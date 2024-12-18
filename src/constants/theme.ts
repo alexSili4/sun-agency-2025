@@ -3,9 +3,7 @@ declare module '@emotion/react' {
 }
 
 interface ITheme {
-  colors: {
-    white: string;
-  };
+  colors: { body: string; white: string };
   fontFamily: {
     involve: string;
     inter: string;
@@ -24,7 +22,7 @@ interface ITheme {
 }
 
 const theme: ITheme = {
-  colors: { white: '#ffffff' },
+  colors: { body: '#0a0a0a', white: '#ffffff' },
   fontFamily: {
     involve: 'Involve',
     inter: 'Inter',
@@ -40,7 +38,7 @@ const theme: ITheme = {
   },
   // shadows: {  },
   iconSizes: { menuBtn: 17 },
-  transitionDurationAndFunc: '250ms cubic-bezier(0.4, 0, 0.2, 1)',
+  transitionDurationAndFunc: '300ms cubic-bezier(0.4, 0, 0.2, 1)',
   spacing: (value = 1) => `${value * 4}px`,
 };
 
