@@ -4,11 +4,14 @@ import { Outlet } from 'react-router-dom';
 import Loader from '@/components/Loader';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import Container from '@/components/Container';
 
 const SharedLayout: FC = () => {
   return (
     <>
-      <Header />
+      <Container>
+        <Header />
+      </Container>
       <Main>
         <Suspense fallback={<Loader />}>
           <Outlet />

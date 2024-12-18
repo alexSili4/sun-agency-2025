@@ -3,20 +3,32 @@ declare module '@emotion/react' {
 }
 
 interface ITheme {
+  colors: {
+    white: string;
+  };
+  fontFamily: {
+    involve: string;
+    inter: string;
+  };
   padding: {
     container: number;
   };
   containerWidth: {
     desktop: number;
-    mobile: number;
+  };
+  iconSizes: {
+    menuBtn: number;
   };
   transitionDurationAndFunc: string;
   spacing: (value?: number) => string;
 }
 
 const theme: ITheme = {
-  // colors: {  },
-  // fontFamily: {  },
+  colors: { white: '#ffffff' },
+  fontFamily: {
+    involve: 'Involve',
+    inter: 'Inter',
+  },
   // fontWeight: {  },
   // fontSize: {  },
   padding: {
@@ -24,10 +36,10 @@ const theme: ITheme = {
   },
   // borderRadius: {  },
   containerWidth: {
-    desktop: 1376,
-    mobile: 375,
+    desktop: 1352,
   },
   // shadows: {  },
+  iconSizes: { menuBtn: 17 },
   transitionDurationAndFunc: '250ms cubic-bezier(0.4, 0, 0.2, 1)',
   spacing: (value = 1) => `${value * 4}px`,
 };
