@@ -3,7 +3,7 @@ import { PagePaths, theme } from '@/constants';
 import Logo from '@/icons/logo.svg?react';
 import { Container, LogoLink, MenuBtn } from './NavLinks.styled';
 import { FaGripLines } from 'react-icons/fa';
-import ShimmerWrap from '@/components/ShimmerWrap';
+import GlowingContainer from '@/components/GlowingContainer';
 
 const NavLinks: FC = () => {
   return (
@@ -11,11 +11,11 @@ const NavLinks: FC = () => {
       <LogoLink to={PagePaths.root}>
         <Logo />
       </LogoLink>
-      <ShimmerWrap rounded={50} width={62}>
+      <GlowingContainer borderRadius='50%'>
         <MenuBtn type='button'>
           <FaGripLines size={theme.iconSizes.menuBtn} />
         </MenuBtn>
-      </ShimmerWrap>
+      </GlowingContainer>
     </Container>
   );
 };

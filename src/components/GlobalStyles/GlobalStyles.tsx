@@ -7,6 +7,12 @@ import { interRegular, involveRegular } from '@/fonts';
 const GlobalStyles: FC = () => (
   <Global
     styles={css`
+      @property --backdrop-rotate {
+        syntax: '<angle>';
+        initial-value: 132deg;
+        inherits: false;
+      }
+
       @font-face {
         font-family: ${theme.fontFamily.inter};
         src: local(${theme.fontFamily.inter}),

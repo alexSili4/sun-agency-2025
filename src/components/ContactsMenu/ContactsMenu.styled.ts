@@ -1,7 +1,6 @@
 import styled from '@emotion/styled';
 
 export const ContactBtn = styled.button`
-  /* flex-shrink: 0; */
   position: relative;
   display: flex;
   align-items: center;
@@ -10,13 +9,19 @@ export const ContactBtn = styled.button`
   width: 130px;
   height: 56px;
   padding: 0;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid;
+  border-color: rgba(255, 255, 255, 0.2);
   border-radius: 16px;
   background-image: radial-gradient(
     175% 286% at 50% -236%,
     rgba(0, 0, 0, 0) 42.549%,
     rgb(0, 0, 0) 100%
   );
+  transition: border-color ${({ theme }) => theme.transitionDurationAndFunc};
+
+  &:is(:hover, :focus) {
+    border-color: transparent;
+  }
 `;
 
 export const ContactBtnIcon = styled.span`
