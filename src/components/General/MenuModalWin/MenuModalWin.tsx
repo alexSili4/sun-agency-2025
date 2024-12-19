@@ -1,7 +1,8 @@
 import { FC } from 'react';
+import { Container } from './MenuModalWin.styled';
 
 const MenuModalWin: FC = () => {
-  return <div>MenuModalWin</div>;
+  return <Container>MenuModalWin</Container>;
 };
 
 export default MenuModalWin;

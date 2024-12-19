@@ -17,6 +17,10 @@ interface ITheme {
   iconSizes: {
     menuBtn: number;
   };
+  zIndex: {
+    menuBtn: number;
+    contactsModalWin: number;
+  };
   transitionDurationAndFunc: string;
   spacing: (value?: number) => string;
 }
@@ -35,6 +39,10 @@ const theme: ITheme = {
   // borderRadius: {  },
   containerWidth: {
     desktop: 1352,
+  },
+  zIndex: {
+    menuBtn: 10,
+    contactsModalWin: 100,
   },
   // shadows: {  },
   iconSizes: { menuBtn: 17 },

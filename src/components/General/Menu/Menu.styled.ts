@@ -1,20 +1,4 @@
 import styled from '@emotion/styled';
-import { Link } from 'react-router-dom';
-
-export const Container = styled.nav`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: ${({ theme }) => theme.spacing(132)};
-`;
-
-export const LogoLink = styled(Link)`
-  & > svg {
-    display: block;
-    width: 121px;
-    height: 25px;
-  }
-`;
 
 export const MenuBtn = styled.button`
   position: relative;
@@ -29,10 +13,6 @@ export const MenuBtn = styled.button`
   border-color: rgba(255, 255, 255, 0.2);
   border-radius: 50%;
   transition: border-color ${({ theme }) => theme.transitionDurationAndFunc};
-
-  & > svg {
-    color: ${({ theme }) => theme.colors.white};
-  }
 
   &:is(:hover, :focus) {
     border-color: transparent;

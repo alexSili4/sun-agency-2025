@@ -10,6 +10,7 @@ export default defineConfig({
       '@': '/src',
       '@AnimationBlocks': '/src/components/AnimationBlocks',
       '@GeneralComponents': '/src/components/General',
+      '@ErrorPageComponents': '/src/components/ErrorPage',
     },
   },
 });

@@ -4,6 +4,7 @@
     "paths": {
       "@/*": ["./src/*"],
       "@AnimationBlocks/*": ["./src/components/AnimationBlocks/*"],
+      "@ErrorPageComponents/*": ["./src/components/ErrorPage/*"],
       "@GeneralComponents/*": ["./src/components/General/*"]
     },
     "target": "ES2020",

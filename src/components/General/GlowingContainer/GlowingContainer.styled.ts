@@ -1,9 +1,13 @@
 import styled from '@emotion/styled';
-import { IStyledBackdropProps } from './GlowingContainer.types';
+import {
+  IStyledBackdropProps,
+  IStyledContainerProps,
+} from './GlowingContainer.types';
 import { animations } from '@/constants';
 
-export const Container = styled.div`
+export const Container = styled.div<IStyledContainerProps>`
   position: relative;
+  z-index: ${({ zIndex }) => zIndex};
 `;
 
 export const Backdrop = styled.div<IStyledBackdropProps>`

@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { StyledHeader } from './Header.styled';
-import NavLinks from '@/components/NavLinks';
-import ContactsInfo from '@/components/ContactsInfo';
+import NavLinks from '@GeneralComponents/NavLinks';
+import ContactsInfo from '@GeneralComponents/ContactsInfo';
 
 const Header: FC = () => {
   return (

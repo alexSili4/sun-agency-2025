@@ -4,10 +4,17 @@ import { IProps } from './AnimatedMenuModalWin.types';
 import MenuModalWin from '@GeneralComponents/MenuModalWin';
 import AnimatedModalWin from '@AnimationBlocks/AnimatedModalWin';
 
-const AnimatedMenuModalWin: FC<IProps> = ({ showModalWin, setModalWin }) => {
+const AnimatedMenuModalWin: FC<IProps> = ({
+  showModalWin,
+  setModalWin,
+  backgroundColor,
+}) => {
   return (
     <AnimatedModalWin showModalWin={showModalWin}>
-      <SmoothFadeUpModalWin setModalWin={setModalWin}>
+      <SmoothFadeUpModalWin
+        setModalWin={setModalWin}
+        backgroundColor={backgroundColor}
+      >
         <MenuModalWin />
       </SmoothFadeUpModalWin>
     </AnimatedModalWin>

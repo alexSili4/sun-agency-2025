@@ -8,7 +8,12 @@ import {
   MotionDiv,
 } from './SmoothFadeUpModalWin.styled';
 
-const SmoothFadeUpModalWin: FC<IProps> = ({ setModalWin, children }) => {
+const SmoothFadeUpModalWin: FC<IProps> = ({
+  backgroundColor,
+  setModalWin,
+  children,
+  zIndex = 0,
+}) => {
   const { hideModalWin, modalRoot } = useModalWin(setModalWin);
 
   return (
@@ -17,8 +22,9 @@ const SmoothFadeUpModalWin: FC<IProps> = ({ setModalWin, children }) => {
         initial={{ opacity: 0, y: -200 }}
         animate={{ opacity: 1, y: 0, transition: { duration: 0.4 } }}
         exit={{ opacity: 0, y: -200, transition: { duration: 0.4 } }}
+        zIndex={zIndex}
       >
-        <BackdropWrap>
+        <BackdropWrap backgroundColor={backgroundColor}>
           <Backdrop onClick={hideModalWin}>{children}</Backdrop>
         </BackdropWrap>
       </MotionDiv>
