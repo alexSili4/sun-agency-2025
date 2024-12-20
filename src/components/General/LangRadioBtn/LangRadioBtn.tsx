@@ -1,10 +1,17 @@
 import { FC } from 'react';
 import { IProps } from './LangRadioBtn.types';
-import { Container, RadioBtn, Title } from './LangRadioBtn.styled';
+import { Container, RadioBtn, TitleWrap, Title } from './LangRadioBtn.styled';
 
-const LangRadioBtn: FC<IProps> = ({ value, onChange, checked }) => {
+const LangRadioBtn: FC<IProps> = ({
+  value,
+  onChange,
+  checked,
+  height,
+  width,
+  isLastRadioBtn = false,
+}) => {
   return (
-    <Container>
+    <Container isLastRadioBtn={isLastRadioBtn}>
       <RadioBtn
         type='radio'
         name='lang'
@@ -13,7 +20,9 @@ const LangRadioBtn: FC<IProps> = ({ value, onChange, checked }) => {
         checked={checked}
         onChange={onChange}
       />
-      <Title>{value}</Title>
+      <TitleWrap width={width} height={height}>
+        <Title>{value}</Title>
+      </TitleWrap>
     </Container>
   );
 };
