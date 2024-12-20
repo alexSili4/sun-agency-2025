@@ -13,10 +13,10 @@ export const Container = styled.label<IStyledContainerProps>`
     transform ${({ theme }) => theme.transitionDurationAndFunc};
 
   div:not(:has(input:is(:hover, :focus))) > div > & {
-    transform: translateX(0px);
+    transform: ${({ isFullMenu }) => !isFullMenu && 'translateX(0px)'};
 
     &:not(:has(input:checked)) {
-      opacity: 0;
+      opacity: ${({ isFullMenu }) => !isFullMenu && 0};
     }
   }
 `;
@@ -37,7 +37,7 @@ export const TitleWrap = styled.span<IStyledTitleWrapProps>`
   border-color: transparent;
   transition: border-color ${({ theme }) => theme.transitionDurationAndFunc};
 
-  label:has(input:checked) > & {
+  label:has(input:is(:hover, :focus, :checked)) > & {
     border-color: rgba(255, 255, 255, 0.12);
   }
 `;
@@ -51,7 +51,7 @@ export const Title = styled.span`
   text-transform: uppercase;
   transition: text-shadow ${({ theme }) => theme.transitionDurationAndFunc};
 
-  *:has(input:checked) > span > & {
+  *:has(input:is(:hover, :focus, :checked)) > span > & {
     text-shadow: 0px 1px 5px #fff9d7;
   }
 `;

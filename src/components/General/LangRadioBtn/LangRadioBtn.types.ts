@@ -6,11 +6,13 @@ export interface IProps {
   value: string;
   onChange: OnInputChangeFunc;
   checked: boolean;
+  isFullMenu: boolean;
   isLastRadioBtn?: boolean;
 }
 
 export interface IStyledContainerProps {
   isLastRadioBtn: boolean;
+  isFullMenu: boolean;
 }
 
 export interface IStyledTitleWrapProps {

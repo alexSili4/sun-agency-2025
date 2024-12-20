@@ -8,10 +8,11 @@ const LangRadioBtn: FC<IProps> = ({
   checked,
   height,
   width,
+  isFullMenu,
   isLastRadioBtn = false,
 }) => {
   return (
-    <Container isLastRadioBtn={isLastRadioBtn}>
+    <Container isLastRadioBtn={isLastRadioBtn} isFullMenu={isFullMenu}>
       <RadioBtn
         type='radio'
         name='lang'
