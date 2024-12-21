@@ -13,6 +13,8 @@ const enum PagePaths {
   clients = '/clients',
   // Про нас
   about = '/about',
+  // Контакти
+  contacts = '/contacts',
 }
 
 export default PagePaths;
