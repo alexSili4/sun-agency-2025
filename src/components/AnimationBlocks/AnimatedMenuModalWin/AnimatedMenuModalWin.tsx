@@ -8,6 +8,7 @@ const AnimatedMenuModalWin: FC<IProps> = ({
   showModalWin,
   setModalWin,
   backgroundColor,
+  onClick,
 }) => {
   return (
     <AnimatedModalWin showModalWin={showModalWin}>
@@ -15,7 +16,7 @@ const AnimatedMenuModalWin: FC<IProps> = ({
         setModalWin={setModalWin}
         backgroundColor={backgroundColor}
       >
-        <MenuModalWin />
+        <MenuModalWin onClick={onClick} />
       </SmoothFadeUpModalWin>
     </AnimatedModalWin>
   );
