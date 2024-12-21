@@ -12,11 +12,7 @@ export const ContactBtn = styled.button`
   border: 1px solid;
   border-color: rgba(255, 255, 255, 0.2);
   border-radius: 16px;
-  background-image: radial-gradient(
-    175% 286% at 50% -236%,
-    rgba(0, 0, 0, 0) 42.549%,
-    rgb(0, 0, 0) 100%
-  );
+  background-color: ${({ theme }) => theme.colors.body};
   transition: border-color ${({ theme }) => theme.transitionDurationAndFunc};
 
   &:is(:hover, :focus) {

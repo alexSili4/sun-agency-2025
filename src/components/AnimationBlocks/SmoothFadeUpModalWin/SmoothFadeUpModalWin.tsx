@@ -13,6 +13,7 @@ const SmoothFadeUpModalWin: FC<IProps> = ({
   setModalWin,
   children,
   zIndex = 0,
+  duration = 0.6,
 }) => {
   const { hideModalWin, modalRoot } = useModalWin(setModalWin);
 
@@ -20,8 +21,8 @@ const SmoothFadeUpModalWin: FC<IProps> = ({
     <ModalWin modalRoot={modalRoot}>
       <MotionDiv
         initial={{ opacity: 0, y: -200 }}
-        animate={{ opacity: 1, y: 0, transition: { duration: 0.6 } }}
-        exit={{ opacity: 0, y: -200, transition: { duration: 0.6 } }}
+        animate={{ opacity: 1, y: 0, transition: { duration } }}
+        exit={{ opacity: 0, y: -200, transition: { duration } }}
         zIndex={zIndex}
       >
         <BackdropWrap backgroundColor={backgroundColor}>

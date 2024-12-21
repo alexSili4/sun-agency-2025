@@ -5,6 +5,7 @@ export interface IProps {
   zIndex?: number;
   backgroundColor: string;
   children: ReactNode;
+  duration?: number;
   setModalWin: Func;
 }
 
