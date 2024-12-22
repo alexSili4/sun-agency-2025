@@ -2,7 +2,7 @@ import { FC } from 'react';
 import { Global, css } from '@emotion/react';
 import 'modern-normalize';
 import { theme } from '@/constants';
-import { interRegular, involveRegular } from '@/fonts';
+import { interRegular, involveRegular, involveSemiBold } from '@/fonts';
 
 const GlobalStyles: FC = () => (
   <Global
@@ -25,6 +25,13 @@ const GlobalStyles: FC = () => (
         src: local(${theme.fontFamily.involve}),
           url(${involveRegular}) format('truetype');
         font-weight: 400;
+      }
+
+      @font-face {
+        font-family: ${theme.fontFamily.involve};
+        src: local(${theme.fontFamily.involve}),
+          url(${involveSemiBold}) format('truetype');
+        font-weight: 600;
       }
 
       body {

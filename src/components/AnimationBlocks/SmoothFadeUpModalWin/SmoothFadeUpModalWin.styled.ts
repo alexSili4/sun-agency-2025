@@ -6,7 +6,7 @@ import {
 } from './SmoothFadeUpModalWin.types';
 
 export const MotionDiv = styled(motion.div)<IStyledMotionDivProps>`
-  position: absolute;
+  position: fixed;
   z-index: ${({ zIndex }) => zIndex};
   top: 0;
   left: 0;
@@ -27,7 +27,6 @@ export const BackdropWrap = styled.div<IStyledBackdropWrapProps>`
 export const Backdrop = styled.div`
   display: flex;
   justify-content: center;
-  align-items: center;
   width: 100%;
   min-height: 100vh;
 `;

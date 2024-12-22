@@ -1,15 +1,23 @@
 import styled from '@emotion/styled';
-import { IStyledLangsRadioBtnWrapProps } from './LangsMenu.types';
+import {
+  IStyledContainerProps,
+  IStyledLangsRadioBtnWrapProps,
+} from './LangsMenu.types';
 
-export const Container = styled.div`
-  position: relative;
+export const Container = styled.div<IStyledContainerProps>`
+  position: ${({ isPositionAbsolute }) =>
+    isPositionAbsolute ? 'absolute' : 'relative'};
+  top: ${({ top }) => top};
+  left: ${({ left }) => left};
+  display: ${({ isFullMenu }) => isFullMenu && 'flex'};
 `;
 
 export const LangsRadioBtnWrap = styled.div<IStyledLangsRadioBtnWrapProps>`
-  position: absolute;
+  position: ${({ isFullMenu }) => !isFullMenu && 'absolute'};
   top: 0;
   left: 0;
-  transform: translateX(-100%);
+  display: ${({ isFullMenu }) => isFullMenu && 'flex'};
+  transform: ${({ isFullMenu }) => !isFullMenu && 'translateX(-100%)'};
   transition: transform ${({ theme }) => theme.transitionDurationAndFunc};
 
   div:not(:has(input:is(:hover, :focus))) > & {
@@ -17,9 +25,9 @@ export const LangsRadioBtnWrap = styled.div<IStyledLangsRadioBtnWrapProps>`
   }
 
   & > label:first-of-type {
-    position: absolute;
+    position: ${({ isFullMenu }) => !isFullMenu && 'absolute'};
     top: 0;
     left: 0;
-    transform: translateX(-100%);
+    transform: ${({ isFullMenu }) => !isFullMenu && 'translateX(-100%)'};
   }
 `;

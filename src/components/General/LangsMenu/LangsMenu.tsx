@@ -1,32 +1,34 @@
-import { FC, useState } from 'react';
+import { FC } from 'react';
 import LangRadioBtn from '@GeneralComponents/LangRadioBtn';
 import { Container, LangsRadioBtnWrap } from './LangsMenu.styled';
-import { InputChangeEvent } from '@/types/types';
-import { makeBlur } from '@/utils';
 import { Langs } from '@/constants';
 import { IProps } from './LangsMenu.types';
 
-const LangsMenu: FC<IProps> = ({ isFullMenu = false }) => {
-  const [currentLang, setCurrentLang] = useState<string>(() => Langs.ua);
-
+const LangsMenu: FC<IProps> = ({
+  currentLang,
+  onChange,
+  isFullMenu = false,
+  isPositionAbsolute = false,
+  left = '0px',
+  top = '0px',
+}) => {
   const isUaLang = currentLang === Langs.ua;
   const isEngLang = currentLang === Langs.eng;
   const isDeLang = currentLang === Langs.de;
 
-  const onLangRadioBtnChange = (e: InputChangeEvent) => {
-    makeBlur(e.currentTarget);
-
-    setCurrentLang(e.currentTarget.value);
-  };
-
   return (
-    <Container>
+    <Container
+      isFullMenu={isFullMenu}
+      isPositionAbsolute={isPositionAbsolute}
+      left={left}
+      top={top}
+    >
       <LangsRadioBtnWrap isFullMenu={isFullMenu}>
         <LangRadioBtn
           width={36}
           height={35}
           value={Langs.ua}
-          onChange={onLangRadioBtnChange}
+          onChange={onChange}
           checked={isUaLang}
           isFullMenu={isFullMenu}
         />
@@ -34,7 +36,7 @@ const LangsMenu: FC<IProps> = ({ isFullMenu = false }) => {
           height={35}
           width={35}
           value={Langs.de}
-          onChange={onLangRadioBtnChange}
+          onChange={onChange}
           checked={isDeLang}
           isFullMenu={isFullMenu}
         />
@@ -43,7 +45,7 @@ const LangsMenu: FC<IProps> = ({ isFullMenu = false }) => {
         width={46}
         height={35}
         value={Langs.eng}
-        onChange={onLangRadioBtnChange}
+        onChange={onChange}
         checked={isEngLang}
         isFullMenu={isFullMenu}
         isLastRadioBtn

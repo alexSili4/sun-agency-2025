@@ -14,9 +14,8 @@ const LangRadioBtn: FC<IProps> = ({
   return (
     <Container isLastRadioBtn={isLastRadioBtn} isFullMenu={isFullMenu}>
       <RadioBtn
-        type='radio'
+        type='checkbox'
         name='lang'
-        id={value}
         value={value}
         checked={checked}
         onChange={onChange}

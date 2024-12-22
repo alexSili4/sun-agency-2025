@@ -22,7 +22,7 @@ export const StyledLinkTitle = styled.span`
   line-height: 1.4;
   transition: color ${({ theme }) => theme.transitionDurationAndFunc};
 
-  div:has(a:is(:hover, :focus)) a:not(:is(:hover, :focus)) > & {
+  div:has(a:is(:hover, :focus)) > ul > li > a:not(:is(:hover, :focus)) > & {
     color: #3e4648;
   }
 `;

@@ -50,7 +50,7 @@ export const StyledLink = styled(Link)`
     padding-bottom: ${({ theme }) => theme.spacing(5)};
   }
 
-  div:has(a:is(:hover, :focus)) &:not(:is(:hover, :focus)) {
+  div:has(a:is(:hover, :focus)) > div > ul > li > &:not(:is(:hover, :focus)) {
     color: #3e4648;
   }
 `;

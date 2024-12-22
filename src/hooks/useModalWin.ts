@@ -16,7 +16,6 @@ const useModalWin = (setModalWinState: Func): IUseModalWin => {
     document.body.style.overflow = 'hidden';
 
     return () => {
-      console.log('unmount');
       document.body.style.overflow = '';
       window.removeEventListener('keydown', hideModalWin);
     };

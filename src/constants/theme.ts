@@ -16,6 +16,7 @@ interface ITheme {
   };
   iconSizes: {
     menuBtn: number;
+    socialLink: number;
   };
   zIndex: {
     menuBtn: number;
@@ -45,7 +46,7 @@ const theme: ITheme = {
     contactsModalWin: 100,
   },
   // shadows: {  },
-  iconSizes: { menuBtn: 17 },
+  iconSizes: { socialLink: 14, menuBtn: 17 },
   transitionDurationAndFunc: '400ms cubic-bezier(0.4, 0, 0.2, 1)',
   spacing: (value = 1) => `${value * 4}px`,
 };

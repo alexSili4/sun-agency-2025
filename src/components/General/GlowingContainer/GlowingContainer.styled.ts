@@ -21,7 +21,7 @@ export const Backdrop = styled.div<IStyledBackdropProps>`
   transform: translateX(-50%) translateY(-50%);
   transition: opacity ${({ theme }) => theme.transitionDurationAndFunc};
 
-  div:not(:has(button:is(:hover, :focus))) > & {
+  div:not(:has(button:is(:hover, :focus), a:is(:hover, :focus))) > & {
     opacity: 0;
   }
 

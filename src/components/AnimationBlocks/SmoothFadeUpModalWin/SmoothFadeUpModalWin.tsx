@@ -1,6 +1,6 @@
-import { FC } from 'react';
+import { FC, useRef } from 'react';
 import { IProps } from './SmoothFadeUpModalWin.types';
-import { useModalWin } from '@/hooks';
+import { useIsScrollingUp, useModalWin } from '@/hooks';
 import ModalWin from '@GeneralComponents//ModalWin';
 import {
   Backdrop,
@@ -16,6 +16,10 @@ const SmoothFadeUpModalWin: FC<IProps> = ({
   duration = 0.6,
 }) => {
   const { hideModalWin, modalRoot } = useModalWin(setModalWin);
+  const backdropWrapRef = useRef<HTMLDivElement>(null);
+  const { isScrolling, isScrollingUp } = useIsScrollingUp({
+    element: backdropWrapRef,
+  });
 
   return (
     <ModalWin modalRoot={modalRoot}>
@@ -25,7 +29,7 @@ const SmoothFadeUpModalWin: FC<IProps> = ({
         exit={{ opacity: 0, y: -200, transition: { duration } }}
         zIndex={zIndex}
       >
-        <BackdropWrap backgroundColor={backgroundColor}>
+        <BackdropWrap backgroundColor={backgroundColor} ref={backdropWrapRef}>
           <Backdrop onClick={hideModalWin}>{children}</Backdrop>
         </BackdropWrap>
       </MotionDiv>
