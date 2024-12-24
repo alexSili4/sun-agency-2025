@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 
-export const StyledContainer = styled.div`
+export const Container = styled.div`
   width: ${({ theme: { containerWidth, padding } }) =>
     containerWidth.desktop + padding.container * 2}px;
   padding-left: ${({ theme }) => theme.padding.container}px;

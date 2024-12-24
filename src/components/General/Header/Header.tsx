@@ -1,10 +1,11 @@
 import { FC, useState } from 'react';
-import { StyledHeader } from './Header.styled';
-import NavLinks from '@GeneralComponents/NavLinks';
+import { Container, StyledHeader } from './Header.styled';
+import NavMenu from '@GeneralComponents/NavMenu';
 import ContactsInfo from '@GeneralComponents/ContactsInfo';
 import { Langs } from '@/constants';
 import { makeBlur } from '@/utils';
 import { InputChangeEvent } from '@/types/types';
+import GeneralContainer from '@GeneralComponents/GeneralContainer';
 
 const Header: FC = () => {
   const [currentLang, setCurrentLang] = useState<string>(() => Langs.ua);
@@ -17,8 +18,15 @@ const Header: FC = () => {
 
   return (
     <StyledHeader>
-      <NavLinks currentLang={currentLang} onChange={onLangRadioBtnChange} />
-      <ContactsInfo currentLang={currentLang} onChange={onLangRadioBtnChange} />
+      <GeneralContainer>
+        <Container>
+          <NavMenu currentLang={currentLang} onChange={onLangRadioBtnChange} />
+          <ContactsInfo
+            currentLang={currentLang}
+            onChange={onLangRadioBtnChange}
+          />
+        </Container>
+      </GeneralContainer>
     </StyledHeader>
   );
 };

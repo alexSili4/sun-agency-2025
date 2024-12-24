@@ -6,14 +6,6 @@ export const Container = styled.div`
   justify-content: space-between;
 `;
 
-export const Copyright = styled.p`
-  color: ${({ theme }) => theme.colors.white};
-  font-family: ${({ theme }) => theme.fontFamily.involve};
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1;
-`;
-
 export const LinksWrap = styled.div`
   display: flex;
   align-items: center;

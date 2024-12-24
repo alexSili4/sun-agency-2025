@@ -1,13 +1,13 @@
-import Container from '@GeneralComponents/Container';
+import GeneralContainer from '@GeneralComponents/GeneralContainer';
 import NotFound from '@ErrorPageComponents/NotFound';
 import Section from '@GeneralComponents/Section';
 import { FC } from 'react';
 
 const NotFoundPage: FC = () => (
   <Section>
-    <Container>
+    <GeneralContainer>
       <NotFound />
-    </Container>
+    </GeneralContainer>
   </Section>
 );
 

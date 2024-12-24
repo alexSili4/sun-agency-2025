@@ -1,17 +1,13 @@
 import { FC } from 'react';
 import SocialLinks from '@GeneralComponents/SocialLinks';
-import {
-  Container,
-  Copyright,
-  LinksWrap,
-  PrivacyPolicyLink,
-} from './GeneralLinks.styled';
+import { Container, LinksWrap, PrivacyPolicyLink } from './GeneralLinks.styled';
 import { Links } from '@/constants';
+import Copyright from '@GeneralComponents/Copyright';
 
 const GeneralLinks: FC = () => {
   return (
     <Container>
-      <Copyright>© 2024 Сонце</Copyright>
+      <Copyright />
       <LinksWrap>
         <SocialLinks />
         <PrivacyPolicyLink
