@@ -1,4 +1,4 @@
-import { FC, useRef } from 'react';
+import { FC, useEffect, useRef } from 'react';
 import { IProps } from './SmoothFadeUpModalWin.types';
 import { useIsScrollingUp, useModalWin } from '@/hooks';
 import ModalWin from '@GeneralComponents//ModalWin';
@@ -14,12 +14,18 @@ const SmoothFadeUpModalWin: FC<IProps> = ({
   children,
   zIndex = 0,
   duration = 0.6,
+  changeShouldHideMenuBtn,
 }) => {
   const { hideModalWin, modalRoot } = useModalWin(setModalWin);
   const backdropWrapRef = useRef<HTMLDivElement>(null);
   const { isScrolling, isScrollingUp } = useIsScrollingUp({
     element: backdropWrapRef,
   });
+  const shouldHideMenuBtn = isScrolling && !isScrollingUp;
+
+  useEffect(() => {
+    changeShouldHideMenuBtn && changeShouldHideMenuBtn(shouldHideMenuBtn);
+  }, [changeShouldHideMenuBtn, shouldHideMenuBtn]);
 
   return (
     <ModalWin modalRoot={modalRoot}>

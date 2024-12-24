@@ -1,4 +1,9 @@
-import { Func, OnAnchorClickFunc, OnInputChangeFunc } from '@/types/types';
+import {
+  Func,
+  OnAnchorClickFunc,
+  OnInputChangeFunc,
+  SetBooleanFunc,
+} from '@/types/types';
 
 export interface IProps {
   currentLang: string;
@@ -7,4 +12,5 @@ export interface IProps {
   showModalWin: boolean;
   backgroundColor: string;
   onClick: OnAnchorClickFunc;
+  changeShouldHideMenuBtn: SetBooleanFunc;
 }

@@ -1,12 +1,13 @@
-import { Func } from '@/types/types';
+import { Func, SetBooleanFunc } from '@/types/types';
 import { ReactNode } from 'react';
 
 export interface IProps {
-  zIndex?: number;
   backgroundColor: string;
   children: ReactNode;
+  zIndex?: number;
   duration?: number;
   setModalWin: Func;
+  changeShouldHideMenuBtn?: SetBooleanFunc;
 }
 
 export interface IStyledMotionDivProps {

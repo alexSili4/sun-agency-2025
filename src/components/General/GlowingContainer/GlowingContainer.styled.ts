@@ -8,6 +8,7 @@ import { animations } from '@/constants';
 export const Container = styled.div<IStyledContainerProps>`
   position: relative;
   z-index: ${({ zIndex }) => zIndex};
+  pointer-events: ${({ shouldHide }) => shouldHide && 'none'};
 `;
 
 export const Backdrop = styled.div<IStyledBackdropProps>`

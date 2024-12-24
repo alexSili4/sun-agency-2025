@@ -11,12 +11,14 @@ const AnimatedMenuModalWin: FC<IProps> = ({
   onClick,
   onChange,
   currentLang,
+  changeShouldHideMenuBtn,
 }) => {
   return (
     <AnimatedModalWin showModalWin={showModalWin}>
       <SmoothFadeUpModalWin
         setModalWin={setModalWin}
         backgroundColor={backgroundColor}
+        changeShouldHideMenuBtn={changeShouldHideMenuBtn}
       >
         <MenuModalWin
           currentLang={currentLang}

@@ -1,4 +1,4 @@
-import { FC, useState } from 'react';
+import { FC, useEffect, useState } from 'react';
 import GlowingContainer from '@GeneralComponents/GlowingContainer';
 import { theme } from '@/constants';
 import { MenuBtn } from './Menu.styled';
@@ -11,6 +11,13 @@ import { IProps } from './Menu.types';
 const Menu: FC<IProps> = ({ currentLang, onChange }) => {
   const [showMenuModalWin, setShowMenuModalWin] = useState<boolean>(false);
   const [shouldHideMenuBtn, setShouldHideMenuBtn] = useState<boolean>(false);
+
+  useEffect(() => {
+    if (shouldHideMenuBtn && !showMenuModalWin) {
+      setShouldHideMenuBtn(false);
+    }
+  }, [shouldHideMenuBtn, showMenuModalWin]);
+
   const toggleShowMenuModalWin = () => {
     setShowMenuModalWin((prevState) => !prevState);
   };
@@ -33,7 +40,11 @@ const Menu: FC<IProps> = ({ currentLang, onChange }) => {
 
   return (
     <>
-      <GlowingContainer borderRadius='50%' zIndex={theme.zIndex.menuBtn}>
+      <GlowingContainer
+        borderRadius='50%'
+        zIndex={theme.zIndex.menuBtn}
+        shouldHide={shouldHideMenuBtn}
+      >
         <MenuBtn
           type='button'
           onClick={onMenuBtnClick}
@@ -53,6 +64,7 @@ const Menu: FC<IProps> = ({ currentLang, onChange }) => {
         setModalWin={toggleShowMenuModalWin}
         showModalWin={showMenuModalWin}
         backgroundColor={theme.colors.body}
+        changeShouldHideMenuBtn={changeShouldHideMenuBtn}
       />
     </>
   );

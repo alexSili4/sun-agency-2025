@@ -14,8 +14,10 @@ export const MenuBtn = styled.button<IStyledMenuBtnProps>`
   border-color: rgba(255, 255, 255, 0.2);
   border-radius: 50%;
   opacity: ${({ shouldHide }) => shouldHide && 0};
+  transform: translateY(${({ shouldHide }) => shouldHide && -100}%);
   transition: border-color ${({ theme }) => theme.transitionDurationAndFunc},
-    opacity ${({ theme }) => theme.transitionDurationAndFunc};
+    opacity ${({ theme }) => theme.transitionDurationAndFunc},
+    transform ${({ theme }) => theme.transitionDurationAndFunc};
 
   &:is(:hover, :focus) {
     border-color: transparent;
