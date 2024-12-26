@@ -14,6 +14,7 @@ export const StyledLink = styled(Link)`
   font-size: 14px;
   font-weight: 400;
   line-height: 1.7;
+  transition: color ${({ theme }) => theme.transitionDurationAndFunc};
 
   li:first-of-type > & {
     padding-left: 0;
@@ -21,5 +22,9 @@ export const StyledLink = styled(Link)`
 
   li:last-of-type > & {
     padding-right: 0;
+  }
+
+  ul:has(&:is(:hover, :focus)) > li:not(:has(&:is(:hover, :focus))) > & {
+    color: ${({ theme }) => theme.colors.inactiveLink};
   }
 `;
