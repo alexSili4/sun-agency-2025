@@ -13,6 +13,9 @@ export const LinksWrap = styled.div`
 `;
 
 export const PrivacyPolicyLink = styled.a`
+  align-self: stretch;
+  display: flex;
+  align-items: center;
   color: ${({ theme }) => theme.colors.white};
   font-family: ${({ theme }) => theme.fontFamily.involve};
   font-size: 14px;

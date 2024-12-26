@@ -3,7 +3,11 @@ declare module '@emotion/react' {
 }
 
 interface ITheme {
-  colors: { body: string; white: string };
+  colors: {
+    body: string;
+    white: string;
+    inactiveLink: string;
+  };
   fontFamily: {
     involve: string;
     inter: string;
@@ -27,7 +31,11 @@ interface ITheme {
 }
 
 const theme: ITheme = {
-  colors: { body: '#0a0a0a', white: '#ffffff' },
+  colors: {
+    body: '#0a0a0a',
+    white: '#ffffff',
+    inactiveLink: '#3e4648',
+  },
   fontFamily: {
     involve: 'Involve',
     inter: 'Inter',

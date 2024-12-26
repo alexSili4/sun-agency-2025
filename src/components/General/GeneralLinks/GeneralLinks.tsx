@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import SocialLinks from '@GeneralComponents/SocialLinks';
 import { Container, LinksWrap, PrivacyPolicyLink } from './GeneralLinks.styled';
-import { Links } from '@/constants';
+import { Links, theme } from '@/constants';
 import Copyright from '@GeneralComponents/Copyright';
 
 const GeneralLinks: FC = () => {
@@ -9,7 +9,7 @@ const GeneralLinks: FC = () => {
     <Container>
       <Copyright />
       <LinksWrap>
-        <SocialLinks />
+        <SocialLinks linkPadding={theme.spacing(17)} />
         <PrivacyPolicyLink
           href={Links.privacyPolicy}
           target='_blank'

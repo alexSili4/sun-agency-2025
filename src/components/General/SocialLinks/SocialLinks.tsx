@@ -3,8 +3,9 @@ import { Links, theme } from '@/constants';
 import { FaLinkedinIn } from 'react-icons/fa';
 import { AiFillInstagram } from 'react-icons/ai';
 import { LinkTitle, List, ListItem, StyledLink } from './SocialLinks.styled';
+import { IProps } from './SocialLinks.types';
 
-const SocialLinks: FC = () => {
+const SocialLinks: FC<IProps> = ({ linkPadding }) => {
   return (
     <List>
       <ListItem>
@@ -12,6 +13,7 @@ const SocialLinks: FC = () => {
           href={Links.linkedin}
           target='_blank'
           rel='noopener noreferrer'
+          linkPadding={linkPadding}
         >
           <FaLinkedinIn size={theme.iconSizes.socialLink} />
           <LinkTitle>Linkedin</LinkTitle>
@@ -22,6 +24,7 @@ const SocialLinks: FC = () => {
           href={Links.instagram}
           target='_blank'
           rel='noopener noreferrer'
+          linkPadding={linkPadding}
         >
           <AiFillInstagram size={theme.iconSizes.socialLink} />
           <LinkTitle>Instagram</LinkTitle>

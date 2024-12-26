@@ -25,7 +25,7 @@ export const Title = styled.p`
     > div:not(:has(a:is(:hover, :focus)))
     > div
     > & {
-    color: #3e4648;
+    color: ${({ theme }) => theme.colors.inactiveLink};
   }
 `;
 
@@ -51,6 +51,6 @@ export const StyledLink = styled(Link)`
   }
 
   div:has(a:is(:hover, :focus)) > div > ul > li > &:not(:is(:hover, :focus)) {
-    color: #3e4648;
+    color: ${({ theme }) => theme.colors.inactiveLink};
   }
 `;
