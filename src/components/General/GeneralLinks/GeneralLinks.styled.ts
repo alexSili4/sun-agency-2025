@@ -4,6 +4,10 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  &:has(a:is(:hover, :focus)) a:not(:is(:hover, :focus)) {
+    color: ${({ theme }) => theme.colors.inactiveLink};
+  }
 `;
 
 export const LinksWrap = styled.div`
@@ -22,4 +26,5 @@ export const PrivacyPolicyLink = styled.a`
   font-weight: 400;
   line-height: 2;
   letter-spacing: -0.14px;
+  transition: color ${({ theme }) => theme.transitionDurationAndFunc};
 `;
