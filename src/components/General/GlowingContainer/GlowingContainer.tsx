@@ -7,10 +7,14 @@ const GlowingContainer: FC<IProps> = ({
   borderRadius,
   zIndex,
   shouldHide = false,
+  isSubduedLighting = false,
 }) => {
   return (
     <Container zIndex={zIndex} shouldHide={shouldHide}>
-      <Backdrop borderRadius={borderRadius}></Backdrop>
+      <Backdrop
+        borderRadius={borderRadius}
+        isSubduedLighting={isSubduedLighting}
+      ></Backdrop>
       {children}
     </Container>
   );

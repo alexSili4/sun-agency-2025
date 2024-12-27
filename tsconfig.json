@@ -5,7 +5,8 @@
       "@/*": ["./src/*"],
       "@AnimationBlocks/*": ["./src/components/AnimationBlocks/*"],
       "@ErrorPageComponents/*": ["./src/components/ErrorPage/*"],
-      "@GeneralComponents/*": ["./src/components/General/*"]
+      "@GeneralComponents/*": ["./src/components/General/*"],
+      "@MainPageComponents/*": ["./src/components/MainPage/*"]
     },
     "target": "ES2020",
     "useDefineForClassFields": true,

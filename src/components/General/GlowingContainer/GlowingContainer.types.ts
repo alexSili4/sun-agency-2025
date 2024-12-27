@@ -5,10 +5,12 @@ export interface IProps {
   borderRadius: string;
   zIndex: number;
   shouldHide?: boolean;
+  isSubduedLighting?: boolean;
 }
 
 export interface IStyledBackdropProps {
   borderRadius: string;
+  isSubduedLighting: boolean;
 }
 
 export interface IStyledContainerProps {

@@ -3,11 +3,11 @@ import styled from '@emotion/styled';
 export const StyledFooter = styled.footer`
   position: relative;
   padding-top: ${({ theme }) => theme.spacing(146)};
-  /* TODO fix */
-  background-color: greenyellow;
+  overflow: hidden;
 `;
 
 export const ContentWrap = styled.div`
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: ${({ theme }) => theme.spacing(24)};

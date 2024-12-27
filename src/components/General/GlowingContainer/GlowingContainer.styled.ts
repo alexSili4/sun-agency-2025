@@ -19,6 +19,7 @@ export const Backdrop = styled.div<IStyledBackdropProps>`
   height: 100%;
   background-color: #452006;
   border-radius: ${({ borderRadius }) => borderRadius};
+  opacity: ${({ isSubduedLighting }) => (isSubduedLighting ? 0.5 : 1)};
   transform: translateX(-50%) translateY(-50%);
   transition: opacity ${({ theme }) => theme.transitionDurationAndFunc};
 

@@ -11,6 +11,7 @@ export default defineConfig({
       '@AnimationBlocks': '/src/components/AnimationBlocks',
       '@GeneralComponents': '/src/components/General',
       '@ErrorPageComponents': '/src/components/ErrorPage',
+      '@MainPageComponents': '/src/components/MainPage',
     },
   },
 });
