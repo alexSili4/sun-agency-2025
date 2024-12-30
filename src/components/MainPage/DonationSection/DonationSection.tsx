@@ -1,9 +1,11 @@
 import { FC } from 'react';
 import GeneralContainer from '@GeneralComponents/GeneralContainer';
-import DonationLink from '@MainPageComponents/DonationLink';
-import { ContentWrap, ScrollBtn, Section } from './DonationSection.styled';
+import { Section } from './DonationSection.styled';
 import { BtnClickEvent } from '@/types/types';
 import { makeBlur } from '@/utils';
+import DonationSectionSpline from '@MainPageComponents/DonationSectionSpline';
+import SectionTitle from '@GeneralComponents/SectionTitle';
+import DonationSectionContent from '@MainPageComponents/DonationSectionContent';
 
 const DonationSection: FC = () => {
   const onScrollBtnClick = (e: BtnClickEvent) => {
@@ -14,14 +16,11 @@ const DonationSection: FC = () => {
 
   return (
     <Section>
+      <SectionTitle text='Допомога 206 батальйону ТрО' isHidden />
+      <DonationSectionSpline />
       <GeneralContainer>
-        <ContentWrap>
-          {/* TODO fix */}
-          <ScrollBtn type='button' onClick={onScrollBtnClick}>
-            Гортати далі
-          </ScrollBtn>
-          <DonationLink />
-        </ContentWrap>
+        {/* TODO fix */}
+        <DonationSectionContent onScrollBtnClick={onScrollBtnClick} />
       </GeneralContainer>
     </Section>
   );

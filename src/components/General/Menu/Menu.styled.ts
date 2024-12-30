@@ -8,7 +8,7 @@ export const MenuBtn = styled.button<IStyledMenuBtnProps>`
   justify-content: center;
   width: 54px;
   aspect-ratio: 1 / 1;
-  background-color: ${({ theme }) => theme.colors.body};
+  background-color: ${({ theme }) => theme.colors.dark};
   padding: 0;
   border: 1px solid;
   border-color: rgba(255, 255, 255, 0.2);

@@ -6,6 +6,7 @@ import {
   interRegular,
   involveRegular,
   involveSemiBold,
+  involveMedium,
   pliskaRegular,
 } from '@/fonts';
 
@@ -35,6 +36,13 @@ const GlobalStyles: FC = () => (
       @font-face {
         font-family: ${theme.fontFamily.involve};
         src: local(${theme.fontFamily.involve}),
+          url(${involveMedium}) format('truetype');
+        font-weight: 500;
+      }
+
+      @font-face {
+        font-family: ${theme.fontFamily.involve};
+        src: local(${theme.fontFamily.involve}),
           url(${involveSemiBold}) format('truetype');
         font-weight: 600;
       }
@@ -47,7 +55,6 @@ const GlobalStyles: FC = () => (
       }
 
       body {
-        background-color: ${theme.colors.body};
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
           'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
           'Helvetica Neue', sans-serif;

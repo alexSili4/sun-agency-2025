@@ -13,7 +13,7 @@ export const StyledLink = styled(Link)<IStyledProps>`
   border: 1px solid;
   border-color: rgba(255, 255, 255, 0.2);
   border-radius: 16px;
-  background-color: ${({ theme }) => theme.colors.body};
+  background-color: ${({ theme }) => theme.colors.dark};
   transition: border-color ${({ theme }) => theme.transitionDurationAndFunc};
 
   &:is(:hover, :focus) {

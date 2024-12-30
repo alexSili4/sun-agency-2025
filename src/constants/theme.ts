@@ -4,9 +4,11 @@ declare module '@emotion/react' {
 
 interface ITheme {
   colors: {
-    body: string;
+    dark: string;
+    black: string;
     white: string;
     inactiveLink: string;
+    darkBg: string;
   };
   fontFamily: {
     involve: string;
@@ -34,7 +36,9 @@ interface ITheme {
 
 const theme: ITheme = {
   colors: {
-    body: '#0a0a0a',
+    dark: '#0a0a0a',
+    darkBg: '#090C08',
+    black: '#000000',
     white: '#ffffff',
     inactiveLink: '#3e4648',
   },

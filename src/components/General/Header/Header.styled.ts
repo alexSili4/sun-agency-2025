@@ -1,6 +1,8 @@
 import styled from '@emotion/styled';
 
-export const StyledHeader = styled.header``;
+export const StyledHeader = styled.header`
+  background-color: ${({ theme }) => theme.colors.darkBg};
+`;
 
 export const Container = styled.div`
   display: flex;

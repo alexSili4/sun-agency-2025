@@ -1,20 +1,8 @@
 import styled from '@emotion/styled';
 
-export const Section = styled.section``;
-
-export const ContentWrap = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-`;
-
-export const ScrollBtn = styled.button`
-  padding: 0;
-  border: none;
-  background-color: transparent;
-  color: ${({ theme }) => theme.colors.white};
-  font-family: ${({ theme }) => theme.fontFamily.involve};
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1.3;
+export const Section = styled.section`
+  position: relative;
+  padding-top: ${({ theme }) => theme.spacing(55)};
+  padding-bottom: ${({ theme }) => theme.spacing(218)};
+  background-color: ${({ theme }) => theme.colors.darkBg};
 `;

@@ -1,3 +1,4 @@
+import { theme } from '@/constants';
 import { FC } from 'react';
 import { ThreeDots } from 'react-loader-spinner';
 
@@ -13,6 +14,7 @@ const Loader: FC = () => (
       justifyContent: 'center',
       alignItems: 'center',
       flexGrow: '1',
+      backgroundColor: theme.colors.darkBg,
     }}
     visible
   />
