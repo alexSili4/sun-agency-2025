@@ -1,4 +1,4 @@
-import { IGetIsLastIndexProps } from '@/types/functions';
+import { IGetIsLastIndexProps } from '@/types/functions.types';
 
 const getIsLastIndex = ({
   currentIndex,

@@ -1,4 +1,4 @@
-import { ElementOrNull, OnDivClickFunc, RefDivObject } from './types';
+import { ElementOrNull, OnDivClickFunc, RefDivObject, RefFunc } from './types';
 
 export interface IUseModalWin {
   modalRoot: ElementOrNull;
@@ -12,4 +12,9 @@ export interface IUseIsScrollingUpProps {
 export interface IUseIsScrollingUp {
   isScrollingUp: boolean;
   isScrolling: boolean;
+}
+
+export interface IUseScrollPercentage {
+  ref: RefFunc;
+  percentage: number;
 }

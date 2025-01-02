@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import SectionTitle from '@GeneralComponents/SectionTitle';
 import AnimatedSectionSubtitle from '@AnimationBlocks/AnimatedSectionSubtitle';
-// import { TextWrap } from './ProjectsSectionContent.styled';
+import { TextWrap } from './ProjectsSectionContent.styled';
 
 const ProjectsSectionContent: FC = () => {
   return (

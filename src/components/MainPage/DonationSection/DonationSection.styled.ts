@@ -5,4 +5,5 @@ export const Section = styled.section`
   padding-top: ${({ theme }) => theme.spacing(55)};
   padding-bottom: ${({ theme }) => theme.spacing(218)};
   background-color: ${({ theme }) => theme.colors.darkBg};
+  overflow: hidden;
 `;

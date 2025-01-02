@@ -1,3 +1,4 @@
+import { MotionValue } from 'motion/react';
 import { ChangeEvent, MouseEvent, RefObject } from 'react';
 
 // events
@@ -22,9 +23,13 @@ export type OnBtnClickFunc = (e: BtnClickEvent) => void;
 
 export type SetBooleanFunc = (data: boolean) => void;
 
+export type RefFunc = (node?: Element | null | undefined) => void;
+
 // other
 export type ElementOrNull = Element | null;
 
 export type Strings = string[];
 
 export type RefDivObject = RefObject<HTMLDivElement>;
+
+export type MotionValueNumber = MotionValue<number>;
