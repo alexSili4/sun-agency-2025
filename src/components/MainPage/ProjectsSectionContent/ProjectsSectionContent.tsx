@@ -8,6 +8,7 @@ import {
 } from './ProjectsSectionContent.styled';
 import GlowingLink from '@GeneralComponents/GlowingLink';
 import GeneralContainer from '@GeneralComponents/GeneralContainer';
+import { PagePaths } from '@/constants';
 
 const ProjectsSectionContent: FC = () => {
   return (
@@ -18,7 +19,12 @@ const ProjectsSectionContent: FC = () => {
             <SectionTitle text='Кейси' />
             <AnimatedSectionSubtitle text='Проекти 2022-2024 років' />
           </TextWrap>
-          <GlowingLink width={200} title='Більше робіт' isSubduedLighting />
+          <GlowingLink
+            width={200}
+            title='Більше робіт'
+            href={PagePaths.projects}
+            isSubduedLighting
+          />
         </ContentWrap>
       </GeneralContainer>
     </Container>
