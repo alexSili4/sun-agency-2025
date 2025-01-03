@@ -13,6 +13,7 @@
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
     "@splinetool/react-spline": "^4.0.0",
+    "gsap": "^3.12.5",
     "hamburger-react": "^2.5.1",
     "modern-normalize": "^2.0.0",
     "motion": "^11.15.0",

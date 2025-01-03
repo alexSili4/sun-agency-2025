@@ -13,18 +13,35 @@ const DonationSection: FC = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: sectionRef,
-    offset: ['550px', 'end center'],
+    offset: ['start end', 'end start'],
   });
 
   const scrollPercentage = useTransform(scrollYProgress, [0, 1], [0, 100]);
 
-  const firstOpacity = useTransform(scrollPercentage, [0, 33, 66], [1, 0, 0]);
+  const firstOpacity = useTransform(
+    scrollPercentage,
+    [
+      0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90,
+      95, 100,
+    ],
+    [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0]
+  );
   const secondOpacity = useTransform(
     scrollPercentage,
-    [33, 66, 100],
-    [0, 1, 0]
+    [
+      0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90,
+      95, 100,
+    ],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0]
   );
-  const thirdOpacity = useTransform(scrollPercentage, [66, 100], [0, 1]);
+  const thirdOpacity = useTransform(
+    scrollPercentage,
+    [
+      0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90,
+      95, 100,
+    ],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1]
+  );
 
   const onScrollBtnClick = (e: BtnClickEvent) => {
     makeBlur(e.currentTarget);

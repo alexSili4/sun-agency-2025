@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 import { Link } from 'react-router-dom';
-import { IStyledProps } from './GlowingContactsLink.types';
+import { IStyledProps } from './GlowingLink.types';
 
 export const StyledLink = styled(Link)<IStyledProps>`
   position: relative;

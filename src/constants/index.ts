@@ -5,3 +5,4 @@ export { default as animations } from './animations';
 export { default as Links } from './links';
 export { default as Symbols } from './symbols';
 export { default as statistics } from './statistics';
+export { default as ClassNames } from './classNames';

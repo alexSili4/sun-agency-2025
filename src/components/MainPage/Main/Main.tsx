@@ -5,11 +5,11 @@ import ProjectsSection from '@MainPageComponents/ProjectsSection';
 
 const Main: FC = () => {
   return (
-    <div>
+    <>
       <HeroSection />
       <DonationSection />
       <ProjectsSection />
-    </div>
+    </>
   );
 };
 
