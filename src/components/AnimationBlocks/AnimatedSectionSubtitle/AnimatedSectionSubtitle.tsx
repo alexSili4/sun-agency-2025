@@ -6,10 +6,14 @@ import { Subtitle, SubtitlePart } from './AnimatedSectionSubtitle.styled';
 import { useInView } from 'motion/react';
 
 const AnimatedSectionSubtitle: FC<IProps> = ({ text }) => {
-  const subtitleRef = useRef(null);
-  const isInView = useInView(subtitleRef, { once: true, margin: '-300px' });
+  const subtitleRef = useRef<HTMLHeadingElement>(null);
+  const isInView = useInView(subtitleRef, {
+    once: true,
+    margin: '-300px',
+  });
   const subtitleParts = text.split(Symbols.space);
   const lastIndex = subtitleParts.length - 1;
+  const animate = isInView ? 'visible' : 'hidden';
 
   const subtitleVariants = {
     hidden: {},
@@ -36,7 +40,7 @@ const AnimatedSectionSubtitle: FC<IProps> = ({ text }) => {
     <Subtitle
       variants={subtitleVariants}
       initial='hidden'
-      animate={isInView ? 'visible' : 'hidden'}
+      animate={animate}
       ref={subtitleRef}
     >
       {subtitleParts.map((part, currentIndex) => {

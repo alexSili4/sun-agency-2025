@@ -1,36 +1,24 @@
 import { FC } from 'react';
 import { Section } from './ProjectsSection.styled';
 import ProjectsSectionContent from '@MainPageComponents/ProjectsSectionContent';
-// import gsap from 'gsap';
-// import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { IProps } from './ProjectsSection.types';
 
-const ProjectsSection: FC = () => {
-  // gsap.registerPlugin(ScrollTrigger);
-
-  // useLayoutEffect(() => {
-  //   const tl = gsap.timeline({
-  //     scrollTrigger: {
-  //       trigger: `.qwerty`,
-  //       start: 'top center',
-  //       end: 'bottom bottom',
-  //       scrub: true,
-  //       markers: true,
-  //       // pin: true,
-  //     },
-  //   });
-
-  //   tl.fromTo(
-  //     `.${ClassNames.projects}`,
-  //     {
-  //       y: 0,
-  //     },
-  //     { y: -1000 }
-  //   );
-  // }, []);
-
+const ProjectsSection: FC<IProps> = ({
+  projectsSectionGradientRef,
+  shouldShowGradient,
+  projectsListContainerRef,
+  projectsListContainerInView,
+  servicesSectionInView,
+}) => {
   return (
     <Section>
-      <ProjectsSectionContent />
+      <ProjectsSectionContent
+        shouldShowGradient={shouldShowGradient}
+        projectsSectionGradientRef={projectsSectionGradientRef}
+        projectsListContainerRef={projectsListContainerRef}
+        projectsListContainerInView={projectsListContainerInView}
+        servicesSectionInView={servicesSectionInView}
+      />
     </Section>
   );
 };

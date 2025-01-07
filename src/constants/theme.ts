@@ -29,6 +29,7 @@ interface ITheme {
   zIndex: {
     menuBtn: number;
     contactsModalWin: number;
+    projectsContainer: number;
   };
   transitionDurationAndFunc: string;
   spacing: (value?: number) => string;
@@ -58,6 +59,7 @@ const theme: ITheme = {
   },
   zIndex: {
     menuBtn: 10,
+    projectsContainer: 10,
     contactsModalWin: 100,
   },
   // shadows: {  },

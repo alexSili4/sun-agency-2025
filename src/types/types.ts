@@ -23,13 +23,16 @@ export type OnBtnClickFunc = (e: BtnClickEvent) => void;
 
 export type SetBooleanFunc = (data: boolean) => void;
 
+// refs
 export type RefFunc = (node?: Element | null | undefined) => void;
+
+export type RefDivObject = RefObject<HTMLDivElement>;
+
+export type RefListObject = RefObject<HTMLUListElement>;
 
 // other
 export type ElementOrNull = Element | null;
 
 export type Strings = string[];
-
-export type RefDivObject = RefObject<HTMLDivElement>;
 
 export type MotionValueNumber = MotionValue<number>;

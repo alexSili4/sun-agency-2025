@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 import { motion } from 'framer-motion';
 
 export const Subtitle = styled(motion.h3)`
-  overflow: hidden;
+   overflow: hidden;
 `;
 
 export const SubtitlePart = styled(motion.span)`
