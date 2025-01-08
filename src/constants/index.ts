@@ -7,3 +7,5 @@ export { default as Symbols } from './symbols';
 export { default as statistics } from './statistics';
 export { default as ClassNames } from './classNames';
 export { default as projects } from './projects';
+export { default as Scenes } from './scenes';
+export { default as services } from './services';

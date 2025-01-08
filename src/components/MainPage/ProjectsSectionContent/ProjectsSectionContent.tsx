@@ -1,21 +1,15 @@
 import { FC } from 'react';
 import SectionTitle from '@GeneralComponents/SectionTitle';
 import AnimatedSectionSubtitle from '@AnimationBlocks/AnimatedSectionSubtitle';
-import {
-  Container,
-  TextWrap,
-  ContentWrap,
-  SectionGradient,
-} from './ProjectsSectionContent.styled';
+import { Container, TextWrap } from './ProjectsSectionContent.styled';
 import GlowingLink from '@GeneralComponents/GlowingLink';
 import GeneralContainer from '@GeneralComponents/GeneralContainer';
 import { PagePaths } from '@/constants';
-import ProjectsList from '@MainPageComponents/ProjectsList';
 import { projects } from '@/constants';
-// TODO fix img
-import sectionGradient from '@/images/projects/section-gradient.png';
 import { IProps } from './ProjectsSectionContent.types';
-import SmoothFadeInElement from '@AnimationBlocks/SmoothFadeInElement';
+import AnimatedProjectsList from '@AnimationBlocks/AnimatedProjectsList';
+import ProjectsSectionContentWrap from '@MainPageComponents/ProjectsSectionContentWrap';
+import AnimatedProjectsSectionGradient from '@AnimationBlocks/AnimatedProjectsSectionGradient';
 
 const ProjectsSectionContent: FC<IProps> = ({
   shouldShowGradient,
@@ -27,16 +21,13 @@ const ProjectsSectionContent: FC<IProps> = ({
   return (
     <>
       <Container>
-        <SmoothFadeInElement
-          shouldShow={shouldShowGradient}
-          elementRef={projectsSectionGradientRef}
-          nextElementInView={servicesSectionInView}
-          isPositionAbsolute
-        >
-          <SectionGradient src={sectionGradient} />
-        </SmoothFadeInElement>
-        <GeneralContainer isFullHeight>
-          <ContentWrap>
+        <GeneralContainer isFullHeight isPositionRelative>
+          <AnimatedProjectsSectionGradient
+            projectsSectionGradientRef={projectsSectionGradientRef}
+            servicesSectionInView={servicesSectionInView}
+            shouldShowGradient={shouldShowGradient}
+          />
+          <ProjectsSectionContentWrap>
             <TextWrap>
               <SectionTitle text='Кейси' />
               <AnimatedSectionSubtitle text='Проекти 2022-2024 років' />
@@ -47,20 +38,16 @@ const ProjectsSectionContent: FC<IProps> = ({
               href={PagePaths.projects}
               isSubduedLighting
             />
-          </ContentWrap>
+          </ProjectsSectionContentWrap>
         </GeneralContainer>
       </Container>
       <GeneralContainer>
-        <SmoothFadeInElement
-          isPositionAbsolute={false}
-          elementRef={projectsListContainerRef}
-          shouldShow={projectsListContainerInView}
-          nextElementInView={servicesSectionInView}
-        >
-          <ContentWrap isProjectsListWrap>
-            <ProjectsList projects={projects} />
-          </ContentWrap>
-        </SmoothFadeInElement>
+        <AnimatedProjectsList
+          projects={projects}
+          projectsListContainerInView={projectsListContainerInView}
+          projectsListContainerRef={projectsListContainerRef}
+          servicesSectionInView={servicesSectionInView}
+        />
       </GeneralContainer>
     </>
   );

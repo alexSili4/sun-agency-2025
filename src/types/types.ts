@@ -36,3 +36,5 @@ export type ElementOrNull = Element | null;
 export type Strings = string[];
 
 export type MotionValueNumber = MotionValue<number>;
+
+export type StringOrNull = string | null;

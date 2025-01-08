@@ -1,8 +1,14 @@
 import { FC } from 'react';
-import { IProps } from './TagsList.types';
-import { List, Container, ListItem, Marker, Tag } from './TagsList.styled';
+import { IProps } from './ProjectCardTagsList.types';
+import {
+  List,
+  Container,
+  ListItem,
+  Marker,
+  Tag,
+} from './ProjectCardTagsList.styled';
 
-const TagsList: FC<IProps> = ({ tags }) => {
+const ProjectCardTagsList: FC<IProps> = ({ tags }) => {
   return (
     <List>
       {tags.map((tag, index) => (
@@ -17,4 +23,4 @@ const TagsList: FC<IProps> = ({ tags }) => {
   );
 };
 
-export default TagsList;
+export default ProjectCardTagsList;

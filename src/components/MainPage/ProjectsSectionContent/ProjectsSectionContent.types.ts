@@ -7,7 +7,3 @@ export interface IProps {
   projectsListContainerInView: boolean;
   servicesSectionInView: boolean;
 }
-
-export interface IStyledContentWrapProps {
-  isProjectsListWrap?: boolean;
-}

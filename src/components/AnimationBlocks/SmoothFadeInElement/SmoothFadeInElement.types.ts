@@ -7,8 +7,12 @@ export interface IProps {
   elementRef: RefDivObject;
   isPositionAbsolute: boolean;
   nextElementInView: boolean;
+  bottom?: string;
+  left?: string;
 }
 
 export interface IStyledContainerProps {
   isPositionAbsolute: boolean;
+  bottom?: string;
+  left?: string;
 }

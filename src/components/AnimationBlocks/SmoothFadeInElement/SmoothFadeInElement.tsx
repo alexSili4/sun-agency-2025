@@ -6,8 +6,10 @@ const SmoothFadeInElement: FC<IProps> = ({
   children,
   shouldShow,
   elementRef,
-  isPositionAbsolute,
   nextElementInView,
+  isPositionAbsolute,
+  bottom,
+  left,
 }) => {
   const animate = shouldShow ? 'visible' : 'hidden';
   const transition = {
@@ -22,7 +24,7 @@ const SmoothFadeInElement: FC<IProps> = ({
 
   const elementVariants = {
     hidden: {
-      y: nextElementInView ? -50 : 50,
+      y: nextElementInView ? -200 : 200,
       opacity: 0,
       transition,
     },
@@ -40,6 +42,8 @@ const SmoothFadeInElement: FC<IProps> = ({
       initial='hidden'
       animate={animate}
       isPositionAbsolute={isPositionAbsolute}
+      bottom={bottom}
+      left={left}
     >
       <ElementWrap variants={elementVariants}>{children}</ElementWrap>
     </Container>

@@ -1,24 +1,18 @@
-import { FC, useRef } from 'react';
+import { FC } from 'react';
 import HeroSection from '@MainPageComponents/HeroSection';
 import DonationSection from '@MainPageComponents/DonationSection';
 import ProjectsSection from '@MainPageComponents/ProjectsSection';
 import ServicesSection from '@MainPageComponents/ServicesSection';
-import { useInView } from 'motion/react';
+import { IProps } from './Main.types';
 
-const Main: FC = () => {
-  const projectsListContainerRef = useRef<HTMLDivElement>(null);
-  const projectsSectionGradientRef = useRef<HTMLDivElement>(null);
-  const servicesSectionRef = useRef<HTMLDivElement>(null);
-  const projectsSectionGradientInView = useInView(projectsSectionGradientRef, {
-    margin: '-300px',
-  });
-  const projectsListContainerInView = useInView(projectsListContainerRef, {
-    margin: '-300px',
-  });
-  const servicesSectionInView = useInView(servicesSectionRef);
-  const shouldShowGradient =
-    projectsSectionGradientInView && !servicesSectionInView;
-
+const Main: FC<IProps> = ({
+  projectsSectionGradientRef,
+  shouldShowGradient,
+  projectsListContainerRef,
+  projectsListContainerInView,
+  servicesSectionInView,
+  servicesSectionRef,
+}) => {
   return (
     <>
       <HeroSection />

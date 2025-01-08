@@ -6,4 +6,9 @@ export interface IProps {
   name: string;
   tags: Strings;
   year: number;
+  isNewProject?: boolean;
+}
+
+export interface IStyledProps {
+  isNewProject: boolean;
 }

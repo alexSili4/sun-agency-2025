@@ -1,8 +1,10 @@
 import { FC } from 'react';
 import { IProps } from './ProjectsList.types';
 import ProjectCard from '@MainPageComponents/ProjectCard';
+import newProject from '@/images/projects/new-project.png';
 import { List, ListItem } from './ProjectsList.styled';
 import { getProjectPath } from '@/utils';
+import { PagePaths } from '@/constants';
 
 const ProjectsList: FC<IProps> = ({ projects }) => {
   return (
@@ -22,6 +24,16 @@ const ProjectsList: FC<IProps> = ({ projects }) => {
           </ListItem>
         );
       })}
+      <ListItem>
+        <ProjectCard
+          img={newProject}
+          name={'У вас є проект?'}
+          projectPath={PagePaths.contacts}
+          tags={['співпраця']}
+          year={2024}
+          isNewProject
+        />
+      </ListItem>
     </List>
   );
 };

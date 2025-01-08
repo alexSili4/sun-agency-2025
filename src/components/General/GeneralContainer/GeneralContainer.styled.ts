@@ -2,6 +2,7 @@ import styled from '@emotion/styled';
 import { IStyledContainerProps } from './GeneralContainer.types';
 
 export const Container = styled.div<IStyledContainerProps>`
+  position: ${({ isPositionRelative }) => isPositionRelative && 'relative'};
   width: ${({ theme: { containerWidth, padding } }) =>
     containerWidth.desktop + padding.container * 2}px;
   height: ${({ isFullHeight }) => isFullHeight && '100%'};
