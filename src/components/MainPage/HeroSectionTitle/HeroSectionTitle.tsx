@@ -7,7 +7,7 @@ import {
   TitlePartContainer,
 } from './HeroSectionTitle.styled';
 
-const HeroShimmerTitle: FC = () => {
+const HeroSectionTitle: FC = () => {
   const firstPart = 'Cтворюємо надійні';
   const secondPart = 'e-commerce рішення, ';
   const secondPartAccent = 'ефективні';
@@ -100,4 +100,4 @@ const HeroShimmerTitle: FC = () => {
   );
 };
 
-export default HeroShimmerTitle;
+export default HeroSectionTitle;

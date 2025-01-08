@@ -4,6 +4,7 @@ import DonationSection from '@MainPageComponents/DonationSection';
 import ProjectsSection from '@MainPageComponents/ProjectsSection';
 import ServicesSection from '@MainPageComponents/ServicesSection';
 import { IProps } from './Main.types';
+import ClientsSection from '@MainPageComponents/ClientsSection';
 
 const Main: FC<IProps> = ({
   projectsSectionGradientRef,
@@ -25,6 +26,7 @@ const Main: FC<IProps> = ({
         servicesSectionInView={servicesSectionInView}
       />
       <ServicesSection servicesSectionRef={servicesSectionRef} />
+      <ClientsSection />
     </>
   );
 };

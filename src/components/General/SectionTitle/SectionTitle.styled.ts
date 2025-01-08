@@ -8,5 +8,6 @@ export const Title = styled.h2<IStyledProps>`
   font-size: 16px;
   font-weight: 400;
   line-height: 1.4;
+  text-align: ${({ isCenter }) => (isCenter ? 'center' : 'start')};
   transform: ${({ isHidden }) => isHidden && 'scale(0)'};
 `;
