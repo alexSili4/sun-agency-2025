@@ -8,7 +8,7 @@ import {
 export interface IProps {
   currentLang: string;
   onChange: OnInputChangeFunc;
-  setModalWin: Func;
+  setModalWinState: Func;
   showModalWin: boolean;
   backgroundColor: string;
   onClick: OnAnchorClickFunc;

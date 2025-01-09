@@ -3,7 +3,7 @@ import { IProps } from './AnimatedSectionSubtitle.types';
 import { Symbols } from '@/constants';
 import { getIsLastIndex } from '@/utils';
 import { Subtitle, SubtitlePart } from './AnimatedSectionSubtitle.styled';
-import { useInView } from 'motion/react';
+import { useInView } from 'framer-motion';
 
 const AnimatedSectionSubtitle: FC<IProps> = ({ text }) => {
   const subtitleRef = useRef<HTMLHeadingElement>(null);

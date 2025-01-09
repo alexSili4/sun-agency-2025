@@ -61,7 +61,7 @@ const Menu: FC<IProps> = ({ currentLang, onChange }) => {
         currentLang={currentLang}
         onChange={onChange}
         onClick={onPageLinkClick}
-        setModalWin={toggleShowMenuModalWin}
+        setModalWinState={toggleShowMenuModalWin}
         showModalWin={showMenuModalWin}
         backgroundColor={theme.colors.darkBg}
         changeShouldHideMenuBtn={changeShouldHideMenuBtn}

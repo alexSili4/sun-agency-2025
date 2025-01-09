@@ -4,8 +4,11 @@ export interface IProps {
   children: ReactNode;
   borderRadius: string;
   zIndex: number;
-  shouldHide?: boolean;
   isSubduedLighting?: boolean;
+  top?: string;
+  right?: string;
+  isPositionAbsolute?: boolean;
+  shouldHide?: boolean;
 }
 
 export interface IStyledBackdropProps {
@@ -15,5 +18,8 @@ export interface IStyledBackdropProps {
 
 export interface IStyledContainerProps {
   zIndex: number;
+  top: string;
+  right: string;
+  isPositionAbsolute: boolean;
   shouldHide: boolean;
 }

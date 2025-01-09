@@ -3,15 +3,20 @@ import {
   Section,
   Container,
   TextWrap,
-  ClientsSliderWrap,
+  ClientsMarqueeWrap,
   Background,
 } from './ClientsSection.styled';
 import AnimatedMultiLineSubtitle from '@AnimationBlocks/AnimatedMultiLineSubtitle';
-import SectionTitle from '@/components/General/SectionTitle';
-import { PagePaths } from '@/constants';
+import SectionTitle from '@GeneralComponents/SectionTitle';
+import { PagePaths, clients } from '@/constants';
 import GlowingLink from '@GeneralComponents/GlowingLink';
+import ClientsMarqueeContainer from '@MainPageComponents/ClientsMarqueeContainer';
+import { splitArray } from '@/utils';
 
 const ClientsSection: FC = () => {
+  const { firstItem: firstClientsItem, secondItem: secondClientsItem } =
+    splitArray(clients);
+
   return (
     <Section>
       <Background>
@@ -25,15 +30,18 @@ const ClientsSection: FC = () => {
               ]}
             />
           </TextWrap>
-          <ClientsSliderWrap>
-            {/* TODO add clients slider */}
+          <ClientsMarqueeWrap>
+            <ClientsMarqueeContainer
+              topClientsLine={firstClientsItem}
+              bottomClientsLine={secondClientsItem}
+            />
             <GlowingLink
               width={200}
               title='Всі клієнти'
               href={PagePaths.clients}
               isSubduedLighting
             />
-          </ClientsSliderWrap>
+          </ClientsMarqueeWrap>
         </Container>
       </Background>
     </Section>

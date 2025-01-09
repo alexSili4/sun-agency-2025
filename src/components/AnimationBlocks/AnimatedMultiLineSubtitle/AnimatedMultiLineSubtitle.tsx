@@ -5,7 +5,7 @@ import {
   LineContainer,
 } from './AnimatedMultiLineSubtitle.styled';
 import { IProps } from './AnimatedMultiLineSubtitle.types';
-import { useInView } from 'motion/react';
+import { useInView } from 'framer-motion';
 
 const AnimatedMultiLineSubtitle: FC<IProps> = ({ lines }) => {
   const subtitleRef = useRef<HTMLHeadingElement>(null);
@@ -37,7 +37,7 @@ const AnimatedMultiLineSubtitle: FC<IProps> = ({ lines }) => {
 
   return (
     <Title ref={subtitleRef}>
-      {lines.map((line) => {
+      {lines.map((line, index) => {
         const symbols = Array.from(line);
 
         return (
@@ -45,6 +45,7 @@ const AnimatedMultiLineSubtitle: FC<IProps> = ({ lines }) => {
             variants={lineVariants}
             initial='hidden'
             animate={animate}
+            key={index}
           >
             {symbols.map((symbol, index) => (
               <Symbol variants={symbolVariants} key={index}>

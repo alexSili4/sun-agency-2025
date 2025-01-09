@@ -1,4 +1,15 @@
-import { ElementOrNull, OnDivClickFunc, RefDivObject, RefFunc } from './types';
+import {
+  ElementOrNull,
+  Func,
+  OnDivClickFunc,
+  RefDivObject,
+  RefFunc,
+} from './types';
+
+export interface IUseModalWinProps {
+  setModalWinState: Func;
+  showModalWin: boolean;
+}
 
 export interface IUseModalWin {
   modalRoot: ElementOrNull;

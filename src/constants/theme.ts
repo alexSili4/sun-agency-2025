@@ -25,8 +25,10 @@ interface ITheme {
     menuBtn: number;
     socialLink: number;
     donationLink: number;
+    closeClientDetailsBtn: number;
   };
   zIndex: {
+    animatedModalWin: number;
     menuBtn: number;
     contactsModalWin: number;
   };
@@ -59,9 +61,15 @@ const theme: ITheme = {
   zIndex: {
     menuBtn: 10,
     contactsModalWin: 100,
+    animatedModalWin: 100000,
   },
   // shadows: {  },
-  iconSizes: { donationLink: 7, socialLink: 14, menuBtn: 17 },
+  iconSizes: {
+    donationLink: 7,
+    socialLink: 14,
+    closeClientDetailsBtn: 14,
+    menuBtn: 17,
+  },
   transitionDurationAndFunc: '400ms cubic-bezier(0.4, 0, 0.2, 1)',
   spacing: (value = 1) => `${value * 4}px`,
 };

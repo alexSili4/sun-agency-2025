@@ -1,4 +1,4 @@
-import { MotionValue } from 'motion/react';
+import { MotionValue } from 'framer-motion';
 import { ChangeEvent, MouseEvent, RefObject } from 'react';
 
 // events
@@ -35,6 +35,10 @@ export type ElementOrNull = Element | null;
 
 export type Strings = string[];
 
+export type AnyElements = any[];
+
 export type MotionValueNumber = MotionValue<number>;
 
 export type StringOrNull = string | null;
+
+export type MarqueeDirection = 'right' | 'left';

@@ -3,7 +3,7 @@ import {
   IStyledImageProps,
   IStyledStatisticsItemProps,
 } from './DonationSectionStatistics.types';
-import { motion } from 'motion/react';
+import { motion } from 'framer-motion';
 
 export const List = styled.ul`
   position: absolute;

@@ -9,3 +9,4 @@ export { default as ClassNames } from './classNames';
 export { default as projects } from './projects';
 export { default as Scenes } from './scenes';
 export { default as services } from './services';
+export { default as clients } from './clients';

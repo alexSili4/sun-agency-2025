@@ -1,6 +1,6 @@
 import Main from '@MainPageComponents/Main';
 import { FC, useRef } from 'react';
-import { useInView } from 'motion/react';
+import { useInView } from 'framer-motion';
 
 const MainPage: FC = () => {
   const projectsListContainerRef = useRef<HTMLDivElement>(null);

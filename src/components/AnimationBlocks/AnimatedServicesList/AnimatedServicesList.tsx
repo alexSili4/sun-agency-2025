@@ -1,4 +1,4 @@
-import { useInView } from 'motion/react';
+import { useInView } from 'framer-motion';
 import { FC, useRef } from 'react';
 import { IProps } from './AnimatedServicesList.types';
 import ServiceItem from '@MainPageComponents/ServiceItem';

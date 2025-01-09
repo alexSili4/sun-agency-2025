@@ -24,7 +24,7 @@ export const TextWrap = styled.div`
   gap: ${({ theme }) => theme.spacing(3)};
 `;
 
-export const ClientsSliderWrap = styled.div`
+export const ClientsMarqueeWrap = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;

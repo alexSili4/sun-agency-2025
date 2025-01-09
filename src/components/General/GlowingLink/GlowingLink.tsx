@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import GlowingContainer from '../GlowingContainer';
+import GlowingContainer from '@GeneralComponents/GlowingContainer';
 import { LinkIcon, LinkTitle, StyledLink } from './GlowingLink.styled';
 import { IProps } from './GlowingLink.types';
 

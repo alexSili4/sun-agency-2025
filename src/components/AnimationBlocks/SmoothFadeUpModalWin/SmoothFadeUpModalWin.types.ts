@@ -1,4 +1,4 @@
-import { Func, SetBooleanFunc } from '@/types/types';
+import { OnDivClickFunc, SetBooleanFunc } from '@/types/types';
 import { ReactNode } from 'react';
 
 export interface IProps {
@@ -6,7 +6,7 @@ export interface IProps {
   children: ReactNode;
   zIndex?: number;
   duration?: number;
-  setModalWin: Func;
+  hideModalWin: OnDivClickFunc;
   changeShouldHideMenuBtn?: SetBooleanFunc;
 }
 

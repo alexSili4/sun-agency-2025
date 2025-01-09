@@ -7,7 +7,7 @@ import DonationSectionSpline from '@MainPageComponents/DonationSectionSpline';
 import SectionTitle from '@GeneralComponents/SectionTitle';
 import DonationSectionContent from '@MainPageComponents/DonationSectionContent';
 import DonationSectionStatistics from '@MainPageComponents/DonationSectionStatistics';
-import { useScroll, useTransform } from 'motion/react';
+import { useScroll, useTransform } from 'framer-motion';
 
 const DonationSection: FC = () => {
   const sectionRef = useRef<HTMLDivElement>(null);

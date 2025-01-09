@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { motion } from 'motion/react';
+import { motion } from 'framer-motion';
 
 export const List = styled(motion.ul)``;
 

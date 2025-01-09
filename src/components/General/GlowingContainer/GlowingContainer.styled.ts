@@ -6,7 +6,10 @@ import {
 import { animations } from '@/constants';
 
 export const Container = styled.div<IStyledContainerProps>`
-  position: relative;
+  position: ${({ isPositionAbsolute }) =>
+    isPositionAbsolute ? 'absolute' : 'relative'};
+  top: ${({ top }) => top};
+  right: ${({ right }) => right};
   z-index: ${({ zIndex }) => zIndex};
   pointer-events: ${({ shouldHide }) => (shouldHide ? 'none' : 'all')};
 `;
