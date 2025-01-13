@@ -9,9 +9,3 @@ export const Container = styled.div`
   pointer-events: none;
   overflow: hidden;
 `;
-
-export const TextWrap = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: ${({ theme }) => theme.spacing(4)};
-`;

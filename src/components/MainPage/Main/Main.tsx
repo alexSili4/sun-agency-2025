@@ -5,28 +5,36 @@ import ProjectsSection from '@MainPageComponents/ProjectsSection';
 import ServicesSection from '@MainPageComponents/ServicesSection';
 import { IProps } from './Main.types';
 import ClientsSection from '@MainPageComponents/ClientsSection';
+import ReviewsSection from '@MainPageComponents/ReviewsSection';
 
 const Main: FC<IProps> = ({
-  projectsSectionGradientRef,
-  shouldShowGradient,
+  projectsSectionBgRef,
+  shouldShowProjectsSectionBg,
+  shouldShowClientsSectionBg,
   projectsListContainerRef,
   projectsListContainerInView,
   servicesSectionInView,
   servicesSectionRef,
+  reviewsSectionRef,
+  clientsSectionBgRef,
 }) => {
   return (
     <>
       <HeroSection />
       <DonationSection />
       <ProjectsSection
-        projectsSectionGradientRef={projectsSectionGradientRef}
-        shouldShowGradient={shouldShowGradient}
-        projectsListContainerRef={projectsListContainerRef}
-        projectsListContainerInView={projectsListContainerInView}
-        servicesSectionInView={servicesSectionInView}
+        sectionBgRef={projectsSectionBgRef}
+        shouldShowSectionBg={shouldShowProjectsSectionBg}
+        containerRef={projectsListContainerRef}
+        containerInView={projectsListContainerInView}
+        inView={servicesSectionInView}
       />
       <ServicesSection servicesSectionRef={servicesSectionRef} />
-      <ClientsSection />
+      <ClientsSection
+        shouldShowSectionBg={shouldShowClientsSectionBg}
+        sectionBgRef={clientsSectionBgRef}
+      />
+      <ReviewsSection sectionRef={reviewsSectionRef} />
     </>
   );
 };

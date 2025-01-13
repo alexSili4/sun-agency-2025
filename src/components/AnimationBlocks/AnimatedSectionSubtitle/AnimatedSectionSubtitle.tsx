@@ -1,44 +1,23 @@
 import { FC, useRef } from 'react';
 import { IProps } from './AnimatedSectionSubtitle.types';
-import { Symbols } from '@/constants';
+import { framerMotionVariants, Symbols } from '@/constants';
 import { getIsLastIndex } from '@/utils';
 import { Subtitle, SubtitlePart } from './AnimatedSectionSubtitle.styled';
 import { useInView } from 'framer-motion';
 
 const AnimatedSectionSubtitle: FC<IProps> = ({ text }) => {
   const subtitleRef = useRef<HTMLHeadingElement>(null);
-  const isInView = useInView(subtitleRef, {
+  const inView = useInView(subtitleRef, {
     once: true,
     margin: '-300px',
   });
   const subtitleParts = text.split(Symbols.space);
   const lastIndex = subtitleParts.length - 1;
-  const animate = isInView ? 'visible' : 'hidden';
-
-  const subtitleVariants = {
-    hidden: {},
-    visible: {
-      transition: {
-        staggerChildren: 0.2,
-      },
-    },
-  };
-
-  const subtitlePartsVariants = {
-    hidden: { y: 50, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.6,
-        ease: [0.25, 0.1, 0.25, 1],
-      },
-    },
-  };
+  const animate = inView ? 'visible' : 'hidden';
 
   return (
     <Subtitle
-      variants={subtitleVariants}
+      variants={framerMotionVariants.slowAnimationContainerVariants}
       initial='hidden'
       animate={animate}
       ref={subtitleRef}
@@ -48,7 +27,10 @@ const AnimatedSectionSubtitle: FC<IProps> = ({ text }) => {
         const text = isLastIndex ? part : `${part} `;
 
         return (
-          <SubtitlePart variants={subtitlePartsVariants} key={currentIndex}>
+          <SubtitlePart
+            variants={framerMotionVariants.smallMovementAnimationVariants}
+            key={currentIndex}
+          >
             {text}
           </SubtitlePart>
         );

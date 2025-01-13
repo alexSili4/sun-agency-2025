@@ -8,11 +8,10 @@ import {
   Year,
   ImgWrap,
   StyledLink,
-  StyledSpline,
   StyledSplineContainer,
 } from './ProjectCard.styled';
 import { IProps } from './ProjectCard.types';
-import { PagePaths, Scenes } from '@/constants';
+import { PagePaths } from '@/constants';
 import ProjectCardTagsList from '@MainPageComponents/ProjectCardTagsList';
 
 const ProjectCard: FC<IProps> = ({
@@ -30,7 +29,9 @@ const ProjectCard: FC<IProps> = ({
         <ProjectCardTagsList tags={tags} />
         {isNewProject && (
           <StyledSplineContainer>
-            <StyledSpline scene={Scenes.newProject} />
+            {/* TODO fix */}
+            <p>StyledSpline</p>
+            {/* <StyledSpline scene={Scenes.newProject} /> */}
           </StyledSplineContainer>
         )}
         <Name isNewProject={isNewProject}>{name}</Name>

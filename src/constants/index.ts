@@ -10,3 +10,5 @@ export { default as projects } from './projects';
 export { default as Scenes } from './scenes';
 export { default as services } from './services';
 export { default as clients } from './clients';
+export { default as framerMotionVariants } from './framerMotionVariants';
+export { default as reviews } from './reviews';

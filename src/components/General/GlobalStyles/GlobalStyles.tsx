@@ -1,6 +1,8 @@
+import 'modern-normalize';
+import 'swiper/css';
+import 'swiper/css/navigation';
 import { FC } from 'react';
 import { Global, css } from '@emotion/react';
-import 'modern-normalize';
 import { theme } from '@/constants';
 import {
   interRegular,

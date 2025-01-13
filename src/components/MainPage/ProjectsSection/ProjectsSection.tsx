@@ -4,20 +4,20 @@ import ProjectsSectionContent from '@MainPageComponents/ProjectsSectionContent';
 import { IProps } from './ProjectsSection.types';
 
 const ProjectsSection: FC<IProps> = ({
-  projectsSectionGradientRef,
-  shouldShowGradient,
-  projectsListContainerRef,
-  projectsListContainerInView,
-  servicesSectionInView,
+  containerInView,
+  containerRef,
+  inView,
+  sectionBgRef,
+  shouldShowSectionBg,
 }) => {
   return (
     <Section>
       <ProjectsSectionContent
-        shouldShowGradient={shouldShowGradient}
-        projectsSectionGradientRef={projectsSectionGradientRef}
-        projectsListContainerRef={projectsListContainerRef}
-        projectsListContainerInView={projectsListContainerInView}
-        servicesSectionInView={servicesSectionInView}
+        shouldShowSectionBg={shouldShowSectionBg}
+        sectionBgRef={sectionBgRef}
+        containerRef={containerRef}
+        containerInView={containerInView}
+        inView={inView}
       />
     </Section>
   );

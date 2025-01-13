@@ -1,6 +1,7 @@
 import { FC } from 'react';
 import { Container, ElementWrap } from './SmoothFadeInElement.styled';
 import { IProps } from './SmoothFadeInElement.types';
+import { framerMotionVariants } from '@/constants';
 
 const SmoothFadeInElement: FC<IProps> = ({
   children,
@@ -12,17 +13,13 @@ const SmoothFadeInElement: FC<IProps> = ({
   left,
 }) => {
   const animate = shouldShow ? 'visible' : 'hidden';
+
   const transition = {
     duration: 0.6,
     ease: [0.25, 0.1, 0.25, 1],
   };
 
-  const containerVariants = {
-    hidden: {},
-    visible: {},
-  };
-
-  const elementVariants = {
+  const reversibleElementVariants = {
     hidden: {
       y: nextElementInView ? -200 : 200,
       opacity: 0,
@@ -38,14 +35,14 @@ const SmoothFadeInElement: FC<IProps> = ({
   return (
     <Container
       ref={elementRef}
-      variants={containerVariants}
+      variants={framerMotionVariants.linearAnimationContainerVariants}
       initial='hidden'
       animate={animate}
       isPositionAbsolute={isPositionAbsolute}
       bottom={bottom}
       left={left}
     >
-      <ElementWrap variants={elementVariants}>{children}</ElementWrap>
+      <ElementWrap variants={reversibleElementVariants}>{children}</ElementWrap>
     </Container>
   );
 };

@@ -5,6 +5,7 @@ export const Section = styled.section`
 `;
 
 export const Background = styled.div`
+  position: relative;
   padding-top: ${({ theme }) => theme.spacing(43)};
   padding-bottom: ${({ theme }) => theme.spacing(18)};
   border-bottom-left-radius: 60px;
@@ -19,6 +20,7 @@ export const Container = styled.div`
 `;
 
 export const TextWrap = styled.div`
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: ${({ theme }) => theme.spacing(3)};

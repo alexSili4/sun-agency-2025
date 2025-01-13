@@ -12,14 +12,20 @@ import { PagePaths, clients } from '@/constants';
 import GlowingLink from '@GeneralComponents/GlowingLink';
 import ClientsMarqueeContainer from '@MainPageComponents/ClientsMarqueeContainer';
 import { splitArray } from '@/utils';
+import { IProps } from './ClientsSection.types';
+import AnimatedClientsSectionBg from '@AnimationBlocks/AnimatedClientsSectionBg';
 
-const ClientsSection: FC = () => {
+const ClientsSection: FC<IProps> = ({ sectionBgRef, shouldShowSectionBg }) => {
   const { firstItem: firstClientsItem, secondItem: secondClientsItem } =
     splitArray(clients);
 
   return (
     <Section>
       <Background>
+        <AnimatedClientsSectionBg
+          sectionBgRef={sectionBgRef}
+          shouldShowSectionBg={shouldShowSectionBg}
+        />
         <Container>
           <TextWrap>
             <SectionTitle text='Клієнти' isCenter />

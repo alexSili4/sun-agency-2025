@@ -15,6 +15,7 @@ const enum PagePaths {
   about = '/about',
   // Контакти
   contacts = '/contacts',
+  notFound = '/not-found',
 }
 
 export default PagePaths;

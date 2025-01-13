@@ -1,10 +1,13 @@
 import { RefDivObject } from '@/types/types';
 
 export interface IProps {
-  projectsSectionGradientRef: RefDivObject;
+  projectsSectionBgRef: RefDivObject;
   servicesSectionRef: RefDivObject;
   projectsListContainerRef: RefDivObject;
-  shouldShowGradient: boolean;
+  shouldShowProjectsSectionBg: boolean;
   projectsListContainerInView: boolean;
   servicesSectionInView: boolean;
+  shouldShowClientsSectionBg: boolean;
+  reviewsSectionRef: RefDivObject;
+  clientsSectionBgRef: RefDivObject;
 }

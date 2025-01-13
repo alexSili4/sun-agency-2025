@@ -2,6 +2,8 @@ import { MotionValue } from 'framer-motion';
 import { ChangeEvent, MouseEvent, RefObject } from 'react';
 
 // events
+export type GlobalUIEvent = globalThis.UIEvent;
+
 export type DivClickEvent = MouseEvent<HTMLDivElement>;
 
 export type BtnClickEvent = MouseEvent<HTMLButtonElement>;

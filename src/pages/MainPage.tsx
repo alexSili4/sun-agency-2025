@@ -4,26 +4,39 @@ import { useInView } from 'framer-motion';
 
 const MainPage: FC = () => {
   const projectsListContainerRef = useRef<HTMLDivElement>(null);
-  const projectsSectionGradientRef = useRef<HTMLDivElement>(null);
+  const projectsSectionBgRef = useRef<HTMLDivElement>(null);
   const servicesSectionRef = useRef<HTMLDivElement>(null);
+  const reviewsSectionRef = useRef<HTMLDivElement>(null);
   const servicesSectionInView = useInView(servicesSectionRef);
-  const projectsSectionGradientInView = useInView(projectsSectionGradientRef, {
+  const projectsSectionBgInView = useInView(projectsSectionBgRef, {
     margin: '-200px',
   });
   const projectsListContainerInView = useInView(projectsListContainerRef, {
     margin: servicesSectionInView ? '-400px' : '-200px',
   });
-  const shouldShowGradient =
-    projectsSectionGradientInView && !servicesSectionInView;
+  const clientsSectionBgRef = useRef<HTMLDivElement>(null);
+  const reviewsSectionInView = useInView(reviewsSectionRef, {
+    margin: '-300px',
+  });
+  const clientsSectionBgInView = useInView(clientsSectionBgRef, {
+    margin: reviewsSectionInView ? '-400px' : '-200px',
+  });
+  const shouldShowProjectsSectionBg =
+    projectsSectionBgInView && !servicesSectionInView;
+  const shouldShowClientsSectionBg =
+    clientsSectionBgInView && !reviewsSectionInView;
 
   return (
     <Main
-      projectsSectionGradientRef={projectsSectionGradientRef}
-      shouldShowGradient={shouldShowGradient}
+      projectsSectionBgRef={projectsSectionBgRef}
+      shouldShowProjectsSectionBg={shouldShowProjectsSectionBg}
       projectsListContainerRef={projectsListContainerRef}
       projectsListContainerInView={projectsListContainerInView}
       servicesSectionInView={servicesSectionInView}
       servicesSectionRef={servicesSectionRef}
+      shouldShowClientsSectionBg={shouldShowClientsSectionBg}
+      reviewsSectionRef={reviewsSectionRef}
+      clientsSectionBgRef={clientsSectionBgRef}
     />
   );
 };

@@ -11,9 +11,3 @@ export const Content = styled.div`
   flex-direction: column;
   gap: ${({ theme }) => theme.spacing(8)};
 `;
-
-export const TextWrap = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: ${({ theme }) => theme.spacing(4)};
-`;

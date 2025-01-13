@@ -12,6 +12,7 @@ const App: FC = () => {
       <Route path={PagePaths.root} element={<SharedLayout />}>
         <Route index element={<MainPage />} />
         <Route path={PagePaths.root} element={<MainPage />} />
+        <Route path={PagePaths.notFound} element={<NotFoundPage />} />
         <Route path='*' element={<NotFoundPage />} />
       </Route>
     </Routes>

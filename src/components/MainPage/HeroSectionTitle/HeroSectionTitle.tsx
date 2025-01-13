@@ -6,6 +6,7 @@ import {
   TitlePart,
   TitlePartContainer,
 } from './HeroSectionTitle.styled';
+import { framerMotionVariants } from '@/constants';
 
 const HeroSectionTitle: FC = () => {
   const firstPart = 'Cтворюємо надійні';
@@ -20,56 +21,44 @@ const HeroSectionTitle: FC = () => {
   const thirdPartSymbols = Array.from(thirdPart);
   const thirdPartAccentSymbols = Array.from(thirdPartAccent);
 
-  const titleVariants = {
-    hidden: {},
-    visible: {
-      transition: {
-        staggerChildren: 0.03,
-      },
-    },
-  };
-
-  const symbolVariants = {
-    hidden: { y: 50, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.6,
-        ease: [0.25, 0.1, 0.25, 1],
-      },
-    },
-  };
-
   return (
     <Title>
       <TitlePartContainer
-        variants={titleVariants}
+        variants={framerMotionVariants.fastAnimationContainerVariants}
         initial='hidden'
         animate='visible'
       >
         <TitlePart>
           {firstPartSymbols.map((symbol, index) => (
-            <Symbol variants={symbolVariants} key={index}>
+            <Symbol
+              variants={framerMotionVariants.smallMovementAnimationVariants}
+              key={index}
+            >
               {symbol}
             </Symbol>
           ))}
         </TitlePart>
       </TitlePartContainer>
       <TitlePartContainer
-        variants={titleVariants}
+        variants={framerMotionVariants.fastAnimationContainerVariants}
         initial='hidden'
         animate='visible'
       >
         <TitlePart>
           {secondPartSymbols.map((symbol, index) => (
-            <Symbol variants={symbolVariants} key={index}>
+            <Symbol
+              variants={framerMotionVariants.smallMovementAnimationVariants}
+              key={index}
+            >
               {symbol}
             </Symbol>
           ))}
           <Accent>
             {secondPartAccentSymbols.map((symbol, index) => (
-              <Symbol variants={symbolVariants} key={index}>
+              <Symbol
+                variants={framerMotionVariants.smallMovementAnimationVariants}
+                key={index}
+              >
                 {symbol}
               </Symbol>
             ))}
@@ -77,20 +66,26 @@ const HeroSectionTitle: FC = () => {
         </TitlePart>
       </TitlePartContainer>
       <TitlePartContainer
-        variants={titleVariants}
+        variants={framerMotionVariants.fastAnimationContainerVariants}
         initial='hidden'
         animate='visible'
       >
         <TitlePart>
           <Accent>
             {thirdPartAccentSymbols.map((symbol, index) => (
-              <Symbol variants={symbolVariants} key={index}>
+              <Symbol
+                variants={framerMotionVariants.smallMovementAnimationVariants}
+                key={index}
+              >
                 {symbol}
               </Symbol>
             ))}
           </Accent>
           {thirdPartSymbols.map((symbol, index) => (
-            <Symbol variants={symbolVariants} key={index}>
+            <Symbol
+              variants={framerMotionVariants.smallMovementAnimationVariants}
+              key={index}
+            >
               {symbol}
             </Symbol>
           ))}

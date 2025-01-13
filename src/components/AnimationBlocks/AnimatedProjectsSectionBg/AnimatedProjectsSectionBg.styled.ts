@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 
-export const SectionGradient = styled.img`
+export const Image = styled.img`
   position: relative;
   width: 2311px;
   max-width: 2311px;

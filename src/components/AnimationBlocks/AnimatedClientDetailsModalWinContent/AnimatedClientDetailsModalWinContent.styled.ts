@@ -29,11 +29,31 @@ export const Container = styled.div`
   background-position: 0 0;
   background-size: 100% 100%;
   background-repeat: no-repeat;
+  padding-right: ${({ theme }) => theme.spacing(3)};
 `;
 
 export const Content = styled.div`
   height: 100%;
   padding: ${({ theme: { spacing } }) =>
-    `${spacing(19)} ${spacing(57)} ${spacing(14)} ${spacing(14)}`};
+    `${spacing(19)} ${spacing(54)} ${spacing(14)} ${spacing(14)}`};
   overflow-y: auto;
+  /* TODO fix */
+  &::-webkit-scrollbar {
+    width: 2px;
+  }
+
+  &::-webkit-scrollbar-track {
+    margin-top: ${({ theme }) => theme.spacing(38)};
+    margin-bottom: ${({ theme }) => theme.spacing(8)};
+    background-color: rgba(255, 255, 255, 0.19);
+    border-radius: 100px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border: 2px solid rgba(255, 245, 211, 0.7);
+    box-shadow: 0px 0px 4px 0px #ffc888;
+    border-radius: 10px;
+    filter: blur(1px);
+    cursor: pointer;
+  }
 `;

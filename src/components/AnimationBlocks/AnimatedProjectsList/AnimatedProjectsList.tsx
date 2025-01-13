@@ -5,17 +5,17 @@ import ProjectsSectionContentWrap from '@MainPageComponents/ProjectsSectionConte
 import { IProps } from './AnimatedProjectsList.types';
 
 const AnimatedProjectsList: FC<IProps> = ({
-  projectsListContainerRef,
-  projectsListContainerInView,
-  servicesSectionInView,
   projects,
+  containerInView,
+  containerRef,
+  inView,
 }) => {
   return (
     <SmoothFadeInElement
       isPositionAbsolute={false}
-      elementRef={projectsListContainerRef}
-      shouldShow={projectsListContainerInView}
-      nextElementInView={servicesSectionInView}
+      elementRef={containerRef}
+      shouldShow={containerInView}
+      nextElementInView={inView}
     >
       <ProjectsSectionContentWrap isProjectsListWrap>
         <ProjectsList projects={projects} />
