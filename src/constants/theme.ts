@@ -26,6 +26,7 @@ interface ITheme {
     socialLink: number;
     donationLink: number;
     closeClientDetailsBtn: number;
+    reviewsSlider: number;
   };
   zIndex: {
     animatedModalWin: number;
@@ -66,6 +67,7 @@ const theme: ITheme = {
   // shadows: {  },
   iconSizes: {
     donationLink: 7,
+    reviewsSlider: 11,
     socialLink: 14,
     closeClientDetailsBtn: 14,
     menuBtn: 17,

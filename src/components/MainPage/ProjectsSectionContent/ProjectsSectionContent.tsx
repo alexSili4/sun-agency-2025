@@ -40,7 +40,7 @@ const ProjectsSectionContent: FC<IProps> = ({
           </ProjectsSectionContentWrap>
         </GeneralContainer>
       </Container>
-      <GeneralContainer>
+      <GeneralContainer isPointerEventsNote>
         <AnimatedProjectsList
           projects={projects}
           containerInView={containerInView}

@@ -6,6 +6,7 @@ export const Container = styled.div`
   flex-direction: column;
   justify-content: space-between;
   gap: ${({ theme }) => theme.spacing(10)};
+  height: 100%;
   padding: ${({ theme: { spacing } }) =>
     `${spacing(18)} ${spacing(8)} ${spacing(5)}`};
   background-image: url(${reviewBg});

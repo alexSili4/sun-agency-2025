@@ -12,3 +12,4 @@ export { default as services } from './services';
 export { default as clients } from './clients';
 export { default as framerMotionVariants } from './framerMotionVariants';
 export { default as reviews } from './reviews';
+export { default as SectionsIds } from './sectionsIds';

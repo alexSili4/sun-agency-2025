@@ -43,4 +43,6 @@ export type MotionValueNumber = MotionValue<number>;
 
 export type StringOrNull = string | null;
 
+export type NumberOrNull = number | null;
+
 export type MarqueeDirection = 'right' | 'left';

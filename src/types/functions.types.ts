@@ -9,3 +9,8 @@ export interface ISplitArray {
   firstItem: AnyElements;
   secondItem: AnyElements;
 }
+
+export interface ISmoothScrollProps {
+  id: string;
+  block?: 'nearest' | 'start' | 'center';
+}

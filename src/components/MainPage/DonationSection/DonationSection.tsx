@@ -2,12 +2,13 @@ import { FC, useRef } from 'react';
 import GeneralContainer from '@GeneralComponents/GeneralContainer';
 import { Section } from './DonationSection.styled';
 import { BtnClickEvent } from '@/types/types';
-import { makeBlur } from '@/utils';
+import { makeBlur, smoothScroll } from '@/utils';
 import DonationSectionSpline from '@MainPageComponents/DonationSectionSpline';
 import SectionTitle from '@GeneralComponents/SectionTitle';
 import DonationSectionContent from '@MainPageComponents/DonationSectionContent';
 import DonationSectionStatistics from '@MainPageComponents/DonationSectionStatistics';
 import { useScroll, useTransform } from 'framer-motion';
+import { SectionsIds } from '@/constants';
 
 const DonationSection: FC = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -46,7 +47,7 @@ const DonationSection: FC = () => {
   const onScrollBtnClick = (e: BtnClickEvent) => {
     makeBlur(e.currentTarget);
 
-    // TODO add action
+    smoothScroll({ id: SectionsIds.projects });
   };
 
   return (

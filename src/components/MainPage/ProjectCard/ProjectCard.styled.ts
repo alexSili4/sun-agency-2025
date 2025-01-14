@@ -11,6 +11,7 @@ export const ContentWrap = styled.div`
   background-position: 0 0;
   background-repeat: no-repeat;
   padding: ${({ theme }) => theme.spacing(3)};
+  pointer-events: all;
 `;
 
 export const ImgWrap = styled.div`
