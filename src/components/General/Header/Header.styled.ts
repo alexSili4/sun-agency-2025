@@ -1,7 +1,13 @@
 import styled from '@emotion/styled';
+import { IStyledHeaderProps } from './Header.types';
 
-export const StyledHeader = styled.header`
-  background-color: ${({ theme }) => theme.colors.darkBg};
+export const StyledHeader = styled.header<IStyledHeaderProps>`
+  position: relative;
+  z-index: ${({ theme }) => theme.zIndex.header};
+  background-color: transparent;
+  transition: background-color ${({ theme }) => theme.transitionDurationAndFunc};
+  pointer-events: ${({ showMenuModalWin }) =>
+    showMenuModalWin ? 'none' : 'all'};
 `;
 
 export const Container = styled.div`

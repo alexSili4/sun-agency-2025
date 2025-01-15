@@ -6,6 +6,7 @@ import ServicesSection from '@MainPageComponents/ServicesSection';
 import { IProps } from './Main.types';
 import ClientsSection from '@MainPageComponents/ClientsSection';
 import ReviewsSection from '@MainPageComponents/ReviewsSection';
+import ParticlesContainer from '@GeneralComponents/ParticlesContainer';
 
 const Main: FC<IProps> = ({
   projectsSectionBgRef,
@@ -20,8 +21,10 @@ const Main: FC<IProps> = ({
 }) => {
   return (
     <>
-      <HeroSection />
-      <DonationSection />
+      <ParticlesContainer>
+        <HeroSection />
+        <DonationSection />
+      </ParticlesContainer>
       <ProjectsSection
         sectionBgRef={projectsSectionBgRef}
         shouldShowSectionBg={shouldShowProjectsSectionBg}

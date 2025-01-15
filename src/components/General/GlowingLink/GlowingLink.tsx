@@ -7,6 +7,7 @@ const GlowingLink: FC<IProps> = ({
   width,
   title,
   href,
+  shouldHide = false,
   isSubduedLighting = false,
 }) => {
   return (
@@ -14,6 +15,7 @@ const GlowingLink: FC<IProps> = ({
       borderRadius='16px'
       zIndex={0}
       isSubduedLighting={isSubduedLighting}
+      shouldHide={shouldHide}
     >
       <StyledLink to={href} width={width}>
         <LinkIcon></LinkIcon>

@@ -1,6 +1,6 @@
-import { OnInputChangeFunc } from '@/types/types';
+import { OnBtnClickFunc } from '@/types/types';
 
 export interface IProps {
-  currentLang: string;
-  onChange: OnInputChangeFunc;
+  showMenuModalWin: boolean;
+  shouldHideMenuBtn: boolean;onMenuBtnClick: OnBtnClickFunc;
 }

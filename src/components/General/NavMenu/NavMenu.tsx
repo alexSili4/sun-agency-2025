@@ -4,11 +4,19 @@ import Menu from '@GeneralComponents/Menu';
 import { IProps } from './NavMenu.types';
 import SunLogoLink from '@GeneralComponents/SunLogoLink';
 
-const NavMenu: FC<IProps> = ({ currentLang, onChange }) => {
+const NavMenu: FC<IProps> = ({
+  showMenuModalWin,
+  shouldHideMenuBtn,
+  onMenuBtnClick,
+}) => {
   return (
     <Container>
-      <SunLogoLink />
-      <Menu currentLang={currentLang} onChange={onChange} />
+      <SunLogoLink showMenuModalWin={showMenuModalWin} />
+      <Menu
+        showMenuModalWin={showMenuModalWin}
+        shouldHideMenuBtn={shouldHideMenuBtn}
+        onMenuBtnClick={onMenuBtnClick}
+      />
     </Container>
   );
 };

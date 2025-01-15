@@ -5,11 +5,20 @@ import { IProps } from './ContactsInfo.types';
 import GlowingLink from '@GeneralComponents/GlowingLink';
 import { PagePaths } from '@/constants';
 
-const ContactsInfo: FC<IProps> = ({ currentLang, onChange }) => {
+const ContactsInfo: FC<IProps> = ({
+  currentLang,
+  onChange,
+  showMenuModalWin,
+}) => {
   return (
-    <Container>
+    <Container showMenuModalWin={showMenuModalWin}>
       <LangsMenu currentLang={currentLang} onChange={onChange} />
-      <GlowingLink width={130} title='Контакт' href={PagePaths.contacts} />
+      <GlowingLink
+        width={130}
+        title='Контакт'
+        href={PagePaths.contacts}
+        shouldHide={showMenuModalWin}
+      />
     </Container>
   );
 };

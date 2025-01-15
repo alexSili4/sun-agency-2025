@@ -32,6 +32,7 @@ interface ITheme {
     animatedModalWin: number;
     menuBtn: number;
     contactsModalWin: number;
+    header: number;
   };
   transitionDurationAndFunc: string;
   spacing: (value?: number) => string;
@@ -61,6 +62,7 @@ const theme: ITheme = {
   },
   zIndex: {
     menuBtn: 10,
+    header: 10,
     contactsModalWin: 100,
     animatedModalWin: 100000,
   },
