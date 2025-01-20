@@ -37,7 +37,7 @@ export const TitleWrap = styled.span<IStyledTitleWrapProps>`
   border-color: transparent;
   transition: border-color ${({ theme }) => theme.transitionDurationAndFunc};
 
-  label:has(input:is(:hover, :focus, :checked)) > & {
+  div:has(input:is(:hover, :focus)) label:has(input:checked) > & {
     border-color: rgba(255, 255, 255, 0.12);
   }
 `;

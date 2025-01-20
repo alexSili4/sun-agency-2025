@@ -2,10 +2,11 @@ import styled from '@emotion/styled';
 import { IStyledHeaderProps } from './Header.types';
 
 export const StyledHeader = styled.header<IStyledHeaderProps>`
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
   z-index: ${({ theme }) => theme.zIndex.header};
-  background-color: transparent;
-  transition: background-color ${({ theme }) => theme.transitionDurationAndFunc};
+  width: 100%;
   pointer-events: ${({ showMenuModalWin }) =>
     showMenuModalWin ? 'none' : 'all'};
 `;

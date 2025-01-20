@@ -14,17 +14,17 @@ const MainPage: FC = () => {
   const projectsListContainerInView = useInView(projectsListContainerRef, {
     margin: servicesSectionInView ? '-400px' : '-200px',
   });
-  const clientsSectionBgRef = useRef<HTMLDivElement>(null);
+  const clientsSectionRef = useRef<HTMLDivElement>(null);
   const reviewsSectionInView = useInView(reviewsSectionRef, {
     margin: '-300px',
   });
-  const clientsSectionBgInView = useInView(clientsSectionBgRef, {
-    margin: reviewsSectionInView ? '-400px' : '-200px',
+  const clientsSectionInView = useInView(clientsSectionRef, {
+    margin: '-300px',
   });
   const shouldShowProjectsSectionBg =
     projectsSectionBgInView && !servicesSectionInView;
-  const shouldShowClientsSectionBg =
-    clientsSectionBgInView && !reviewsSectionInView;
+  const shouldShowClientsSectionContent =
+    clientsSectionInView && !reviewsSectionInView;
 
   return (
     <Main
@@ -34,9 +34,9 @@ const MainPage: FC = () => {
       projectsListContainerInView={projectsListContainerInView}
       servicesSectionInView={servicesSectionInView}
       servicesSectionRef={servicesSectionRef}
-      shouldShowClientsSectionBg={shouldShowClientsSectionBg}
+      shouldShowClientsSectionContent={shouldShowClientsSectionContent}
       reviewsSectionRef={reviewsSectionRef}
-      clientsSectionBgRef={clientsSectionBgRef}
+      clientsSectionRef={clientsSectionRef}
     />
   );
 };

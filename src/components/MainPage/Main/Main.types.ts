@@ -7,7 +7,7 @@ export interface IProps {
   shouldShowProjectsSectionBg: boolean;
   projectsListContainerInView: boolean;
   servicesSectionInView: boolean;
-  shouldShowClientsSectionBg: boolean;
+  shouldShowClientsSectionContent: boolean;
   reviewsSectionRef: RefDivObject;
-  clientsSectionBgRef: RefDivObject;
+  clientsSectionRef: RefDivObject;
 }

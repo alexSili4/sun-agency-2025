@@ -1,8 +1,8 @@
 // import { Scenes } from '@/constants';
 import { FC } from 'react';
-// import { StyledSpline } from './DonationSectionSpline.styled';
+// import { StyledSpline } from './HeroSectionSpline.styled';
 
-const DonationSectionSpline: FC = () => {
+const HeroSectionSpline: FC = () => {
   return (
     // TODO fix
     <p>StyledSpline</p>
@@ -10,4 +10,4 @@ const DonationSectionSpline: FC = () => {
   );
 };
 
-export default DonationSectionSpline;
+export default HeroSectionSpline;

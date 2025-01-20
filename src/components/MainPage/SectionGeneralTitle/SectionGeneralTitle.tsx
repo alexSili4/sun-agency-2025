@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import SectionTitle from '@GeneralComponents/SectionTitle';
+import AnimatedSectionTitle from '@AnimationBlocks/AnimatedSectionTitle';
 import AnimatedSectionSubtitle from '@AnimationBlocks/AnimatedSectionSubtitle';
 import { Container } from './SectionGeneralTitle.styled';
 import { IProps } from './SectionGeneralTitle.types';
@@ -7,7 +7,7 @@ import { IProps } from './SectionGeneralTitle.types';
 const SectionGeneralTitle: FC<IProps> = ({ title, subtitle }) => {
   return (
     <Container>
-      <SectionTitle text={title} />
+      <AnimatedSectionTitle text={title} />
       <AnimatedSectionSubtitle text={subtitle} />
     </Container>
   );

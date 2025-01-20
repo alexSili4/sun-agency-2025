@@ -30,14 +30,14 @@ const ParticlesItem: FC = () => {
         events: {
           onHover: {
             enable: true,
-            mode: 'repulse',
+            mode: 'attract',
           },
         },
         modes: {
-          repulse: {
-            distance: 50,
-            duration: 0.4,
-            speed: 0.5,
+          attract: {
+            distance: 100,
+            duration: 0.2,
+            speed: 5,
           },
         },
       },
@@ -59,7 +59,7 @@ const ParticlesItem: FC = () => {
           density: {
             enable: true,
           },
-          value: 80,
+          value: 800,
         },
         opacity: {
           value: 0.5,
@@ -68,7 +68,7 @@ const ParticlesItem: FC = () => {
           type: 'circle',
         },
         size: {
-          value: { min: 0.1, max: 3 },
+          value: { min: 0.1, max: 1 },
         },
       },
       detectRetina: true,

@@ -2,17 +2,13 @@ import styled from '@emotion/styled';
 import {
   IStyledImageProps,
   IStyledStatisticsItemProps,
-} from './DonationSectionStatistics.types';
+} from './StatisticsList.types';
 import { motion } from 'framer-motion';
 
 export const List = styled.ul`
   position: absolute;
+  right: 44px;
   bottom: 18px;
-  left: calc(
-    50% + ${({ theme }) => theme.containerWidth.desktop / 2}px +
-      ${({ theme }) => theme.padding.container}px
-  );
-  transform: translateX(-100%);
 `;
 
 export const ListItem = styled.li``;

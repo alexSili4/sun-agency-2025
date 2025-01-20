@@ -1,10 +1,10 @@
 export interface IProps {
-  isHidden?: boolean;
   text: string;
+  isHidden?: boolean;
   isCenter?: boolean;
 }
 
-export interface IStyledProps {
+export interface IStyledTitleProps {
   isHidden: boolean;
   isCenter: boolean;
 }

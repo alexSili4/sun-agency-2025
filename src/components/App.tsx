@@ -5,6 +5,7 @@ import SharedLayout from '@GeneralComponents/SharedLayout';
 
 const NotFoundPage = lazy(() => import('@/pages/NotFoundPage'));
 const MainPage = lazy(() => import('@/pages/MainPage'));
+const ProjectDetailsPage = lazy(() => import('@/pages/ProjectDetailsPage'));
 
 const App: FC = () => {
   return (
@@ -12,6 +13,10 @@ const App: FC = () => {
       <Route path={PagePaths.root} element={<SharedLayout />}>
         <Route index element={<MainPage />} />
         <Route path={PagePaths.root} element={<MainPage />} />
+        <Route
+          path={`${PagePaths.projects}/:${PagePaths.dynamicParam}`}
+          element={<ProjectDetailsPage />}
+        />
         <Route path={PagePaths.notFound} element={<NotFoundPage />} />
         <Route path='*' element={<NotFoundPage />} />
       </Route>

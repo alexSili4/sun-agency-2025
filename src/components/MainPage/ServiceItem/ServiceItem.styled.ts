@@ -5,6 +5,8 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding-top: ${({ theme }) => theme.spacing(6)};
+  padding-bottom: ${({ theme }) => theme.spacing(6)};
 `;
 
 export const TitleWrap = styled.div`
@@ -58,6 +60,6 @@ export const GlowImg = styled.img`
   }
 
   a:is(:hover, :focus) > div > & {
-    transform: translateX(-177px);
+    transform: translateX(-177px) translateY(50%);
   }
 `;

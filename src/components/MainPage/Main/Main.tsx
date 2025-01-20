@@ -1,30 +1,25 @@
 import { FC } from 'react';
 import HeroSection from '@MainPageComponents/HeroSection';
-import DonationSection from '@MainPageComponents/DonationSection';
 import ProjectsSection from '@MainPageComponents/ProjectsSection';
 import ServicesSection from '@MainPageComponents/ServicesSection';
 import { IProps } from './Main.types';
 import ClientsSection from '@MainPageComponents/ClientsSection';
 import ReviewsSection from '@MainPageComponents/ReviewsSection';
-import ParticlesContainer from '@GeneralComponents/ParticlesContainer';
 
 const Main: FC<IProps> = ({
   projectsSectionBgRef,
   shouldShowProjectsSectionBg,
-  shouldShowClientsSectionBg,
+  shouldShowClientsSectionContent,
   projectsListContainerRef,
   projectsListContainerInView,
   servicesSectionInView,
   servicesSectionRef,
   reviewsSectionRef,
-  clientsSectionBgRef,
+  clientsSectionRef,
 }) => {
   return (
     <>
-      <ParticlesContainer>
-        <HeroSection />
-        <DonationSection />
-      </ParticlesContainer>
+      <HeroSection />
       <ProjectsSection
         sectionBgRef={projectsSectionBgRef}
         shouldShowSectionBg={shouldShowProjectsSectionBg}
@@ -34,8 +29,8 @@ const Main: FC<IProps> = ({
       />
       <ServicesSection servicesSectionRef={servicesSectionRef} />
       <ClientsSection
-        shouldShowSectionBg={shouldShowClientsSectionBg}
-        sectionBgRef={clientsSectionBgRef}
+        shouldShowSectionContent={shouldShowClientsSectionContent}
+        sectionRef={clientsSectionRef}
       />
       <ReviewsSection sectionRef={reviewsSectionRef} />
     </>

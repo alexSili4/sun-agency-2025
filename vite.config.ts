@@ -12,6 +12,7 @@ export default defineConfig({
       '@GeneralComponents': '/src/components/General',
       '@ErrorPageComponents': '/src/components/ErrorPage',
       '@MainPageComponents': '/src/components/MainPage',
+      '@ProjectDetailsPageComponents': '/src/components/ProjectDetailsPage',
     },
   },
 });

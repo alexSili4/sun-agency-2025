@@ -11,7 +11,7 @@ const ReviewsSection: FC<IProps> = ({ sectionRef }) => {
     <Section ref={sectionRef}>
       <Container>
         <GeneralContainer>
-          <SectionGeneralTitle title=' Відгуки' subtitle='Клієнти про нас ' />
+          <SectionGeneralTitle title='Відгуки' subtitle='Клієнти про нас ' />
         </GeneralContainer>
         <ReviewsSlider reviews={reviews} slideWidth={553} gap={16} />
       </Container>

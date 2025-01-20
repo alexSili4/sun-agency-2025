@@ -6,11 +6,11 @@ import {
   StatisticsItem,
   Image,
   TextPart,
-} from './DonationSectionStatistics.styled';
+} from './StatisticsList.styled';
 import { statistics, Symbols } from '@/constants';
-import { IProps } from './DonationSectionStatistics.types';
+import { IProps } from './StatisticsList.types';
 
-const DonationSectionStatistics: FC<IProps> = ({
+const StatisticsList: FC<IProps> = ({
   firstOpacity,
   secondOpacity,
   thirdOpacity,
@@ -50,4 +50,4 @@ const DonationSectionStatistics: FC<IProps> = ({
   );
 };
 
-export default DonationSectionStatistics;
+export default StatisticsList;
