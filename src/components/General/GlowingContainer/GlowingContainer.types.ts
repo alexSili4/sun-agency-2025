@@ -4,6 +4,7 @@ export interface IProps {
   children: ReactNode;
   borderRadius: string;
   zIndex: number;
+  animationData: object;
   isSubduedLighting?: boolean;
   top?: string;
   right?: string;

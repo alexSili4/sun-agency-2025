@@ -29,3 +29,9 @@ export interface IUseScrollPercentage {
   ref: RefFunc;
   percentage: number;
 }
+
+export interface IUseIsHoverOrFocus {
+  isHoverOrFocus: boolean;
+  onItemFocus: Func;
+  onItemBlur: Func;
+}

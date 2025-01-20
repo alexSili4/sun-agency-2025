@@ -18,4 +18,5 @@ export interface IStyledContainerProps {
 export interface IStyledTitleWrapProps {
   width: number;
   height: number;
+  isFullMenu:boolean
 }

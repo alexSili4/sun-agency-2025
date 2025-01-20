@@ -5,6 +5,7 @@ export interface IProps {
   borderRadius: string;
   top: string;
   right: string;
+  animationData: object;
   isPositionAbsolute: boolean;
   isSubduedLighting?: boolean;
 }

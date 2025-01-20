@@ -1,8 +1,8 @@
 import { FC } from 'react';
 import { Container } from './NavMenu.styled';
-import Menu from '@GeneralComponents/Menu';
 import { IProps } from './NavMenu.types';
 import SunLogoLink from '@GeneralComponents/SunLogoLink';
+import MenuBtn from '@GeneralComponents/MenuBtn';
 
 const NavMenu: FC<IProps> = ({
   showMenuModalWin,
@@ -12,7 +12,7 @@ const NavMenu: FC<IProps> = ({
   return (
     <Container>
       <SunLogoLink showMenuModalWin={showMenuModalWin} />
-      <Menu
+      <MenuBtn
         showMenuModalWin={showMenuModalWin}
         shouldHideMenuBtn={shouldHideMenuBtn}
         onMenuBtnClick={onMenuBtnClick}

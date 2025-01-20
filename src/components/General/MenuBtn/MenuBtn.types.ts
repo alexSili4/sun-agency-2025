@@ -6,6 +6,6 @@ export interface IProps {
   onMenuBtnClick: OnBtnClickFunc;
 }
 
-export interface IStyledMenuBtnProps {
+export interface IStyledButtonProps {
   shouldHide: boolean;
 }

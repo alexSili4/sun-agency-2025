@@ -11,17 +11,12 @@ export const StyledLink = styled(Link)<IStyledProps>`
   width: ${({ width }) => width}px;
   height: 56px;
   border: 1px solid;
-  border-color: rgba(255, 255, 255, 0.2);
   border-radius: 16px;
-  background-color: ${({ theme }) => theme.colors.dark};
   transition: border-color ${({ theme }) => theme.transitionDurationAndFunc};
-
-  &:is(:hover, :focus) {
-    border-color: transparent;
-  }
 `;
 
 export const LinkIcon = styled.span`
+  position: relative;
   width: 10px;
   aspect-ratio: 1 / 1;
   background-color: #ffcd33;
@@ -29,6 +24,7 @@ export const LinkIcon = styled.span`
 `;
 
 export const LinkTitle = styled.span`
+  position: relative;
   color: ${({ theme }) => theme.colors.white};
   font-family: ${({ theme }) => theme.fontFamily.involve};
   font-size: 18.67px;

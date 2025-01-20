@@ -1,27 +1,37 @@
 import { FC } from 'react';
-import GlowingContainer from '@GeneralComponents/GlowingContainer';
 import { LinkIcon, LinkTitle, StyledLink } from './GlowingLink.styled';
 import { IProps } from './GlowingLink.types';
+import LottieGlowingAnimation from '@GeneralComponents/LottieGlowingAnimation';
+import { useIsHoverOrFocus } from '@/hooks';
 
 const GlowingLink: FC<IProps> = ({
   width,
   title,
   href,
-  shouldHide = false,
-  isSubduedLighting = false,
+  animationData,
+  glowHeight,
+  glowWidth,
 }) => {
+  const { isHoverOrFocus, onItemBlur, onItemFocus } = useIsHoverOrFocus();
+
   return (
-    <GlowingContainer
-      borderRadius='16px'
-      zIndex={0}
-      isSubduedLighting={isSubduedLighting}
-      shouldHide={shouldHide}
+    <StyledLink
+      to={href}
+      width={width}
+      onBlur={onItemBlur}
+      onFocus={onItemFocus}
+      onMouseEnter={onItemFocus}
+      onMouseLeave={onItemBlur}
     >
-      <StyledLink to={href} width={width}>
-        <LinkIcon></LinkIcon>
-        <LinkTitle>{title}</LinkTitle>
-      </StyledLink>
-    </GlowingContainer>
+      <LottieGlowingAnimation
+        animationData={animationData}
+        isHoverOrFocus={isHoverOrFocus}
+        height={glowHeight}
+        width={glowWidth}
+      />
+      <LinkIcon></LinkIcon>
+      <LinkTitle>{title}</LinkTitle>
+    </StyledLink>
   );
 };
 

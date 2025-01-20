@@ -40,6 +40,11 @@ export const TitleWrap = styled.span<IStyledTitleWrapProps>`
   div:has(input:is(:hover, :focus)) label:has(input:checked) > & {
     border-color: rgba(255, 255, 255, 0.12);
   }
+
+  label:has(input:checked) > & {
+    border-color: ${({ isFullMenu }) =>
+      isFullMenu && 'rgba(255, 255, 255, 0.12)'};
+  }
 `;
 
 export const Title = styled.span`

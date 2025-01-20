@@ -8,6 +8,7 @@ const GlowingBtnWrap: FC<IProps> = ({
   isPositionAbsolute,
   right,
   top,
+  animationData,
   isSubduedLighting = false,
 }) => {
   return (
@@ -18,6 +19,7 @@ const GlowingBtnWrap: FC<IProps> = ({
       isPositionAbsolute={isPositionAbsolute}
       right={right}
       top={top}
+      animationData={animationData}
     >
       {children}
     </GlowingContainer>

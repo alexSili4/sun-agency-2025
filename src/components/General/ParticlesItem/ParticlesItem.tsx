@@ -19,10 +19,6 @@ const ParticlesItem: FC = () => {
     });
   }, []);
 
-  const particlesLoaded = async (container?: Container): Promise<void> => {
-    console.log(container);
-  };
-
   const options: ISourceOptions = useMemo(
     () => ({
       fpsLimit: 120,
@@ -77,15 +73,7 @@ const ParticlesItem: FC = () => {
     []
   );
 
-  return (
-    init && (
-      <Particles
-        id='tsparticles'
-        particlesLoaded={particlesLoaded}
-        options={options}
-      />
-    )
-  );
+  return init && <Particles id='tsparticles' options={options} />;
 };
 
 export default ParticlesItem;

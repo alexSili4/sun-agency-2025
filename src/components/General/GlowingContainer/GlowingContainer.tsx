@@ -1,13 +1,11 @@
 import { FC } from 'react';
 import { IProps } from './GlowingContainer.types';
-import { Backdrop, Container } from './GlowingContainer.styled';
+import { Container } from './GlowingContainer.styled';
 
 const GlowingContainer: FC<IProps> = ({
   children,
-  borderRadius,
   zIndex,
   shouldHide = false,
-  isSubduedLighting = false,
   isPositionAbsolute = false,
   top = '0px',
   right = '0px',
@@ -20,10 +18,10 @@ const GlowingContainer: FC<IProps> = ({
       right={right}
       top={top}
     >
-      <Backdrop
+      {/* <Backdrop
         borderRadius={borderRadius}
         isSubduedLighting={isSubduedLighting}
-      ></Backdrop>
+      ></Backdrop> */}
       {children}
     </Container>
   );

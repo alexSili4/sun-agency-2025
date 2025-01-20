@@ -20,7 +20,7 @@ const LangRadioBtn: FC<IProps> = ({
         checked={checked}
         onChange={onChange}
       />
-      <TitleWrap width={width} height={height}>
+      <TitleWrap width={width} height={height} isFullMenu={isFullMenu}>
         <Title>{value}</Title>
       </TitleWrap>
     </Container>

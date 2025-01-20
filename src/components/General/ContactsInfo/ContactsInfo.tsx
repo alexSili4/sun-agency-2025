@@ -17,7 +17,7 @@ const ContactsInfo: FC<IProps> = ({
         width={130}
         title='Контакт'
         href={PagePaths.contacts}
-        shouldHide={showMenuModalWin}
+        animationData={glowingContactBtn}
       />
     </Container>
   );
