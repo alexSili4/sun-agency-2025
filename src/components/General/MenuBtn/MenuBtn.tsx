@@ -10,14 +10,14 @@ import { useIsHoverOrFocus } from '@/hooks';
 const MenuBtn: FC<IProps> = ({
   showMenuModalWin,
   shouldHideMenuBtn,
-  onMenuBtnClick,
+  onClick,
 }) => {
   const { isHoverOrFocus, onItemBlur, onItemFocus } = useIsHoverOrFocus();
 
   return (
     <Button
       type='button'
-      onClick={onMenuBtnClick}
+      onClick={onClick}
       shouldHide={shouldHideMenuBtn}
       onMouseEnter={onItemFocus}
       onMouseLeave={onItemBlur}

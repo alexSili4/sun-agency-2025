@@ -1,13 +1,14 @@
+import { OnBtnClickFunc } from '@/types/types';
 import { ReactNode } from 'react';
 
 export interface IProps {
+  width: number;
   children: ReactNode;
-  borderRadius: string;
-  top: string;
-  right: string;
+  onClick: OnBtnClickFunc;
   animationData: object;
-  isPositionAbsolute: boolean;
-  isSubduedLighting?: boolean;
+  glowHeight: number;
+  glowWidth: number;
+  loop?: boolean;
 }
 
 export interface IStyledProps {

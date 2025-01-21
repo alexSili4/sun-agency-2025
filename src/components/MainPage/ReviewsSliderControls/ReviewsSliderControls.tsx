@@ -4,34 +4,41 @@ import { FC } from 'react';
 import { FaChevronRight, FaChevronLeft } from 'react-icons/fa';
 import { Container } from './ReviewsSliderControls.styled';
 import { useSwiper } from 'swiper/react';
-import { BtnClickEvent } from '@/types/types';
-import { makeBlur } from '@/utils';
-import ReviewsSliderNavBtn from '../ReviewsSliderNavBtn';
+import GlowingButton from '@GeneralComponents/GlowingButton';
+import glowingRoundBtn from '@/lottiefiles/glowing-round-btn.json';
 
 const ReviewsSliderControls: FC = () => {
   const swiper = useSwiper();
 
-  const onPrevNavBtnClick = (e: BtnClickEvent) => {
-    makeBlur(e.currentTarget);
-
+  const onPrevNavBtnClick = () => {
     swiper.slidePrev();
   };
 
-  const onNextNavBtnClick = (e: BtnClickEvent) => {
-    makeBlur(e.currentTarget);
-
+  const onNextNavBtnClick = () => {
     swiper.slideNext();
   };
 
   return (
     <GeneralContainer top='-159px' isPositionAbsolute isCenterXPosition>
       <Container>
-        <ReviewsSliderNavBtn onClick={onPrevNavBtnClick}>
+        <GlowingButton
+          onClick={onPrevNavBtnClick}
+          animationData={glowingRoundBtn}
+          glowHeight={70}
+          glowWidth={70}
+          width={58}
+        >
           <FaChevronLeft size={theme.iconSizes.reviewsSlider} />
-        </ReviewsSliderNavBtn>
-        <ReviewsSliderNavBtn onClick={onNextNavBtnClick}>
+        </GlowingButton>
+        <GlowingButton
+          onClick={onNextNavBtnClick}
+          animationData={glowingRoundBtn}
+          glowHeight={70}
+          glowWidth={70}
+          width={58}
+        >
           <FaChevronRight size={theme.iconSizes.reviewsSlider} />
-        </ReviewsSliderNavBtn>
+        </GlowingButton>
       </Container>
     </GeneralContainer>
   );

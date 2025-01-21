@@ -7,7 +7,10 @@ import {
   Container,
   Content,
 } from './AnimatedClientDetailsModalWinContent.styled';
-import GlowingCloseClientDetailsModalWinBtn from '@MainPageComponents/GlowingCloseClientDetailsModalWinBtn';
+import GlowingButton from '@GeneralComponents/GlowingButton';
+import { IoMdClose } from 'react-icons/io';
+import { theme } from '@/constants';
+import glowingRoundBtn from '@/lottiefiles/glowing-round-btn.json';
 
 const AnimatedClientDetailsModalWinContent: FC<IProps> = ({
   children,
@@ -28,9 +31,16 @@ const AnimatedClientDetailsModalWinContent: FC<IProps> = ({
             exit={{ opacity: 0, y: 200, transition: { duration: 0.3 } }}
           >
             <Container>
-              <GlowingCloseClientDetailsModalWinBtn
+              <GlowingButton
                 onClick={setModalWinState}
-              />
+                animationData={glowingRoundBtn}
+                glowHeight={70}
+                glowWidth={70}
+                width={54}
+              >
+                <IoMdClose size={theme.iconSizes.closeClientDetailsBtn} />
+              </GlowingButton>
+
               <Content>{children}</Content>
             </Container>
           </motion.div>

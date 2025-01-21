@@ -15,7 +15,7 @@ const NavMenu: FC<IProps> = ({
       <MenuBtn
         showMenuModalWin={showMenuModalWin}
         shouldHideMenuBtn={shouldHideMenuBtn}
-        onMenuBtnClick={onMenuBtnClick}
+        onClick={onMenuBtnClick}
       />
     </Container>
   );
