@@ -29,6 +29,7 @@ interface ITheme {
     reviewsSlider: number;
   };
   zIndex: {
+    projectsSectionContent: number;
     animatedModalWin: number;
     menuBtn: number;
     contactsModalWin: number;
@@ -61,6 +62,7 @@ const theme: ITheme = {
     desktop: 1352,
   },
   zIndex: {
+    projectsSectionContent: 10,
     menuBtn: 10,
     header: 10,
     contactsModalWin: 100,

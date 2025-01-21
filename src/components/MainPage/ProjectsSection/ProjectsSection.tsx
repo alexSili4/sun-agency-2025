@@ -1,8 +1,9 @@
 import { FC } from 'react';
-import { Section } from './ProjectsSection.styled';
+import { Container, NexSectionBg, Section } from './ProjectsSection.styled';
 import ProjectsSectionContent from '@MainPageComponents/ProjectsSectionContent';
 import { IProps } from './ProjectsSection.types';
 import { SectionsIds } from '@/constants';
+import nexSectionBg from '@/images/projects/next-section-bg.png';
 
 const ProjectsSection: FC<IProps> = ({
   containerInView,
@@ -13,6 +14,7 @@ const ProjectsSection: FC<IProps> = ({
 }) => {
   return (
     <Section id={SectionsIds.projects}>
+      <NexSectionBg src={nexSectionBg} />
       <ProjectsSectionContent
         shouldShowSectionBg={shouldShowSectionBg}
         sectionBgRef={sectionBgRef}

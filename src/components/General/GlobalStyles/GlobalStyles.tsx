@@ -63,6 +63,7 @@ const GlobalStyles: FC = () => (
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
         overflow-y: scroll;
+        overflow-x: hidden;
       }
 
       code {

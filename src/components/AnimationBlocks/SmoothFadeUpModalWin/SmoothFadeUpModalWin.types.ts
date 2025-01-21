@@ -5,7 +5,6 @@ export interface IProps {
   backgroundColor: string;
   children: ReactNode;
   zIndex?: number;
-  duration?: number;
   hideModalWin: OnDivClickFunc;
   changeShouldHideMenuBtn?: SetBooleanFunc;
 }

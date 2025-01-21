@@ -14,7 +14,7 @@ export const MotionDiv = styled(motion.div)<IStyledMotionDivProps>`
   height: 100%;
 `;
 
-export const BackdropWrap = styled.div<IStyledBackdropWrapProps>`
+export const BackdropWrap = styled(motion.div)<IStyledBackdropWrapProps>`
   position: fixed;
   top: 0;
   left: 0;

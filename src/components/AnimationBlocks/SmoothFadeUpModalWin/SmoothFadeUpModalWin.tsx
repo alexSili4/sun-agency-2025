@@ -12,7 +12,6 @@ const SmoothFadeUpModalWin: FC<IProps> = ({
   hideModalWin,
   children,
   zIndex = 0,
-  duration = 0.6,
   changeShouldHideMenuBtn,
 }) => {
   const backdropWrapRef = useRef<HTMLDivElement>(null);
@@ -27,12 +26,18 @@ const SmoothFadeUpModalWin: FC<IProps> = ({
 
   return (
     <MotionDiv
-      initial={{ opacity: 0, y: -200 }}
-      animate={{ opacity: 1, y: 0, transition: { duration } }}
-      exit={{ opacity: 0, y: -200, transition: { duration } }}
+      initial={{ y: -200 }}
+      animate={{ y: 0, transition: { duration: 0.6 } }}
+      exit={{ y: -200, transition: { duration: 0.6 } }}
       zIndex={zIndex}
     >
-      <BackdropWrap backgroundColor={backgroundColor} ref={backdropWrapRef}>
+      <BackdropWrap
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1, transition: { duration: 0.3 } }}
+        exit={{ opacity: 0, transition: { duration: 0.3 } }}
+        backgroundColor={backgroundColor}
+        ref={backdropWrapRef}
+      >
         <Backdrop onClick={hideModalWin}>{children}</Backdrop>
       </BackdropWrap>
     </MotionDiv>
