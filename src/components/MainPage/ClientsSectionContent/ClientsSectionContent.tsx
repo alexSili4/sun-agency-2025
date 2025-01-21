@@ -31,9 +31,7 @@ const ClientsSectionContent: FC = () => {
           topClientsLine={firstClientsItem}
           bottomClientsLine={secondClientsItem}
         />
-        <GlowingLink width={200} title='Всі клієнти' href={PagePaths.clients}>
-          <></>
-        </GlowingLink>
+        <GlowingLink width={200} title='Всі клієнти' href={PagePaths.clients} />
       </ClientsMarqueeWrap>
     </Container>
   );

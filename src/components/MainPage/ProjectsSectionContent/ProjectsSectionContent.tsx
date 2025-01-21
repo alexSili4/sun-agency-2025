@@ -35,9 +35,7 @@ const ProjectsSectionContent: FC<IProps> = ({
               width={200}
               title='Більше робіт'
               href={PagePaths.projects}
-            >
-              <></>
-            </GlowingLink>
+            />
           </ProjectsSectionContentWrap>
         </GeneralContainer>
       </Container>

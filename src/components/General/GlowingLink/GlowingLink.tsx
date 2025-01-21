@@ -11,6 +11,7 @@ const GlowingLink: FC<IProps> = ({
   animationData,
   glowHeight,
   glowWidth,
+  loop = false,
 }) => {
   const { isHoverOrFocus, onItemBlur, onItemFocus } = useIsHoverOrFocus();
 
@@ -28,6 +29,7 @@ const GlowingLink: FC<IProps> = ({
         isHoverOrFocus={isHoverOrFocus}
         height={glowHeight}
         width={glowWidth}
+        loop={loop}
       />
       <LinkIcon></LinkIcon>
       <LinkTitle>{title}</LinkTitle>

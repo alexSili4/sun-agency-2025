@@ -7,9 +7,7 @@ const FooterContacts: FC = () => {
   return (
     <Container>
       <Title>Маєте цікавий проект? Ми будемо раді почути про нього</Title>
-      <GlowingLink width={200} title='Напишіть нам' href={PagePaths.contacts}>
-        <></>
-      </GlowingLink>
+      <GlowingLink width={200} title='Напишіть нам' href={PagePaths.contacts} />
     </Container>
   );
 };

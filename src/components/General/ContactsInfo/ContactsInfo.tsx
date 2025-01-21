@@ -4,6 +4,7 @@ import LangsMenu from '@GeneralComponents/LangsMenu';
 import { IProps } from './ContactsInfo.types';
 import GlowingLink from '@GeneralComponents/GlowingLink';
 import { PagePaths } from '@/constants';
+import glowingContactBtn from '@/lottiefiles/glowing-contact-btn.json';
 
 const ContactsInfo: FC<IProps> = ({
   currentLang,
@@ -18,6 +19,9 @@ const ContactsInfo: FC<IProps> = ({
         title='Контакт'
         href={PagePaths.contacts}
         animationData={glowingContactBtn}
+        glowHeight={71}
+        glowWidth={148}
+        loop
       />
     </Container>
   );

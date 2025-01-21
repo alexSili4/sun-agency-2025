@@ -3,6 +3,7 @@ export interface IProps {
   isHoverOrFocus: boolean;
   width: number;
   height: number;
+  loop?: boolean;
 }
 
 export interface IStyledLottieProps {

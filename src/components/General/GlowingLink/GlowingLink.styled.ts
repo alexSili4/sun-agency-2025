@@ -10,7 +10,6 @@ export const StyledLink = styled(Link)<IStyledProps>`
   gap: ${({ theme }) => theme.spacing(3)};
   width: ${({ width }) => width}px;
   height: 56px;
-  border: 1px solid;
   border-radius: 16px;
   transition: border-color ${({ theme }) => theme.transitionDurationAndFunc};
 `;

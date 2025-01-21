@@ -2,7 +2,6 @@ import { FC, useEffect, useMemo, useState } from 'react';
 import Particles, { initParticlesEngine } from '@tsparticles/react';
 import { loadSlim } from '@tsparticles/slim';
 import {
-  type Container,
   type ISourceOptions,
   MoveDirection,
   OutMode,

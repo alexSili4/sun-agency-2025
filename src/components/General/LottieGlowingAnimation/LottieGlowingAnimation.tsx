@@ -8,18 +8,27 @@ const LottieGlowingAnimation: FC<IProps> = ({
   isHoverOrFocus,
   width,
   height,
+  loop = false,
 }) => {
   const lottieRef = useRef<LottieRefCurrentProps>(null);
 
   useEffect(() => {
     if (isHoverOrFocus) {
-      lottieRef.current?.setDirection(1);
-    } else {
-      lottieRef.current?.setDirection(-1);
-    }
+      if (lottieRef.current?.animationItem) {
+        lottieRef.current.animationItem.loop = loop;
+      }
 
-    lottieRef.current?.play();
-  }, [isHoverOrFocus]);
+      lottieRef.current?.setDirection(1);
+      lottieRef.current?.play();
+    } else {
+      if (lottieRef.current?.animationItem) {
+        lottieRef.current.animationItem.loop = false;
+      }
+
+      lottieRef.current?.setDirection(-1);
+      lottieRef.current?.play();
+    }
+  }, [isHoverOrFocus, loop]);
 
   return (
     <StyledLottie
