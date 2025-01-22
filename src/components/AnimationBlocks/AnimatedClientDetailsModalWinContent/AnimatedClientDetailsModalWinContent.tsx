@@ -10,7 +10,7 @@ import {
 import GlowingButton from '@GeneralComponents/GlowingButton';
 import { IoMdClose } from 'react-icons/io';
 import { theme } from '@/constants';
-import glowingRoundBtn from '@/lottiefiles/glowing-round-btn.json';
+import glowingRoundBtn from '@/lottiefiles/glow/glowing-round-btn.json';
 
 const AnimatedClientDetailsModalWinContent: FC<IProps> = ({
   children,

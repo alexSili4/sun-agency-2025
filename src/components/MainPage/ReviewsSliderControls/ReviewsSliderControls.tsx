@@ -5,7 +5,7 @@ import { FaChevronRight, FaChevronLeft } from 'react-icons/fa';
 import { Container } from './ReviewsSliderControls.styled';
 import { useSwiper } from 'swiper/react';
 import GlowingButton from '@GeneralComponents/GlowingButton';
-import glowingRoundBtn from '@/lottiefiles/glowing-round-btn.json';
+import glowingRoundBtn from '@/lottiefiles/glow/glowing-round-btn.json';
 
 const ReviewsSliderControls: FC = () => {
   const swiper = useSwiper();
