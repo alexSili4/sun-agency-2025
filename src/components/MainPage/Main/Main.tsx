@@ -8,26 +8,26 @@ import ReviewsSection from '@MainPageComponents/ReviewsSection';
 
 const Main: FC<IProps> = ({
   projectsSectionBgRef,
-  shouldShowProjectsSectionBg,
   shouldShowClientsSectionContent,
-  projectsListContainerRef,
-  projectsListContainerInView,
-  servicesSectionInView,
   servicesSectionRef,
   reviewsSectionRef,
   clientsSectionRef,
+  projectsSectionBgInView,
+  servicesSectionInViewWithMargin,
+  clientsSectionInView,
 }) => {
   return (
     <>
       <HeroSection />
       <ProjectsSection
+        nextSectionInView={servicesSectionInViewWithMargin}
+        sectionBgInView={projectsSectionBgInView}
         sectionBgRef={projectsSectionBgRef}
-        shouldShowSectionBg={shouldShowProjectsSectionBg}
-        containerRef={projectsListContainerRef}
-        containerInView={projectsListContainerInView}
-        inView={servicesSectionInView}
       />
-      <ServicesSection servicesSectionRef={servicesSectionRef} />
+      <ServicesSection
+        servicesSectionRef={servicesSectionRef}
+        nextSectionInView={clientsSectionInView}
+      />
       <ClientsSection
         shouldShowSectionContent={shouldShowClientsSectionContent}
         sectionRef={clientsSectionRef}

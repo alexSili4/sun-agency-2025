@@ -3,16 +3,14 @@ import { FC, useRef } from 'react';
 import { useInView } from 'framer-motion';
 
 const MainPage: FC = () => {
-  const projectsListContainerRef = useRef<HTMLDivElement>(null);
   const projectsSectionBgRef = useRef<HTMLDivElement>(null);
   const servicesSectionRef = useRef<HTMLDivElement>(null);
   const reviewsSectionRef = useRef<HTMLDivElement>(null);
-  const servicesSectionInView = useInView(servicesSectionRef);
-  const projectsSectionBgInView = useInView(projectsSectionBgRef, {
+  const servicesSectionInViewWithMargin = useInView(servicesSectionRef, {
     margin: '-200px',
   });
-  const projectsListContainerInView = useInView(projectsListContainerRef, {
-    margin: servicesSectionInView ? '-400px' : '-200px',
+  const projectsSectionBgInView = useInView(projectsSectionBgRef, {
+    margin: '-200px',
   });
   const clientsSectionRef = useRef<HTMLDivElement>(null);
   const reviewsSectionInView = useInView(reviewsSectionRef, {
@@ -22,21 +20,20 @@ const MainPage: FC = () => {
     margin: '-300px',
   });
   const shouldShowProjectsSectionBg =
-    projectsSectionBgInView && !servicesSectionInView;
+    projectsSectionBgInView && !servicesSectionInViewWithMargin;
   const shouldShowClientsSectionContent =
     clientsSectionInView && !reviewsSectionInView;
 
   return (
     <Main
       projectsSectionBgRef={projectsSectionBgRef}
-      shouldShowProjectsSectionBg={shouldShowProjectsSectionBg}
-      projectsListContainerRef={projectsListContainerRef}
-      projectsListContainerInView={projectsListContainerInView}
-      servicesSectionInView={servicesSectionInView}
+      servicesSectionInViewWithMargin={servicesSectionInViewWithMargin}
       servicesSectionRef={servicesSectionRef}
       shouldShowClientsSectionContent={shouldShowClientsSectionContent}
       reviewsSectionRef={reviewsSectionRef}
       clientsSectionRef={clientsSectionRef}
+      projectsSectionBgInView={shouldShowProjectsSectionBg}
+      clientsSectionInView={clientsSectionInView}
     />
   );
 };

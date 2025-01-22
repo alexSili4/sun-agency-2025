@@ -10,11 +10,12 @@ const Loader: FC = () => (
     color='#808080'
     ariaLabel='three-dots-loading'
     wrapperStyle={{
-      display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'center',
-      flexGrow: '1',
+      position: 'fixed',
+      zIndex: String(theme.zIndex.loader),
+      top: '50%',
+      left: '50%',
       backgroundColor: theme.colors.darkBg,
+      transform: 'translateX(-50%) translateY(-50%)',
     }}
     visible
   />

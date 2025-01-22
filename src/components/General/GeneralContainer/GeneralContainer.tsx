@@ -8,7 +8,7 @@ const GeneralContainer: FC<IProps> = ({
   isPositionRelative = false,
   isPositionAbsolute = false,
   isCenterXPosition = false,
-  isPointerEventsNote = false,
+  isPointerEventsNone = false,
   top,
 }) => {
   return (
@@ -17,7 +17,7 @@ const GeneralContainer: FC<IProps> = ({
       isPositionRelative={isPositionRelative}
       isPositionAbsolute={isPositionAbsolute}
       isCenterXPosition={isCenterXPosition}
-      isPointerEventsNote={isPointerEventsNote}
+      isPointerEventsNone={isPointerEventsNone}
       top={top}
     >
       {children}

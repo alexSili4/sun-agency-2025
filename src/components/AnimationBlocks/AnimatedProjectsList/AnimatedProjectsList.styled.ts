@@ -2,16 +2,8 @@ import styled from '@emotion/styled';
 import { motion } from 'framer-motion';
 
 export const Container = styled(motion.div)`
-  position: absolute;
-  bottom: -998px;
-  left: -414px;
+  position: relative;
+  z-index: 100;
 `;
 
 export const Element = styled(motion.div)``;
-
-export const Image = styled.img`
-  position: relative;
-  width: 2311px;
-  max-width: 2311px;
-  height: 1276px;
-`;

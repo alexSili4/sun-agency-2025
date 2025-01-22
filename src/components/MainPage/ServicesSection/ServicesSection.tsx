@@ -6,7 +6,10 @@ import AnimatedServicesList from '@AnimationBlocks/AnimatedServicesList';
 import { services } from '@/constants';
 import SectionGeneralTitle from '@MainPageComponents/SectionGeneralTitle';
 
-const ServicesSection: FC<IProps> = ({ servicesSectionRef }) => {
+const ServicesSection: FC<IProps> = ({
+  servicesSectionRef,
+  nextSectionInView,
+}) => {
   return (
     <Section ref={servicesSectionRef}>
       <GeneralContainer>
@@ -15,7 +18,10 @@ const ServicesSection: FC<IProps> = ({ servicesSectionRef }) => {
             title='Послуги та співпраця'
             subtitle='Наша команда допоможе вам з...'
           />
-          <AnimatedServicesList services={services} />
+          <AnimatedServicesList
+            services={services}
+            nextSectionInView={nextSectionInView}
+          />
         </Content>
       </GeneralContainer>
     </Section>

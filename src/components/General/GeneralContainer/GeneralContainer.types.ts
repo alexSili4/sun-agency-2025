@@ -6,7 +6,7 @@ export interface IProps {
   isPositionRelative?: boolean;
   isPositionAbsolute?: boolean;
   isCenterXPosition?: boolean;
-  isPointerEventsNote?: boolean;
+  isPointerEventsNone?: boolean;
   top?: string;
 }
 
@@ -15,6 +15,6 @@ export interface IStyledContainerProps {
   isPositionRelative: boolean;
   isPositionAbsolute: boolean;
   isCenterXPosition: boolean;
-  isPointerEventsNote: boolean;
+  isPointerEventsNone: boolean;
   top: string | undefined;
 }

@@ -5,11 +5,10 @@ import ServiceItem from '@MainPageComponents/ServiceItem';
 import { List, ListItem } from './AnimatedServicesList.styled';
 import { framerMotionVariants } from '@/constants';
 
-const AnimatedServicesList: FC<IProps> = ({ services }) => {
+const AnimatedServicesList: FC<IProps> = ({ services, nextSectionInView }) => {
   const listRef = useRef<HTMLUListElement>(null);
   const inView = useInView(listRef, {
-    once: true,
-    margin: '-300px',
+    margin: nextSectionInView ? '-100px' : '-300px',
   });
   const animate = inView ? 'visible' : 'hidden';
 

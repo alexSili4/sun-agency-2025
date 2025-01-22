@@ -1,9 +1,7 @@
 import { RefDivObject } from '@/types/types';
 
 export interface IProps {
+  nextSectionInView: boolean;
+  sectionBgInView: boolean;
   sectionBgRef: RefDivObject;
-  shouldShowSectionBg: boolean;
-  containerRef: RefDivObject;
-  containerInView: boolean;
-  inView: boolean;
 }

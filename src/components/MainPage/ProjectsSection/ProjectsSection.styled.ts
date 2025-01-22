@@ -5,10 +5,6 @@ export const Section = styled.section`
   background-color: ${({ theme }) => theme.colors.black};
 `;
 
-export const Container = styled.div`
-  position: relative;
-`;
-
 export const NexSectionBg = styled.img`
   position: absolute;
   bottom: -50%;

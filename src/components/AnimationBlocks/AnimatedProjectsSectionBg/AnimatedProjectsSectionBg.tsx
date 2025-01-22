@@ -1,25 +1,49 @@
 import { FC } from 'react';
 import sectionBg from '@/images/projects/section-bg.png';
-import SmoothFadeInElement from '@AnimationBlocks/SmoothFadeInElement';
-import { Image } from './AnimatedProjectsSectionBg.styled';
+import { Container, Element, Image } from './AnimatedProjectsSectionBg.styled';
 import { IProps } from './AnimatedProjectsSectionBg.types';
 
 const AnimatedProjectsSectionBg: FC<IProps> = ({
-  shouldShowSectionBg,
+  nextSectionInView,
   inView,
   sectionBgRef,
 }) => {
+  const animate = inView ? 'visible' : 'hidden';
+
+  const containerVariants = {
+    hidden: {},
+    visible: {},
+  };
+
+  const transition = {
+    duration: 0.6,
+    ease: [0.25, 0.1, 0.25, 1],
+  };
+
+  const elementVariants = {
+    hidden: {
+      y: nextSectionInView ? -200 : 200,
+      opacity: 0,
+      transition,
+    },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition,
+    },
+  };
+
   return (
-    <SmoothFadeInElement
-      shouldShow={shouldShowSectionBg}
-      elementRef={sectionBgRef}
-      nextElementInView={inView}
-      bottom='-998px'
-      left='-414px'
-      isPositionAbsolute
+    <Container
+      ref={sectionBgRef}
+      variants={containerVariants}
+      initial='hidden'
+      animate={animate}
     >
-      <Image src={sectionBg} />
-    </SmoothFadeInElement>
+      <Element variants={elementVariants}>
+        <Image src={sectionBg} />
+      </Element>
+    </Container>
   );
 };
 

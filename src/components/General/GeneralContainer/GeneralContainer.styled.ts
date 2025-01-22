@@ -17,7 +17,7 @@ export const Container = styled.div<IStyledContainerProps>`
   padding-right: ${({ theme }) => theme.padding.container}px;
   margin-left: auto;
   margin-right: auto;
-  pointer-events: ${({ isPointerEventsNote }) => isPointerEventsNote && 'none'};
+  pointer-events: ${({ isPointerEventsNone }) => isPointerEventsNone && 'none'};
   transform: translateX(
     ${({ isCenterXPosition }) => (isCenterXPosition ? '-50%' : 0)}
   );

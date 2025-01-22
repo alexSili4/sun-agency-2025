@@ -11,6 +11,7 @@ export const StyledLink = styled(Link)<IStyledProps>`
   width: ${({ width }) => width}px;
   height: 56px;
   border-radius: 16px;
+  pointer-events: all;
   transition: border-color ${({ theme }) => theme.transitionDurationAndFunc};
 `;
 
