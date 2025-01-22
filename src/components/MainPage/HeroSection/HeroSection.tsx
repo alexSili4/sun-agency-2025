@@ -1,5 +1,5 @@
-import { FC } from 'react';
-import HeroSectionTitle from '@MainPageComponents/HeroSectionTitle';
+import { FC, useRef } from 'react';
+import AnimatedHeroSectionTitle from '@AnimationBlocks/AnimatedHeroSectionTitle';
 import { Section, Container } from './HeroSection.styled';
 import { BtnClickEvent } from '@/types/types';
 import { makeBlur, smoothScroll } from '@/utils';
@@ -10,6 +10,8 @@ import BusinessMetrics from '@MainPageComponents/BusinessMetrics';
 import ParticlesItem from '@GeneralComponents/ParticlesItem';
 
 const HeroSection: FC = () => {
+  const containerRef = useRef<HTMLDivElement>(null);
+
   const onScrollBtnClick = (e: BtnClickEvent) => {
     makeBlur(e.currentTarget);
 
@@ -19,8 +21,8 @@ const HeroSection: FC = () => {
   return (
     <Section>
       <GeneralContainer>
-        <Container>
-          <HeroSectionTitle />
+        <Container ref={containerRef}>
+          <AnimatedHeroSectionTitle containerRef={containerRef} />
           <DonationSectionContent onScrollBtnClick={onScrollBtnClick} />
         </Container>
       </GeneralContainer>

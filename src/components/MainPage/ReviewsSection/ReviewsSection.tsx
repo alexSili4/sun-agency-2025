@@ -4,7 +4,7 @@ import SectionGeneralTitle from '../SectionGeneralTitle';
 import GeneralContainer from '@GeneralComponents/GeneralContainer';
 import { Container, Section } from './ReviewsSection.styled';
 import { reviews } from '@/constants';
-import ReviewsSlider from '@MainPageComponents/ReviewsSlider';
+import AnimatedReviewsSlider from '@AnimationBlocks/AnimatedReviewsSlider';
 
 const ReviewsSection: FC<IProps> = ({ sectionRef }) => {
   return (
@@ -13,7 +13,7 @@ const ReviewsSection: FC<IProps> = ({ sectionRef }) => {
         <GeneralContainer>
           <SectionGeneralTitle title='Відгуки' subtitle='Клієнти про нас ' />
         </GeneralContainer>
-        <ReviewsSlider reviews={reviews} slideWidth={553} gap={16} />
+        <AnimatedReviewsSlider reviews={reviews} />
       </Container>
     </Section>
   );
