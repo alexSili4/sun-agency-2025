@@ -1,10 +1,11 @@
 import { FC } from 'react';
 import { IProps } from './ProjectDetailsTag.types';
-import { Container, Tag } from './ProjectDetailsTag.styled';
+import { Container, Marker, Tag } from './ProjectDetailsTag.styled';
 
 const ProjectDetailsTag: FC<IProps> = ({ tag }) => {
   return (
     <Container>
+      <Marker></Marker>
       <Tag>{tag}</Tag>
     </Container>
   );

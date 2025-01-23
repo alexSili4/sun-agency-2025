@@ -131,7 +131,13 @@ const projects: Projects = [
     year: 2023,
     tags: ['e-commerce', 'брендинг'],
     img: qanabi,
-    details: {},
+    details: {
+      name: '',
+      tags: [''],
+      title: '',
+      primaryBanner: '',
+      firstBanner: '',
+    },
   },
   {
     id: 3,
@@ -139,7 +145,13 @@ const projects: Projects = [
     year: 2023,
     tags: ['e-commerce'],
     img: maxBanus,
-    details: {},
+    details: {
+      name: '',
+      tags: [''],
+      title: '',
+      primaryBanner: '',
+      firstBanner: '',
+    },
   },
   {
     id: 4,
@@ -147,7 +159,13 @@ const projects: Projects = [
     year: 2023,
     tags: ['цифровізація'],
     img: evaSport,
-    details: {},
+    details: {
+      name: '',
+      tags: [''],
+      title: '',
+      primaryBanner: '',
+      firstBanner: '',
+    },
   },
 ];
 

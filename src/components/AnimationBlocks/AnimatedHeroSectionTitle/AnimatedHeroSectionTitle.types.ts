@@ -1,5 +1,5 @@
-import { RefDivObject } from '@/types/types';
+import { MotionValueNumber } from '@/types/types';
 
 export interface IProps {
-  containerRef: RefDivObject;
+  scale: MotionValueNumber;
 }
