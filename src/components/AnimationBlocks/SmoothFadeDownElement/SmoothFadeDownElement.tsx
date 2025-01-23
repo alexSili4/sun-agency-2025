@@ -1,7 +1,6 @@
 import { FC } from 'react';
 import { Container, ElementWrap } from './SmoothFadeDownElement.styled';
 import { IProps } from './SmoothFadeDownElement.types';
-import { framerMotionVariants } from '@/constants';
 
 const SmoothFadeDownElement: FC<IProps> = ({
   children,
@@ -13,21 +12,40 @@ const SmoothFadeDownElement: FC<IProps> = ({
 }) => {
   const animate = shouldShow ? 'visible' : 'hidden';
 
+  const containerVariants = {
+    hidden: {},
+    visible: {},
+  };
+
+  const transition = {
+    duration: 0.6,
+    ease: [0.25, 0.1, 0.25, 1],
+  };
+
+  const elementVariants = {
+    hidden: {
+      y: 200,
+      opacity: 0,
+      transition,
+    },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition,
+    },
+  };
+
   return (
     <Container
       ref={elementRef}
-      variants={framerMotionVariants.linearAnimationContainerVariants}
+      variants={containerVariants}
       initial='hidden'
       animate={animate}
       isPositionAbsolute={isPositionAbsolute}
       bottom={bottom}
       left={left}
     >
-      <ElementWrap
-        variants={framerMotionVariants.largeMovementAnimationVariants}
-      >
-        {children}
-      </ElementWrap>
+      <ElementWrap variants={elementVariants}>{children}</ElementWrap>
     </Container>
   );
 };

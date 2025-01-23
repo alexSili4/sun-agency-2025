@@ -27,6 +27,7 @@ interface ITheme {
     donationLink: number;
     closeClientDetailsBtn: number;
     reviewsSlider: number;
+    projectDetailsBreadcrumbs: number;
   };
   zIndex: {
     loader: number;
@@ -71,6 +72,7 @@ const theme: ITheme = {
   // shadows: {  },
   iconSizes: {
     donationLink: 7,
+    projectDetailsBreadcrumbs: 9,
     reviewsSlider: 11,
     socialLink: 14,
     closeClientDetailsBtn: 14,

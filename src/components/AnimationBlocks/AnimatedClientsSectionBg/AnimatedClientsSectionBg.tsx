@@ -11,20 +11,19 @@ const AnimatedClientsSectionBg: FC<IProps> = ({ shouldShow }) => {
     visible: {},
   };
 
+  const transition = {
+    duration: 2,
+    ease: [0.25, 0.1, 0.25, 1],
+  };
+
   const itemVariants = {
     hidden: {
       y: '100%',
-      transition: {
-        duration: 2,
-        ease: [0.25, 0.1, 0.25, 1],
-      },
+      transition,
     },
     visible: {
       y: 0,
-      transition: {
-        duration: 2,
-        ease: [0.25, 0.1, 0.25, 1],
-      },
+      transition,
     },
   };
 

@@ -3,7 +3,6 @@ import { FC, useRef } from 'react';
 import { IProps } from './AnimatedServicesList.types';
 import ServiceItem from '@MainPageComponents/ServiceItem';
 import { List, ListItem } from './AnimatedServicesList.styled';
-import { framerMotionVariants } from '@/constants';
 
 const AnimatedServicesList: FC<IProps> = ({ services, nextSectionInView }) => {
   const listRef = useRef<HTMLUListElement>(null);
@@ -12,9 +11,32 @@ const AnimatedServicesList: FC<IProps> = ({ services, nextSectionInView }) => {
   });
   const animate = inView ? 'visible' : 'hidden';
 
+  const containerVariants = {
+    hidden: {},
+    visible: {
+      transition: {
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  const transition = {
+    duration: 0.6,
+    ease: [0.25, 0.1, 0.25, 1],
+  };
+
+  const elementVariants = {
+    hidden: { y: 50, opacity: 0, transition },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition,
+    },
+  };
+
   return (
     <List
-      variants={framerMotionVariants.slowAnimationContainerVariants}
+      variants={containerVariants}
       initial='hidden'
       animate={animate}
       ref={listRef}
@@ -25,10 +47,7 @@ const AnimatedServicesList: FC<IProps> = ({ services, nextSectionInView }) => {
         const formattedNumber = positionString.padStart(2, '0');
 
         return (
-          <ListItem
-            variants={framerMotionVariants.smallMovementAnimationVariants}
-            key={index}
-          >
+          <ListItem variants={elementVariants} key={index}>
             <ServiceItem
               icon={icon}
               path={path}

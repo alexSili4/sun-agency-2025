@@ -6,7 +6,6 @@ import {
 } from './AnimatedMultiLineSubtitle.styled';
 import { IProps } from './AnimatedMultiLineSubtitle.types';
 import { useInView } from 'framer-motion';
-import { framerMotionVariants } from '@/constants';
 
 const AnimatedMultiLineSubtitle: FC<IProps> = ({ lines }) => {
   const subtitleRef = useRef<HTMLHeadingElement>(null);
@@ -16,6 +15,29 @@ const AnimatedMultiLineSubtitle: FC<IProps> = ({ lines }) => {
   });
   const animate = inView ? 'visible' : 'hidden';
 
+  const containerVariants = {
+    hidden: {},
+    visible: {
+      transition: {
+        staggerChildren: 0.03,
+      },
+    },
+  };
+
+  const transition = {
+    duration: 0.6,
+    ease: [0.25, 0.1, 0.25, 1],
+  };
+
+  const elementVariants = {
+    hidden: { y: 50, opacity: 0, transition },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition,
+    },
+  };
+
   return (
     <Title ref={subtitleRef}>
       {lines.map((line, index) => {
@@ -23,16 +45,13 @@ const AnimatedMultiLineSubtitle: FC<IProps> = ({ lines }) => {
 
         return (
           <LineContainer
-            variants={framerMotionVariants.fastAnimationContainerVariants}
+            variants={containerVariants}
             initial='hidden'
             animate={animate}
             key={index}
           >
             {symbols.map((symbol, index) => (
-              <Symbol
-                variants={framerMotionVariants.smallMovementAnimationVariants}
-                key={index}
-              >
+              <Symbol variants={elementVariants} key={index}>
                 {symbol}
               </Symbol>
             ))}

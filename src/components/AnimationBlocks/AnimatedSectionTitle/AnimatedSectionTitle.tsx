@@ -1,6 +1,5 @@
 import { FC, useRef } from 'react';
 import { IProps } from './AnimatedSectionTitle.types';
-import { framerMotionVariants } from '@/constants';
 import { Container, Title } from './AnimatedSectionTitle.styled';
 import { useInView } from 'framer-motion';
 
@@ -16,18 +15,37 @@ const AnimatedSectionTitle: FC<IProps> = ({
   });
   const animate = inView ? 'visible' : 'hidden';
 
+  const containerVariants = {
+    hidden: {},
+    visible: {
+      transition: {
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  const transition = {
+    duration: 0.6,
+    ease: [0.25, 0.1, 0.25, 1],
+  };
+
+  const elementVariants = {
+    hidden: { y: 50, opacity: 0, transition },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition,
+    },
+  };
+
   return (
     <Container
-      variants={framerMotionVariants.slowAnimationContainerVariants}
+      variants={containerVariants}
       initial='hidden'
       animate={animate}
       ref={containerRef}
     >
-      <Title
-        variants={framerMotionVariants.smallMovementAnimationVariants}
-        isCenter={isCenter}
-        isHidden={isHidden}
-      >
+      <Title variants={elementVariants} isCenter={isCenter} isHidden={isHidden}>
         {text}
       </Title>
     </Container>
