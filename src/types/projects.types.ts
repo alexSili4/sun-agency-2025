@@ -1,11 +1,22 @@
 import { Strings } from './types';
 
-export interface IProjectDetails {
+export interface IGeneralInfo {
+  desc: string;
+  timeline: string;
+  client: string;
+  websiteAddress: string;
+}
+
+export interface IMainInfo {
   name: string;
   tags: Strings;
   title: string;
   primaryBanner: string;
-  firstBanner: string;
+}
+
+export interface IProjectDetails {
+  mainInfo: IMainInfo;
+  generalInfo: IGeneralInfo;
 }
 
 export interface IProject {

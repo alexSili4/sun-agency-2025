@@ -36,14 +36,16 @@ const projects: Projects = [
     tags: ['e-commerce'],
     img: atb,
     details: {
-      name: 'АТБ',
-      tags: ['e-commerce', 'V3.0'],
-      title: 'Онлайн магазин для мережі супермаркетів АТБ',
-      primaryBanner: atbPrimaryBanner,
+      mainInfo: {
+        name: 'АТБ',
+        tags: ['e-commerce', 'V3.0'],
+        title: 'Онлайн магазин для мережі супермаркетів АТБ',
+        primaryBanner: atbPrimaryBanner,
+      },
       firstBanner: atbFirstBanner,
       thirdBanner: atbThirdBanner,
-      desc: "Ми розробили комплексний онлайн-магазин для мережі супермаркетів АТБ, щоб об'єднати ключові бізнес-процеси в єдину ефективну екосистему. Інтеграція з касовими системами, службами доставки та платіжними сервісами забезпечила зручність для покупців і гнучкість для подальшого масштабування. Це рішення стало важливим етапом цифрової трансформації найбільшої мережі супермаркетів України.",
       generalInfo: {
+        desc: "Ми розробили комплексний онлайн-магазин для мережі супермаркетів АТБ, щоб об'єднати ключові бізнес-процеси в єдину ефективну екосистему. Інтеграція з касовими системами, службами доставки та платіжними сервісами забезпечила зручність для покупців і гнучкість для подальшого масштабування. Це рішення стало важливим етапом цифрової трансформації найбільшої мережі супермаркетів України.",
         timeline: 'Триває',
         client: 'АТБ',
         websiteAddress: 'www.atbmarket.com',
@@ -132,11 +134,18 @@ const projects: Projects = [
     tags: ['e-commerce', 'брендинг'],
     img: qanabi,
     details: {
-      name: '',
-      tags: [''],
-      title: '',
-      primaryBanner: '',
-      firstBanner: '',
+      mainInfo: {
+        name: '',
+        tags: [''],
+        title: '',
+        primaryBanner: '',
+      },
+      generalInfo: {
+        desc: '',
+        timeline: '',
+        client: '',
+        websiteAddress: '',
+      },
     },
   },
   {
@@ -146,11 +155,18 @@ const projects: Projects = [
     tags: ['e-commerce'],
     img: maxBanus,
     details: {
-      name: '',
-      tags: [''],
-      title: '',
-      primaryBanner: '',
-      firstBanner: '',
+      mainInfo: {
+        name: '',
+        tags: [''],
+        title: '',
+        primaryBanner: '',
+      },
+      generalInfo: {
+        desc: '',
+        timeline: '',
+        client: '',
+        websiteAddress: '',
+      },
     },
   },
   {
@@ -160,11 +176,18 @@ const projects: Projects = [
     tags: ['цифровізація'],
     img: evaSport,
     details: {
-      name: '',
-      tags: [''],
-      title: '',
-      primaryBanner: '',
-      firstBanner: '',
+      mainInfo: {
+        name: '',
+        tags: [''],
+        title: '',
+        primaryBanner: '',
+      },
+      generalInfo: {
+        desc: '',
+        timeline: '',
+        client: '',
+        websiteAddress: '',
+      },
     },
   },
 ];

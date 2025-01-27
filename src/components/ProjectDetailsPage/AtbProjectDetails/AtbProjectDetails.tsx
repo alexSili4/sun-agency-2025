@@ -1,9 +1,12 @@
 import { FC } from 'react';
 import AtbProjectDetailsHeroSection from '@ProjectDetailsPageComponents/AtbProjectDetailsHeroSection';
+import AtbGeneralInfoSection from '@ProjectDetailsPageComponents/AtbGeneralInfoSection';
 import { IProps } from './AtbProjectDetails.types.ts';
 
 const AtbProjectDetails: FC<IProps> = ({ project }) => {
-  const { name, tags, title, primaryBanner } = project;
+  const {
+    mainInfo: { name, tags, title, primaryBanner },
+  } = project;
 
   return (
     <>
@@ -14,6 +17,7 @@ const AtbProjectDetails: FC<IProps> = ({ project }) => {
         primaryBanner={primaryBanner}
         borderRadius={58}
       />
+      <AtbGeneralInfoSection />
     </>
   );
 };
