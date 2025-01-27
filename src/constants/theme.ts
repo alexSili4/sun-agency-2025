@@ -37,7 +37,7 @@ interface ITheme {
     header: number;
   };
   transitionDurationAndFunc: string;
-  spacing: (value?: number) => string;
+  spacing: (value?: number) => number;
 }
 
 const theme: ITheme = {
@@ -79,7 +79,7 @@ const theme: ITheme = {
     menuBtn: 17,
   },
   transitionDurationAndFunc: '400ms cubic-bezier(0.4, 0, 0.2, 1)',
-  spacing: (value = 1) => `${value * 4}px`,
+  spacing: (value = 1) => value * 4,
 };
 
 export default theme;

@@ -5,12 +5,12 @@ export const Container = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: ${({ theme }) => theme.spacing(26)};
+  gap: ${({ theme }) => theme.spacing(26)}px;
   width: 562px;
 `;
 
 export const TitleWrap = styled.div`
-  padding-top: ${({ theme }) => theme.spacing(8)};
+  padding-top: ${({ theme }) => theme.spacing(8)}px;
 `;
 
 export const Title = styled.p`
@@ -47,7 +47,7 @@ export const StyledLink = styled(Link)`
   transition: color ${({ theme }) => theme.transitionDurationAndFunc};
 
   li:not(:last-of-type) > & {
-    padding-bottom: ${({ theme }) => theme.spacing(5)};
+    padding-bottom: ${({ theme }) => theme.spacing(5)}px;
   }
 
   div:has(a:is(:hover, :focus)) > div > ul > li > &:not(:is(:hover, :focus)) {

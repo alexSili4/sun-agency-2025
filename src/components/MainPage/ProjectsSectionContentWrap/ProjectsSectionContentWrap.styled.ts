@@ -14,6 +14,6 @@ export const Container = styled.div<IStyledContainerProps>`
   align-items: flex-start;
   height: 100%;
   padding-top: ${({ theme, isProjectsListWrap }) =>
-    !isProjectsListWrap && theme.spacing(8)};
-  padding-bottom: ${({ theme }) => theme.spacing(12)};
+    !isProjectsListWrap && theme.spacing(8)}px;
+  padding-bottom: ${({ theme }) => theme.spacing(12)}px;
 `;

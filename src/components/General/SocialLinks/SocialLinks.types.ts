@@ -1,7 +1,7 @@
 export interface IProps {
-  linkPadding: string;
+  linkPadding: number;
 }
 
 export interface IStyledProps {
-  linkPadding: string;
+  linkPadding: number;
 }

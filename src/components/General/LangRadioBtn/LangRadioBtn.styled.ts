@@ -7,7 +7,7 @@ import {
 export const Container = styled.label<IStyledContainerProps>`
   display: block;
   padding-right: ${({ theme, isLastRadioBtn }) =>
-    !isLastRadioBtn && theme.spacing()};
+    !isLastRadioBtn && `${theme.spacing()}px`};
   cursor: pointer;
   transition: opacity ${({ theme }) => theme.transitionDurationAndFunc},
     transform ${({ theme }) => theme.transitionDurationAndFunc};

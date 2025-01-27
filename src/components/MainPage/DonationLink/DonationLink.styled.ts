@@ -6,8 +6,8 @@ export const StyledLink = styled(Link)`
   position: relative;
   display: flex;
   align-items: center;
-  gap: ${({ theme }) => theme.spacing(13)};
-  padding: ${({ theme: { spacing } }) => `${spacing(2)} ${spacing(5)}`};
+  gap: ${({ theme }) => theme.spacing(13)}px;
+  padding: ${({ theme: { spacing } }) => `${spacing(2)}px ${spacing(5)}px`};
   border: 1px solid;
   border-color: rgba(255, 255, 255, 0.18);
   border-radius: 16px;

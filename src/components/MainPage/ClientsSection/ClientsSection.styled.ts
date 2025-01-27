@@ -7,8 +7,8 @@ export const Section = styled.section`
 
 export const Background = styled.div`
   position: relative;
-  padding-top: ${({ theme }) => theme.spacing(43)};
-  padding-bottom: ${({ theme }) => theme.spacing(18)};
+  padding-top: ${({ theme }) => theme.spacing(43)}px;
+  padding-bottom: ${({ theme }) => theme.spacing(18)}px;
   background-color: ${({ theme }) => theme.colors.dark};
   border-bottom-left-radius: 60px;
   border-bottom-right-radius: 60px;

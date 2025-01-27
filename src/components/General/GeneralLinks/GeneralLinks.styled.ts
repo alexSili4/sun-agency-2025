@@ -13,7 +13,7 @@ export const Container = styled.div`
 export const LinksWrap = styled.div`
   display: flex;
   align-items: center;
-  gap: ${({ theme }) => theme.spacing(40)};
+  gap: ${({ theme }) => theme.spacing(40)}px;
 `;
 
 export const PrivacyPolicyLink = styled.a`

@@ -5,10 +5,10 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: ${({ theme }) => theme.spacing(10)};
+  gap: ${({ theme }) => theme.spacing(10)}px;
   height: 100%;
   padding: ${({ theme: { spacing } }) =>
-    `${spacing(18)} ${spacing(8)} ${spacing(5)}`};
+    `${spacing(18)}px ${spacing(8)}px ${spacing(5)}px`};
   background-image: url(${reviewBg});
   background-position: 0 0;
   background-size: 100% 100%;
@@ -31,7 +31,7 @@ export const ClientInfoWrap = styled.div`
 export const ClientInfo = styled.div`
   display: flex;
   align-items: center;
-  gap: ${({ theme }) => theme.spacing(5)};
+  gap: ${({ theme }) => theme.spacing(5)}px;
 `;
 
 export const Avatar = styled.img`
@@ -43,7 +43,7 @@ export const Avatar = styled.img`
 export const TextWrap = styled.div`
   display: flex;
   flex-direction: column;
-  gap: ${({ theme }) => theme.spacing()};
+  gap: ${({ theme }) => theme.spacing()}px;
 `;
 
 export const Name = styled.p`

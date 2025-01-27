@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 
 export const StyledFooter = styled.footer`
   position: relative;
-  padding-top: ${({ theme }) => theme.spacing(146)};
+  padding-top: ${({ theme }) => theme.spacing(146)}px;
   background-color: ${({ theme }) => theme.colors.dark};
   overflow: hidden;
 `;
@@ -24,9 +24,9 @@ export const ContentWrap = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: ${({ theme }) => theme.spacing(24)};
+  gap: ${({ theme }) => theme.spacing(24)}px;
   border-top-left-radius: 60px;
   border-top-right-radius: 60px;
-  padding-top: ${({ theme }) => theme.spacing(17)};
+  padding-top: ${({ theme }) => theme.spacing(17)}px;
   background-color: inherit;
 `;

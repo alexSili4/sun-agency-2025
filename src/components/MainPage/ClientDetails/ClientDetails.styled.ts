@@ -3,13 +3,13 @@ import styled from '@emotion/styled';
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  gap: ${({ theme }) => theme.spacing(13)};
+  gap: ${({ theme }) => theme.spacing(13)}px;
 `;
 
 export const InfoWrap = styled.div`
   display: flex;
   flex-direction: column;
-  gap: ${({ theme }) => theme.spacing(9)};
+  gap: ${({ theme }) => theme.spacing(9)}px;
 `;
 
 export const Logo = styled.img`
@@ -20,7 +20,7 @@ export const Logo = styled.img`
 export const TextWrap = styled.div`
   display: flex;
   flex-direction: column;
-  gap: ${({ theme }) => theme.spacing(6)};
+  gap: ${({ theme }) => theme.spacing(6)}px;
 `;
 
 export const WebsiteAddress = styled.p`

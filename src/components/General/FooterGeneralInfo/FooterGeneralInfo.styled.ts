@@ -14,8 +14,8 @@ export const Container = styled.div`
 
 export const ContentWrap = styled.div`
   background-color: inherit;
-  padding-top: ${({ theme }) => theme.spacing(12)};
-  padding-bottom: ${({ theme }) => theme.spacing(12)};
+  padding-top: ${({ theme }) => theme.spacing(12)}px;
+  padding-bottom: ${({ theme }) => theme.spacing(12)}px;
 `;
 
 export const Content = styled.div`
@@ -27,5 +27,5 @@ export const Content = styled.div`
 export const LinksWrap = styled.div`
   display: flex;
   align-items: center;
-  gap: ${({ theme }) => theme.spacing(90)};
+  gap: ${({ theme }) => theme.spacing(90)}px;
 `;

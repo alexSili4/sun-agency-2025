@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 export const List = styled.ul`
   display: flex;
   align-items: center;
-  gap: ${({ theme }) => theme.spacing(12)};
+  gap: ${({ theme }) => theme.spacing(12)}px;
 `;
 
 export const ListItem = styled.li``;
@@ -11,7 +11,7 @@ export const ListItem = styled.li``;
 export const Container = styled.div`
   display: flex;
   align-items: center;
-  gap: ${({ theme }) => theme.spacing(2)};
+  gap: ${({ theme }) => theme.spacing(2)}px;
 `;
 
 export const Number = styled.img`

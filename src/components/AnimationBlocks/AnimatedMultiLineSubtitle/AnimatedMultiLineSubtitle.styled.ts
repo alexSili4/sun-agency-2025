@@ -5,7 +5,7 @@ export const Title = styled.h3`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: ${({ theme }) => theme.spacing()};
+  gap: ${({ theme }) => theme.spacing()}px;
 `;
 
 export const LineContainer = styled(motion.span)`

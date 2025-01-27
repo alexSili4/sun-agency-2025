@@ -1,6 +1,7 @@
 import GeneralContainer from '@GeneralComponents/GeneralContainer';
 import { FC } from 'react';
 import {
+  Container,
   Background,
   Section,
   Title,
@@ -9,17 +10,30 @@ import {
 import ProjectDetailsBreadcrumbs from '@ProjectDetailsPageComponents/ProjectDetailsBreadcrumbs';
 import ProjectDetailsTagsList from '@ProjectDetailsPageComponents/ProjectDetailsTagsList';
 import { IProps } from './AtbProjectDetailsHeroSection.types';
+import AtbHeroSectionBanner from '@ProjectDetailsPageComponents/AtbHeroSectionBanner';
 
-const AtbProjectDetailsHeroSection: FC<IProps> = ({ name, tags, title }) => {
+const AtbProjectDetailsHeroSection: FC<IProps> = ({
+  name,
+  tags,
+  title,
+  primaryBanner,
+  borderRadius,
+}) => {
   return (
     <Section>
-      <Background>
+      <AtbHeroSectionBanner
+        banner={primaryBanner}
+        borderRadius={borderRadius}
+      />
+      <Background borderRadius={borderRadius}>
         <GeneralContainer>
-          <ProjectDetailsBreadcrumbs name={name} />
-          <TitleWrap>
-            <ProjectDetailsTagsList tags={tags} />
-            <Title>{title}</Title>
-          </TitleWrap>
+          <Container>
+            <ProjectDetailsBreadcrumbs name={name} />
+            <TitleWrap>
+              <ProjectDetailsTagsList tags={tags} />
+              <Title>{title}</Title>
+            </TitleWrap>
+          </Container>
         </GeneralContainer>
       </Background>
     </Section>

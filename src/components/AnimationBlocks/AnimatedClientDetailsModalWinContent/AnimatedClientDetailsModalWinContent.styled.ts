@@ -16,8 +16,8 @@ export const Backdrop = styled.div`
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  padding-top: ${({ theme }) => theme.spacing(10)};
-  padding-bottom: ${({ theme }) => theme.spacing(10)};
+  padding-top: ${({ theme }) => theme.spacing(10)}px;
+  padding-bottom: ${({ theme }) => theme.spacing(10)}px;
   background-color: rgba(0, 0, 0, 0.25);
 `;
 
@@ -29,13 +29,13 @@ export const Container = styled.div`
   background-position: 0 0;
   background-size: 100% 100%;
   background-repeat: no-repeat;
-  padding-right: ${({ theme }) => theme.spacing(3)};
+  padding-right: ${({ theme }) => theme.spacing(3)}px;
 `;
 
 export const Content = styled.div`
   height: 100%;
   padding: ${({ theme: { spacing } }) =>
-    `${spacing(19)} ${spacing(54)} ${spacing(14)} ${spacing(14)}`};
+    `${spacing(19)}px ${spacing(54)}px ${spacing(14)}px ${spacing(14)}px`};
   overflow-y: auto;
   /* TODO fix */
   &::-webkit-scrollbar {
@@ -43,8 +43,8 @@ export const Content = styled.div`
   }
 
   &::-webkit-scrollbar-track {
-    margin-top: ${({ theme }) => theme.spacing(38)};
-    margin-bottom: ${({ theme }) => theme.spacing(8)};
+    margin-top: ${({ theme }) => theme.spacing(38)}px;
+    margin-bottom: ${({ theme }) => theme.spacing(8)}px;
     background-color: rgba(255, 255, 255, 0.19);
     border-radius: 100px;
   }

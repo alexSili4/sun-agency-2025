@@ -13,6 +13,6 @@ export const Container = styled.div`
   flex-direction: column;
   justify-content: space-between;
   height: 100vh;
-  padding-top: ${({ theme }) => theme.spacing(45)};
-  padding-bottom: ${({ theme }) => theme.spacing(12)};
+  padding-top: ${({ theme }) => theme.spacing(45)}px;
+  padding-bottom: ${({ theme }) => theme.spacing(12)}px;
 `;

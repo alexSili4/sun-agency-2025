@@ -3,19 +3,19 @@ import styled from '@emotion/styled';
 export const Container = styled.address`
   display: flex;
   flex-direction: column;
-  gap: ${({ theme }) => theme.spacing(8)};
+  gap: ${({ theme }) => theme.spacing(8)}px;
 `;
 
 export const AddressItem = styled.div`
   display: flex;
   flex-direction: column;
-  gap: ${({ theme }) => theme.spacing(2)};
+  gap: ${({ theme }) => theme.spacing(2)}px;
 `;
 
 export const PhonesList = styled.ul`
   display: flex;
   flex-direction: column;
-  gap: ${({ theme }) => theme.spacing(2)};
+  gap: ${({ theme }) => theme.spacing(2)}px;
 `;
 
 export const PhonesListItem = styled.li``;

@@ -19,10 +19,10 @@ export const StatisticsItem = styled(motion.div)<IStyledStatisticsItemProps>`
   left: 0;
   display: flex;
   align-items: center;
-  gap: ${({ theme }) => theme.spacing(5)};
+  gap: ${({ theme }) => theme.spacing(5)}px;
   width: 275px;
-  padding-top: ${({ theme }) => theme.spacing(12)};
-  padding-bottom: ${({ theme }) => theme.spacing(12)};
+  padding-top: ${({ theme }) => theme.spacing(12)}px;
+  padding-bottom: ${({ theme }) => theme.spacing(12)}px;
 `;
 
 export const Image = styled.img<IStyledImageProps>`

@@ -11,7 +11,7 @@ export const Content = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding-top: ${({ theme }) => theme.spacing(20)};
+  padding-top: ${({ theme }) => theme.spacing(20)}px;
 `;
 
 export const LinksWrap = styled.div`

@@ -10,8 +10,8 @@ export const ListItem = styled.li``;
 export const StyledLink = styled(Link)`
   position: relative;
   display: block;
-  padding-top: ${({ theme }) => theme.spacing(7)};
-  padding-bottom: ${({ theme }) => theme.spacing(7)};
+  padding-top: ${({ theme }) => theme.spacing(7)}px;
+  padding-bottom: ${({ theme }) => theme.spacing(7)}px;
 `;
 
 export const StyledLinkTitle = styled.span`

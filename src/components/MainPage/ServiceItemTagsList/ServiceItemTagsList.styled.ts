@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 export const List = styled.ul`
   display: flex;
   align-items: center;
-  gap: ${({ theme }) => theme.spacing(5)};
+  gap: ${({ theme }) => theme.spacing(5)}px;
   transition: transform ${({ theme }) => theme.transitionDurationAndFunc},
     opacity ${({ theme }) => theme.transitionDurationAndFunc};
 
@@ -18,7 +18,7 @@ export const ListItem = styled.li``;
 export const Container = styled.div`
   display: flex;
   align-items: center;
-  gap: ${({ theme }) => theme.spacing(5)};
+  gap: ${({ theme }) => theme.spacing(5)}px;
 `;
 
 export const Tag = styled.p`

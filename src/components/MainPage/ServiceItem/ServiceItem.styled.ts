@@ -5,14 +5,14 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: ${({ theme }) => theme.spacing(6)};
-  padding-bottom: ${({ theme }) => theme.spacing(6)};
+  padding-top: ${({ theme }) => theme.spacing(6)}px;
+  padding-bottom: ${({ theme }) => theme.spacing(6)}px;
 `;
 
 export const TitleWrap = styled.div`
   display: flex;
   align-items: center;
-  gap: ${({ theme }) => theme.spacing(20)};
+  gap: ${({ theme }) => theme.spacing(20)}px;
 `;
 
 export const Number = styled.p`
@@ -34,7 +34,7 @@ export const Title = styled.p`
 export const DetailsWrap = styled.div`
   display: flex;
   align-items: center;
-  gap: ${({ theme }) => theme.spacing(19)};
+  gap: ${({ theme }) => theme.spacing(19)}px;
 `;
 
 export const Image = styled.img`

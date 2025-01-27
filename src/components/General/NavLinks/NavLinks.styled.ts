@@ -8,7 +8,7 @@ export const List = styled.ul`
 export const ListItem = styled.li``;
 
 export const StyledLink = styled(Link)`
-  padding: ${({ theme: { spacing } }) => `${spacing(13)} ${spacing(5)}`};
+  padding: ${({ theme: { spacing } }) => `${spacing(13)}px ${spacing(5)}px`};
   color: #dedede;
   font-family: ${({ theme }) => theme.fontFamily.involve};
   font-size: 14px;

@@ -4,7 +4,7 @@ import { IStyledSwiperSlideProps } from './ReviewsSlider.types';
 
 export const Container = styled.div`
   position: relative;
-  margin-top: ${({ theme }) => theme.spacing(18)};
+  margin-top: ${({ theme }) => theme.spacing(18)}px;
 `;
 
 export const StyledSwiper = styled(Swiper)`

@@ -10,7 +10,7 @@ export const ContentWrap = styled.div`
   background-size: 100% 100%;
   background-position: 0 0;
   background-repeat: no-repeat;
-  padding: ${({ theme }) => theme.spacing(3)};
+  padding: ${({ theme }) => theme.spacing(3)}px;
   pointer-events: all;
 `;
 
@@ -66,7 +66,7 @@ export const StyledLink = styled(Link)`
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: ${({ theme: { spacing } }) => `${spacing(4)} ${spacing(7)}`};
+  padding: ${({ theme: { spacing } }) => `${spacing(4)}px ${spacing(7)}px`};
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 16px;
   background-color: rgba(255, 255, 255, 0.05);

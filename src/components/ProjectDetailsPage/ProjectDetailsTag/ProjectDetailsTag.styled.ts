@@ -3,11 +3,11 @@ import styled from '@emotion/styled';
 export const Container = styled.div`
   display: flex;
   align-items: center;
-  gap: ${({ theme }) => theme.spacing()};
+  gap: ${({ theme }) => theme.spacing()}px;
   border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 16px;
   backdrop-filter: blur(8px);
-  padding: ${({ theme: { spacing } }) => `${spacing(4)} ${spacing(5)}`};
+  padding: ${({ theme: { spacing } }) => `${spacing(4)}px ${spacing(5)}px`};
 `;
 
 export const Marker = styled.div`

@@ -6,7 +6,7 @@ export const List = styled.ul`
   right: 14px;
   display: flex;
   align-items: center;
-  gap: ${({ theme }) => theme.spacing(4)};
+  gap: ${({ theme }) => theme.spacing(4)}px;
 `;
 
 export const ListItem = styled.li``;
@@ -14,7 +14,7 @@ export const ListItem = styled.li``;
 export const Container = styled.div`
   display: flex;
   align-items: center;
-  gap: ${({ theme }) => theme.spacing()};
+  gap: ${({ theme }) => theme.spacing()}px;
 `;
 
 export const Marker = styled.div`

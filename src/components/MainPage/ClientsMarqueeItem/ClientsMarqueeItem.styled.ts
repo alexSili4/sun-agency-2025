@@ -6,7 +6,7 @@ export const ShowClientDetailsBtn = styled.button`
   justify-content: center;
   padding: 0;
   border: none;
-  margin-right: ${({ theme }) => theme.spacing(4)};
+  margin-right: ${({ theme }) => theme.spacing(4)}px;
   background-color: transparent;
 `;
 

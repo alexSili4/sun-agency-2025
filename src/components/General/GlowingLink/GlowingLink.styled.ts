@@ -7,7 +7,7 @@ export const StyledLink = styled(Link)<IStyledProps>`
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: ${({ theme }) => theme.spacing(3)};
+  gap: ${({ theme }) => theme.spacing(3)}px;
   width: ${({ width }) => width}px;
   height: 56px;
   border-radius: 16px;

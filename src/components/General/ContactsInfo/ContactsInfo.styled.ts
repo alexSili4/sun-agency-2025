@@ -4,7 +4,7 @@ import { IStyledContainerProps } from './ContactsInfo.types';
 export const Container = styled.div<IStyledContainerProps>`
   display: flex;
   align-items: center;
-  gap: ${({ theme }) => theme.spacing(5)};
+  gap: ${({ theme }) => theme.spacing(5)}px;
   pointer-events: ${({ showMenuModalWin }) =>
     showMenuModalWin ? 'none' : 'all'};
   opacity: ${({ showMenuModalWin }) => (showMenuModalWin ? 0 : 1)};

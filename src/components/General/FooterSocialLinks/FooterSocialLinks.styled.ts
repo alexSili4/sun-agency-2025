@@ -19,8 +19,8 @@ export const Content = styled.div`
   justify-content: space-between;
   align-items: center;
   border-radius: inherit;
-  padding-left: ${({ theme }) => theme.spacing(15)};
-  padding-right: ${({ theme }) => theme.spacing(15)};
+  padding-left: ${({ theme }) => theme.spacing(15)}px;
+  padding-right: ${({ theme }) => theme.spacing(15)}px;
   background-color: #161616;
 `;
 
