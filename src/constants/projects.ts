@@ -1,7 +1,7 @@
 // atb
 import atb from '@/images/projects/atb.png';
 import atbPrimaryBanner from '@/images/projects/atb-primary-banner.jpg';
-import atbFirstBanner from '@/images/projects/atb-first-banner.jpg';
+import atbBanner1 from '@/images/projects/atb-banner-1.jpg';
 import atbCashSystemIntegration from '@/images/projects/atb-cash-system-integration.png';
 import atbThirdBanner from '@/images/projects/atb-third-banner.jpg';
 import atbYearlyOrders from '@/images/projects/atb-yearly-orders.png';
@@ -26,7 +26,6 @@ import maxBanus from '@/images/projects/max-banus.png';
 import evaSport from '@/images/projects/eva-sport.png';
 
 import { Projects } from '@/types/projects.types';
-import Symbols from './symbols';
 
 const projects: Projects = [
   {
@@ -42,31 +41,47 @@ const projects: Projects = [
         title: 'Онлайн магазин для мережі супермаркетів АТБ',
         primaryBanner: atbPrimaryBanner,
       },
-      firstBanner: atbFirstBanner,
-      thirdBanner: atbThirdBanner,
+      businessMetrics: [
+        {
+          title: 'замовлень<br/>в рік',
+          img: atbYearlyOrders,
+        },
+        {
+          title: 'товарів у<br/>каталозі',
+          img: atbProductsCount,
+        },
+        {
+          title: 'активних<br/>юзерів',
+          img: atbActiveUsers,
+        },
+        {
+          title: 'фізичних<br/>магазинів',
+          img: atbStores,
+        },
+      ],
       generalInfo: {
         desc: "Ми розробили комплексний онлайн-магазин для мережі супермаркетів АТБ, щоб об'єднати ключові бізнес-процеси в єдину ефективну екосистему. Інтеграція з касовими системами, службами доставки та платіжними сервісами забезпечила зручність для покупців і гнучкість для подальшого масштабування. Це рішення стало важливим етапом цифрової трансформації найбільшої мережі супермаркетів України.",
         timeline: 'Триває',
         client: 'АТБ',
         websiteAddress: 'www.atbmarket.com',
       },
-      businessMetrics: {
-        yearlyOrders: atbYearlyOrders,
-        productsCount: atbProductsCount,
-        activeUsers: atbActiveUsers,
-        stores: atbStores,
+      banner1: atbBanner1,
+      technicalTask: {
+        desc: 'АТБ-Маркет — найбільша мережа супермаркетів в Україні, яка щодня обслуговує понад 4 млн покупців. У 2023 році торговий оборот мережі склав 181 млрд грн, сплачені податки — 26 млрд грн. Компанія є лідером не лише у сфері роздрібної торгівлі, а й у соціальній відповідальності, надавши під час війни допомогу на понад 2 млрд грн.<br/><br/>Нашим завданням було створити сучасний і зручний онлайн-магазин, який би інтегрувався з масштабною інфраструктурою мережі, підтримував її стрімкий розвиток та забезпечував легкий доступ до продуктів для мільйонів українців.',
+        services: [
+          'Проектування і консалтинг',
+          'UX/UI дизайн',
+          'Розробка та тестування',
+          'Контент-підтримка',
+          'Хостинг та технічна підтримка',
+          'Консультаційна підтримка кол-центру',
+        ],
+        preview: atbScreens,
       },
-      technicalTask: `АТБ-Маркет — найбільша мережа супермаркетів в Україні, яка щодня обслуговує понад 4 млн покупців. У 2023 році торговий оборот мережі склав 181 млрд грн, сплачені податки — 26 млрд грн. Компанія є лідером не лише у сфері роздрібної торгівлі, а й у соціальній відповідальності, надавши під час війни допомогу на понад 2 млрд грн.${Symbols.lineSpacing}Нашим завданням було створити сучасний і зручний онлайн-магазин, який би інтегрувався з масштабною інфраструктурою мережі, підтримував її стрімкий розвиток та забезпечував легкий доступ до продуктів для мільйонів українців.`,
-      services: [
-        'Проектування і консалтинг',
-        'UX/UI дизайн',
-        'Розробка та тестування',
-        'Контент-підтримка',
-        'Хостинг та технічна підтримка',
-        'Консультаційна підтримка кол-центру',
-      ],
+
+      thirdBanner: atbThirdBanner,
+
       lottiefiles: {
-        screens: atbScreens,
         website: atbWebsite,
       },
       mobAppIntegration: {
@@ -146,6 +161,13 @@ const projects: Projects = [
         client: '',
         websiteAddress: '',
       },
+      businessMetrics: [],
+      banner1: '',
+      technicalTask: {
+        desc: '',
+        services: [],
+        preview: {},
+      },
     },
   },
   {
@@ -167,6 +189,13 @@ const projects: Projects = [
         client: '',
         websiteAddress: '',
       },
+      businessMetrics: [],
+      banner1: '',
+      technicalTask: {
+        desc: '',
+        services: [],
+        preview: {},
+      },
     },
   },
   {
@@ -187,6 +216,13 @@ const projects: Projects = [
         timeline: '',
         client: '',
         websiteAddress: '',
+      },
+      businessMetrics: [],
+      banner1: '',
+      technicalTask: {
+        desc: '',
+        services: [],
+        preview: {},
       },
     },
   },

@@ -14,3 +14,8 @@ export interface ISmoothScrollProps {
   id: string;
   block?: 'nearest' | 'start' | 'center';
 }
+
+export interface IGetFlexItemWidthProps {
+  listLength: number;
+  listGap: number;
+}

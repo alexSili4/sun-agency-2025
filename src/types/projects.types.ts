@@ -14,9 +14,25 @@ export interface IMainInfo {
   primaryBanner: string;
 }
 
+export interface IBusinessMetrics {
+  title: string;
+  img: string;
+}
+
+export type BusinessMetrics = IBusinessMetrics[];
+
+export interface ITechnicalTask {
+  desc: string;
+  services: Strings;
+  preview: object;
+}
+
 export interface IProjectDetails {
   mainInfo: IMainInfo;
   generalInfo: IGeneralInfo;
+  businessMetrics: BusinessMetrics;
+  banner1: string;
+  technicalTask: ITechnicalTask;
 }
 
 export interface IProject {
