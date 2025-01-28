@@ -30,7 +30,6 @@ export const Image = styled.img`
 `;
 
 export const Title = styled.p`
-  max-width: 140px;
   color: ${({ theme }) => theme.colors.white};
   font-family: ${({ theme }) => theme.fontFamily.involve};
   font-size: 14px;

@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import { IProps } from './AtbBusinessMetricsList.types';
-import AtbBusinessMetrics from '@ProjectDetailsPageComponents/AtbBusinessMetrics';
+import AtbBusinessMetric from '@ProjectDetailsPageComponents/AtbBusinessMetric';
 import { List, ListItem } from './AtbBusinessMetricsList.styled';
 
 const AtbBusinessMetricsList: FC<IProps> = ({ businessMetrics }) => {
@@ -10,7 +10,7 @@ const AtbBusinessMetricsList: FC<IProps> = ({ businessMetrics }) => {
     <List>
       {businessMetrics.map(({ img, title }, index) => (
         <ListItem key={index} businessMetrics={businessMetricsLength}>
-          <AtbBusinessMetrics img={img} title={title} />
+          <AtbBusinessMetric img={img} title={title} />
         </ListItem>
       ))}
     </List>

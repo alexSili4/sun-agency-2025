@@ -2,38 +2,30 @@ import { FC } from 'react';
 import { IProps } from './AtbTechnicalTaskSection.types';
 import GeneralContainer from '@/components/General/GeneralContainer';
 import AtbTechnicalTaskPreview from '@ProjectDetailsPageComponents/AtbTechnicalTaskPreview';
-import {
-  Container,
-  InfoContentWrap,
-  InfoWrap,
-  Section,
-  Text,
-  TextWrap,
-  Title,
-} from './AtbTechnicalTaskSection.styled';
+import { Container, Section, TextWrap } from './AtbTechnicalTaskSection.styled';
 import AtbTechnicalTaskServicesList from '@ProjectDetailsPageComponents/AtbTechnicalTaskServicesList';
+import AtbContentContainer from '@ProjectDetailsPageComponents/AtbContentContainer';
+import AtbText from '@ProjectDetailsPageComponents/AtbText';
 
-const AtbTechnicalTaskSection: FC<IProps> = ({ desc, services }) => {
+const AtbTechnicalTaskSection: FC<IProps> = ({
+  desc,
+  services,
+  animationData,
+}) => {
   return (
     <Section>
       <Container>
         <GeneralContainer>
           <TextWrap>
-            <InfoWrap>
-              <Title>Клієнт та задача</Title>
-              <InfoContentWrap>
-                <Text>{desc}</Text>
-              </InfoContentWrap>
-            </InfoWrap>
-            <InfoWrap>
-              <Title>Послуги</Title>
-              <InfoContentWrap>
-                <AtbTechnicalTaskServicesList services={services} />
-              </InfoContentWrap>
-            </InfoWrap>
+            <AtbContentContainer title='Клієнт та задача'>
+              <AtbText text={desc} />
+            </AtbContentContainer>
+            <AtbContentContainer title='Послуги'>
+              <AtbTechnicalTaskServicesList services={services} />
+            </AtbContentContainer>
           </TextWrap>
         </GeneralContainer>
-        <AtbTechnicalTaskPreview />
+        <AtbTechnicalTaskPreview animationData={animationData} />
       </Container>
     </Section>
   );

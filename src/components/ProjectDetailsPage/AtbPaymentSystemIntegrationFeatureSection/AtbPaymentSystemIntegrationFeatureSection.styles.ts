@@ -1,18 +1,20 @@
 import styled from '@emotion/styled';
 
 export const Section = styled.section`
-  padding-top: ${({ theme }) => theme.spacing(23)}px;
+  padding-top: ${({ theme }) => theme.spacing(50)}px;
   background-color: ${({ theme }) => theme.colors.dark};
 `;
 
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  gap: ${({ theme }) => theme.spacing(23)}px;
+  gap: ${({ theme }) => theme.spacing(25)}px;
 `;
 
-export const TextWrap = styled.div`
+export const Content = styled.div`
   display: flex;
   flex-direction: column;
-  gap: ${({ theme }) => theme.spacing(20)}px;
+  gap: ${({ theme }) => theme.spacing(8)}px;
 `;
+
+export const Image = styled.img``;

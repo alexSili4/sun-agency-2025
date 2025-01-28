@@ -27,12 +27,29 @@ export interface ITechnicalTask {
   preview: object;
 }
 
+export interface IFeatureMetric {
+  title: string;
+  img: string;
+}
+
+export type FeatureMetrics = IFeatureMetric[];
+
+export interface IFeature {
+  title: string;
+  desc: string;
+  banner: string;
+  metrics?: FeatureMetrics;
+}
+
 export interface IProjectDetails {
   mainInfo: IMainInfo;
   generalInfo: IGeneralInfo;
   businessMetrics: BusinessMetrics;
   banner1: string;
   technicalTask: ITechnicalTask;
+  feature1: IFeature;
+  feature2: IFeature;
+  feature3: IFeature;
 }
 
 export interface IProject {
