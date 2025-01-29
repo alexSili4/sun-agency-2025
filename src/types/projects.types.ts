@@ -83,6 +83,7 @@ export interface IProjectDetails {
   feature5: IFeature;
   funFact: string;
   teams: ITeams;
+  websitePreview: object;
 }
 
 export interface IProject {

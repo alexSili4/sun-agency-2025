@@ -9,7 +9,7 @@ import atbProductsCount from '@/images/projects/atb-products-count.png';
 import atbActiveUsers from '@/images/projects/atb-active-users.png';
 import atbStores from '@/images/projects/atb-stores.png';
 import atbScreens from '@/lottiefiles/projects/atb-screens.json';
-// import atbWebsite from '@/lottiefiles/projects/atb-website.json';
+import atbWebsite from '@/lottiefiles/projects/atb-website.json';
 import atbAverageTime from '@/images/projects/atb-average-time.png';
 import atbSuccessfulTransactions from '@/images/projects/atb-successful-transactions.png';
 import atbBonusActivatingCustomers from '@/images/projects/atb-bonus-activating-customers.png';
@@ -161,14 +161,8 @@ const projects: Projects = [
           },
         },
       },
+      websitePreview: atbWebsite,
       // --------------------------
-      // lottiefiles: {
-      //   website: atbWebsite,
-      // },
-
-      // sunAgencyTeam: {
-
-      // },
       // reviews: [
       //   {
       //     name: 'Олександр Фролов',
@@ -262,6 +256,7 @@ const projects: Projects = [
           },
         },
       },
+      websitePreview: {},
     },
   },
   {
@@ -347,6 +342,7 @@ const projects: Projects = [
           },
         },
       },
+      websitePreview: {},
     },
   },
   {
@@ -432,6 +428,7 @@ const projects: Projects = [
           },
         },
       },
+      websitePreview: {},
     },
   },
 ];

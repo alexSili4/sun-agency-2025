@@ -1,4 +1,5 @@
 import { MotionValue } from 'framer-motion';
+import { LottieRefCurrentProps } from 'lottie-react';
 import { ChangeEvent, MouseEvent, RefObject } from 'react';
 
 // events
@@ -31,6 +32,8 @@ export type RefFunc = (node?: Element | null | undefined) => void;
 export type RefDivObject = RefObject<HTMLDivElement>;
 
 export type RefListObject = RefObject<HTMLUListElement>;
+
+export type RefLottieObject = RefObject<LottieRefCurrentProps>;
 
 // other
 export type ElementOrNull = Element | null;

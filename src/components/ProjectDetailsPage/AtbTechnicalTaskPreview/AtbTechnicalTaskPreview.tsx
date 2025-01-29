@@ -1,34 +1,11 @@
-import { useInView } from 'framer-motion';
-import Lottie, { LottieRefCurrentProps } from 'lottie-react';
-import { FC, useEffect, useRef } from 'react';
+import Lottie from 'lottie-react';
+import { FC } from 'react';
 import { IProps } from './AtbTechnicalTaskPreview.types';
 import { Container } from './AtbTechnicalTaskPreview.styled';
+import { useLottieContainerInView } from '@/hooks';
 
 const AtbTechnicalTaskPreview: FC<IProps> = ({ animationData }) => {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const lottieRef = useRef<LottieRefCurrentProps>(null);
-
-  const inView = useInView(containerRef, {
-    margin: '-300px',
-  });
-
-  useEffect(() => {
-    if (inView) {
-      if (lottieRef.current?.animationItem) {
-        lottieRef.current.animationItem.loop = true;
-      }
-
-      lottieRef.current?.setDirection(1);
-      lottieRef.current?.play();
-    } else {
-      if (lottieRef.current?.animationItem) {
-        lottieRef.current.animationItem.loop = false;
-      }
-
-      lottieRef.current?.setDirection(-1);
-      lottieRef.current?.play();
-    }
-  }, [inView]);
+  const { containerRef, lottieRef } = useLottieContainerInView();
 
   return (
     <Container ref={containerRef}>

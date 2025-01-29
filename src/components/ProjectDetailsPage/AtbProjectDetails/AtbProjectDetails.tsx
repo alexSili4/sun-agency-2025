@@ -11,6 +11,7 @@ import AtbLoyaltySystemIntegrationFeatureSection from '@ProjectDetailsPageCompon
 import AtbMobAppIntegrationFeatureSection from '@ProjectDetailsPageComponents/AtbMobAppIntegrationFeatureSection';
 import AtbFunFactSection from '@ProjectDetailsPageComponents/AtbFunFactSection';
 import AtbProjectTeamSection from '@ProjectDetailsPageComponents/AtbProjectTeamSection';
+import AtbProjectPreviewSection from '@ProjectDetailsPageComponents/AtbProjectPreviewSection';
 
 const AtbProjectDetails: FC<IProps> = ({ project }) => {
   const {
@@ -52,6 +53,7 @@ const AtbProjectDetails: FC<IProps> = ({ project }) => {
       client: { team: clientTeam, title: clientTeamTitle },
       sunAgency: { team: sunAgencyTeam, title: sunAgencyTeamTitle },
     },
+    websitePreview,
   } = project;
 
   return (
@@ -113,6 +115,7 @@ const AtbProjectDetails: FC<IProps> = ({ project }) => {
         sunAgencyTeam={sunAgencyTeam}
         sunAgencyTeamTitle={sunAgencyTeamTitle}
       />
+      <AtbProjectPreviewSection websitePreview={websitePreview} />
     </>
   );
 };

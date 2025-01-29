@@ -4,6 +4,7 @@ import {
   OnDivClickFunc,
   RefDivObject,
   RefFunc,
+  RefLottieObject,
 } from './types';
 
 export interface IUseModalWinProps {
@@ -34,4 +35,9 @@ export interface IUseIsHoverOrFocus {
   isHoverOrFocus: boolean;
   onItemFocus: Func;
   onItemBlur: Func;
+}
+
+export interface IUseLottieContainerInView {
+  containerRef: RefDivObject;
+  lottieRef: RefLottieObject;
 }
