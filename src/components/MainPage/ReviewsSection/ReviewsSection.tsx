@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import { IProps } from './ReviewsSection.types.';
-import SectionGeneralTitle from '../SectionGeneralTitle';
+import SectionGeneralTitle from '@MainPageComponents/SectionGeneralTitle';
 import GeneralContainer from '@GeneralComponents/GeneralContainer';
 import { Container, Section } from './ReviewsSection.styled';
 import { reviews } from '@/constants';

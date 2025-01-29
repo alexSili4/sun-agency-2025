@@ -7,12 +7,12 @@ import {
   Title,
 } from './AtbFeatureSectionMetric.styled';
 
-const AtbFeatureSectionMetric: FC<IProps> = ({ img, title }) => {
+const AtbFeatureSectionMetric: FC<IProps> = ({ img, title, maxWidth }) => {
   return (
     <Container>
       <Content>
         <Image src={img} />
-        <Title dangerouslySetInnerHTML={{ __html: title }}></Title>
+        <Title maxWidth={maxWidth}>{title}</Title>
       </Content>
     </Container>
   );

@@ -1,4 +1,4 @@
-import HiddenSectionTitle from '@/components/General/HiddenSectionTitle';
+import HiddenSectionTitle from '@GeneralComponents/HiddenSectionTitle';
 import { FC } from 'react';
 import AtbBusinessMetricsList from '@ProjectDetailsPageComponents/AtbBusinessMetricsList';
 import GeneralContainer from '@GeneralComponents/GeneralContainer';

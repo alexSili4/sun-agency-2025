@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { IStyledTitleProps } from './AtbFeatureSectionMetric.types';
 
 export const Container = styled.div`
   padding: 1px;
@@ -29,7 +30,8 @@ export const Image = styled.img`
   height: 37px;
 `;
 
-export const Title = styled.p`
+export const Title = styled.p<IStyledTitleProps>`
+  max-width: ${({ maxWidth }) => maxWidth && `${maxWidth}px`};
   color: ${({ theme }) => theme.colors.white};
   font-family: ${({ theme }) => theme.fontFamily.involve};
   font-size: 14px;

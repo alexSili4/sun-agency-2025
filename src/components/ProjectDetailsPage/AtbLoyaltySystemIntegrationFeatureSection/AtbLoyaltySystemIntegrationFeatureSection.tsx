@@ -1,4 +1,7 @@
 import { FC } from 'react';
+import { IProps } from './AtbLoyaltySystemIntegrationFeatureSection.types';
+import AtbFeatureSectionMetricsList from '@ProjectDetailsPageComponents/AtbFeatureSectionMetricsList';
+import HiddenSectionTitle from '@GeneralComponents/HiddenSectionTitle';
 import AtbContentContainer from '@ProjectDetailsPageComponents/AtbContentContainer';
 import AtbText from '@ProjectDetailsPageComponents/AtbText';
 import GeneralContainer from '@GeneralComponents/GeneralContainer';
@@ -7,16 +10,13 @@ import {
   Content,
   Image,
   Section,
-} from './AtbPaymentSystemIntegrationFeatureSection.styles';
-import { IProps } from './AtbPaymentSystemIntegrationFeatureSection.types';
-import AtbFeatureSectionMetricsList from '@ProjectDetailsPageComponents/AtbFeatureSectionMetricsList';
-import HiddenSectionTitle from '@GeneralComponents/HiddenSectionTitle';
+} from './AtbLoyaltySystemIntegrationFeatureSection.styled';
 
-const AtbPaymentSystemIntegrationFeatureSection: FC<IProps> = ({
-  title,
-  desc,
+const AtbLoyaltySystemIntegrationFeatureSection: FC<IProps> = ({
   banner,
+  desc,
   metrics,
+  title,
 }) => {
   return (
     <Section>
@@ -26,12 +26,7 @@ const AtbPaymentSystemIntegrationFeatureSection: FC<IProps> = ({
           <AtbContentContainer title={title}>
             <Content>
               <AtbText text={desc} />
-              {metrics && (
-                <AtbFeatureSectionMetricsList
-                  metrics={metrics}
-                  maxWidth={146}
-                />
-              )}
+              {metrics && <AtbFeatureSectionMetricsList metrics={metrics} />}
             </Content>
           </AtbContentContainer>
         </GeneralContainer>
@@ -41,4 +36,4 @@ const AtbPaymentSystemIntegrationFeatureSection: FC<IProps> = ({
   );
 };
 
-export default AtbPaymentSystemIntegrationFeatureSection;
+export default AtbLoyaltySystemIntegrationFeatureSection;

@@ -12,14 +12,11 @@ import atbScreens from '@/lottiefiles/projects/atb-screens.json';
 // import atbWebsite from '@/lottiefiles/projects/atb-website.json';
 import atbAverageTime from '@/images/projects/atb-average-time.png';
 import atbSuccessfulTransactions from '@/images/projects/atb-successful-transactions.png';
-// import atbBonusActivatingCustomers from '@/images/projects/atb-bonus-activating-customers.png';
-// import atbMobAppScreen1 from '@/images/projects/atb-mob-app-screen-1.png';
-// import atbMobAppScreen2 from '@/images/projects/atb-mob-app-screen-2.png';
-// import atbOleksandrFrolov from '@/images/projects/atb-oleksandr-frolov.jpg';
+import atbBonusActivatingCustomers from '@/images/projects/atb-bonus-activating-customers.png';
 import atbDeliverySystemIntegration from '@/images/projects/atb-delivery-system-integration.png';
-// import atbLoyaltySystemIntegration from '@/images/projects/atb-loyalty-system-integration.jpg';
-// import atbMobAppIntegration from '@/images/projects/atb-mob-app-integration.png';
-// import atbMobAppIntegrationSecondary from '@/images/projects/atb-mob-app-integration-secondary.jpg';
+import atbLoyaltySystemIntegration from '@/images/projects/atb-loyalty-system-integration.jpg';
+import atbMobAppIntegration from '@/images/projects/atb-mob-app-integration.png';
+import atbMobAppIntegrationAdditional from '@/images/projects/atb-mob-app-integration-additional.jpg';
 // other
 import qanabi from '@/images/projects/qanabi.png';
 import maxBanus from '@/images/projects/max-banus.png';
@@ -88,9 +85,9 @@ const projects: Projects = [
         desc: 'Швидкі та безпечні онлайн-оплати (EasyPay, А-Банк). Підтримка різних методів оплати: карткою, мобільними гаманцями, через термінали.',
         banner: atbPaymentSystemIntegration,
         metrics: [
-          { title: 'Середній час<br/>завершення оплати', img: atbAverageTime },
+          { title: 'Середній час завершення оплати', img: atbAverageTime },
           {
-            title: 'успішних транзакцій<br/>без помилок',
+            title: 'успішних транзакцій без помилок',
             img: atbSuccessfulTransactions,
           },
         ],
@@ -100,43 +97,77 @@ const projects: Projects = [
         title: 'Інтеграція з доставками',
         banner: atbDeliverySystemIntegration,
       },
+      feature4: {
+        title: 'Інтеграція з системою лояльності та кобрендовими картками АТБ',
+        desc: 'Покупці можуть використовувати бонуси та унікальні знижки під час оформлення замовлення. Інтеграція підтримує кобрендові картки, забезпечуючи персоналізований підхід до кожного клієнта.',
+        banner: atbLoyaltySystemIntegration,
+        metrics: [
+          {
+            title: 'клієнтів активували бонуси при онлайн-замовленнях',
+            img: atbBonusActivatingCustomers,
+          },
+        ],
+      },
+      feature5: {
+        title: 'Інтеграція з мобільним додатком',
+        desc: 'Синхронізація даних між вебсайтом і мобільним додатком. Синхронізація даних між вебсайтом і мобільним додатком. Синхронізація даних між вебсайтом і мобільним додатком. Синхронізація даних між вебсайтом і мобільним додатком.',
+        banner: atbMobAppIntegration,
+        additionalBanner: atbMobAppIntegrationAdditional,
+      },
+      funFact:
+        'Перша версія сайту була розроблена всього за 2 тижні під час пандемії',
+      teams: {
+        client: {
+          title: 'Команда АТБ',
+          team: [
+            'Валерій Бондарь',
+            'Олександр Фролов',
+            'Ілля Нестеренко',
+            'Віталій Торшин',
+            'Наталія Забара',
+          ],
+        },
+        sunAgency: {
+          title: 'Команда Сонця',
+          team: {
+            uiUx: {
+              title: 'Дизайн',
+              team: ['Катерина Луценко', 'Сергій Сотников'],
+            },
+            content: {
+              title: 'Контент',
+              team: ['Ксенія Пономаренко'],
+            },
+            management: {
+              title: 'Менеджмент',
+              team: ['Сергій Василєв', 'Андрій Косолапов'],
+            },
+            qa: {
+              title: 'QA',
+              team: ['Алла Варавіна'],
+            },
+            developers: {
+              title: 'Розробка',
+              team: [
+                'Тетяна Шумакова',
+                'Ілля Мельничук',
+                'Ольга Климась',
+                'Юрій Кривенко',
+                'Стас Шегіда',
+                'Дмитро Антоненко',
+                'Андрій Рожков',
+              ],
+            },
+          },
+        },
+      },
       // --------------------------
       // lottiefiles: {
       //   website: atbWebsite,
       // },
-      // mobAppIntegration: {
-      //   desc: 'Синхронізація даних між вебсайтом і мобільним додатком. Синхронізація даних між вебсайтом і мобільним додатком. Синхронізація даних між вебсайтом і мобільним додатком. Синхронізація даних між вебсайтом і мобільним додатком.',
-      //   banner: atbMobAppIntegration,
-      //   secondaryBanner: atbMobAppIntegrationSecondary,
-      // },
-      // loyaltySystemIntegration: {
-      //   bonusActivatingCustomers: atbBonusActivatingCustomers,
-      //   banner: atbLoyaltySystemIntegration,
-      // },
-      // mobAppScreens: [atbMobAppScreen1, atbMobAppScreen2],
-      // funFact:
-      //   'Перша версія сайту була розроблена всього за 2 тижні під час пандемії',
-      // clientTeam: [
-      //   'Валерій Бондарь',
-      //   'Олександр Фролов',
-      //   'Ілля Нестеренко',
-      //   'Віталій Торшин',
-      //   'Наталія Забара',
-      // ],
+
       // sunAgencyTeam: {
-      //   uiUx: ['Катерина Луценко', 'Сергій Сотников'],
-      //   content: ['Ксенія Пономаренко'],
-      //   management: ['Сергій Василєв', 'Андрій Косолапов'],
-      //   qa: ['Алла Варавіна'],
-      //   developers: [
-      //     'Тетяна Шумакова',
-      //     'Ілля Мельничук',
-      //     'Ольга Климась',
-      //     'Юрій Кривенко',
-      //     'Стас Шегіда',
-      //     'Дмитро Антоненко',
-      //     'Андрій Рожков',
-      //   ],
+
       // },
       // reviews: [
       //   {
@@ -189,6 +220,48 @@ const projects: Projects = [
         desc: '',
         banner: '',
       },
+      feature4: {
+        title: '',
+        desc: '',
+        banner: '',
+      },
+      feature5: {
+        title: '',
+        desc: '',
+        banner: '',
+      },
+      funFact: '',
+      teams: {
+        client: {
+          title: '',
+          team: [],
+        },
+        sunAgency: {
+          title: '',
+          team: {
+            uiUx: {
+              title: '',
+              team: [],
+            },
+            content: {
+              title: '',
+              team: [],
+            },
+            management: {
+              title: '',
+              team: [],
+            },
+            qa: {
+              title: '',
+              team: [],
+            },
+            developers: {
+              title: '',
+              team: [],
+            },
+          },
+        },
+      },
     },
   },
   {
@@ -232,6 +305,48 @@ const projects: Projects = [
         desc: '',
         banner: '',
       },
+      feature4: {
+        title: '',
+        desc: '',
+        banner: '',
+      },
+      feature5: {
+        title: '',
+        desc: '',
+        banner: '',
+      },
+      funFact: '',
+      teams: {
+        client: {
+          title: '',
+          team: [],
+        },
+        sunAgency: {
+          title: '',
+          team: {
+            uiUx: {
+              title: '',
+              team: [],
+            },
+            content: {
+              title: '',
+              team: [],
+            },
+            management: {
+              title: '',
+              team: [],
+            },
+            qa: {
+              title: '',
+              team: [],
+            },
+            developers: {
+              title: '',
+              team: [],
+            },
+          },
+        },
+      },
     },
   },
   {
@@ -274,6 +389,48 @@ const projects: Projects = [
         title: '',
         desc: '',
         banner: '',
+      },
+      feature4: {
+        title: '',
+        desc: '',
+        banner: '',
+      },
+      feature5: {
+        title: '',
+        desc: '',
+        banner: '',
+      },
+      funFact: '',
+      teams: {
+        client: {
+          title: '',
+          team: [],
+        },
+        sunAgency: {
+          title: '',
+          team: {
+            uiUx: {
+              title: '',
+              team: [],
+            },
+            content: {
+              title: '',
+              team: [],
+            },
+            management: {
+              title: '',
+              team: [],
+            },
+            qa: {
+              title: '',
+              team: [],
+            },
+            developers: {
+              title: '',
+              team: [],
+            },
+          },
+        },
       },
     },
   },

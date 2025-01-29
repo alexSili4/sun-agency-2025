@@ -7,6 +7,10 @@ import AtbTechnicalTaskSection from '@ProjectDetailsPageComponents/AtbTechnicalT
 import AtbCashSystemIntegrationFeatureSection from '@ProjectDetailsPageComponents/AtbCashSystemIntegrationFeatureSection';
 import AtbPaymentSystemIntegrationFeatureSection from '@ProjectDetailsPageComponents/AtbPaymentSystemIntegrationFeatureSection';
 import AtbDeliverySystemIntegrationFeatureSection from '@ProjectDetailsPageComponents/AtbDeliverySystemIntegrationFeatureSection';
+import AtbLoyaltySystemIntegrationFeatureSection from '@ProjectDetailsPageComponents/AtbLoyaltySystemIntegrationFeatureSection';
+import AtbMobAppIntegrationFeatureSection from '@ProjectDetailsPageComponents/AtbMobAppIntegrationFeatureSection';
+import AtbFunFactSection from '@ProjectDetailsPageComponents/AtbFunFactSection';
+import AtbProjectTeamSection from '@ProjectDetailsPageComponents/AtbProjectTeamSection';
 
 const AtbProjectDetails: FC<IProps> = ({ project }) => {
   const {
@@ -30,6 +34,23 @@ const AtbProjectDetails: FC<IProps> = ({ project }) => {
       banner: deliverySystemIntegrationBanner,
       desc: deliverySystemIntegrationDesc,
       title: deliverySystemIntegrationTitle,
+    },
+    feature4: {
+      title: loyaltySystemIntegrationTitle,
+      desc: loyaltySystemIntegrationDesc,
+      banner: loyaltySystemIntegrationBanner,
+      metrics: loyaltySystemIntegrationMetrics,
+    },
+    feature5: {
+      title: mobAppIntegrationTitle,
+      desc: mobAppIntegrationDesc,
+      banner: mobAppIntegrationBanner,
+      additionalBanner: mobAppIntegrationAdditionalBanner,
+    },
+    funFact,
+    teams: {
+      client: { team: clientTeam, title: clientTeamTitle },
+      sunAgency: { team: sunAgencyTeam, title: sunAgencyTeamTitle },
     },
   } = project;
 
@@ -62,18 +83,35 @@ const AtbProjectDetails: FC<IProps> = ({ project }) => {
         desc={cashSystemIntegrationDesc}
         title={cashSystemIntegrationTitle}
       />
-      {paymentSystemIntegrationMetrics && (
-        <AtbPaymentSystemIntegrationFeatureSection
-          banner={paymentSystemIntegrationBanner}
-          desc={paymentSystemIntegrationDesc}
-          title={paymentSystemIntegrationTitle}
-          metrics={paymentSystemIntegrationMetrics}
-        />
-      )}
+      <AtbPaymentSystemIntegrationFeatureSection
+        banner={paymentSystemIntegrationBanner}
+        desc={paymentSystemIntegrationDesc}
+        title={paymentSystemIntegrationTitle}
+        metrics={paymentSystemIntegrationMetrics}
+      />
       <AtbDeliverySystemIntegrationFeatureSection
         banner={deliverySystemIntegrationBanner}
         desc={deliverySystemIntegrationDesc}
         title={deliverySystemIntegrationTitle}
+      />
+      <AtbLoyaltySystemIntegrationFeatureSection
+        title={loyaltySystemIntegrationTitle}
+        desc={loyaltySystemIntegrationDesc}
+        banner={loyaltySystemIntegrationBanner}
+        metrics={loyaltySystemIntegrationMetrics}
+      />
+      <AtbMobAppIntegrationFeatureSection
+        title={mobAppIntegrationTitle}
+        desc={mobAppIntegrationDesc}
+        banner={mobAppIntegrationBanner}
+        additionalBanner={mobAppIntegrationAdditionalBanner}
+      />
+      <AtbFunFactSection funFact={funFact} />
+      <AtbProjectTeamSection
+        clientTeam={clientTeam}
+        clientTeamTitle={clientTeamTitle}
+        sunAgencyTeam={sunAgencyTeam}
+        sunAgencyTeamTitle={sunAgencyTeamTitle}
       />
     </>
   );

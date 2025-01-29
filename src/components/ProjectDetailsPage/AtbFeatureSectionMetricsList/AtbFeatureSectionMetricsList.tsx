@@ -3,14 +3,18 @@ import { IProps } from './AtbFeatureSectionMetricsList.types';
 import { List, ListItem } from './AtbFeatureSectionMetricsList.styled';
 import AtbFeatureSectionMetric from '@ProjectDetailsPageComponents/AtbFeatureSectionMetric';
 
-const AtbFeatureSectionMetricsList: FC<IProps> = ({ metrics }) => {
+const AtbFeatureSectionMetricsList: FC<IProps> = ({ metrics, maxWidth }) => {
   const metricsLength = metrics.length;
 
   return (
     <List>
       {metrics.map(({ img, title }, index) => (
         <ListItem key={index} metrics={metricsLength}>
-          <AtbFeatureSectionMetric img={img} title={title} />
+          <AtbFeatureSectionMetric
+            img={img}
+            title={title}
+            maxWidth={maxWidth}
+          />
         </ListItem>
       ))}
     </List>

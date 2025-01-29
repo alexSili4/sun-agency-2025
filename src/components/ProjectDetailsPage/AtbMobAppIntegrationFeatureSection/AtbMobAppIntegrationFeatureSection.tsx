@@ -1,19 +1,22 @@
 import { FC } from 'react';
+import { IProps } from './AtbMobAppIntegrationFeatureSection.types';
 import AtbContentContainer from '@ProjectDetailsPageComponents/AtbContentContainer';
 import AtbText from '@ProjectDetailsPageComponents/AtbText';
-import { IProps } from './AtbDeliverySystemIntegrationFeatureSection.types';
+import HiddenSectionTitle from '@GeneralComponents/HiddenSectionTitle';
 import GeneralContainer from '@GeneralComponents/GeneralContainer';
 import {
+  BannersWrap,
+  BannerWrap,
   Container,
   Image,
   Section,
-} from './AtbDeliverySystemIntegrationFeatureSection.styled';
-import HiddenSectionTitle from '@GeneralComponents/HiddenSectionTitle';
+} from './AtbMobAppIntegrationFeatureSection.styled';
 
-const AtbDeliverySystemIntegrationFeatureSection: FC<IProps> = ({
+const AtbMobAppIntegrationFeatureSection: FC<IProps> = ({
   title,
   desc,
   banner,
+  additionalBanner,
 }) => {
   return (
     <Section>
@@ -24,10 +27,15 @@ const AtbDeliverySystemIntegrationFeatureSection: FC<IProps> = ({
             <AtbText text={desc} />
           </AtbContentContainer>
         </GeneralContainer>
-        <Image src={banner} />
+        <BannersWrap>
+          <Image src={banner} />
+          <BannerWrap>
+            <Image src={additionalBanner} />
+          </BannerWrap>
+        </BannersWrap>
       </Container>
     </Section>
   );
 };
 
-export default AtbDeliverySystemIntegrationFeatureSection;
+export default AtbMobAppIntegrationFeatureSection;
