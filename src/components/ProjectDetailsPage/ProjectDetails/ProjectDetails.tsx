@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import { IProps } from './ProjectDetails.types';
-import AtbProjectDetails from '@ProjectDetailsPageComponents/AtbProjectDetails';
+import AtbProjectDetails from '@AtbProjectDetailsComponents/AtbProjectDetails';
 
 const ProjectDetails: FC<IProps> = ({ project }) => {
   return <AtbProjectDetails project={project.details} />;

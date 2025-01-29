@@ -9,6 +9,9 @@
       "@MainPageComponents/*": ["./src/components/MainPage/*"],
       "@ProjectDetailsPageComponents/*": [
         "./src/components/ProjectDetailsPage/*"
+      ],
+      "@AtbProjectDetailsComponents/*": [
+        "./src/components/ProjectDetailsPage/AtbProjectDetails/*"
       ]
     },
     "target": "ES2020",

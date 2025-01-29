@@ -33,6 +33,8 @@ export default defineConfig({
       '@ErrorPageComponents': '/src/components/ErrorPage',
       '@MainPageComponents': '/src/components/MainPage',
       '@ProjectDetailsPageComponents': '/src/components/ProjectDetailsPage',
+      '@AtbProjectDetailsComponents':
+        '/src/components/ProjectDetailsPage/AtbProjectDetails',
     },
   },
 });
