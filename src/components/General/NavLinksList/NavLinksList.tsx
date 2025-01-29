@@ -1,6 +1,5 @@
 import { FC } from 'react';
 import { IProps } from './NavLinksList.types';
-import NavLinkGlow from '@GeneralComponents/NavLinkGlow';
 import {
   List,
   ListItem,
@@ -8,6 +7,8 @@ import {
   StyledLinkTitle,
 } from './NavLinksList.styled';
 import { PagePaths } from '@/constants';
+// ----- components
+import NavLinkGlow from '@GeneralComponents/NavLinkGlow';
 
 const NavLinksList: FC<IProps> = ({ onClick }) => {
   return (

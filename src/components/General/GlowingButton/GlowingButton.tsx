@@ -1,8 +1,9 @@
 import { FC } from 'react';
 import { IProps } from './GlowingButton.types';
-import LottieGlowingAnimation from '@GeneralComponents/LottieGlowingAnimation';
 import { useIsHoverOrFocus } from '@/hooks';
 import { Button } from './GlowingButton.styled';
+// ----- components
+import LottieGlowingAnimation from '@GeneralComponents/LottieGlowingAnimation';
 
 const GlowingButton: FC<IProps> = ({
   width,

@@ -2,8 +2,9 @@ import { FC, useState } from 'react';
 import { ClientLogo, ShowClientDetailsBtn } from './ClientsMarqueeItem.styled';
 import { BtnClickEvent } from '@/types/types';
 import { makeBlur } from '@/utils';
-import ClientDetailsModalWin from '@MainPageComponents/ClientDetailsModalWin';
 import { IProps } from './ClientsMarqueeItem.types';
+// ----- components
+import ClientDetailsModalWin from '@MainPageComponents/ClientDetailsModalWin';
 
 const ClientsMarqueeItem: FC<IProps> = ({
   primaryLogo,

@@ -1,10 +1,11 @@
 import { FC } from 'react';
 import { IProps } from './ProjectsList.types';
-import ProjectCard from '@MainPageComponents/ProjectCard';
 import newProject from '@/images/projects/new-project.png';
 import { List, ListItem } from './ProjectsList.styled';
 import { getProjectPath } from '@/utils';
 import { PagePaths } from '@/constants';
+// ----- components
+import ProjectCard from '@MainPageComponents/ProjectCard';
 
 const ProjectsList: FC<IProps> = ({ projects }) => {
   return (

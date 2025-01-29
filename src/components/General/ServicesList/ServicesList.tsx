@@ -9,6 +9,7 @@ import {
 } from './ServicesList.styled';
 import { PagePaths } from '@/constants';
 import { IProps } from './ServicesList.types';
+// ----- components
 import NavLinkGlow from '@GeneralComponents/NavLinkGlow';
 
 const ServicesList: FC<IProps> = ({ onClick }) => {

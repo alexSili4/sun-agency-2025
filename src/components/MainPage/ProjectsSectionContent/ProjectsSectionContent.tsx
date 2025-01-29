@@ -1,9 +1,9 @@
 import { FC } from 'react';
 import { Container } from './ProjectsSectionContent.styled';
-
-import GeneralContainer from '@GeneralComponents/GeneralContainer';
 import { projects } from '@/constants';
 import { IProps } from './ProjectsSectionContent.types';
+// ----- components
+import GeneralContainer from '@GeneralComponents/GeneralContainer';
 import AnimatedProjectsList from '@AnimationBlocks/AnimatedProjectsList';
 import ProjectsSectionContentWrap from '@MainPageComponents/ProjectsSectionContentWrap';
 import AnimatedProjectsSectionBg from '@AnimationBlocks/AnimatedProjectsSectionBg';

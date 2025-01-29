@@ -1,7 +1,8 @@
 import { FC, useRef } from 'react';
-import StatisticsList from '@MainPageComponents/StatisticsList';
 import { Container, ListContainer } from './BusinessMetrics.styled';
 import { useScroll, useTransform } from 'framer-motion';
+// ----- components
+import StatisticsList from '@MainPageComponents/StatisticsList';
 import HeroSectionSpline from '@MainPageComponents/HeroSectionSpline';
 
 const BusinessMetrics: FC = () => {

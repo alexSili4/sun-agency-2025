@@ -1,8 +1,9 @@
 import { FC } from 'react';
 import { IProps } from './AtbTechnicalTaskSection.types';
+import { Container, Section, TextWrap } from './AtbTechnicalTaskSection.styled';
+// ----- components
 import GeneralContainer from '@GeneralComponents/GeneralContainer';
 import AtbTechnicalTaskPreview from '@AtbProjectDetailsComponents/AtbTechnicalTaskPreview';
-import { Container, Section, TextWrap } from './AtbTechnicalTaskSection.styled';
 import AtbTechnicalTaskServicesList from '@AtbProjectDetailsComponents/AtbTechnicalTaskServicesList';
 import AtbContentContainer from '@AtbProjectDetailsComponents/AtbContentContainer';
 import AtbText from '@AtbProjectDetailsComponents/AtbText';

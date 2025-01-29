@@ -1,13 +1,14 @@
 import { FC } from 'react';
-import AtbContentContainer from '@AtbProjectDetailsComponents/AtbContentContainer';
-import AtbText from '@AtbProjectDetailsComponents/AtbText';
 import { IProps } from './AtbDeliverySystemIntegrationFeatureSection.types';
-import GeneralContainer from '@GeneralComponents/GeneralContainer';
 import {
   Container,
   Image,
   Section,
 } from './AtbDeliverySystemIntegrationFeatureSection.styled';
+// ----- components
+import AtbText from '@AtbProjectDetailsComponents/AtbText';
+import GeneralContainer from '@GeneralComponents/GeneralContainer';
+import AtbContentContainer from '@AtbProjectDetailsComponents/AtbContentContainer';
 import HiddenSectionTitle from '@GeneralComponents/HiddenSectionTitle';
 
 const AtbDeliverySystemIntegrationFeatureSection: FC<IProps> = ({

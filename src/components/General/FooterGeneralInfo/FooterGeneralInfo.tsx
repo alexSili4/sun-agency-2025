@@ -5,6 +5,7 @@ import {
   ContentWrap,
   LinksWrap,
 } from './FooterGeneralInfo.styled';
+// ----- components
 import SunLogoLink from '@GeneralComponents/SunLogoLink';
 import GeneralContainer from '@GeneralComponents/GeneralContainer';
 import Copyright from '@GeneralComponents/Copyright';

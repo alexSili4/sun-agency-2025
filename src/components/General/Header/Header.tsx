@@ -1,9 +1,10 @@
 import { FC, useEffect, useState } from 'react';
 import { Container, StyledHeader } from './Header.styled';
-import NavMenu from '@GeneralComponents/NavMenu';
-import ContactsInfo from '@GeneralComponents/ContactsInfo';
 import { Langs, theme } from '@/constants';
 import { makeBlur } from '@/utils';
+// ----- components
+import NavMenu from '@GeneralComponents/NavMenu';
+import ContactsInfo from '@GeneralComponents/ContactsInfo';
 import {
   AnchorClickEvent,
   BtnClickEvent,

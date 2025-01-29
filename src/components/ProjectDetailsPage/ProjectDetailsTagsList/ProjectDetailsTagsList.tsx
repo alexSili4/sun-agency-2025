@@ -1,6 +1,7 @@
 import { FC } from 'react';
 import { IProps } from './ProjectDetailsTagsList.types';
 import { List, ListItem } from './ProjectDetailsTagsList.styled';
+// ----- components
 import ProjectDetailsTag from '@ProjectDetailsPageComponents/ProjectDetailsTag';
 
 const ProjectDetailsTagsList: FC<IProps> = ({ tags }) => {

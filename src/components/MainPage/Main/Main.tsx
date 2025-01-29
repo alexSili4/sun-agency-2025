@@ -1,8 +1,9 @@
 import { FC } from 'react';
+import { IProps } from './Main.types';
+// ----- components
 import HeroSection from '@MainPageComponents/HeroSection';
 import ProjectsSection from '@MainPageComponents/ProjectsSection';
 import ServicesSection from '@MainPageComponents/ServicesSection';
-import { IProps } from './Main.types';
 import ClientsSection from '@MainPageComponents/ClientsSection';
 import ReviewsSection from '@MainPageComponents/ReviewsSection';
 

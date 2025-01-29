@@ -1,9 +1,10 @@
 import { FC } from 'react';
 import { IProps } from './ServicesSection.types';
-import GeneralContainer from '@GeneralComponents/GeneralContainer';
 import { Content, Section } from './ServicesSection.styled';
-import AnimatedServicesList from '@AnimationBlocks/AnimatedServicesList';
 import { services } from '@/constants';
+// ----- components
+import GeneralContainer from '@GeneralComponents/GeneralContainer';
+import AnimatedServicesList from '@AnimationBlocks/AnimatedServicesList';
 import SectionGeneralTitle from '@MainPageComponents/SectionGeneralTitle';
 
 const ServicesSection: FC<IProps> = ({

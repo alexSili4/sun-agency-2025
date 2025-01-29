@@ -1,7 +1,4 @@
 import { FC } from 'react';
-import AtbContentContainer from '@AtbProjectDetailsComponents/AtbContentContainer';
-import AtbText from '@AtbProjectDetailsComponents/AtbText';
-import GeneralContainer from '@GeneralComponents/GeneralContainer';
 import {
   Container,
   Content,
@@ -9,6 +6,10 @@ import {
   Section,
 } from './AtbPaymentSystemIntegrationFeatureSection.styles';
 import { IProps } from './AtbPaymentSystemIntegrationFeatureSection.types';
+// ----- components
+import GeneralContainer from '@GeneralComponents/GeneralContainer';
+import AtbContentContainer from '@AtbProjectDetailsComponents/AtbContentContainer';
+import AtbText from '@AtbProjectDetailsComponents/AtbText';
 import AtbFeatureSectionMetricsList from '@AtbProjectDetailsComponents/AtbFeatureSectionMetricsList';
 import HiddenSectionTitle from '@GeneralComponents/HiddenSectionTitle';
 

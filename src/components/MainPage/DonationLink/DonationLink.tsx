@@ -13,7 +13,6 @@ import {
 import donationLink from '@/images/main/donation-link.png';
 import video from '@/video/donation-link.mp4';
 import donationLinkShadow from '@/images/main/donation-link-shadow.png';
-// import GlowingContainer from '@GeneralComponents/GlowingContainer';
 
 const DonationLink: FC = () => {
   const [play, setPlay] = useState<boolean>(false);

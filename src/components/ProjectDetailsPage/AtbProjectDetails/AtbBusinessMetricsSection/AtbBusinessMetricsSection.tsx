@@ -1,7 +1,4 @@
-import HiddenSectionTitle from '@GeneralComponents/HiddenSectionTitle';
 import { FC } from 'react';
-import AtbBusinessMetricsList from '@AtbProjectDetailsComponents/AtbBusinessMetricsList';
-import GeneralContainer from '@GeneralComponents/GeneralContainer';
 import { IProps } from './AtbBusinessMetricsSection.types';
 import {
   Container,
@@ -9,6 +6,10 @@ import {
   Section,
   Banner,
 } from './AtbBusinessMetricsSection.styled';
+// ----- components
+import HiddenSectionTitle from '@GeneralComponents/HiddenSectionTitle';
+import AtbBusinessMetricsList from '@AtbProjectDetailsComponents/AtbBusinessMetricsList';
+import GeneralContainer from '@GeneralComponents/GeneralContainer';
 
 const AtbBusinessMetricsSection: FC<IProps> = ({ businessMetrics, banner }) => {
   return (

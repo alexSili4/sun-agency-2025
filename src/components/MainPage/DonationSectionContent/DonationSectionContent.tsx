@@ -1,7 +1,8 @@
 import { FC } from 'react';
-import DonationLink from '@MainPageComponents/DonationLink';
 import { Container, ScrollBtn } from './DonationSectionContent.styled';
 import { IProps } from './DonationSectionContent.types';
+// ----- components
+import DonationLink from '@MainPageComponents/DonationLink';
 
 const DonationSectionContent: FC<IProps> = ({ onScrollBtnClick }) => {
   return (

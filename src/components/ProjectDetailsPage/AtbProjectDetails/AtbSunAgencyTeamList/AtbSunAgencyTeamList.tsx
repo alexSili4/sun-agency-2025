@@ -1,12 +1,13 @@
 import { FC } from 'react';
 import { IProps } from './AtbSunAgencyTeamList.types';
-import AtbSunAgencyTargetTeam from '@AtbProjectDetailsComponents/AtbSunAgencyTargetTeam';
 import {
   List,
   DevelopersListItem,
   BottomListItem,
   ListItem,
 } from './AtbSunAgencyTeamList.styled';
+// ----- components
+import AtbSunAgencyTargetTeam from '@AtbProjectDetailsComponents/AtbSunAgencyTargetTeam';
 
 const AtbSunAgencyTeamList: FC<IProps> = ({ team }) => {
   const {

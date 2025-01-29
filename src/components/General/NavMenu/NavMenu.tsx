@@ -1,6 +1,7 @@
 import { FC } from 'react';
 import { Container } from './NavMenu.styled';
 import { IProps } from './NavMenu.types';
+// ----- components
 import SunLogoLink from '@GeneralComponents/SunLogoLink';
 import MenuBtn from '@GeneralComponents/MenuBtn';
 

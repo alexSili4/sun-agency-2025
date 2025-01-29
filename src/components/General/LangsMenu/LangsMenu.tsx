@@ -1,8 +1,9 @@
 import { FC } from 'react';
-import LangRadioBtn from '@GeneralComponents/LangRadioBtn';
 import { Container, LangsRadioBtnWrap } from './LangsMenu.styled';
 import { Langs } from '@/constants';
 import { IProps } from './LangsMenu.types';
+// ----- components
+import LangRadioBtn from '@GeneralComponents/LangRadioBtn';
 
 const LangsMenu: FC<IProps> = ({
   currentLang,

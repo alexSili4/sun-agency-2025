@@ -1,6 +1,7 @@
 import { FC } from 'react';
 import { IProps } from './ClientsMarqueeContainer.types';
 import { List, ListItem } from './ClientsMarqueeContainer.styled';
+// ----- components
 import ClientsMarquee from '@MainPageComponents/ClientsMarquee';
 
 const ClientsMarqueeContainer: FC<IProps> = ({

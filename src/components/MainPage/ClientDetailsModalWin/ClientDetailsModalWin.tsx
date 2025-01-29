@@ -1,7 +1,8 @@
 import { FC } from 'react';
+import { IProps } from './ClientDetailsModalWin.types';
+// ----- components
 import AnimatedClientDetailsModalWin from '@AnimationBlocks/AnimatedClientDetailsModalWin';
 import ClientDetails from '@MainPageComponents/ClientDetails';
-import { IProps } from './ClientDetailsModalWin.types';
 
 const ClientDetailsModalWin: FC<IProps> = ({
   setModalWinState,

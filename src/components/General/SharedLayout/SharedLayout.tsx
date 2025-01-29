@@ -1,6 +1,7 @@
 import { FC, Suspense } from 'react';
 import { Main } from './SharedLayout.styled';
 import { Outlet } from 'react-router-dom';
+// ----- components
 import Loader from '@GeneralComponents/Loader';
 import Header from '@GeneralComponents/Header';
 import Footer from '@GeneralComponents/Footer';

@@ -1,8 +1,9 @@
 import { FC } from 'react';
 import { LinkIcon, LinkTitle, StyledLink } from './GlowingLink.styled';
 import { IProps } from './GlowingLink.types';
-import LottieGlowingAnimation from '@GeneralComponents/LottieGlowingAnimation';
 import { useIsHoverOrFocus } from '@/hooks';
+// ----- components
+import LottieGlowingAnimation from '@GeneralComponents/LottieGlowingAnimation';
 
 const GlowingLink: FC<IProps> = ({
   width,

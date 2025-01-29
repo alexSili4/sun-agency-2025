@@ -1,10 +1,11 @@
 import { FC } from 'react';
 import { Container } from './ContactsInfo.styled';
-import LangsMenu from '@GeneralComponents/LangsMenu';
 import { IProps } from './ContactsInfo.types';
-import GlowingLink from '@GeneralComponents/GlowingLink';
-import { PagePaths } from '@/constants';
 import glowingContactBtn from '@/lottiefiles/glow/glowing-contact-link.json';
+import { PagePaths } from '@/constants';
+// ----- components
+import GlowingLink from '@GeneralComponents/GlowingLink';
+import LangsMenu from '@GeneralComponents/LangsMenu';
 
 const ContactsInfo: FC<IProps> = ({
   currentLang,

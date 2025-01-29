@@ -1,9 +1,5 @@
 import { FC } from 'react';
 import { IProps } from './AtbMobAppIntegrationFeatureSection.types';
-import AtbContentContainer from '@AtbProjectDetailsComponents/AtbContentContainer';
-import AtbText from '@AtbProjectDetailsComponents/AtbText';
-import HiddenSectionTitle from '@GeneralComponents/HiddenSectionTitle';
-import GeneralContainer from '@GeneralComponents/GeneralContainer';
 import {
   BannersWrap,
   BannerWrap,
@@ -11,6 +7,11 @@ import {
   Image,
   Section,
 } from './AtbMobAppIntegrationFeatureSection.styled';
+// ----- components
+import AtbContentContainer from '@AtbProjectDetailsComponents/AtbContentContainer';
+import AtbText from '@AtbProjectDetailsComponents/AtbText';
+import HiddenSectionTitle from '@GeneralComponents/HiddenSectionTitle';
+import GeneralContainer from '@GeneralComponents/GeneralContainer';
 
 const AtbMobAppIntegrationFeatureSection: FC<IProps> = ({
   title,

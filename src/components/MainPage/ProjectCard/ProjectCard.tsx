@@ -12,6 +12,7 @@ import {
 } from './ProjectCard.styled';
 import { IProps } from './ProjectCard.types';
 import { PagePaths } from '@/constants';
+// ----- components
 import ProjectCardTagsList from '@MainPageComponents/ProjectCardTagsList';
 
 const ProjectCard: FC<IProps> = ({

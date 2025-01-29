@@ -1,7 +1,8 @@
 import { FC } from 'react';
-import SocialLinks from '@GeneralComponents/SocialLinks';
 import { Container, Title, Content } from './FooterSocialLinks.styled';
 import { theme } from '@/constants';
+// ----- components
+import SocialLinks from '@GeneralComponents/SocialLinks';
 
 const FooterSocialLinks: FC = () => {
   return (

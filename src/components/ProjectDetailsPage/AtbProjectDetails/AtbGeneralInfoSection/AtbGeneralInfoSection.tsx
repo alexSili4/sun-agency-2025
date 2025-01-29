@@ -1,7 +1,5 @@
 import { FC } from 'react';
 import { IProps } from './AtbGeneralInfoSection.types';
-import HiddenSectionTitle from '@GeneralComponents/HiddenSectionTitle';
-import GeneralContainer from '@GeneralComponents/GeneralContainer';
 import {
   Container,
   Description,
@@ -11,6 +9,9 @@ import {
   Title,
   TextWrap,
 } from './AtbGeneralInfoSection.styled';
+// ----- components
+import HiddenSectionTitle from '@GeneralComponents/HiddenSectionTitle';
+import GeneralContainer from '@GeneralComponents/GeneralContainer';
 
 const AtbGeneralInfoSection: FC<IProps> = ({
   desc,

@@ -8,6 +8,7 @@ import {
   TextWrap,
   WebsiteAddress,
 } from './ClientDetails.styled';
+// ----- components
 import ClientGeneralInfo from '@MainPageComponents/ClientGeneralInfo';
 import ClientProjects from '@MainPageComponents/ClientProjects';
 

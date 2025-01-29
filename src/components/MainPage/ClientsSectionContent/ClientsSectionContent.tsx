@@ -4,13 +4,14 @@ import {
   ClientsMarqueeWrap,
   TextWrap,
 } from './ClientsSectionContent.styled';
-import AnimatedMultiLineSubtitle from '@AnimationBlocks/AnimatedMultiLineSubtitle';
-import AnimatedSectionTitle from '@AnimationBlocks/AnimatedSectionTitle';
 import { PagePaths, clients } from '@/constants';
-import GlowingLink from '@GeneralComponents/GlowingLink';
-import ClientsMarqueeContainer from '@MainPageComponents/ClientsMarqueeContainer';
 import { splitArray } from '@/utils';
 import glowingLink from '@/lottiefiles/glow/glowing-link.json';
+// ----- components
+import AnimatedMultiLineSubtitle from '@AnimationBlocks/AnimatedMultiLineSubtitle';
+import AnimatedSectionTitle from '@AnimationBlocks/AnimatedSectionTitle';
+import GlowingLink from '@GeneralComponents/GlowingLink';
+import ClientsMarqueeContainer from '@MainPageComponents/ClientsMarqueeContainer';
 
 const ClientsSectionContent: FC = () => {
   const { firstItem: firstClientsItem, secondItem: secondClientsItem } =

@@ -1,8 +1,9 @@
 import { FC } from 'react';
-import GlowingLink from '@GeneralComponents/GlowingLink';
 import { Container, Title } from './FooterContacts.styled';
 import { PagePaths } from '@/constants';
 import glowingLink from '@/lottiefiles/glow/glowing-link.json';
+// ----- components
+import GlowingLink from '@GeneralComponents/GlowingLink';
 
 const FooterContacts: FC = () => {
   return (

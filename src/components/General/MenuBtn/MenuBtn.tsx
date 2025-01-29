@@ -4,8 +4,9 @@ import { Button } from './MenuBtn.styled';
 import { Cross as Hamburger } from 'hamburger-react';
 import { IProps } from './MenuBtn.types';
 import glowingRoundBtn from '@/lottiefiles/glow/glowing-round-btn.json';
-import LottieGlowingAnimation from '@GeneralComponents/LottieGlowingAnimation';
 import { useIsHoverOrFocus } from '@/hooks';
+// ----- components
+import LottieGlowingAnimation from '@GeneralComponents/LottieGlowingAnimation';
 
 const MenuBtn: FC<IProps> = ({
   showMenuModalWin,

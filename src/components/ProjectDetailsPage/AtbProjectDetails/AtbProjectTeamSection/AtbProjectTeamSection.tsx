@@ -1,8 +1,9 @@
-import GeneralContainer from '@GeneralComponents/GeneralContainer';
 import { FC } from 'react';
-import AtbContentContainer from '@AtbProjectDetailsComponents/AtbContentContainer';
 import { IProps } from './AtbProjectTeamSection.types';
 import { Container, Section } from './AtbProjectTeamSection.styled';
+// ----- components
+import GeneralContainer from '@GeneralComponents/GeneralContainer';
+import AtbContentContainer from '@AtbProjectDetailsComponents/AtbContentContainer';
 import AtbClientTeamList from '@AtbProjectDetailsComponents/AtbClientTeamList';
 import AtbSunAgencyTeamList from '@AtbProjectDetailsComponents/AtbSunAgencyTeamList';
 

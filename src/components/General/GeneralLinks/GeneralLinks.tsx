@@ -1,7 +1,8 @@
 import { FC } from 'react';
-import SocialLinks from '@GeneralComponents/SocialLinks';
 import { Container, LinksWrap, PrivacyPolicyLink } from './GeneralLinks.styled';
 import { Links, theme } from '@/constants';
+// ----- components
+import SocialLinks from '@GeneralComponents/SocialLinks';
 import Copyright from '@GeneralComponents/Copyright';
 
 const GeneralLinks: FC = () => {

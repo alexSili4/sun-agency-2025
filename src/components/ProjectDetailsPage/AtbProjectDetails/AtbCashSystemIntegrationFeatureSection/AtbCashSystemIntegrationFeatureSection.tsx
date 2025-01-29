@@ -1,13 +1,14 @@
 import { FC } from 'react';
 import { IProps } from './AtbCashSystemIntegrationFeatureSection.types';
-import GeneralContainer from '@GeneralComponents/GeneralContainer';
-import AtbContentContainer from '@AtbProjectDetailsComponents/AtbContentContainer';
 import {
   Content,
   Image,
   Section,
   Container,
 } from './AtbCashSystemIntegrationFeatureSection.styled';
+// ----- components
+import GeneralContainer from '@GeneralComponents/GeneralContainer';
+import AtbContentContainer from '@AtbProjectDetailsComponents/AtbContentContainer';
 import AtbText from '@AtbProjectDetailsComponents/AtbText';
 import HiddenSectionTitle from '@GeneralComponents/HiddenSectionTitle';
 

@@ -1,11 +1,12 @@
 import { theme } from '@/constants';
-import GeneralContainer from '@GeneralComponents/GeneralContainer';
 import { FC } from 'react';
 import { FaChevronRight, FaChevronLeft } from 'react-icons/fa';
 import { Container } from './ReviewsSliderControls.styled';
 import { useSwiper } from 'swiper/react';
-import GlowingButton from '@GeneralComponents/GlowingButton';
 import glowingRoundBtn from '@/lottiefiles/glow/glowing-round-btn.json';
+// ----- components
+import GeneralContainer from '@GeneralComponents/GeneralContainer';
+import GlowingButton from '@GeneralComponents/GlowingButton';
 
 const ReviewsSliderControls: FC = () => {
   const swiper = useSwiper();

@@ -1,9 +1,10 @@
 import { FC } from 'react';
 import { Container, Content, LinksWrap } from './MenuModalWin.styled';
-import ServicesList from '@GeneralComponents/ServicesList';
 import { IProps } from './MenuModalWin.types';
+// ----- components
 import NavLinksList from '@GeneralComponents/NavLinksList';
 import GeneralLinks from '@GeneralComponents/GeneralLinks';
+import ServicesList from '@GeneralComponents/ServicesList';
 import LangsMenu from '@GeneralComponents/LangsMenu';
 
 const MenuModalWin: FC<IProps> = ({ onClick, onChange, currentLang }) => {

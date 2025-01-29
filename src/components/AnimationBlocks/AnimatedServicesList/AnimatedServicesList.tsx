@@ -1,8 +1,9 @@
 import { useInView } from 'framer-motion';
 import { FC, useRef } from 'react';
 import { IProps } from './AnimatedServicesList.types';
-import ServiceItem from '@MainPageComponents/ServiceItem';
 import { List, ListItem } from './AnimatedServicesList.styled';
+// ----- components
+import ServiceItem from '@MainPageComponents/ServiceItem';
 
 const AnimatedServicesList: FC<IProps> = ({ services, nextSectionInView }) => {
   const listRef = useRef<HTMLUListElement>(null);

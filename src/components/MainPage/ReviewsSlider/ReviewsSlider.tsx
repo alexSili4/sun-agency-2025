@@ -1,13 +1,14 @@
 import { FC, useEffect, useRef, useState } from 'react';
 import { IProps } from './ReviewsSlider.types';
 import { Navigation } from 'swiper/modules';
-import Review from '@MainPageComponents/Review';
 import {
   Container,
   StyledSwiper,
   StyledSwiperSlide,
 } from './ReviewsSlider.styled';
 import { NumberOrNull } from '@/types/types';
+// ----- components
+import Review from '@MainPageComponents/Review';
 import ReviewsSliderControls from '@MainPageComponents/ReviewsSliderControls';
 
 const ReviewsSlider: FC<IProps> = ({ reviews, slideWidth, gap }) => {

@@ -1,4 +1,3 @@
-import GeneralContainer from '@GeneralComponents/GeneralContainer';
 import { FC } from 'react';
 import {
   Container,
@@ -7,9 +6,11 @@ import {
   Title,
   TitleWrap,
 } from './AtbProjectDetailsHeroSection.styled';
+import { IProps } from './AtbProjectDetailsHeroSection.types';
+// ----- components
+import GeneralContainer from '@GeneralComponents/GeneralContainer';
 import ProjectDetailsBreadcrumbs from '@ProjectDetailsPageComponents/ProjectDetailsBreadcrumbs';
 import ProjectDetailsTagsList from '@ProjectDetailsPageComponents/ProjectDetailsTagsList';
-import { IProps } from './AtbProjectDetailsHeroSection.types';
 import AtbHeroSectionBanner from '@AtbProjectDetailsComponents/AtbHeroSectionBanner';
 
 const AtbProjectDetailsHeroSection: FC<IProps> = ({

@@ -1,7 +1,8 @@
 import { FC } from 'react';
-import AtbTeamMember from '@AtbProjectDetailsComponents/AtbTeamMember';
 import { IProps } from './AtbSunAgencyTargetTeamList.types';
 import { List, ListItem } from './AtbSunAgencyTargetTeamList.styled';
+// ----- components
+import AtbTeamMember from '@AtbProjectDetailsComponents/AtbTeamMember';
 
 const AtbSunAgencyTargetTeamList: FC<IProps> = ({ team }) => {
   return (

@@ -1,14 +1,15 @@
 import { FC, useRef } from 'react';
-import AnimatedHeroSectionTitle from '@AnimationBlocks/AnimatedHeroSectionTitle';
 import { Section, Container } from './HeroSection.styled';
 import { BtnClickEvent } from '@/types/types';
 import { makeBlur, smoothScroll } from '@/utils';
+import { useScroll, useTransform } from 'framer-motion';
 import { SectionsIds } from '@/constants';
+// ----- components
+import AnimatedHeroSectionTitle from '@AnimationBlocks/AnimatedHeroSectionTitle';
 import DonationSectionContent from '@MainPageComponents/DonationSectionContent';
 import GeneralContainer from '@GeneralComponents/GeneralContainer';
 import BusinessMetrics from '@MainPageComponents/BusinessMetrics';
 import ParticlesItem from '@GeneralComponents/ParticlesItem';
-import { useScroll, useTransform } from 'framer-motion';
 
 const HeroSection: FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);

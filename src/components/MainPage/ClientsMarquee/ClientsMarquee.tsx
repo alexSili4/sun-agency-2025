@@ -1,6 +1,7 @@
 import { FC } from 'react';
 import Marquee from 'react-fast-marquee';
 import { IProps } from './ClientsMarquee.types';
+// ----- components
 import ClientsMarqueeItem from '@MainPageComponents/ClientsMarqueeItem';
 
 const ClientsMarquee: FC<IProps> = ({ clients, direction }) => {

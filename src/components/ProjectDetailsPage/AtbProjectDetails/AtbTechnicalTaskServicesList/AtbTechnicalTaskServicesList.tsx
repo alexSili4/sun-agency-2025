@@ -1,7 +1,8 @@
 import { FC } from 'react';
 import { IProps } from './AtbTechnicalTaskServicesList.types';
-import AtbTechnicalTaskService from '@AtbProjectDetailsComponents/AtbTechnicalTaskService';
 import { List, ListItem } from './AtbTechnicalTaskServicesList.styled';
+// ----- components
+import AtbTechnicalTaskService from '@AtbProjectDetailsComponents/AtbTechnicalTaskService';
 
 const AtbTechnicalTaskServicesList: FC<IProps> = ({ services }) => {
   return (

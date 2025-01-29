@@ -1,16 +1,17 @@
 import { FC } from 'react';
 import { IProps } from './AtbLoyaltySystemIntegrationFeatureSection.types';
-import AtbFeatureSectionMetricsList from '@AtbProjectDetailsComponents/AtbFeatureSectionMetricsList';
-import HiddenSectionTitle from '@GeneralComponents/HiddenSectionTitle';
-import AtbContentContainer from '@AtbProjectDetailsComponents/AtbContentContainer';
-import AtbText from '@AtbProjectDetailsComponents/AtbText';
-import GeneralContainer from '@GeneralComponents/GeneralContainer';
 import {
   Container,
   Content,
   Image,
   Section,
 } from './AtbLoyaltySystemIntegrationFeatureSection.styled';
+// ----- components
+import AtbFeatureSectionMetricsList from '@AtbProjectDetailsComponents/AtbFeatureSectionMetricsList';
+import HiddenSectionTitle from '@GeneralComponents/HiddenSectionTitle';
+import AtbContentContainer from '@AtbProjectDetailsComponents/AtbContentContainer';
+import AtbText from '@AtbProjectDetailsComponents/AtbText';
+import GeneralContainer from '@GeneralComponents/GeneralContainer';
 
 const AtbLoyaltySystemIntegrationFeatureSection: FC<IProps> = ({
   banner,

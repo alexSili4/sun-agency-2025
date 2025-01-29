@@ -10,8 +10,9 @@ import {
   Number,
   GlowImg,
 } from './ServiceItem.styled';
-import ServiceItemTagsList from '@MainPageComponents/ServiceItemTagsList';
 import serviceGlow from '@/images/services/service-glow.png';
+// ----- components
+import ServiceItemTagsList from '@MainPageComponents/ServiceItemTagsList';
 
 const ServiceItem: FC<IProps> = ({ path, icon, tags, title, number }) => {
   return (
