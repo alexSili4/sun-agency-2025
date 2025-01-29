@@ -7,10 +7,11 @@ import {
   Container,
   Content,
 } from './AnimatedClientDetailsModalWinContent.styled';
-import GlowingButton from '@GeneralComponents/GlowingButton';
 import { IoMdClose } from 'react-icons/io';
 import { theme } from '@/constants';
 import glowingRoundBtn from '@/lottiefiles/glow/glowing-round-btn.json';
+// ----- components
+import GlowingButton from '@GeneralComponents/GlowingButton';
 
 const AnimatedClientDetailsModalWinContent: FC<IProps> = ({
   children,

@@ -1,3 +1,3 @@
 export interface IProps {
-  websitePreview: object;
+  animationData: object;
 }

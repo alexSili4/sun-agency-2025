@@ -1,7 +1,8 @@
 import { FC } from 'react';
-import ClientsSectionContent from '@MainPageComponents/ClientsSectionContent';
 import { Container, ItemWrap } from './AnimatedClientsSectionContent.styled';
 import { IProps } from './AnimatedClientsSectionContent.types';
+// ----- components
+import ClientsSectionContent from '@MainPageComponents/ClientsSectionContent';
 
 const AnimatedClientsSectionContent: FC<IProps> = ({ shouldShow }) => {
   const animate = shouldShow ? 'visible' : 'hidden';

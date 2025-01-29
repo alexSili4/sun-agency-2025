@@ -1,8 +1,9 @@
 import { FC } from 'react';
-import ProjectsList from '@MainPageComponents/ProjectsList';
-import ProjectsSectionContentWrap from '@MainPageComponents/ProjectsSectionContentWrap';
 import { IProps } from './AnimatedProjectsList.types';
 import { Container, Element } from './AnimatedProjectsList.styled';
+// ----- components
+import ProjectsSectionContentWrap from '@MainPageComponents/ProjectsSectionContentWrap';
+import ProjectsList from '@MainPageComponents/ProjectsList';
 
 const AnimatedProjectsList: FC<IProps> = ({ projects, nextSectionInView }) => {
   const animate = !nextSectionInView ? 'visible' : 'hidden';

@@ -1,12 +1,13 @@
 import { FC } from 'react';
 import { PagePaths } from '@/constants';
-import GlowingLink from '@GeneralComponents/GlowingLink';
 import {
   Container,
   Element,
 } from './AnimatedProjectsSectionGlowingLink.styled';
 import { IProps } from './AnimatedProjectsSectionGlowingLink.types';
 import glowingLink from '@/lottiefiles/glow/glowing-link.json';
+// ----- components
+import GlowingLink from '@GeneralComponents/GlowingLink';
 
 const AnimatedProjectsSectionGlowingLink: FC<IProps> = ({
   nextSectionInView,

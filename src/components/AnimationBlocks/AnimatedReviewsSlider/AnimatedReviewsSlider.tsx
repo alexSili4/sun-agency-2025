@@ -1,8 +1,9 @@
 import { FC, useRef } from 'react';
-import ReviewsSlider from '@MainPageComponents/ReviewsSlider';
 import { IProps } from './AnimatedReviewsSlider.types';
 import { Container, Element } from './AnimatedReviewsSlider.styled';
 import { useInView } from 'framer-motion';
+// ----- components
+import ReviewsSlider from '@MainPageComponents/ReviewsSlider';
 
 const AnimatedReviewsSlider: FC<IProps> = ({ reviews }) => {
   const containerRef = useRef<HTMLDivElement>(null);

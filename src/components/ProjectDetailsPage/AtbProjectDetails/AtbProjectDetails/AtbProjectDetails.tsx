@@ -115,7 +115,7 @@ const AtbProjectDetails: FC<IProps> = ({ project }) => {
         sunAgencyTeam={sunAgencyTeam}
         sunAgencyTeamTitle={sunAgencyTeamTitle}
       />
-      <AtbProjectPreviewSection websitePreview={websitePreview} />
+      <AtbProjectPreviewSection animationData={websitePreview} />
     </>
   );
 };

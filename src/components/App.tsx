@@ -1,6 +1,7 @@
 import { FC, lazy } from 'react';
 import { PagePaths } from '@/constants';
 import { Route, Routes } from 'react-router-dom';
+// ----- components
 import SharedLayout from '@GeneralComponents/SharedLayout';
 
 const NotFoundPage = lazy(() => import('@/pages/NotFoundPage'));
