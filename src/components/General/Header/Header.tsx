@@ -1,6 +1,6 @@
 import { FC, useEffect, useState } from 'react';
 import { Container, StyledHeader } from './Header.styled';
-import { Langs, theme } from '@/constants';
+import { langs, theme } from '@/constants';
 import { makeBlur } from '@/utils';
 // ----- components
 import NavMenu from '@GeneralComponents/NavMenu';
@@ -14,7 +14,7 @@ import GeneralContainer from '@GeneralComponents/GeneralContainer';
 import AnimatedMenuModalWin from '@AnimationBlocks/AnimatedMenuModalWin';
 
 const Header: FC = () => {
-  const [currentLang, setCurrentLang] = useState<string>(() => Langs.ua);
+  const [currentLang, setCurrentLang] = useState<string>(() => langs.ua.name);
   const [showMenuModalWin, setShowMenuModalWin] = useState<boolean>(false);
   const [shouldHideMenuBtn, setShouldHideMenuBtn] = useState<boolean>(false);
 
@@ -62,8 +62,10 @@ const Header: FC = () => {
             />
             <ContactsInfo
               currentLang={currentLang}
-              onChange={onLangRadioBtnChange}
               showMenuModalWin={showMenuModalWin}
+              shouldHideMenuBtn={shouldHideMenuBtn}
+              onLangRadioBtnChange={onLangRadioBtnChange}
+              onMenuBtnClick={onMenuBtnClick}
             />
           </Container>
         </GeneralContainer>

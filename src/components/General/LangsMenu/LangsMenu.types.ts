@@ -7,6 +7,8 @@ export interface IProps {
   isPositionAbsolute?: boolean;
   top?: string;
   left?: string;
+  isHiddenOnMobile?: boolean;
+  isHidden?: boolean;
 }
 
 export interface IStyledContainerProps {
@@ -14,6 +16,8 @@ export interface IStyledContainerProps {
   isPositionAbsolute: boolean;
   top: string;
   left: string;
+  isHiddenOnMobile: boolean;
+  isHidden: boolean;
 }
 
 export interface IStyledLangsRadioBtnWrapProps {

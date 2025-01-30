@@ -8,9 +8,12 @@ import Copyright from '@GeneralComponents/Copyright';
 const GeneralLinks: FC = () => {
   return (
     <Container>
-      <Copyright />
+      <Copyright isHiddenOnMobile />
       <LinksWrap>
-        <SocialLinks linkPadding={theme.spacing(17)} />
+        <SocialLinks
+          mobileLinkPadding={0}
+          deskLinkPadding={theme.spacing(17)}
+        />
         <PrivacyPolicyLink
           href={Links.privacyPolicy}
           target='_blank'

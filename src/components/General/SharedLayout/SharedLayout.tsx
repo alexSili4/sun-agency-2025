@@ -4,7 +4,7 @@ import { Outlet } from 'react-router-dom';
 // ----- components
 import Loader from '@GeneralComponents/Loader';
 import Header from '@GeneralComponents/Header';
-import Footer from '@GeneralComponents/Footer';
+// import Footer from '@GeneralComponents/Footer';
 
 const SharedLayout: FC = () => {
   return (
@@ -15,7 +15,7 @@ const SharedLayout: FC = () => {
           <Outlet />
         </Suspense>
       </Main>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };

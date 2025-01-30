@@ -12,6 +12,8 @@ const MenuBtn: FC<IProps> = ({
   showMenuModalWin,
   shouldHideMenuBtn,
   onClick,
+  isMobileMenuBtn = false,
+  isDeskMenuBtn = false,
 }) => {
   const { isHoverOrFocus, onItemBlur, onItemFocus } = useIsHoverOrFocus();
 
@@ -20,6 +22,8 @@ const MenuBtn: FC<IProps> = ({
       type='button'
       onClick={onClick}
       shouldHide={shouldHideMenuBtn}
+      isDeskMenuBtn={isDeskMenuBtn}
+      isMobileMenuBtn={isMobileMenuBtn}
       onMouseEnter={onItemFocus}
       onMouseLeave={onItemBlur}
       onBlur={onItemBlur}
@@ -30,6 +34,7 @@ const MenuBtn: FC<IProps> = ({
         isHoverOrFocus={isHoverOrFocus}
         height={70}
         width={70}
+        isHidden={isMobileMenuBtn}
       />
       <Hamburger
         toggled={showMenuModalWin}

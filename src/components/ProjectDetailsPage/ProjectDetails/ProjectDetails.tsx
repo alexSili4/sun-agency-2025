@@ -1,10 +1,13 @@
 import { FC } from 'react';
 import { IProps } from './ProjectDetails.types';
+import { useIsDesk } from '@/hooks';
 // ----- components
 import AtbProjectDetails from '@AtbProjectDetailsComponents/AtbProjectDetails';
 
 const ProjectDetails: FC<IProps> = ({ project }) => {
-  return <AtbProjectDetails project={project.details} />;
+  const isDesk = useIsDesk();
+
+  return <AtbProjectDetails project={project.details} isDesk={isDesk} />;
 };
 
 export default ProjectDetails;

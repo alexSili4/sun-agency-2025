@@ -11,7 +11,7 @@ export interface IMainInfo {
   name: string;
   tags: Strings;
   title: string;
-  primaryBanner: string;
+  primaryBanner: { mobile: string; desk: string };
 }
 
 export interface IBusinessMetrics {

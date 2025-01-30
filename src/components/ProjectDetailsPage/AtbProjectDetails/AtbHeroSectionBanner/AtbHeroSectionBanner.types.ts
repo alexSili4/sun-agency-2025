@@ -1,9 +1,11 @@
 export interface IProps {
   banner: string;
-  borderRadius: number;
+  borderRadiusDesk: number;
+  borderRadiusMobile: number;
 }
 
 export interface IStyledContainerProps {
   banner: string;
-  borderRadius: number;
+  borderRadiusDesk: number;
+  borderRadiusMobile: number;
 }

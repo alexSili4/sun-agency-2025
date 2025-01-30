@@ -9,27 +9,38 @@ export const StyledLink = styled(Link)<IStyledProps>`
   justify-content: center;
   gap: ${({ theme }) => theme.spacing(3)}px;
   width: ${({ width }) => width}px;
-  height: 56px;
   border-radius: 16px;
-  pointer-events: all;
-  transition: border-color ${({ theme }) => theme.transitionDurationAndFunc};
+  height: 44px;
+  pointer-events: ${({ isHidden }) => (isHidden ? 'none' : 'all')};
+  opacity: ${({ isHidden }) => (isHidden ? 0 : 1)};
+  transition: opacity ${({ theme }) => theme.transitionDurationAndFunc};
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
+    height: 56px;
+  }
 `;
 
 export const LinkIcon = styled.span`
   position: relative;
-  width: 10px;
+  width: 8px;
   aspect-ratio: 1 / 1;
   background-color: #ffcd33;
   border-radius: 50%;
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
+    width: 8px;
+  }
 `;
 
 export const LinkTitle = styled.span`
   position: relative;
   color: ${({ theme }) => theme.colors.white};
   font-family: ${({ theme }) => theme.fontFamily.involve};
-  font-size: 18.67px;
+  font-size: 11px;
   font-weight: 400;
-  line-height: 22.4px;
-  letter-spacing: 0%;
-  text-align: left;
+  line-height: 1.2;
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
+    font-size: 18.67px;
+  }
 `;

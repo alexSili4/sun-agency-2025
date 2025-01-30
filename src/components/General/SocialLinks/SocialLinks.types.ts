@@ -1,7 +1,9 @@
 export interface IProps {
-  linkPadding: number;
+  mobileLinkPadding: number;
+  deskLinkPadding: number;
 }
 
 export interface IStyledProps {
-  linkPadding: number;
+  mobileLinkPadding: number;
+  deskLinkPadding: number;
 }

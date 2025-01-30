@@ -20,6 +20,10 @@ interface ITheme {
   };
   containerWidth: {
     desktop: number;
+    mobile: number;
+  };
+  breakpoints: {
+    desktop: number;
   };
   iconSizes: {
     menuBtn: number;
@@ -28,6 +32,7 @@ interface ITheme {
     closeClientDetailsBtn: number;
     reviewsSlider: number;
     projectDetailsBreadcrumbs: number;
+    servicesListBtn: number;
   };
   zIndex: {
     loader: number;
@@ -61,6 +66,7 @@ const theme: ITheme = {
   // borderRadius: {  },
   containerWidth: {
     desktop: 1352,
+    mobile: 335,
   },
   zIndex: {
     loader: 10,
@@ -69,11 +75,15 @@ const theme: ITheme = {
     contactsModalWin: 100,
     animatedModalWin: 100000,
   },
+  breakpoints: {
+    desktop: 1440,
+  },
   // shadows: {  },
   iconSizes: {
     donationLink: 7,
     projectDetailsBreadcrumbs: 9,
     reviewsSlider: 11,
+    servicesListBtn: 11,
     socialLink: 14,
     closeClientDetailsBtn: 14,
     menuBtn: 17,

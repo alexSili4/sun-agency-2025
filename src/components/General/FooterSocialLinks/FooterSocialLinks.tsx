@@ -9,7 +9,10 @@ const FooterSocialLinks: FC = () => {
     <Container>
       <Content>
         <Title>Слідкуйте за нами</Title>
-        <SocialLinks linkPadding={theme.spacing(12)} />
+        <SocialLinks
+          mobileLinkPadding={theme.spacing(5)}
+          deskLinkPadding={theme.spacing(12)}
+        />
       </Content>
     </Container>
   );

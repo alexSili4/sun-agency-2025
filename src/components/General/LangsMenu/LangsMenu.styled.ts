@@ -5,11 +5,20 @@ import {
 } from './LangsMenu.types';
 
 export const Container = styled.div<IStyledContainerProps>`
-  position: ${({ isPositionAbsolute }) =>
-    isPositionAbsolute ? 'absolute' : 'relative'};
-  top: ${({ top }) => top};
-  left: ${({ left }) => left};
   display: ${({ isFullMenu }) => isFullMenu && 'flex'};
+  opacity: ${({ isHidden }) => (isHidden ? 0 : 1)};
+  transition: opacity ${({ theme }) => theme.transitionDurationAndFunc};
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.desktop - 1}px) {
+    display: ${({ isHiddenOnMobile }) => isHiddenOnMobile && 'none'};
+  }
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
+    position: ${({ isPositionAbsolute }) =>
+      isPositionAbsolute ? 'absolute' : 'relative'};
+    top: ${({ top }) => top};
+    left: ${({ left }) => left};
+  }
 `;
 
 export const LangsRadioBtnWrap = styled.div<IStyledLangsRadioBtnWrapProps>`

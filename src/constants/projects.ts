@@ -1,6 +1,7 @@
 // atb
 import atb from '@/images/projects/atb.png';
-import atbPrimaryBanner from '@/images/projects/atb-primary-banner.jpg';
+import atbPrimaryBannerDesk from '@/images/projects/atb-primary-banner-desk.jpg';
+import atbPrimaryBannerMobile from '@/images/projects/atb-primary-banner-mobile.png';
 import atbBanner1 from '@/images/projects/atb-banner-1.jpg';
 import atbCashSystemIntegration from '@/images/projects/atb-cash-system-integration.png';
 import atbPaymentSystemIntegration from '@/images/projects/atb-payment-system-integration.jpg';
@@ -36,7 +37,10 @@ const projects: Projects = [
         name: 'АТБ',
         tags: ['e-commerce', 'V3.0'],
         title: 'Онлайн магазин для мережі супермаркетів АТБ',
-        primaryBanner: atbPrimaryBanner,
+        primaryBanner: {
+          mobile: atbPrimaryBannerMobile,
+          desk: atbPrimaryBannerDesk,
+        },
       },
       businessMetrics: [
         {
@@ -184,7 +188,7 @@ const projects: Projects = [
         name: '',
         tags: [''],
         title: '',
-        primaryBanner: '',
+        primaryBanner: { desk: '', mobile: '' },
       },
       generalInfo: {
         desc: '',
@@ -270,7 +274,7 @@ const projects: Projects = [
         name: '',
         tags: [''],
         title: '',
-        primaryBanner: '',
+        primaryBanner: { desk: '', mobile: '' },
       },
       generalInfo: {
         desc: '',
@@ -356,7 +360,7 @@ const projects: Projects = [
         name: '',
         tags: [''],
         title: '',
-        primaryBanner: '',
+        primaryBanner: { desk: '', mobile: '' },
       },
       generalInfo: {
         desc: '',

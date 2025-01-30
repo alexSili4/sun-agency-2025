@@ -2,18 +2,31 @@ import styled from '@emotion/styled';
 
 export const Container = styled.div`
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 100%;
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 `;
 
 export const Content = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  padding-top: ${({ theme }) => theme.spacing(20)}px;
+  align-items: center;
+  padding: ${({ theme: { spacing, padding } }) =>
+    `${spacing(20)}px ${padding.container}px ${spacing(11)}px`};
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.desktop - 1}px) {
+    gap: ${({ theme }) => theme.spacing(7)}px;
+  }
 `;
 
 export const LinksWrap = styled.div`
-  display: flex;
+  width: 100%;
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
+    display: flex;
+  }
 `;

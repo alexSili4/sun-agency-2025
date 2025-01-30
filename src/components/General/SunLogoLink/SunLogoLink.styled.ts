@@ -8,7 +8,12 @@ export const LogoLink = styled(Link)<IStyledLogoLinkProps>`
 
   & > svg {
     display: block;
-    width: 121px;
-    height: 25px;
+    width: 86px;
+    height: 18px;
+
+    @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
+      width: 121px;
+      height: 25px;
+    }
   }
 `;

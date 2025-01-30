@@ -13,6 +13,7 @@ const GlowingLink: FC<IProps> = ({
   glowHeight,
   glowWidth,
   loop = false,
+  isHidden = false,
 }) => {
   const { isHoverOrFocus, onItemBlur, onItemFocus } = useIsHoverOrFocus();
 
@@ -24,6 +25,7 @@ const GlowingLink: FC<IProps> = ({
       onFocus={onItemFocus}
       onMouseEnter={onItemFocus}
       onMouseLeave={onItemBlur}
+      isHidden={isHidden}
     >
       <LottieGlowingAnimation
         animationData={animationData}

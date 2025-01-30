@@ -5,7 +5,7 @@ import { AiFillInstagram } from 'react-icons/ai';
 import { LinkTitle, List, ListItem, StyledLink } from './SocialLinks.styled';
 import { IProps } from './SocialLinks.types';
 
-const SocialLinks: FC<IProps> = ({ linkPadding }) => {
+const SocialLinks: FC<IProps> = ({ mobileLinkPadding, deskLinkPadding }) => {
   return (
     <List>
       <ListItem>
@@ -13,7 +13,8 @@ const SocialLinks: FC<IProps> = ({ linkPadding }) => {
           href={Links.linkedin}
           target='_blank'
           rel='noopener noreferrer'
-          linkPadding={linkPadding}
+          deskLinkPadding={deskLinkPadding}
+          mobileLinkPadding={mobileLinkPadding}
         >
           <FaLinkedinIn size={theme.iconSizes.socialLink} />
           <LinkTitle>Linkedin</LinkTitle>
@@ -24,7 +25,8 @@ const SocialLinks: FC<IProps> = ({ linkPadding }) => {
           href={Links.instagram}
           target='_blank'
           rel='noopener noreferrer'
-          linkPadding={linkPadding}
+          deskLinkPadding={deskLinkPadding}
+          mobileLinkPadding={mobileLinkPadding}
         >
           <AiFillInstagram size={theme.iconSizes.socialLink} />
           <LinkTitle>Instagram</LinkTitle>

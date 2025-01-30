@@ -15,11 +15,16 @@ export const StyledLink = styled.a<IStyledProps>`
   gap: ${({ theme }) => theme.spacing(2)}px;
   color: ${({ theme }) => theme.colors.white};
   transition: color ${({ theme }) => theme.transitionDurationAndFunc};
-  padding-top: ${({ linkPadding }) => linkPadding}px;
-  padding-bottom: ${({ linkPadding }) => linkPadding}px;
+  padding-top: ${({ mobileLinkPadding }) => mobileLinkPadding}px;
+  padding-bottom: ${({ mobileLinkPadding }) => mobileLinkPadding}px;
 
   ul:has(&:is(:hover, :focus)) > li:not(:has(&:is(:hover, :focus))) > & {
     color: ${({ theme }) => theme.colors.inactiveLink};
+  }
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
+    padding-top: ${({ deskLinkPadding }) => deskLinkPadding}px;
+    padding-bottom: ${({ deskLinkPadding }) => deskLinkPadding}px;
   }
 `;
 

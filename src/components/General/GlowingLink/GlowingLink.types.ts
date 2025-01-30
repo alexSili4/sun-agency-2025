@@ -8,8 +8,10 @@ export interface IProps {
   glowHeight: number;
   glowWidth: number;
   loop?: boolean;
+  isHidden?: boolean;
 }
 
 export interface IStyledProps {
   width: number;
+  isHidden: boolean;
 }

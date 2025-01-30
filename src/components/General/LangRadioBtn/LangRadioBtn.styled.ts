@@ -7,7 +7,7 @@ import {
 export const Container = styled.label<IStyledContainerProps>`
   display: block;
   padding-right: ${({ theme, isLastRadioBtn }) =>
-    !isLastRadioBtn && `${theme.spacing()}px`};
+    !isLastRadioBtn && `${theme.spacing(4)}px`};
   cursor: pointer;
   transition: opacity ${({ theme }) => theme.transitionDurationAndFunc},
     transform ${({ theme }) => theme.transitionDurationAndFunc};
@@ -18,6 +18,11 @@ export const Container = styled.label<IStyledContainerProps>`
     &:not(:has(input:checked)) {
       opacity: ${({ isFullMenu }) => !isFullMenu && 0};
     }
+  }
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
+    padding-right: ${({ theme, isLastRadioBtn }) =>
+      !isLastRadioBtn && `${theme.spacing()}px`};
   }
 `;
 
@@ -30,8 +35,8 @@ export const TitleWrap = styled.span<IStyledTitleWrapProps>`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: ${({ width }) => width}px;
-  height: ${({ height }) => height}px;
+  width: ${({ mobileWidth }) => mobileWidth}px;
+  height: 35px;
   border-radius: 50%;
   border: 1px solid;
   border-color: transparent;
@@ -45,18 +50,28 @@ export const TitleWrap = styled.span<IStyledTitleWrapProps>`
     border-color: ${({ isFullMenu }) =>
       isFullMenu && 'rgba(255, 255, 255, 0.12)'};
   }
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
+    width: ${({ deskWidth }) => deskWidth}px;
+  }
 `;
 
 export const Title = styled.span`
   color: ${({ theme }) => theme.colors.white};
   font-family: ${({ theme }) => theme.fontFamily.inter};
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
-  line-height: 15px;
+  line-height: 1.07;
   text-transform: uppercase;
   transition: text-shadow ${({ theme }) => theme.transitionDurationAndFunc};
 
   *:has(input:is(:hover, :focus, :checked)) > span > & {
     text-shadow: 0px 1px 5px #fff9d7;
+  }
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
+    color: ${({ theme }) => theme.colors.white};
+    font-family: ${({ theme }) => theme.fontFamily.inter};
+    font-size: 14px;
   }
 `;

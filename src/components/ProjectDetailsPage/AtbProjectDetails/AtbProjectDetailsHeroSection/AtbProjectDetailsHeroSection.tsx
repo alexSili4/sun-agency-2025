@@ -1,10 +1,11 @@
 import { FC } from 'react';
 import {
-  Container,
+  Content,
   Background,
   Section,
   Title,
   TitleWrap,
+  Container,
 } from './AtbProjectDetailsHeroSection.styled';
 import { IProps } from './AtbProjectDetailsHeroSection.types';
 // ----- components
@@ -18,25 +19,32 @@ const AtbProjectDetailsHeroSection: FC<IProps> = ({
   tags,
   title,
   primaryBanner,
-  borderRadius,
+  borderRadiusDesk,
+  borderRadiusMobile,
 }) => {
   return (
     <Section>
-      <AtbHeroSectionBanner
-        banner={primaryBanner}
-        borderRadius={borderRadius}
-      />
-      <Background borderRadius={borderRadius}>
-        <GeneralContainer>
-          <Container>
-            <ProjectDetailsBreadcrumbs name={name} />
-            <TitleWrap>
-              <ProjectDetailsTagsList tags={tags} />
-              <Title>{title}</Title>
-            </TitleWrap>
-          </Container>
-        </GeneralContainer>
-      </Background>
+      <Container>
+        <AtbHeroSectionBanner
+          banner={primaryBanner}
+          borderRadiusDesk={borderRadiusDesk}
+          borderRadiusMobile={borderRadiusMobile}
+        />
+        <Background
+          borderRadiusDesk={borderRadiusDesk}
+          borderRadiusMobile={borderRadiusMobile}
+        >
+          <GeneralContainer>
+            <Content>
+              <ProjectDetailsBreadcrumbs name={name} />
+              <TitleWrap>
+                <Title>{title}</Title>
+                <ProjectDetailsTagsList tags={tags} />
+              </TitleWrap>
+            </Content>
+          </GeneralContainer>
+        </Background>
+      </Container>
     </Section>
   );
 };

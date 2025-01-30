@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import { Container, LangsRadioBtnWrap } from './LangsMenu.styled';
-import { Langs } from '@/constants';
+import { langs } from '@/constants';
 import { IProps } from './LangsMenu.types';
 // ----- components
 import LangRadioBtn from '@GeneralComponents/LangRadioBtn';
@@ -10,42 +10,48 @@ const LangsMenu: FC<IProps> = ({
   onChange,
   isFullMenu = false,
   isPositionAbsolute = false,
+  isHiddenOnMobile = false,
+  isHidden = false,
   left = '0px',
   top = '0px',
 }) => {
-  const isUaLang = currentLang === Langs.ua;
-  const isEngLang = currentLang === Langs.eng;
-  const isDeLang = currentLang === Langs.de;
+  const { de, eng, ua } = langs;
+
+  const isUaLang = currentLang === ua.name;
+  const isEngLang = currentLang === eng.name;
+  const isDeLang = currentLang === de.name;
 
   return (
     <Container
       isFullMenu={isFullMenu}
       isPositionAbsolute={isPositionAbsolute}
+      isHiddenOnMobile={isHiddenOnMobile}
       left={left}
       top={top}
+      isHidden={isHidden}
     >
       <LangsRadioBtnWrap isFullMenu={isFullMenu}>
         <LangRadioBtn
-          width={36}
-          height={35}
-          value={Langs.ua}
+          mobileWidth={ua.width.mobile}
+          deskWidth={ua.width.desk}
+          value={ua.name}
           onChange={onChange}
           checked={isUaLang}
           isFullMenu={isFullMenu}
         />
         <LangRadioBtn
-          height={35}
-          width={35}
-          value={Langs.de}
+          mobileWidth={de.width.mobile}
+          deskWidth={de.width.desk}
+          value={de.name}
           onChange={onChange}
           checked={isDeLang}
           isFullMenu={isFullMenu}
         />
       </LangsRadioBtnWrap>
       <LangRadioBtn
-        width={46}
-        height={35}
-        value={Langs.eng}
+        mobileWidth={eng.width.mobile}
+        deskWidth={eng.width.desk}
+        value={eng.name}
         onChange={onChange}
         checked={isEngLang}
         isFullMenu={isFullMenu}

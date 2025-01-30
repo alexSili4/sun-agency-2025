@@ -1,8 +1,8 @@
 import { OnInputChangeFunc } from '@/types/types';
 
 export interface IProps {
-  width: number;
-  height: number;
+  mobileWidth: number;
+  deskWidth: number;
   value: string;
   onChange: OnInputChangeFunc;
   checked: boolean;
@@ -16,7 +16,7 @@ export interface IStyledContainerProps {
 }
 
 export interface IStyledTitleWrapProps {
-  width: number;
-  height: number;
-  isFullMenu:boolean
+  mobileWidth: number;
+  deskWidth: number;
+  isFullMenu: boolean;
 }

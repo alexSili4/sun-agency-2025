@@ -10,8 +10,7 @@ export const Container = styled.div<IStyledContainerProps>`
       : 'static'};
   top: ${({ top }) => top};
   left: ${({ isCenterXPosition }) => isCenterXPosition && '50%'};
-  width: ${({ theme: { containerWidth, padding } }) =>
-    containerWidth.desktop + padding.container * 2}px;
+  width: 100%;
   height: ${({ isFullHeight }) => isFullHeight && '100%'};
   padding-left: ${({ theme }) => theme.padding.container}px;
   padding-right: ${({ theme }) => theme.padding.container}px;
@@ -21,4 +20,9 @@ export const Container = styled.div<IStyledContainerProps>`
   transform: translateX(
     ${({ isCenterXPosition }) => (isCenterXPosition ? '-50%' : 0)}
   );
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
+    width: ${({ theme: { containerWidth, padding } }) =>
+      containerWidth.desktop + padding.container * 2}px;
+  }
 `;

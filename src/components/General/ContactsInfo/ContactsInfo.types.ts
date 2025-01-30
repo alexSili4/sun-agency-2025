@@ -1,9 +1,11 @@
-import { OnInputChangeFunc } from '@/types/types';
+import { OnBtnClickFunc, OnInputChangeFunc } from '@/types/types';
 
 export interface IProps {
   currentLang: string;
   showMenuModalWin: boolean;
-  onChange: OnInputChangeFunc;
+  shouldHideMenuBtn: boolean;
+  onMenuBtnClick: OnBtnClickFunc;
+  onLangRadioBtnChange: OnInputChangeFunc;
 }
 
 export interface IStyledContainerProps {

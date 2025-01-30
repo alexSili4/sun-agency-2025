@@ -6,7 +6,7 @@ export const StyledLottie = styled(Lottie)<IStyledLottieProps>`
   position: absolute;
   top: 50%;
   left: 50%;
-  display: flex;
+  display: ${({ isHidden }) => (isHidden ? 'none' : 'flex')};
   align-items: center;
   justify-content: center;
   width: ${({ width }) => width}px;

@@ -4,9 +4,11 @@ import { IStyledContainerProps } from './ContactsInfo.types';
 export const Container = styled.div<IStyledContainerProps>`
   display: flex;
   align-items: center;
-  gap: ${({ theme }) => theme.spacing(5)}px;
+  gap: ${({ theme }) => theme.spacing(3)}px;
   pointer-events: ${({ showMenuModalWin }) =>
     showMenuModalWin ? 'none' : 'all'};
-  opacity: ${({ showMenuModalWin }) => (showMenuModalWin ? 0 : 1)};
-  transition: opacity ${({ theme }) => theme.transitionDurationAndFunc};
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
+    gap: ${({ theme }) => theme.spacing(5)}px;
+  }
 `;

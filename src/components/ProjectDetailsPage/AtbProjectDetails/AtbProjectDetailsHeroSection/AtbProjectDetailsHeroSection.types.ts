@@ -5,9 +5,11 @@ export interface IProps {
   tags: Strings;
   title: string;
   primaryBanner: string;
-  borderRadius: number;
+  borderRadiusDesk: number;
+  borderRadiusMobile: number;
 }
 
 export interface IStyledBackgroundProps {
-  borderRadius: number;
+  borderRadiusDesk: number;
+  borderRadiusMobile: number;
 }

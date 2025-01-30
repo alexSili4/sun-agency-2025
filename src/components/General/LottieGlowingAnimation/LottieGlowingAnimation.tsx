@@ -9,6 +9,7 @@ const LottieGlowingAnimation: FC<IProps> = ({
   width,
   height,
   loop = false,
+  isHidden = false,
 }) => {
   const lottieRef = useRef<LottieRefCurrentProps>(null);
 
@@ -38,6 +39,7 @@ const LottieGlowingAnimation: FC<IProps> = ({
       autoplay={isHoverOrFocus}
       height={height}
       width={width}
+      isHidden={isHidden}
     />
   );
 };

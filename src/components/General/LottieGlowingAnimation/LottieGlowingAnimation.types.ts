@@ -4,9 +4,11 @@ export interface IProps {
   width: number;
   height: number;
   loop?: boolean;
+  isHidden?: boolean;
 }
 
 export interface IStyledLottieProps {
   width: number;
   height: number;
+  isHidden: boolean;
 }
