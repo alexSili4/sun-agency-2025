@@ -1,28 +1,31 @@
 // atb
-import atb from '@/images/projects/atb.png';
-import atbPrimaryBannerDesk from '@/images/projects/atb-primary-banner-desk.jpg';
-import atbPrimaryBannerMobile from '@/images/projects/atb-primary-banner-mobile.png';
-import atbBanner1 from '@/images/projects/atb-banner-1.jpg';
-import atbCashSystemIntegration from '@/images/projects/atb-cash-system-integration.png';
-import atbPaymentSystemIntegration from '@/images/projects/atb-payment-system-integration.jpg';
-import atbYearlyOrders from '@/images/projects/atb-yearly-orders.png';
-import atbProductsCount from '@/images/projects/atb-products-count.png';
-import atbActiveUsers from '@/images/projects/atb-active-users.png';
-import atbStores from '@/images/projects/atb-stores.png';
+import atbDesk from '@/images/projects/atb/atb-desk.png';
+import atbMob from '@/images/projects/atb/atb-mob.png';
+import atbPrimaryBannerDesk from '@/images/projects/atb/atb-primary-banner-desk.jpg';
+import atbPrimaryBannerMobile from '@/images/projects/atb/atb-primary-banner-mobile.png';
+import atbBanner1 from '@/images/projects/atb/atb-banner-1.jpg';
+import atbCashSystemIntegration from '@/images/projects/atb/atb-cash-system-integration.png';
+import atbPaymentSystemIntegration from '@/images/projects/atb/atb-payment-system-integration.jpg';
+import atbYearlyOrders from '@/images/projects/atb/atb-yearly-orders.png';
+import atbProductsCount from '@/images/projects/atb/atb-products-count.png';
+import atbActiveUsers from '@/images/projects/atb/atb-active-users.png';
+import atbStores from '@/images/projects/atb/atb-stores.png';
 import atbScreens from '@/lottiefiles/projects/atb-screens.json';
 import atbWebsite from '@/lottiefiles/projects/atb-website.json';
-import atbAverageTime from '@/images/projects/atb-average-time.png';
-import atbSuccessfulTransactions from '@/images/projects/atb-successful-transactions.png';
-import atbBonusActivatingCustomers from '@/images/projects/atb-bonus-activating-customers.png';
-import atbDeliverySystemIntegration from '@/images/projects/atb-delivery-system-integration.png';
-import atbLoyaltySystemIntegration from '@/images/projects/atb-loyalty-system-integration.jpg';
-import atbMobAppIntegration from '@/images/projects/atb-mob-app-integration.png';
-import atbMobAppIntegrationAdditional from '@/images/projects/atb-mob-app-integration-additional.jpg';
+import atbAverageTime from '@/images/projects/atb/atb-average-time.png';
+import atbSuccessfulTransactions from '@/images/projects/atb/atb-successful-transactions.png';
+import atbBonusActivatingCustomers from '@/images/projects/atb/atb-bonus-activating-customers.png';
+import atbDeliverySystemIntegration from '@/images/projects/atb/atb-delivery-system-integration.png';
+import atbLoyaltySystemIntegration from '@/images/projects/atb/atb-loyalty-system-integration.jpg';
+import atbMobAppIntegration from '@/images/projects/atb/atb-mob-app-integration.png';
+import atbMobAppIntegrationAdditional from '@/images/projects/atb/atb-mob-app-integration-additional.jpg';
 // other
-import qanabi from '@/images/projects/qanabi.png';
-import maxBanus from '@/images/projects/max-banus.png';
-import evaSport from '@/images/projects/eva-sport.png';
-
+import qanabiDesk from '@/images/projects/qanabi/qanabi-desk.png';
+import qanabiMob from '@/images/projects/qanabi/qanabi-mob.png';
+import maxBanusDesk from '@/images/projects/max-banus/max-banus-desk.png';
+import maxBanusMob from '@/images/projects/max-banus/max-banus-mob.png';
+import evaSportMob from '@/images/projects/eva-sport/eva-sport-mob.png';
+import evaSportDesk from '@/images/projects/eva-sport/eva-sport-desk.png';
 import { Projects } from '@/types/projects.types';
 
 const projects: Projects = [
@@ -31,7 +34,7 @@ const projects: Projects = [
     name: 'АТБ ver 3.0',
     year: 2023,
     tags: ['e-commerce'],
-    img: atb,
+    img: { desk: atbDesk, mob: atbMob },
     details: {
       mainInfo: {
         name: 'АТБ',
@@ -182,7 +185,7 @@ const projects: Projects = [
     name: 'Qanabi',
     year: 2023,
     tags: ['e-commerce', 'брендинг'],
-    img: qanabi,
+    img: { desk: qanabiDesk, mob: qanabiMob },
     details: {
       mainInfo: {
         name: '',
@@ -268,7 +271,7 @@ const projects: Projects = [
     name: 'MaxBanus',
     year: 2023,
     tags: ['e-commerce'],
-    img: maxBanus,
+    img: { desk: maxBanusDesk, mob: maxBanusMob },
     details: {
       mainInfo: {
         name: '',
@@ -354,7 +357,7 @@ const projects: Projects = [
     name: 'EVA Sport',
     year: 2023,
     tags: ['цифровізація'],
-    img: evaSport,
+    img: { desk: evaSportDesk, mob: evaSportMob },
     details: {
       mainInfo: {
         name: '',

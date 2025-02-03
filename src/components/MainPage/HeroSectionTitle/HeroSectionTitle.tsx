@@ -6,19 +6,24 @@ import {
   TitlePart,
   TitlePartContainer,
 } from './HeroSectionTitle.styled';
+import { IProps } from './HeroSectionTitle.types';
 
-const HeroSectionTitle: FC = () => {
-  const firstPart = 'Cтворюємо надійні';
-  const secondPart = 'e-commerce рішення, ';
-  const secondPartAccent = 'ефективні';
-  const thirdPart = ' та яскраві бренди';
-  const thirdPartAccent = 'веб-сайти';
-
+const HeroSectionTitle: FC<IProps> = ({
+  firstPart,
+  secondPart,
+  secondPartAccent,
+  thirdPart,
+  thirdPartAccent,
+  fourthPart,
+  isHiddenOnMobile = false,
+  isHiddenOnDesk = false,
+}) => {
   const firstPartSymbols = Array.from(firstPart);
   const secondPartSymbols = Array.from(secondPart);
   const secondPartAccentSymbols = Array.from(secondPartAccent);
   const thirdPartSymbols = Array.from(thirdPart);
   const thirdPartAccentSymbols = Array.from(thirdPartAccent);
+  const fourthPartSymbols = Array.from(fourthPart);
 
   const containerVariants = {
     hidden: {},
@@ -44,7 +49,7 @@ const HeroSectionTitle: FC = () => {
   };
 
   return (
-    <Title>
+    <Title isHiddenOnMobile={isHiddenOnMobile} isHiddenOnDesk={isHiddenOnDesk}>
       <TitlePartContainer
         variants={containerVariants}
         initial='hidden'
@@ -98,6 +103,21 @@ const HeroSectionTitle: FC = () => {
           ))}
         </TitlePart>
       </TitlePartContainer>
+      {fourthPart && (
+        <TitlePartContainer
+          variants={containerVariants}
+          initial='hidden'
+          animate='visible'
+        >
+          <TitlePart>
+            {fourthPartSymbols.map((symbol, index) => (
+              <Symbol variants={elementVariants} key={index}>
+                {symbol}
+              </Symbol>
+            ))}
+          </TitlePart>
+        </TitlePartContainer>
+      )}
     </Title>
   );
 };

@@ -20,3 +20,7 @@ export interface IStyledTitleWrapProps {
   deskWidth: number;
   isFullMenu: boolean;
 }
+
+export interface IStyledTitleProps {
+  isFullMenu: boolean;
+}

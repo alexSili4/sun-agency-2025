@@ -86,12 +86,17 @@ export interface IProjectDetails {
   websitePreview: object;
 }
 
+export interface IProjectImg {
+  mob: string;
+  desk: string;
+}
+
 export interface IProject {
   id: number;
   name: string;
   year: number;
   tags: Strings;
-  img: string;
+  img: IProjectImg;
   details: IProjectDetails;
 }
 

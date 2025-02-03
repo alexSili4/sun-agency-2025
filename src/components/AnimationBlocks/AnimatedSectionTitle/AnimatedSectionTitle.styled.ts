@@ -10,9 +10,13 @@ export const Title = styled(motion.h2)<IStyledTitleProps>`
   position: ${({ isHidden }) => isHidden && 'absolute'};
   color: ${({ theme }) => theme.colors.white};
   font-family: ${({ theme }) => theme.fontFamily.involve};
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
   line-height: 1.4;
   text-align: ${({ isCenter }) => (isCenter ? 'center' : 'start')};
   transform: ${({ isHidden }) => isHidden && 'scale(0) !important'};
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
+    font-size: 16px;
+  }
 `;

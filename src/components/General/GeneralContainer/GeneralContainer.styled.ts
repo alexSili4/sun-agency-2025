@@ -22,7 +22,6 @@ export const Container = styled.div<IStyledContainerProps>`
   );
 
   @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
-    width: ${({ theme: { containerWidth, padding } }) =>
-      containerWidth.desktop + padding.container * 2}px;
+    width: 96vw;
   }
 `;

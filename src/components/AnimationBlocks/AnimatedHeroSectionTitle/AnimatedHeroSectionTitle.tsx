@@ -8,7 +8,24 @@ const AnimatedHeroSectionTitle: FC<IProps> = ({ scale }) => {
   return (
     <Container>
       <Element style={{ scale }}>
-        <HeroSectionTitle />
+        <HeroSectionTitle
+          firstPart='Cтворюємо надійні'
+          secondPart='e-commerce рішення, '
+          secondPartAccent='ефективні'
+          thirdPart=' та яскраві бренди'
+          thirdPartAccent='веб-сайти'
+          fourthPart=''
+          isHiddenOnMobile
+        />
+        <HeroSectionTitle
+          firstPart='Cтворюємо надійні e-'
+          secondPart='commerce рішення,'
+          secondPartAccent=''
+          thirdPart=''
+          thirdPartAccent='ефективні веб-сайти'
+          fourthPart='та яскраві бренди'
+          isHiddenOnDesk
+        />
       </Element>
     </Container>
   );

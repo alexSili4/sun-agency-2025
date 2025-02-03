@@ -11,6 +11,7 @@ export const StyledLink = styled(Link)<IStyledProps>`
   width: ${({ width }) => width}px;
   border-radius: 16px;
   height: 44px;
+  margin: ${({ isCenter }) => isCenter && '0 auto'};
   pointer-events: ${({ isHidden }) => (isHidden ? 'none' : 'all')};
   opacity: ${({ isHidden }) => (isHidden ? 0 : 1)};
   transition: opacity ${({ theme }) => theme.transitionDurationAndFunc};

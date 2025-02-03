@@ -7,6 +7,7 @@ export interface IProps {
   animationData: object;
   glowHeight: number;
   glowWidth: number;
+  isCenter?: boolean;
   loop?: boolean;
   isHidden?: boolean;
 }
@@ -14,4 +15,5 @@ export interface IProps {
 export interface IStyledProps {
   width: number;
   isHidden: boolean;
+  isCenter: boolean;
 }

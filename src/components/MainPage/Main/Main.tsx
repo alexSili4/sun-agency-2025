@@ -3,19 +3,19 @@ import { IProps } from './Main.types';
 // ----- components
 import HeroSection from '@MainPageComponents/HeroSection';
 import ProjectsSection from '@MainPageComponents/ProjectsSection';
-import ServicesSection from '@MainPageComponents/ServicesSection';
-import ClientsSection from '@MainPageComponents/ClientsSection';
-import ReviewsSection from '@MainPageComponents/ReviewsSection';
+// import ServicesSection from '@MainPageComponents/ServicesSection';
+// import ClientsSection from '@MainPageComponents/ClientsSection';
+// import ReviewsSection from '@MainPageComponents/ReviewsSection';
 
 const Main: FC<IProps> = ({
   projectsSectionBgRef,
-  shouldShowClientsSectionContent,
-  servicesSectionRef,
-  reviewsSectionRef,
-  clientsSectionRef,
   projectsSectionBgInView,
   servicesSectionInViewWithMargin,
-  clientsSectionInView,
+  // shouldShowClientsSectionContent,
+  // servicesSectionRef,
+  // reviewsSectionRef,
+  // clientsSectionRef,
+  // clientsSectionInView,
 }) => {
   return (
     <>
@@ -25,15 +25,15 @@ const Main: FC<IProps> = ({
         sectionBgInView={projectsSectionBgInView}
         sectionBgRef={projectsSectionBgRef}
       />
-      <ServicesSection
+      {/* <ServicesSection
         servicesSectionRef={servicesSectionRef}
         nextSectionInView={clientsSectionInView}
-      />
-      <ClientsSection
+      /> */}
+      {/* <ClientsSection
         shouldShowSectionContent={shouldShowClientsSectionContent}
         sectionRef={clientsSectionRef}
-      />
-      <ReviewsSection sectionRef={reviewsSectionRef} />
+      /> */}
+      {/* <ReviewsSection sectionRef={reviewsSectionRef} /> */}
     </>
   );
 };

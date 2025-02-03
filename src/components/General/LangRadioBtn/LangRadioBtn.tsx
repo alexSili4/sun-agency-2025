@@ -25,7 +25,7 @@ const LangRadioBtn: FC<IProps> = ({
         mobileWidth={mobileWidth}
         isFullMenu={isFullMenu}
       >
-        <Title>{value}</Title>
+        <Title isFullMenu={isFullMenu}>{value}</Title>
       </TitleWrap>
     </Container>
   );

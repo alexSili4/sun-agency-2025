@@ -3,7 +3,7 @@ import { IProps } from './AnimatedProjectsList.types';
 import { Container, Element } from './AnimatedProjectsList.styled';
 // ----- components
 import ProjectsSectionContentWrap from '@MainPageComponents/ProjectsSectionContentWrap';
-import ProjectsList from '@MainPageComponents/ProjectsList';
+import ProjectsSectionProjectsList from '@MainPageComponents/ProjectsSectionProjectsList';
 
 const AnimatedProjectsList: FC<IProps> = ({ projects, nextSectionInView }) => {
   const animate = !nextSectionInView ? 'visible' : 'hidden';
@@ -33,7 +33,10 @@ const AnimatedProjectsList: FC<IProps> = ({ projects, nextSectionInView }) => {
     <Container variants={containerVariants} initial='visible' animate={animate}>
       <Element variants={elementVariants}>
         <ProjectsSectionContentWrap isProjectsListWrap>
-          <ProjectsList projects={projects} />
+          <ProjectsSectionProjectsList
+            projects={projects}
+            nextSectionInView={nextSectionInView}
+          />
         </ProjectsSectionContentWrap>
       </Element>
     </Container>

@@ -6,9 +6,9 @@ import { useScroll, useTransform } from 'framer-motion';
 import { SectionsIds } from '@/constants';
 // ----- components
 import AnimatedHeroSectionTitle from '@AnimationBlocks/AnimatedHeroSectionTitle';
-import DonationSectionContent from '@MainPageComponents/DonationSectionContent';
+import HeroSectionDonationInfo from '@MainPageComponents/HeroSectionDonationInfo';
 import GeneralContainer from '@GeneralComponents/GeneralContainer';
-import BusinessMetrics from '@MainPageComponents/BusinessMetrics';
+import HeroSectionBusinessMetrics from '@MainPageComponents/HeroSectionBusinessMetrics';
 import ParticlesItem from '@GeneralComponents/ParticlesItem';
 
 const HeroSection: FC = () => {
@@ -30,10 +30,10 @@ const HeroSection: FC = () => {
       <GeneralContainer>
         <Container ref={containerRef}>
           <AnimatedHeroSectionTitle scale={scale} />
-          <DonationSectionContent onScrollBtnClick={onScrollBtnClick} />
+          <HeroSectionDonationInfo onScrollBtnClick={onScrollBtnClick} />
         </Container>
       </GeneralContainer>
-      <BusinessMetrics />
+      <HeroSectionBusinessMetrics />
       <ParticlesItem />
     </Section>
   );

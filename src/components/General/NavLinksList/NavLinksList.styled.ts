@@ -2,7 +2,9 @@ import styled from '@emotion/styled';
 import { Link } from 'react-router-dom';
 
 export const List = styled.ul`
-  /* width: 562px; */
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
+    width: 50%;
+  }
 `;
 
 export const ListItem = styled.li``;
@@ -20,7 +22,8 @@ export const StyledLinkTitle = styled.span`
   font-size: 28px;
   font-weight: 600;
   line-height: 1.4;
-
+  letter-spacing: 0%;
+  text-align: left;
   transition: color ${({ theme }) => theme.transitionDurationAndFunc};
 
   div:has(a:is(:hover, :focus)) > ul > li > a:not(:is(:hover, :focus)) > & {

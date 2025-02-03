@@ -11,6 +11,9 @@ import GlowingLink from '@GeneralComponents/GlowingLink';
 
 const AnimatedProjectsSectionGlowingLink: FC<IProps> = ({
   nextSectionInView,
+  isHiddenOnMobile = false,
+  isHiddenOnDesk = false,
+  isCenter = false,
 }) => {
   const animate = !nextSectionInView ? 'visible' : 'hidden';
 
@@ -34,7 +37,13 @@ const AnimatedProjectsSectionGlowingLink: FC<IProps> = ({
   };
 
   return (
-    <Container variants={containerVariants} initial='visible' animate={animate}>
+    <Container
+      variants={containerVariants}
+      initial='visible'
+      animate={animate}
+      isHiddenOnMobile={isHiddenOnMobile}
+      isHiddenOnDesk={isHiddenOnDesk}
+    >
       <Element variants={elementVariants}>
         <GlowingLink
           width={200}
@@ -43,6 +52,7 @@ const AnimatedProjectsSectionGlowingLink: FC<IProps> = ({
           animationData={glowingLink}
           glowHeight={69}
           glowWidth={214}
+          isCenter={isCenter}
         />
       </Element>
     </Container>

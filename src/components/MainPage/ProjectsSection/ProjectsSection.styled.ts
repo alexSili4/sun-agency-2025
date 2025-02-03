@@ -7,7 +7,7 @@ export const Section = styled.section`
 
 export const NexSectionBg = styled.img`
   position: absolute;
-  bottom: -50%;
+  bottom: 50%;
   left: 50%;
   width: calc(100% + 100px + 100px);
   max-width: none;

@@ -18,7 +18,7 @@ export const StyledLink = styled.a<IStyledProps>`
   padding-top: ${({ mobileLinkPadding }) => mobileLinkPadding}px;
   padding-bottom: ${({ mobileLinkPadding }) => mobileLinkPadding}px;
 
-  ul:has(&:is(:hover, :focus)) > li:not(:has(&:is(:hover, :focus))) > & {
+  div:has(a:is(:hover, :focus)) > ul > li:not(:has(&:is(:hover, :focus))) > & {
     color: ${({ theme }) => theme.colors.inactiveLink};
   }
 

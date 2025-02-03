@@ -2,6 +2,7 @@ import styled from '@emotion/styled';
 import {
   IStyledTitleWrapProps,
   IStyledContainerProps,
+  IStyledTitleProps,
 } from './LangRadioBtn.types';
 
 export const Container = styled.label<IStyledContainerProps>`
@@ -56,7 +57,7 @@ export const TitleWrap = styled.span<IStyledTitleWrapProps>`
   }
 `;
 
-export const Title = styled.span`
+export const Title = styled.span<IStyledTitleProps>`
   color: ${({ theme }) => theme.colors.white};
   font-family: ${({ theme }) => theme.fontFamily.inter};
   font-size: 16px;
@@ -70,8 +71,6 @@ export const Title = styled.span`
   }
 
   @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
-    color: ${({ theme }) => theme.colors.white};
-    font-family: ${({ theme }) => theme.fontFamily.inter};
-    font-size: 14px;
+    font-size: ${({ isFullMenu }) => isFullMenu? 14:15}px;
   }
 `;

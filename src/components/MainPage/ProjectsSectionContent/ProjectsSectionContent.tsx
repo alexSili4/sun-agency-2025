@@ -30,6 +30,7 @@ const ProjectsSectionContent: FC<IProps> = ({
             />
             <AnimatedProjectsSectionGlowingLink
               nextSectionInView={nextSectionInView}
+              isHiddenOnMobile
             />
           </ProjectsSectionContentWrap>
         </GeneralContainer>

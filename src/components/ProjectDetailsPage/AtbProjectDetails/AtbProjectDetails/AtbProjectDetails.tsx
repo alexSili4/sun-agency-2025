@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { IProps } from './AtbProjectDetails.types';
 // ----- components
-import AtbProjectDetailsHeroSection from '@AtbProjectDetailsComponents/AtbProjectDetailsHeroSection';
+import AtbProjectDetailsHeroSection from '@AtbProjectDetailsComponents/AtbHeroSection';
 // import AtbGeneralInfoSection from '@AtbProjectDetailsComponents/AtbGeneralInfoSection';
 // import AtbBusinessMetricsSection from '@AtbProjectDetailsComponents/AtbBusinessMetricsSection';
 // import AtbTechnicalTaskSection from '@AtbProjectDetailsComponents/AtbTechnicalTaskSection';
