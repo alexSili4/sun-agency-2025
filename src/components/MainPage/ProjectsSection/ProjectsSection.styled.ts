@@ -7,10 +7,10 @@ export const Section = styled.section`
 
 export const NexSectionBg = styled.img`
   position: absolute;
-  bottom: 50%;
+  bottom: 0;
   left: 50%;
   width: calc(100% + 100px + 100px);
   max-width: none;
   height: auto;
-  transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(50%);
 `;

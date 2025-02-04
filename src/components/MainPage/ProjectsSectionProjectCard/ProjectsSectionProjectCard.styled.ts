@@ -19,12 +19,15 @@ export const ImgWrap = styled.div`
 
 export const Image = styled.img`
   width: 100%;
-  max-width: 347px;
   transition: transform ${({ theme }) => theme.transitionDurationAndFunc};
 
   a:is(:hover, :focus) > div > div > &,
   div:has(a:is(:hover, :focus)) > div > & {
     transform: scale(0.95);
+  }
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
+    max-width: 347px;
   }
 `;
 

@@ -22,7 +22,9 @@ export const List = styled.ul`
 `;
 
 export const ListItem = styled.li`
-  &:nth-of-type(even) {
-    margin-top: ${({ theme }) => theme.spacing(100)}px;
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
+    &:nth-of-type(even) {
+      margin-top: ${({ theme }) => theme.spacing(100)}px;
+    }
   }
 `;
