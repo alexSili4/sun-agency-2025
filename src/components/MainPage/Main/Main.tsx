@@ -4,7 +4,7 @@ import { IProps } from './Main.types';
 import HeroSection from '@MainPageComponents/HeroSection';
 import ProjectsSection from '@MainPageComponents/ProjectsSection';
 import ServicesSection from '@MainPageComponents/ServicesSection';
-// import ClientsSection from '@MainPageComponents/ClientsSection';
+import ClientsSection from '@MainPageComponents/ClientsSection';
 // import ReviewsSection from '@MainPageComponents/ReviewsSection';
 
 const Main: FC<IProps> = ({
@@ -13,8 +13,8 @@ const Main: FC<IProps> = ({
   servicesSectionInViewWithMargin,
   servicesSectionRef,
   clientsSectionInView,
-  // clientsSectionRef,
-  // shouldShowClientsSectionContent,
+  clientsSectionRef,
+  shouldShowClientsSectionContent,
   // reviewsSectionRef,
 }) => {
   return (
@@ -29,10 +29,10 @@ const Main: FC<IProps> = ({
         servicesSectionRef={servicesSectionRef}
         nextSectionInView={clientsSectionInView}
       />
-      {/* <ClientsSection
+      <ClientsSection
         shouldShowSectionContent={shouldShowClientsSectionContent}
         sectionRef={clientsSectionRef}
-      /> */}
+      />
       {/* <ReviewsSection sectionRef={reviewsSectionRef} /> */}
     </>
   );

@@ -5,7 +5,11 @@ import { getIsLastIndex } from '@/utils';
 import { Subtitle, SubtitlePart } from './AnimatedSectionSubtitle.styled';
 import { useInView } from 'framer-motion';
 
-const AnimatedSectionSubtitle: FC<IProps> = ({ text }) => {
+const AnimatedSectionSubtitle: FC<IProps> = ({
+  text,
+  isHiddenOnDesk = false,
+  isCenter = false,
+}) => {
   const subtitleRef = useRef<HTMLHeadingElement>(null);
   const inView = useInView(subtitleRef, {
     once: true,
@@ -44,6 +48,8 @@ const AnimatedSectionSubtitle: FC<IProps> = ({ text }) => {
       initial='hidden'
       animate={animate}
       ref={subtitleRef}
+      isHiddenOnDesk={isHiddenOnDesk}
+      isCenter={isCenter}
     >
       {subtitleParts.map((part, currentIndex) => {
         const isLastIndex = getIsLastIndex({ currentIndex, lastIndex });
