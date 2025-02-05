@@ -40,10 +40,14 @@ const AnimatedClientDetailsModalWinContent: FC<IProps> = ({
                 glowHeight={70}
                 glowWidth={70}
                 width={54}
+                topMob='48px'
+                rightMob='25px'
+                topDesk='70px'
+                rightDesk='32px'
+                isPositionAbsolute
               >
                 <IoMdClose size={theme.iconSizes.closeClientDetailsBtn} />
               </GlowingButton>
-
               <Content>{children}</Content>
             </Container>
           </motion.div>

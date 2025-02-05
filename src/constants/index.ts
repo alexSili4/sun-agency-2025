@@ -12,3 +12,5 @@ export { default as services } from './services';
 export { default as clients } from './clients';
 export { default as reviews } from './reviews';
 export { default as SectionsIds } from './sectionsIds';
+export { default as navLinks } from './navLinks';
+export { default as servicesLinks } from './servicesLinks';

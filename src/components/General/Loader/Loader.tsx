@@ -14,7 +14,6 @@ const Loader: FC = () => (
       zIndex: String(theme.zIndex.loader),
       top: '50%',
       left: '50%',
-      backgroundColor: theme.colors.darkBg,
       transform: 'translateX(-50%) translateY(-50%)',
     }}
     visible

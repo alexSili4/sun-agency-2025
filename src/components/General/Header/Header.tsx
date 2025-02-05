@@ -2,14 +2,14 @@ import { FC, useEffect, useState } from 'react';
 import { Container, StyledHeader } from './Header.styled';
 import { langs, theme } from '@/constants';
 import { makeBlur } from '@/utils';
-// ----- components
-import NavMenu from '@GeneralComponents/NavMenu';
-import ContactsInfo from '@GeneralComponents/ContactsInfo';
 import {
   AnchorClickEvent,
   BtnClickEvent,
   InputChangeEvent,
 } from '@/types/types';
+// ----- components
+import HeaderNavMenu from '@GeneralComponents/HeaderNavMenu';
+import HeaderContactsInfo from '@GeneralComponents/HeaderContactsInfo';
 import GeneralContainer from '@GeneralComponents/GeneralContainer';
 import AnimatedMenuModalWin from '@AnimationBlocks/AnimatedMenuModalWin';
 
@@ -55,12 +55,12 @@ const Header: FC = () => {
       <StyledHeader showMenuModalWin={showMenuModalWin}>
         <GeneralContainer isPositionRelative>
           <Container>
-            <NavMenu
+            <HeaderNavMenu
               showMenuModalWin={showMenuModalWin}
               shouldHideMenuBtn={shouldHideMenuBtn}
               onMenuBtnClick={onMenuBtnClick}
             />
-            <ContactsInfo
+            <HeaderContactsInfo
               currentLang={currentLang}
               showMenuModalWin={showMenuModalWin}
               shouldHideMenuBtn={shouldHideMenuBtn}

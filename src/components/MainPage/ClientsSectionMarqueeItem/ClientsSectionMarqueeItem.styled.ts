@@ -11,6 +11,10 @@ export const ShowClientDetailsBtn = styled.button`
 `;
 
 export const ClientLogo = styled.img`
-  width: 175px;
-  height: 80px;
+  width: auto;
+  height: 54px;
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
+    height: 80px;
+  }
 `;

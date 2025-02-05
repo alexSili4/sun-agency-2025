@@ -12,6 +12,11 @@ const GlowingButton: FC<IProps> = ({
   animationData,
   glowHeight,
   glowWidth,
+  isPositionAbsolute = false,
+  rightDesk = '0px',
+  rightMob = '0px',
+  topDesk = '0px',
+  topMob = '0px',
 }) => {
   const { isHoverOrFocus, onItemBlur, onItemFocus } = useIsHoverOrFocus();
 
@@ -23,6 +28,11 @@ const GlowingButton: FC<IProps> = ({
       onFocus={onItemFocus}
       onMouseEnter={onItemFocus}
       onMouseLeave={onItemBlur}
+      isPositionAbsolute={isPositionAbsolute}
+      rightDesk={rightDesk}
+      rightMob={rightMob}
+      topDesk={topDesk}
+      topMob={topMob}
     >
       <LottieGlowingAnimation
         animationData={animationData}

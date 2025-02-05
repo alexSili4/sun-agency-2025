@@ -2,7 +2,10 @@ import styled from '@emotion/styled';
 import { IStyledProps } from './GlowingButton.types';
 
 export const Button = styled.button<IStyledProps>`
-  position: relative;
+  position: ${({ isPositionAbsolute }) =>
+    isPositionAbsolute ? 'absolute' : 'relative'};
+  top: ${({ topMob }) => topMob};
+  right: ${({ rightMob }) => rightMob};
   display: flex;
   align-items: center;
   justify-content: center;
@@ -16,5 +19,10 @@ export const Button = styled.button<IStyledProps>`
   & > svg {
     position: relative;
     color: ${({ theme }) => theme.colors.white};
+  }
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
+    top: ${({ topDesk }) => topDesk};
+    right: ${({ rightDesk }) => rightDesk};
   }
 `;

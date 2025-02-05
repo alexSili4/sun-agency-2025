@@ -25,5 +25,9 @@ export const ClientsMarqueeWrap = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: ${({ theme }) => theme.spacing(22)}px;
+  gap: ${({ theme }) => theme.spacing(20)}px;
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
+    gap: ${({ theme }) => theme.spacing(22)}px;
+  }
 `;

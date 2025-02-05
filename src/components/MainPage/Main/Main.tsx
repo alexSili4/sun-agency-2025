@@ -5,7 +5,7 @@ import HeroSection from '@MainPageComponents/HeroSection';
 import ProjectsSection from '@MainPageComponents/ProjectsSection';
 import ServicesSection from '@MainPageComponents/ServicesSection';
 import ClientsSection from '@MainPageComponents/ClientsSection';
-// import ReviewsSection from '@MainPageComponents/ReviewsSection';
+import ReviewsSection from '@MainPageComponents/ReviewsSection';
 
 const Main: FC<IProps> = ({
   projectsSectionBgRef,
@@ -15,7 +15,7 @@ const Main: FC<IProps> = ({
   clientsSectionInView,
   clientsSectionRef,
   shouldShowClientsSectionContent,
-  // reviewsSectionRef,
+  reviewsSectionRef,
 }) => {
   return (
     <>
@@ -33,7 +33,7 @@ const Main: FC<IProps> = ({
         shouldShowSectionContent={shouldShowClientsSectionContent}
         sectionRef={clientsSectionRef}
       />
-      {/* <ReviewsSection sectionRef={reviewsSectionRef} /> */}
+      <ReviewsSection sectionRef={reviewsSectionRef} />
     </>
   );
 };

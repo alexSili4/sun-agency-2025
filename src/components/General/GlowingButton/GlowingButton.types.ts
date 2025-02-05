@@ -9,8 +9,18 @@ export interface IProps {
   glowHeight: number;
   glowWidth: number;
   loop?: boolean;
+  isPositionAbsolute?: boolean;
+  topMob?: string;
+  topDesk?: string;
+  rightMob?: string;
+  rightDesk?: string;
 }
 
 export interface IStyledProps {
   width: number;
+  isPositionAbsolute: boolean;
+  topMob: string;
+  topDesk: string;
+  rightMob: string;
+  rightDesk: string;
 }

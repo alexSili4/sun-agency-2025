@@ -11,7 +11,7 @@ import {
   StyledReactPlayer,
 } from './HeroSectionDonationLink.styled';
 import donationLink from '@/images/main/donation-link.png';
-import video from '@/video/donation-link.mp4';
+import video from '@/video/donation-link-compressed.mp4';
 import donationLinkShadow from '@/images/main/donation-link-shadow.png';
 
 const HeroSectionDonationLink: FC = () => {
