@@ -1,22 +1,15 @@
-import { PagePaths } from '@/constants';
 import { FC } from 'react';
 import { List, ListItem, StyledLink } from './FooterNavLinks.styled';
+import { IProps } from './FooterNavLinks.types';
 
-const FooterNavLinks: FC = () => {
+const FooterNavLinks: FC<IProps> = ({ navLinks }) => {
   return (
     <List>
-      <ListItem>
-        <StyledLink to={PagePaths.projects}>Кейси</StyledLink>
-      </ListItem>
-      <ListItem>
-        <StyledLink to={PagePaths.services}>Послуги</StyledLink>
-      </ListItem>
-      <ListItem>
-        <StyledLink to={PagePaths.clients}>Клієнти</StyledLink>
-      </ListItem>
-      <ListItem>
-        <StyledLink to={PagePaths.about}>Про нас</StyledLink>
-      </ListItem>
+      {navLinks.map(({ path, title }) => (
+        <ListItem key={title}>
+          <StyledLink to={path}>{title}</StyledLink>
+        </ListItem>
+      ))}
     </List>
   );
 };

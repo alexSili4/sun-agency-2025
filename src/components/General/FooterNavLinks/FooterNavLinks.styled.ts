@@ -3,6 +3,10 @@ import { Link } from 'react-router-dom';
 
 export const List = styled.ul`
   display: flex;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.desktop - 1}px) {
+    display: none;
+  }
 `;
 
 export const ListItem = styled.li``;

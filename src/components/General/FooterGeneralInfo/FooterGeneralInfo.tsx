@@ -10,6 +10,7 @@ import SunLogoLink from '@GeneralComponents/SunLogoLink';
 import GeneralContainer from '@GeneralComponents/GeneralContainer';
 import Copyright from '@GeneralComponents/Copyright';
 import FooterNavLinks from '@GeneralComponents/FooterNavLinks';
+import { footerNavLinks } from '@/constants';
 
 const FooterGeneralInfo: FC = () => {
   return (
@@ -19,7 +20,7 @@ const FooterGeneralInfo: FC = () => {
           <Content>
             <LinksWrap>
               <SunLogoLink />
-              <FooterNavLinks />
+              <FooterNavLinks navLinks={footerNavLinks} />
             </LinksWrap>
             <Copyright />
           </Content>
