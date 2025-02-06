@@ -20,12 +20,20 @@ export const ContentWrap = styled.div`
 
 export const Content = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
+    justify-content: space-between;
+  }
 `;
 
 export const LinksWrap = styled.div`
   display: flex;
   align-items: center;
-  gap: ${({ theme }) => theme.spacing(90)}px;
+  justify-content: space-between;
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
+    width: 57.9vw;
+  }
 `;

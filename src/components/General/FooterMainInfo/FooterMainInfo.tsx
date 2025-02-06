@@ -12,8 +12,8 @@ const FooterMainInfo: FC = () => {
       <Container>
         <FooterContacts />
         <LinksWrap>
-          <FooterSocialLinks />
           <FooterAddress />
+          <FooterSocialLinks />
         </LinksWrap>
       </Container>
     </GeneralContainer>

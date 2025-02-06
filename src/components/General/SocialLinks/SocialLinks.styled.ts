@@ -1,15 +1,20 @@
 import styled from '@emotion/styled';
-import { IStyledProps } from './SocialLinks.types';
+import { IStyledListProps, IStyledLinkProps } from './SocialLinks.types';
 
-export const List = styled.ul`
+export const List = styled.ul<IStyledListProps>`
   display: flex;
   align-items: center;
   gap: ${({ theme }) => theme.spacing(8)}px;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.desktop - 1}px) {
+    width: ${({ isFooter }) => isFooter && '100%'};
+    justify-content: ${({ isFooter }) => isFooter && 'space-between'};
+  }
 `;
 
 export const ListItem = styled.li``;
 
-export const StyledLink = styled.a<IStyledProps>`
+export const StyledLink = styled.a<IStyledLinkProps>`
   display: flex;
   align-items: center;
   gap: ${({ theme }) => theme.spacing(2)}px;

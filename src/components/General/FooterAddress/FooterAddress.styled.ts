@@ -37,7 +37,7 @@ export const Title = styled.p`
 export const StyledLink = styled.a`
   color: ${({ theme }) => theme.colors.white};
   font-family: ${({ theme }) => theme.fontFamily.involve};
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 600;
   line-height: 1;
   font-style: normal;
@@ -45,6 +45,10 @@ export const StyledLink = styled.a`
 
   address:has(a:is(:hover, :focus)) &:not(:is(:hover, :focus)) {
     color: ${({ theme }) => theme.colors.inactiveLink};
+  }
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
+    font-size: 20px;
   }
 `;
 

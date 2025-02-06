@@ -5,9 +5,13 @@ import { AiFillInstagram } from 'react-icons/ai';
 import { LinkTitle, List, ListItem, StyledLink } from './SocialLinks.styled';
 import { IProps } from './SocialLinks.types';
 
-const SocialLinks: FC<IProps> = ({ mobileLinkPadding, deskLinkPadding }) => {
+const SocialLinks: FC<IProps> = ({
+  mobileLinkPadding,
+  deskLinkPadding,
+  isFooter = false,
+}) => {
   return (
-    <List>
+    <List isFooter={isFooter}>
       <ListItem>
         <StyledLink
           href={Links.linkedin}

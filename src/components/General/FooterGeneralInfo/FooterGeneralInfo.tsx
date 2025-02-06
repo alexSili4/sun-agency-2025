@@ -19,10 +19,10 @@ const FooterGeneralInfo: FC = () => {
         <GeneralContainer>
           <Content>
             <LinksWrap>
-              <SunLogoLink />
+              <SunLogoLink isFooter />
               <FooterNavLinks navLinks={footerNavLinks} />
             </LinksWrap>
-            <Copyright />
+            <Copyright isHiddenOnMobile />
           </Content>
         </GeneralContainer>
       </ContentWrap>

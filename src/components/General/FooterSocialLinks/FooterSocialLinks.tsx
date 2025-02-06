@@ -12,6 +12,7 @@ const FooterSocialLinks: FC = () => {
         <SocialLinks
           mobileLinkPadding={theme.spacing(5)}
           deskLinkPadding={theme.spacing(12)}
+          isFooter
         />
       </Content>
     </Container>

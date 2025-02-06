@@ -19,9 +19,14 @@ export const Content = styled.div`
   justify-content: space-between;
   align-items: center;
   border-radius: inherit;
-  padding-left: ${({ theme }) => theme.spacing(15)}px;
-  padding-right: ${({ theme }) => theme.spacing(15)}px;
+  padding-left: ${({ theme }) => theme.spacing(6)}px;
+  padding-right: ${({ theme }) => theme.spacing(6)}px;
   background-color: #161616;
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
+    padding-left: ${({ theme }) => theme.spacing(15)}px;
+    padding-right: ${({ theme }) => theme.spacing(15)}px;
+  }
 `;
 
 export const Title = styled.div`
@@ -30,4 +35,8 @@ export const Title = styled.div`
   font-size: 14px;
   font-weight: 400;
   line-height: 1;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.desktop - 1}px) {
+    display: none;
+  }
 `;
