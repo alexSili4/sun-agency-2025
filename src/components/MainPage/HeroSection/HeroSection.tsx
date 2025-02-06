@@ -10,8 +10,9 @@ import HeroSectionDonationInfo from '@MainPageComponents/HeroSectionDonationInfo
 import GeneralContainer from '@GeneralComponents/GeneralContainer';
 import HeroSectionBusinessMetrics from '@MainPageComponents/HeroSectionBusinessMetrics';
 import ParticlesItem from '@GeneralComponents/ParticlesItem';
+import { IProps } from './HeroSection.types';
 
-const HeroSection: FC = () => {
+const HeroSection: FC<IProps> = ({ nextSectionInView }) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -33,7 +34,7 @@ const HeroSection: FC = () => {
           <HeroSectionDonationInfo onScrollBtnClick={onScrollBtnClick} />
         </Container>
       </GeneralContainer>
-      <HeroSectionBusinessMetrics />
+      <HeroSectionBusinessMetrics nextSectionInView={nextSectionInView} />
       <ParticlesItem />
     </Section>
   );

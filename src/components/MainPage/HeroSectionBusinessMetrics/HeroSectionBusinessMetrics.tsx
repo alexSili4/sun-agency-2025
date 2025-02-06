@@ -3,9 +3,10 @@ import { Container, ListContainer } from './HeroSectionBusinessMetrics.styled';
 import { useScroll, useTransform } from 'framer-motion';
 // ----- components
 import HeroSectionBusinessMetricsList from '@MainPageComponents/HeroSectionBusinessMetricsList';
-import HeroSectionSpline from '@MainPageComponents/HeroSectionSpline';
+import AnimatedHeroSectionSpline from '@AnimationBlocks/AnimatedHeroSectionSpline';
+import { IProps } from './HeroSectionBusinessMetrics.types';
 
-const HeroSectionBusinessMetrics: FC = () => {
+const HeroSectionBusinessMetrics: FC<IProps> = ({ nextSectionInView }) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -33,7 +34,7 @@ const HeroSectionBusinessMetrics: FC = () => {
   return (
     <Container ref={containerRef}>
       <ListContainer>
-        <HeroSectionSpline />
+        <AnimatedHeroSectionSpline nextSectionInView={nextSectionInView} />
         <HeroSectionBusinessMetricsList
           firstOpacity={firstOpacity}
           secondOpacity={secondOpacity}

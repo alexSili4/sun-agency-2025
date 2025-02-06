@@ -10,9 +10,10 @@ const ProjectsSection: FC<IProps> = ({
   sectionBgInView,
   nextSectionInView,
   sectionBgRef,
+  sectionRef,
 }) => {
   return (
-    <Section id={SectionsIds.projects}>
+    <Section id={SectionsIds.projects} ref={sectionRef}>
       <NexSectionBg src={nexSectionBg} />
       <ProjectsSectionContent
         nextSectionInView={nextSectionInView}

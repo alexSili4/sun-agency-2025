@@ -4,4 +4,5 @@ export interface IProps {
   nextSectionInView: boolean;
   sectionBgInView: boolean;
   sectionBgRef: RefDivObject;
+  sectionRef: RefDivObject;
 }

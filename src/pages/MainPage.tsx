@@ -4,12 +4,16 @@ import { FC, useRef } from 'react';
 // import { useInView } from 'framer-motion';
 
 const MainPage: FC = () => {
+  const projectsSectionRef = useRef<HTMLDivElement>(null);
   const projectsSectionBgRef = useRef<HTMLDivElement>(null);
   const servicesSectionRef = useRef<HTMLDivElement>(null);
   const clientsSectionRef = useRef<HTMLDivElement>(null);
   const reviewsSectionRef = useRef<HTMLDivElement>(null);
 
   const servicesSectionInViewWithMargin = useInView(servicesSectionRef, {
+    margin: '-200px',
+  });
+  const projectsSectionInView = useInView(projectsSectionRef, {
     margin: '-200px',
   });
   const projectsSectionBgInView = useInView(projectsSectionBgRef, {
@@ -29,6 +33,8 @@ const MainPage: FC = () => {
 
   return (
     <Main
+      projectsSectionRef={projectsSectionRef}
+      projectsSectionInView={projectsSectionInView}
       projectsSectionBgRef={projectsSectionBgRef}
       projectsSectionBgInView={shouldShowProjectsSectionBg}
       servicesSectionInViewWithMargin={servicesSectionInViewWithMargin}
