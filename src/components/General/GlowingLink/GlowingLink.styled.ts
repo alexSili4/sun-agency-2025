@@ -10,15 +10,11 @@ export const StyledLink = styled(Link)<IStyledProps>`
   gap: ${({ theme }) => theme.spacing(3)}px;
   width: ${({ width }) => width}px;
   border-radius: 16px;
-  height: 44px;
+  height: 56px;
   margin: ${({ isCenter }) => isCenter && '0 auto'};
   pointer-events: ${({ isHidden }) => (isHidden ? 'none' : 'all')};
   opacity: ${({ isHidden }) => (isHidden ? 0 : 1)};
   transition: opacity ${({ theme }) => theme.transitionDurationAndFunc};
-
-  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
-    height: 56px;
-  }
 `;
 
 export const LinkIcon = styled.span`

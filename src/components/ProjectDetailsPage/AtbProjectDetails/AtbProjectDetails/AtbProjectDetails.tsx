@@ -2,7 +2,7 @@ import { FC } from 'react';
 import { IProps } from './AtbProjectDetails.types';
 // ----- components
 import AtbProjectDetailsHeroSection from '@AtbProjectDetailsComponents/AtbHeroSection';
-// import AtbGeneralInfoSection from '@AtbProjectDetailsComponents/AtbGeneralInfoSection';
+import AtbGeneralInfoSection from '@AtbProjectDetailsComponents/AtbGeneralInfoSection';
 // import AtbBusinessMetricsSection from '@AtbProjectDetailsComponents/AtbBusinessMetricsSection';
 // import AtbTechnicalTaskSection from '@AtbProjectDetailsComponents/AtbTechnicalTaskSection';
 // import AtbCashSystemIntegrationFeatureSection from '@AtbProjectDetailsComponents/AtbCashSystemIntegrationFeatureSection';
@@ -22,7 +22,7 @@ const AtbProjectDetails: FC<IProps> = ({ project, isDesk }) => {
       title: mainInfoTitle,
       primaryBanner: { mobile: primaryBannerMobile, desk: primaryBannerDesk },
     },
-    // generalInfo: { client, desc: generalInfoDesc, timeline, websiteAddress },
+    generalInfo: { client, desc: generalInfoDesc, timeline, websiteAddress },
     // businessMetrics,
     // banner1,
     // technicalTask: { desc: technicalTaskDesc, services, preview },
@@ -74,12 +74,12 @@ const AtbProjectDetails: FC<IProps> = ({ project, isDesk }) => {
         borderRadiusDesk={58}
         borderRadiusMobile={40}
       />
-      {/* <AtbGeneralInfoSection
+      <AtbGeneralInfoSection
         desc={generalInfoDesc}
         timeline={timeline}
         client={client}
         websiteAddress={websiteAddress}
-      /> */}
+      />
       {/* <AtbBusinessMetricsSection
         businessMetrics={businessMetrics}
         banner={banner1}
