@@ -12,10 +12,6 @@ const useLottieContainerInView = (): IUseLottieContainerInView => {
   });
 
   useEffect(() => {
-    console.log(inView);
-  }, [inView]);
-
-  useEffect(() => {
     if (inView) {
       if (lottieRef.current?.animationItem) {
         lottieRef.current.animationItem.loop = true;

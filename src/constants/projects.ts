@@ -3,22 +3,23 @@ import atbDesk from '@/images/projects/atb/atb-desk.png';
 import atbMob from '@/images/projects/atb/atb-mob.png';
 import atbPrimaryBannerDesk from '@/images/projects/atb/atb-primary-banner-desk.jpg';
 import atbPrimaryBannerMobile from '@/images/projects/atb/atb-primary-banner-mobile.png';
-import atbBanner1 from '@/images/projects/atb/atb-banner-1.jpg';
-import atbCashSystemIntegration from '@/images/projects/atb/atb-cash-system-integration.png';
-import atbPaymentSystemIntegration from '@/images/projects/atb/atb-payment-system-integration.jpg';
-import atbYearlyOrders from '@/images/projects/atb/atb-yearly-orders.png';
-import atbProductsCount from '@/images/projects/atb/atb-products-count.png';
-import atbActiveUsers from '@/images/projects/atb/atb-active-users.png';
-import atbStores from '@/images/projects/atb/atb-stores.png';
+import atbBanner1Desk from '@/images/projects/atb/atb-banner-1-desk.jpg';
+import atbBanner1Mobile from '@/images/projects/atb/atb-banner-1-mob.jpg';
+import atbCashSystemIntegrationDesk from '@/images/projects/atb/atb-cash-system-integration-desk.png';
+import atbCashSystemIntegrationMobile from '@/images/projects/atb/atb-cash-system-integration-mobile.png';
+import atbPaymentSystemIntegrationDesk from '@/images/projects/atb/atb-payment-system-integration-desk.jpg';
+import atbPaymentSystemIntegrationMobile from '@/images/projects/atb/atb-payment-system-integration-mobile.jpg';
 import atbScreens from '@/lottiefiles/projects/atb-screens.json';
 import atbWebsite from '@/lottiefiles/projects/atb-website.json';
-import atbAverageTime from '@/images/projects/atb/atb-average-time.png';
-import atbSuccessfulTransactions from '@/images/projects/atb/atb-successful-transactions.png';
-import atbBonusActivatingCustomers from '@/images/projects/atb/atb-bonus-activating-customers.png';
-import atbDeliverySystemIntegration from '@/images/projects/atb/atb-delivery-system-integration.png';
-import atbLoyaltySystemIntegration from '@/images/projects/atb/atb-loyalty-system-integration.jpg';
-import atbMobAppIntegration from '@/images/projects/atb/atb-mob-app-integration.png';
-import atbMobAppIntegrationAdditional from '@/images/projects/atb/atb-mob-app-integration-additional.jpg';
+import atbDeliverySystemIntegrationDesk from '@/images/projects/atb/atb-delivery-system-integration-desk.png';
+import atbDeliverySystemIntegrationMobile from '@/images/projects/atb/atb-delivery-system-integration-mobile.png';
+import atbLoyaltySystemIntegrationDesk from '@/images/projects/atb/atb-loyalty-system-integration-desk.jpg';
+import atbLoyaltySystemIntegrationMobile from '@/images/projects/atb/atb-loyalty-system-integration-mobile.jpg';
+import atbMobAppIntegrationDesk from '@/images/projects/atb/atb-mob-app-integration-desk.png';
+import atbMobAppIntegrationMobile from '@/images/projects/atb/atb-mob-app-integration-mobile.png';
+import atbMobAppIntegrationAdditionalDesk from '@/images/projects/atb/atb-mob-app-integration-additional-desk.jpg';
+import atbMobAppIntegrationAdditionalMobile from '@/images/projects/atb/atb-mob-app-integration-additional-mobile.jpg';
+import atbOleksandrFrolov from '@/images/projects/atb/atb-oleksandr-frolov.jpg';
 // other
 import qanabiDesk from '@/images/projects/qanabi/qanabi-desk.png';
 import qanabiMob from '@/images/projects/qanabi/qanabi-mob.png';
@@ -48,19 +49,19 @@ const projects: Projects = [
       businessMetrics: [
         {
           title: 'замовлень<br/>в рік',
-          img: atbYearlyOrders,
+          number: '10млн',
         },
         {
           title: 'товарів у<br/>каталозі',
-          img: atbProductsCount,
+          number: '25 000 +',
         },
         {
           title: 'активних<br/>юзерів',
-          img: atbActiveUsers,
+          number: '2млн +',
         },
         {
           title: 'фізичних<br/>магазинів',
-          img: atbStores,
+          number: '25 000 +',
         },
       ],
       generalInfo: {
@@ -69,7 +70,7 @@ const projects: Projects = [
         client: 'АТБ',
         websiteAddress: 'www.atbmarket.com',
       },
-      banner1: atbBanner1,
+      banner1: { desk: atbBanner1Desk, mobile: atbBanner1Mobile },
       technicalTask: {
         desc: 'АТБ-Маркет — найбільша мережа супермаркетів в Україні, яка щодня обслуговує понад 4 млн покупців. У 2023 році торговий оборот мережі склав 181 млрд грн, сплачені податки — 26 млрд грн. Компанія є лідером не лише у сфері роздрібної торгівлі, а й у соціальній відповідальності, надавши під час війни допомогу на понад 2 млрд грн.<br/><br/>Нашим завданням було створити сучасний і зручний онлайн-магазин, який би інтегрувався з масштабною інфраструктурою мережі, підтримував її стрімкий розвиток та забезпечував легкий доступ до продуктів для мільйонів українців.',
         services: [
@@ -85,41 +86,59 @@ const projects: Projects = [
       feature1: {
         title: 'Масштабування та інтеграція з касовою системою АТБ ',
         desc: 'Система підтримує роботу з 1400+ магазинів, забезпечуючи локалізацію та автоматичне оновлення залишків і актуальних цін для понад 25 000 товарів у каталозі. Це дозволяє покупцям бачити лише доступні продукти та планувати покупки без неприємних сюрпризів.',
-        banner: atbCashSystemIntegration,
+        banner: {
+          mobile: atbCashSystemIntegrationMobile,
+          desk: atbCashSystemIntegrationDesk,
+        },
       },
       feature2: {
         title: 'Інтеграція з платіжними системами',
         desc: 'Швидкі та безпечні онлайн-оплати (EasyPay, А-Банк). Підтримка різних методів оплати: карткою, мобільними гаманцями, через термінали.',
-        banner: atbPaymentSystemIntegration,
+        banner: {
+          mobile: atbPaymentSystemIntegrationMobile,
+          desk: atbPaymentSystemIntegrationDesk,
+        },
         metrics: [
-          { title: 'Середній час завершення оплати', img: atbAverageTime },
+          { title: 'Середній час завершення оплати', number: '20 с' },
           {
             title: 'успішних транзакцій без помилок',
-            img: atbSuccessfulTransactions,
+            number: '98%',
           },
         ],
       },
       feature3: {
         desc: 'Можливість вибору зручної служби доставки: iPost, Уклон, Glovo, Нова Пошта. Підтримка автоматичної калькуляції вартості та оптимального способу доставки враховуючи вагу замовлення.',
         title: 'Інтеграція з доставками',
-        banner: atbDeliverySystemIntegration,
+        banner: {
+          mobile: atbDeliverySystemIntegrationMobile,
+          desk: atbDeliverySystemIntegrationDesk,
+        },
       },
       feature4: {
         title: 'Інтеграція з системою лояльності та кобрендовими картками АТБ',
         desc: 'Покупці можуть використовувати бонуси та унікальні знижки під час оформлення замовлення. Інтеграція підтримує кобрендові картки, забезпечуючи персоналізований підхід до кожного клієнта.',
-        banner: atbLoyaltySystemIntegration,
+        banner: {
+          desk: atbLoyaltySystemIntegrationDesk,
+          mobile: atbLoyaltySystemIntegrationMobile,
+        },
         metrics: [
           {
             title: 'клієнтів активували бонуси при онлайн-замовленнях',
-            img: atbBonusActivatingCustomers,
+            number: '53%',
           },
         ],
       },
       feature5: {
         title: 'Інтеграція з мобільним додатком',
         desc: 'Синхронізація даних між вебсайтом і мобільним додатком. Синхронізація даних між вебсайтом і мобільним додатком. Синхронізація даних між вебсайтом і мобільним додатком. Синхронізація даних між вебсайтом і мобільним додатком.',
-        banner: atbMobAppIntegration,
-        additionalBanner: atbMobAppIntegrationAdditional,
+        banner: {
+          desk: atbMobAppIntegrationDesk,
+          mobile: atbMobAppIntegrationMobile,
+        },
+        additionalBanner: {
+          desk: atbMobAppIntegrationAdditionalDesk,
+          mobile: atbMobAppIntegrationAdditionalMobile,
+        },
       },
       funFact:
         'Перша версія сайту була розроблена всього за 2 тижні під час пандемії',
@@ -169,15 +188,14 @@ const projects: Projects = [
         },
       },
       websitePreview: atbWebsite,
-      // --------------------------
-      // reviews: [
-      //   {
-      //     name: 'Олександр Фролов',
-      //     jobTitle: 'АТБ',
-      //     avatar: atbOleksandrFrolov,
-      //     text: 'Ми співпрацюємо майже 5 років і активно розбудовуємо напрямок інтернет-продажів. Все почалося із завдання запустити проєкт у критичний момент локдауну 2020 року, і Сонце успішно впорались із цим. Протягом 5 років команда виконує десятки задач щомісяця, дотримуючись строків і високих стандартів якості. Це партнерство з чітким стратегічним баченням',
-      //   },
-      // ],
+      reviews: [
+        {
+          name: 'Олександр Фролов',
+          jobTitle: 'АТБ',
+          avatar: atbOleksandrFrolov,
+          text: 'Ми співпрацюємо майже 5 років і активно розбудовуємо напрямок інтернет-продажів. Все почалося із завдання запустити проєкт у критичний момент локдауну 2020 року, і Сонце успішно впорались із цим. Протягом 5 років команда виконує десятки задач щомісяця, дотримуючись строків і високих стандартів якості. Це партнерство з чітким стратегічним баченням',
+        },
+      ],
     },
   },
   {
@@ -200,7 +218,7 @@ const projects: Projects = [
         websiteAddress: '',
       },
       businessMetrics: [],
-      banner1: '',
+      banner1: { mobile: '', desk: '' },
       technicalTask: {
         desc: '',
         services: [],
@@ -209,27 +227,27 @@ const projects: Projects = [
       feature1: {
         title: '',
         desc: '',
-        banner: '',
+        banner: { mobile: '', desk: '' },
       },
       feature2: {
         title: '',
         desc: '',
-        banner: '',
+        banner: { mobile: '', desk: '' },
       },
       feature3: {
         title: '',
         desc: '',
-        banner: '',
+        banner: { mobile: '', desk: '' },
       },
       feature4: {
         title: '',
         desc: '',
-        banner: '',
+        banner: { mobile: '', desk: '' },
       },
       feature5: {
         title: '',
         desc: '',
-        banner: '',
+        banner: { mobile: '', desk: '' },
       },
       funFact: '',
       teams: {
@@ -264,6 +282,7 @@ const projects: Projects = [
         },
       },
       websitePreview: {},
+      reviews: [],
     },
   },
   {
@@ -286,7 +305,7 @@ const projects: Projects = [
         websiteAddress: '',
       },
       businessMetrics: [],
-      banner1: '',
+      banner1: { mobile: '', desk: '' },
       technicalTask: {
         desc: '',
         services: [],
@@ -295,27 +314,27 @@ const projects: Projects = [
       feature1: {
         title: '',
         desc: '',
-        banner: '',
+        banner: { mobile: '', desk: '' },
       },
       feature2: {
         title: '',
         desc: '',
-        banner: '',
+        banner: { mobile: '', desk: '' },
       },
       feature3: {
         title: '',
         desc: '',
-        banner: '',
+        banner: { mobile: '', desk: '' },
       },
       feature4: {
         title: '',
         desc: '',
-        banner: '',
+        banner: { mobile: '', desk: '' },
       },
       feature5: {
         title: '',
         desc: '',
-        banner: '',
+        banner: { mobile: '', desk: '' },
       },
       funFact: '',
       teams: {
@@ -350,6 +369,7 @@ const projects: Projects = [
         },
       },
       websitePreview: {},
+      reviews: [],
     },
   },
   {
@@ -372,7 +392,7 @@ const projects: Projects = [
         websiteAddress: '',
       },
       businessMetrics: [],
-      banner1: '',
+      banner1: { mobile: '', desk: '' },
       technicalTask: {
         desc: '',
         services: [],
@@ -381,27 +401,27 @@ const projects: Projects = [
       feature1: {
         title: '',
         desc: '',
-        banner: '',
+        banner: { mobile: '', desk: '' },
       },
       feature2: {
         title: '',
         desc: '',
-        banner: '',
+        banner: { mobile: '', desk: '' },
       },
       feature3: {
         title: '',
         desc: '',
-        banner: '',
+        banner: { mobile: '', desk: '' },
       },
       feature4: {
         title: '',
         desc: '',
-        banner: '',
+        banner: { mobile: '', desk: '' },
       },
       feature5: {
         title: '',
         desc: '',
-        banner: '',
+        banner: { mobile: '', desk: '' },
       },
       funFact: '',
       teams: {
@@ -436,6 +456,7 @@ const projects: Projects = [
         },
       },
       websitePreview: {},
+      reviews: [],
     },
   },
 ];

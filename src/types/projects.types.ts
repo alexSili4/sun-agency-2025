@@ -1,4 +1,10 @@
+import { Reviews } from './reviews.types';
 import { Strings } from './types';
+
+export interface IImage {
+  mobile: string;
+  desk: string;
+}
 
 export interface IGeneralInfo {
   desc: string;
@@ -11,12 +17,12 @@ export interface IMainInfo {
   name: string;
   tags: Strings;
   title: string;
-  primaryBanner: { mobile: string; desk: string };
+  primaryBanner: IImage;
 }
 
 export interface IBusinessMetrics {
   title: string;
-  img: string;
+  number: string;
 }
 
 export type BusinessMetrics = IBusinessMetrics[];
@@ -29,7 +35,7 @@ export interface ITechnicalTask {
 
 export interface IFeatureMetric {
   title: string;
-  img: string;
+  number: string;
 }
 
 export type FeatureMetrics = IFeatureMetric[];
@@ -37,9 +43,9 @@ export type FeatureMetrics = IFeatureMetric[];
 export interface IFeature {
   title: string;
   desc: string;
-  banner: string;
+  banner: IImage;
   metrics?: FeatureMetrics;
-  additionalBanner?: string;
+  additionalBanner?: IImage;
 }
 
 export interface IClientTeam {
@@ -74,7 +80,7 @@ export interface IProjectDetails {
   mainInfo: IMainInfo;
   generalInfo: IGeneralInfo;
   businessMetrics: BusinessMetrics;
-  banner1: string;
+  banner1: IImage;
   technicalTask: ITechnicalTask;
   feature1: IFeature;
   feature2: IFeature;
@@ -84,6 +90,7 @@ export interface IProjectDetails {
   funFact: string;
   teams: ITeams;
   websitePreview: object;
+  reviews: Reviews;
 }
 
 export interface IProjectImg {

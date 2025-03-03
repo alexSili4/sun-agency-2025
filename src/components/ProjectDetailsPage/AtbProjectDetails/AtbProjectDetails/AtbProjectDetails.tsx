@@ -3,16 +3,17 @@ import { IProps } from './AtbProjectDetails.types';
 // ----- components
 import AtbProjectDetailsHeroSection from '@AtbProjectDetailsComponents/AtbHeroSection';
 import AtbGeneralInfoSection from '@AtbProjectDetailsComponents/AtbGeneralInfoSection';
-// import AtbBusinessMetricsSection from '@AtbProjectDetailsComponents/AtbBusinessMetricsSection';
-// import AtbTechnicalTaskSection from '@AtbProjectDetailsComponents/AtbTechnicalTaskSection';
-// import AtbCashSystemIntegrationFeatureSection from '@AtbProjectDetailsComponents/AtbCashSystemIntegrationFeatureSection';
-// import AtbPaymentSystemIntegrationFeatureSection from '@AtbProjectDetailsComponents/AtbPaymentSystemIntegrationFeatureSection';
-// import AtbDeliverySystemIntegrationFeatureSection from '@AtbProjectDetailsComponents/AtbDeliverySystemIntegrationFeatureSection';
-// import AtbLoyaltySystemIntegrationFeatureSection from '@AtbProjectDetailsComponents/AtbLoyaltySystemIntegrationFeatureSection';
-// import AtbMobAppIntegrationFeatureSection from '@AtbProjectDetailsComponents/AtbMobAppIntegrationFeatureSection';
-// import AtbFunFactSection from '@AtbProjectDetailsComponents/AtbFunFactSection';
-// import AtbProjectTeamSection from '@AtbProjectDetailsComponents/AtbProjectTeamSection';
-// import AtbProjectPreviewSection from '@AtbProjectDetailsComponents/AtbProjectPreviewSection';
+import AtbBusinessMetricsSection from '@AtbProjectDetailsComponents/AtbBusinessMetricsSection';
+import AtbTechnicalTaskSection from '@AtbProjectDetailsComponents/AtbTechnicalTaskSection';
+import AtbCashSystemIntegrationFeatureSection from '@AtbProjectDetailsComponents/AtbCashSystemIntegrationFeatureSection';
+import AtbPaymentSystemIntegrationFeatureSection from '@AtbProjectDetailsComponents/AtbPaymentSystemIntegrationFeatureSection';
+import AtbDeliverySystemIntegrationFeatureSection from '@AtbProjectDetailsComponents/AtbDeliverySystemIntegrationFeatureSection';
+import AtbLoyaltySystemIntegrationFeatureSection from '@AtbProjectDetailsComponents/AtbLoyaltySystemIntegrationFeatureSection';
+import AtbMobAppIntegrationFeatureSection from '@AtbProjectDetailsComponents/AtbMobAppIntegrationFeatureSection';
+import AtbFunFactSection from '@AtbProjectDetailsComponents/AtbFunFactSection';
+import AtbProjectTeamSection from '@AtbProjectDetailsComponents/AtbProjectTeamSection';
+import AtbProjectPreviewSection from '@AtbProjectDetailsComponents/AtbProjectPreviewSection';
+import AtbProjectReviewsSection from '@AtbProjectDetailsComponents/AtbProjectReviewsSection';
 
 const AtbProjectDetails: FC<IProps> = ({ project, isDesk }) => {
   const {
@@ -23,46 +24,84 @@ const AtbProjectDetails: FC<IProps> = ({ project, isDesk }) => {
       primaryBanner: { mobile: primaryBannerMobile, desk: primaryBannerDesk },
     },
     generalInfo: { client, desc: generalInfoDesc, timeline, websiteAddress },
-    // businessMetrics,
-    // banner1,
-    // technicalTask: { desc: technicalTaskDesc, services, preview },
-    // feature1: {
-    //   title: cashSystemIntegrationTitle,
-    //   banner: cashSystemIntegrationBanner,
-    //   desc: cashSystemIntegrationDesc,
-    // },
-    // feature2: {
-    //   banner: paymentSystemIntegrationBanner,
-    //   desc: paymentSystemIntegrationDesc,
-    //   title: paymentSystemIntegrationTitle,
-    //   metrics: paymentSystemIntegrationMetrics,
-    // },
-    // feature3: {
-    //   banner: deliverySystemIntegrationBanner,
-    //   desc: deliverySystemIntegrationDesc,
-    //   title: deliverySystemIntegrationTitle,
-    // },
-    // feature4: {
-    //   title: loyaltySystemIntegrationTitle,
-    //   desc: loyaltySystemIntegrationDesc,
-    //   banner: loyaltySystemIntegrationBanner,
-    //   metrics: loyaltySystemIntegrationMetrics,
-    // },
-    // feature5: {
-    //   title: mobAppIntegrationTitle,
-    //   desc: mobAppIntegrationDesc,
-    //   banner: mobAppIntegrationBanner,
-    //   additionalBanner: mobAppIntegrationAdditionalBanner,
-    // },
-    // funFact,
-    // teams: {
-    //   client: { team: clientTeam, title: clientTeamTitle },
-    //   sunAgency: { team: sunAgencyTeam, title: sunAgencyTeamTitle },
-    // },
-    // websitePreview,
+    businessMetrics,
+    banner1: { mobile: banner1Mobile, desk: banner1Desk },
+    technicalTask: { desc: technicalTaskDesc, services, preview },
+    feature1: {
+      title: cashSystemIntegrationTitle,
+      banner: {
+        mobile: cashSystemIntegrationBannerMobile,
+        desk: cashSystemIntegrationBannerDesk,
+      },
+      desc: cashSystemIntegrationDesc,
+    },
+    feature2: {
+      banner: {
+        mobile: paymentSystemIntegrationBannerMobile,
+        desk: paymentSystemIntegrationBannerDesk,
+      },
+      desc: paymentSystemIntegrationDesc,
+      title: paymentSystemIntegrationTitle,
+      metrics: paymentSystemIntegrationMetrics,
+    },
+    feature3: {
+      banner: {
+        mobile: deliverySystemIntegrationBannerMobile,
+        desk: deliverySystemIntegrationBannerDesk,
+      },
+      desc: deliverySystemIntegrationDesc,
+      title: deliverySystemIntegrationTitle,
+    },
+    feature4: {
+      title: loyaltySystemIntegrationTitle,
+      desc: loyaltySystemIntegrationDesc,
+      banner: {
+        desk: loyaltySystemIntegrationBannerDesk,
+        mobile: loyaltySystemIntegrationBannerMobile,
+      },
+      metrics: loyaltySystemIntegrationMetrics,
+    },
+    feature5: {
+      title: mobAppIntegrationTitle,
+      desc: mobAppIntegrationDesc,
+      banner: {
+        desk: mobAppIntegrationBannerDesk,
+        mobile: mobAppIntegrationBannerMobile,
+      },
+      additionalBanner: {
+        desk: mobAppIntegrationAdditionalBannerDesk,
+        mobile: mobAppIntegrationAdditionalBannerMobile,
+      } = {},
+    },
+    funFact,
+    teams: {
+      client: { team: clientTeam, title: clientTeamTitle },
+      sunAgency: { team: sunAgencyTeam, title: sunAgencyTeamTitle },
+    },
+    websitePreview,
+    reviews,
   } = project;
 
   const primaryBanner = isDesk ? primaryBannerDesk : primaryBannerMobile;
+  const banner1 = isDesk ? banner1Desk : banner1Mobile;
+  const paymentSystemIntegrationBanner = isDesk
+    ? paymentSystemIntegrationBannerDesk
+    : paymentSystemIntegrationBannerMobile;
+  const cashSystemIntegrationBanner = isDesk
+    ? cashSystemIntegrationBannerDesk
+    : cashSystemIntegrationBannerMobile;
+  const deliverySystemIntegrationBanner = isDesk
+    ? deliverySystemIntegrationBannerDesk
+    : deliverySystemIntegrationBannerMobile;
+  const loyaltySystemIntegrationBanner = isDesk
+    ? loyaltySystemIntegrationBannerDesk
+    : loyaltySystemIntegrationBannerMobile;
+  const mobAppIntegrationBanner = isDesk
+    ? mobAppIntegrationBannerDesk
+    : mobAppIntegrationBannerMobile;
+  const mobAppIntegrationAdditionalBanner = isDesk
+    ? mobAppIntegrationAdditionalBannerDesk
+    : mobAppIntegrationAdditionalBannerMobile;
 
   return (
     <>
@@ -80,51 +119,52 @@ const AtbProjectDetails: FC<IProps> = ({ project, isDesk }) => {
         client={client}
         websiteAddress={websiteAddress}
       />
-      {/* <AtbBusinessMetricsSection
+      <AtbBusinessMetricsSection
         businessMetrics={businessMetrics}
         banner={banner1}
-      /> */}
-      {/* <AtbTechnicalTaskSection
+      />
+      <AtbTechnicalTaskSection
         desc={technicalTaskDesc}
         services={services}
         animationData={preview}
-      /> */}
-      {/* <AtbCashSystemIntegrationFeatureSection
+      />
+      <AtbCashSystemIntegrationFeatureSection
         banner={cashSystemIntegrationBanner}
         desc={cashSystemIntegrationDesc}
         title={cashSystemIntegrationTitle}
-      /> */}
-      {/* <AtbPaymentSystemIntegrationFeatureSection
+      />
+      <AtbPaymentSystemIntegrationFeatureSection
         banner={paymentSystemIntegrationBanner}
         desc={paymentSystemIntegrationDesc}
         title={paymentSystemIntegrationTitle}
         metrics={paymentSystemIntegrationMetrics}
-      /> */}
-      {/* <AtbDeliverySystemIntegrationFeatureSection
+      />
+      <AtbDeliverySystemIntegrationFeatureSection
         banner={deliverySystemIntegrationBanner}
         desc={deliverySystemIntegrationDesc}
         title={deliverySystemIntegrationTitle}
-      /> */}
-      {/* <AtbLoyaltySystemIntegrationFeatureSection
+      />
+      <AtbLoyaltySystemIntegrationFeatureSection
         title={loyaltySystemIntegrationTitle}
         desc={loyaltySystemIntegrationDesc}
         banner={loyaltySystemIntegrationBanner}
         metrics={loyaltySystemIntegrationMetrics}
-      /> */}
-      {/* <AtbMobAppIntegrationFeatureSection
+      />
+      <AtbMobAppIntegrationFeatureSection
         title={mobAppIntegrationTitle}
         desc={mobAppIntegrationDesc}
         banner={mobAppIntegrationBanner}
         additionalBanner={mobAppIntegrationAdditionalBanner}
-      /> */}
-      {/* <AtbFunFactSection funFact={funFact} /> */}
-      {/* <AtbProjectTeamSection
+      />
+      <AtbFunFactSection funFact={funFact} />
+      <AtbProjectTeamSection
         clientTeam={clientTeam}
         clientTeamTitle={clientTeamTitle}
         sunAgencyTeam={sunAgencyTeam}
         sunAgencyTeamTitle={sunAgencyTeamTitle}
-      /> */}
-      {/* <AtbProjectPreviewSection animationData={websitePreview} /> */}
+      />
+      <AtbProjectPreviewSection animationData={websitePreview} />
+      <AtbProjectReviewsSection reviews={reviews} />
     </>
   );
 };
