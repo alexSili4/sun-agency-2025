@@ -27,13 +27,13 @@ const AtbMobAppIntegrationFeatureSection: FC<IProps> = ({
           <AtbContentContainer title={title}>
             <AtbText text={desc} />
           </AtbContentContainer>
+          <BannersWrap>
+            <Image src={banner} />
+            <BannerWrap>
+              <Image src={additionalBanner} />
+            </BannerWrap>
+          </BannersWrap>
         </GeneralContainer>
-        <BannersWrap>
-          <Image src={banner} />
-          <BannerWrap>
-            <Image src={additionalBanner} />
-          </BannerWrap>
-        </BannersWrap>
       </Container>
     </Section>
   );
