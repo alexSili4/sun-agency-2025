@@ -1,7 +1,8 @@
 import { FC } from 'react';
+import About from '@AboutPageComponents/About';
 
 const AboutPage: FC = () => {
-  return <div>AboutPage</div>;
+  return <About />;
 };
 
 export default AboutPage;

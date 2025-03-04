@@ -32,6 +32,7 @@ export default defineConfig({
       '@GeneralComponents': '/src/components/General',
       '@ErrorPageComponents': '/src/components/ErrorPage',
       '@MainPageComponents': '/src/components/MainPage',
+      '@AboutPageComponents': '/src/components/AboutPage',
       '@ProjectDetailsPageComponents': '/src/components/ProjectDetailsPage',
       '@AtbProjectDetailsComponents':
         '/src/components/ProjectDetailsPage/AtbProjectDetails',

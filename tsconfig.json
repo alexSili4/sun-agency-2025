@@ -7,6 +7,7 @@
       "@ErrorPageComponents/*": ["./src/components/ErrorPage/*"],
       "@GeneralComponents/*": ["./src/components/General/*"],
       "@MainPageComponents/*": ["./src/components/MainPage/*"],
+      "@AboutPageComponents/*": ["./src/components/AboutPage/*"],
       "@ProjectDetailsPageComponents/*": [
         "./src/components/ProjectDetailsPage/*"
       ],
