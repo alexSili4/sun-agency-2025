@@ -2,13 +2,16 @@ import { FC } from 'react';
 import { IProps } from './AtbProjectReviewDetails.types';
 import {
   Container,
-  Image,
-  InfoWrap,
+  Avatar,
+  DetailsWrap,
   JobTitle,
   Name,
   NameWrap,
   Text,
+  DecorativeElement,
+  InfoWrap,
 } from './AtbProjectReviewDetails.styled';
+import reviewDecorativeElement from '@/images/projects/review-decorative-element.png';
 
 const AtbProjectReviewDetails: FC<IProps> = ({
   text,
@@ -20,11 +23,17 @@ const AtbProjectReviewDetails: FC<IProps> = ({
     <Container>
       <Text>{text}</Text>
       <InfoWrap>
-        <Image src={avatar} alt={name} />
-        <NameWrap>
-          <Name>{name}</Name>
-          <JobTitle>{jobTitle}</JobTitle>
-        </NameWrap>
+        <DetailsWrap>
+          <Avatar src={avatar} alt={name} />
+          <NameWrap>
+            <Name>{name}</Name>
+            <JobTitle>{jobTitle}</JobTitle>
+          </NameWrap>
+        </DetailsWrap>
+        <DecorativeElement
+          src={reviewDecorativeElement}
+          alt='Декоративний елемент'
+        />
       </InfoWrap>
     </Container>
   );

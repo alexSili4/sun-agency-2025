@@ -39,10 +39,16 @@ export const Text = styled.p`
 export const InfoWrap = styled.div`
   display: flex;
   align-items: center;
+  justify-content: space-between;
+`;
+
+export const DetailsWrap = styled.div`
+  display: flex;
+  align-items: center;
   gap: ${({ theme }) => theme.spacing(5)}px;
 `;
 
-export const Image = styled.img`
+export const Avatar = styled.img`
   width: 48px;
   aspect-ratio: 1 / 1;
   border-radius: 50%;
@@ -52,9 +58,6 @@ export const NameWrap = styled.div`
   display: flex;
   flex-direction: column;
   gap: ${({ theme }) => theme.spacing()}px;
-
-  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
-  }
 `;
 
 export const Name = styled.p`
@@ -78,5 +81,14 @@ export const JobTitle = styled.p`
 
   @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
     font-size: 16px;
+  }
+`;
+
+export const DecorativeElement = styled.img`
+  width: 99px;
+  height: 83px;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.desktop - 1}px) {
+    display: none;
   }
 `;
