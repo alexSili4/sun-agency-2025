@@ -15,6 +15,7 @@ const enum PagePaths {
   about = '/about',
   // Контакти
   contacts = '/contacts',
+  vacancies = 'vacancies',
   notFound = '/not-found',
   dynamicParam = 'id',
 }
