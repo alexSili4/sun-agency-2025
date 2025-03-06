@@ -1,5 +1,5 @@
 import { navLinks, PagePaths, theme } from '@/constants';
-import { FC, useEffect } from 'react';
+import { FC } from 'react';
 import { FaChevronRight } from 'react-icons/fa';
 import { useLocation } from 'react-router-dom';
 import { Container, StyledLink, Title } from './Breadcrumbs.styled';
@@ -7,10 +7,6 @@ import { Container, StyledLink, Title } from './Breadcrumbs.styled';
 const Breadcrumbs: FC = () => {
   const { pathname } = useLocation();
   const targetPath = navLinks.find(({ path }) => path === pathname);
-
-  useEffect(() => {
-    console.log(targetPath);
-  }, [targetPath]);
 
   return (
     <Container>
