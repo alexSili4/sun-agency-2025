@@ -1,4 +1,19 @@
-import { Employees } from '@/types/employees.types';
+import { Employees, Metrics, IAbout } from '@/types/about.types';
+
+const metrics: Metrics = [
+  {
+    name: 'На ринку',
+    number: '14+ років',
+  },
+  {
+    name: 'Експертиза',
+    number: 'Рітейл',
+  },
+  {
+    name: 'Досвід',
+    number: '200+ проектів',
+  },
+];
 
 const employees: Employees = [
   { name: 'Андрій Косолапов', jobTitle: 'CEO', avatar: '' },
@@ -12,4 +27,9 @@ const employees: Employees = [
   { name: 'Front-end Developer', jobTitle: 'Front-end Developer', avatar: '' },
 ];
 
-export default employees;
+const about: IAbout = {
+  metrics,
+  employees,
+};
+
+export default about;

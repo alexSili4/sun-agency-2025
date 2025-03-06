@@ -7,7 +7,7 @@ export const StyledFooter = styled.footer`
   overflow: hidden;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
-    padding-top: ${({ theme }) => theme.spacing(146)}px;
+    padding-top: ${({ theme }) => theme.spacing(123)}px;
   }
 `;
 

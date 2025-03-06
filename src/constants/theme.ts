@@ -31,7 +31,7 @@ interface ITheme {
     donationLink: number;
     closeClientDetailsBtn: number;
     reviewsSlider: number;
-    projectDetailsBreadcrumbs: number;
+    breadcrumbs: number;
     servicesListBtn: number;
   };
   zIndex: {
@@ -81,7 +81,7 @@ const theme: ITheme = {
   // shadows: {  },
   iconSizes: {
     donationLink: 7,
-    projectDetailsBreadcrumbs: 9,
+    breadcrumbs: 9,
     reviewsSlider: 11,
     servicesListBtn: 11,
     socialLink: 14,

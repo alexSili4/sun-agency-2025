@@ -12,7 +12,7 @@ const ProjectDetailsBreadcrumbs: FC<IProps> = ({ name }) => {
   return (
     <Container>
       <StyledLink to={PagePaths.projects}>Всі кейси</StyledLink>
-      <FaChevronRight size={theme.iconSizes.projectDetailsBreadcrumbs} />
+      <FaChevronRight size={theme.iconSizes.breadcrumbs} />
       <Name>{name}</Name>
     </Container>
   );
