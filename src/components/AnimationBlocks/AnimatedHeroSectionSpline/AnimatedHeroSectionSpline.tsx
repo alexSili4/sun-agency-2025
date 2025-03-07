@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, useRef } from 'react';
 import {
   Container,
   Element,
@@ -6,37 +6,45 @@ import {
 } from './AnimatedHeroSectionSpline.styled';
 import { Scenes } from '@/constants';
 import { IProps } from './AnimatedHeroSectionSpline.types';
+import { AnimatePresence, useInView } from 'framer-motion';
 
 const AnimatedHeroSectionSpline: FC<IProps> = ({ nextSectionInView }) => {
-  const y = nextSectionInView ? '-100%' : '100%';
+  const containerRef = useRef<HTMLDivElement>(null);
+  const inView = useInView(containerRef);
+  // const y = nextSectionInView ? '-100%' : '100%';
 
-  const animate = !nextSectionInView ? 'visible' : 'hidden';
+  // const animate = !nextSectionInView ? 'visible' : 'hidden';
 
-  const containerVariants = {
-    hidden: {},
-    visible: {},
-  };
+  // const containerVariants = {
+  //   hidden: {},
+  //   visible: {},
+  // };
 
-  const transition = {
-    duration: 1.2,
-    ease: [0.25, 0.1, 0.25, 1],
-  };
+const transition = { duration: 0.3 };
 
-  const elementVariants = {
-    hidden: { y, opacity: 0, scale: 0.5, transition },
-    visible: {
-      y: 0,
-      opacity: 1,
-      scale: 1,
-      transition,
-    },
-  };
+  // const elementVariants = {
+  //   hidden: { y, opacity: 0, scale: 0.5, transition },
+  //   visible: {
+  //     y: 0,
+  //     opacity: 1,
+  //     scale: 1,
+  //     transition,
+  //   },
+  // };
 
   return (
-    <Container variants={containerVariants} initial='visible' animate={animate}>
-      <Element variants={elementVariants}>
-        <StyledSpline scene={Scenes.donationSection} />
-      </Element>
+    <Container ref={containerRef}>
+      <AnimatePresence>
+        {inView && (
+          <StyledSplineWrap
+          // initial={{ opacity: 0 }}
+          // animate={{ opacity: 1, transition }}
+          // exit={{ opacity: 0, transition }}
+          >
+            <StyledSpline scene={Scenes.donationSection} />
+          </StyledSplineWrap>
+        )}
+      </AnimatePresence>
     </Container>
   );
 };
