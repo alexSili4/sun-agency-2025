@@ -3,9 +3,9 @@ import About from '@AboutPageComponents/About';
 import { about } from '@/constants';
 
 const AboutPage: FC = () => {
-  const { employees } = about;
+  const { employees, metrics } = about;
 
-  return <About employees={employees} />;
+  return <About employees={employees} metrics={metrics} />;
 };
 
 export default AboutPage;

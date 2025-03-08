@@ -4,8 +4,9 @@ import HeroSectionAboutUs from '@AboutPageComponents/HeroSectionAboutUs';
 import { Section, Container, Content } from './HeroSection.styled';
 import HeroSectionTitle from '@AboutPageComponents/HeroSectionTitle';
 import Breadcrumbs from '@GeneralComponents/Breadcrumbs';
+import { IProps } from './HeroSection.types';
 
-const HeroSection: FC = () => {
+const HeroSection: FC<IProps> = ({ metrics }) => {
   return (
     <Section>
       <GeneralContainer>
@@ -13,7 +14,7 @@ const HeroSection: FC = () => {
           <Breadcrumbs />
           <Content>
             <HeroSectionTitle />
-            <HeroSectionAboutUs />
+            <HeroSectionAboutUs metrics={metrics} />
           </Content>
         </Container>
       </GeneralContainer>

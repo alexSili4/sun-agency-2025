@@ -10,6 +10,7 @@ import {
   involveSemiBold,
   involveMedium,
   pliskaRegular,
+  involveBold,
 } from '@/fonts';
 
 const GlobalStyles: FC = () => (
@@ -47,6 +48,13 @@ const GlobalStyles: FC = () => (
         src: local(${theme.fontFamily.involve}),
           url(${involveSemiBold}) format('truetype');
         font-weight: 600;
+      }
+
+      @font-face {
+        font-family: ${theme.fontFamily.involve};
+        src: local(${theme.fontFamily.involve}),
+          url(${involveBold}) format('truetype');
+        font-weight: 700;
       }
 
       @font-face {
