@@ -13,14 +13,16 @@ const FooterSpline: FC = () => {
 
   const transition = { duration: 0.3 };
 
+  const initial = { opacity: 0 };
+
   return (
     <Container ref={containerRef}>
       <AnimatePresence>
         {inView && (
           <StyledSplineWrap
-            initial={{ opacity: 0 }}
+            initial={initial}
             animate={{ opacity: 1, transition }}
-            exit={{ opacity: 0, transition }}
+            exit={{ ...initial, transition }}
           >
             <StyledSpline scene={Scenes.footer} />
           </StyledSplineWrap>

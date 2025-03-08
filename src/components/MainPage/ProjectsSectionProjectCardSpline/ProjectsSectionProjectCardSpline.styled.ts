@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 import Spline from '@splinetool/react-spline';
+import { motion } from 'framer-motion';
 
 export const Container = styled.div`
   position: absolute;
@@ -9,6 +10,8 @@ export const Container = styled.div`
   height: 218px;
   transform: translateX(-50%);
 `;
+
+export const StyledSplineWrap = styled(motion.div)``;
 
 export const StyledSpline = styled(Spline)`
   position: absolute;
