@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
-import reviewBgMob from '@/images/projects/review-bg-mob.png';
-import reviewBgDesk from '@/images/projects/review-bg-desk.png';
+import reviewBgMob from '@/images/projectDetails/review-bg-mob.png';
+import reviewBgDesk from '@/images/projectDetails/review-bg-desk.png';
 
 export const Container = styled.div`
   display: flex;

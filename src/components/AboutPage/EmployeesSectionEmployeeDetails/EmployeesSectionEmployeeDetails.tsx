@@ -10,7 +10,7 @@ import {
   Avatar,
   NameWrap,
 } from './EmployeesSectionEmployeeDetails.styled';
-import employeeBorder from '@/images/about/employee-border.png';
+import employeeBorder from '@/images/about/employees/employee-border.png';
 
 const EmployeesSectionEmployeeDetails: FC<IProps> = ({
   avatar,

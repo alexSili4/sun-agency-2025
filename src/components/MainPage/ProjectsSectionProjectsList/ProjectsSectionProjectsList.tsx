@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { IProps } from './ProjectsSectionProjectsList.types';
-import newProjectDesk from '@/images/projects/new-project-desk.png';
-import newProjectMob from '@/images/projects/new-project-mob.png';
+import newProjectDesk from '@/images/main/projects/new-project-desk.png';
+import newProjectMob from '@/images/main/projects/new-project-mob.png';
 
 import {
   Container,

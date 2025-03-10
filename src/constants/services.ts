@@ -1,9 +1,9 @@
 import { Services } from '@/types/services.types';
 import PagePaths from './pagePaths';
-import brandingAndIdentity from '@/images/services/branding-and-identity.png';
-import digitalization from '@/images/services/digitalization.png';
-import eCommerce from '@/images/services/e-commerce.png';
-import webDevelopment from '@/images/services/web-development.png';
+import brandingAndIdentity from '@/images/main/services/branding-and-identity.png';
+import digitalization from '@/images/main/services/digitalization.png';
+import eCommerce from '@/images/main/services/e-commerce.png';
+import webDevelopment from '@/images/main/services/web-development.png';
 
 const services: Services = [
   {

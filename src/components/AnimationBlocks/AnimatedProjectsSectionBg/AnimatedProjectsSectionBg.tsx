@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import sectionBg from '@/images/projects/section-bg.png';
+import sectionBg from '@/images/main/projects/section-bg.png';
 import { Container, Element, Image } from './AnimatedProjectsSectionBg.styled';
 import { IProps } from './AnimatedProjectsSectionBg.types';
 

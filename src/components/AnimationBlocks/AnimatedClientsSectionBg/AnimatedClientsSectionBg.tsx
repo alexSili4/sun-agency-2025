@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import sectionBg from '@/images/clients/section-bg.jpg';
+import sectionBg from '@/images/main/clients/section-bg.jpg';
 import { Container, Image } from './AnimatedClientsSectionBg.styled';
 import { IProps } from './AnimatedClientsSectionBg.types';
 

@@ -1,7 +1,7 @@
 import { Reviews } from '@/types/reviews.types';
-import pedro from '@/images/reviews/pedro.jpg';
-import pablo from '@/images/reviews/pablo.jpg';
-import esmiralda from '@/images/reviews/esmiralda.jpg';
+import pedro from '@/images/main/reviews/pedro.jpg';
+import pablo from '@/images/main/reviews/pablo.jpg';
+import esmiralda from '@/images/main/reviews/esmiralda.jpg';
 
 const reviews: Reviews = [
   {

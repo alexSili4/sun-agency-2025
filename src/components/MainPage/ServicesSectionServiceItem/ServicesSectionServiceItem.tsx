@@ -10,7 +10,7 @@ import {
   Number,
   GlowImg,
 } from './ServicesSectionServiceItem.styled';
-import serviceGlow from '@/images/services/service-glow.png';
+import serviceGlow from '@/images/main/services/service-glow.png';
 // ----- components
 import ServicesSectionTagsList from '@MainPageComponents/ServicesSectionTagsList';
 

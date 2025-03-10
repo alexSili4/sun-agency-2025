@@ -2,7 +2,7 @@ import { FC } from 'react';
 import { NexSectionBg, Section } from './ProjectsSection.styled';
 import { IProps } from './ProjectsSection.types';
 import { SectionsIds } from '@/constants';
-import nexSectionBg from '@/images/projects/next-section-bg.png';
+import nexSectionBg from '@/images/main/projects/next-section-bg.png';
 // ----- components
 import ProjectsSectionContent from '@MainPageComponents/ProjectsSectionContent';
 

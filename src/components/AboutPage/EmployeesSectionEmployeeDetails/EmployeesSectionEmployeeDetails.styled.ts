@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import employeeBg from '@/images/about/employee-bg.png';
+import employeeBg from '@/images/about/employees/employee-bg.png';
 
 export const Container = styled.div`
   position: relative;

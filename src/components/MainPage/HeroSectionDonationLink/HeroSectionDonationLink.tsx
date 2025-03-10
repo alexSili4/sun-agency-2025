@@ -10,9 +10,9 @@ import {
   StyledLink,
   StyledReactPlayer,
 } from './HeroSectionDonationLink.styled';
-import donationLink from '@/images/main/donation-link.png';
+import donationLink from '@/images/main/hero/donation-link.png';
 import video from '@/video/donation-link-compressed.mp4';
-import donationLinkShadow from '@/images/main/donation-link-shadow.png';
+import donationLinkShadow from '@/images/main/hero/donation-link-shadow.png';
 
 const HeroSectionDonationLink: FC = () => {
   const [play, setPlay] = useState<boolean>(false);

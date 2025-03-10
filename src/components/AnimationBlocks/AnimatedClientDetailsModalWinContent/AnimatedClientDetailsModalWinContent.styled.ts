@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
-import clientDetailsContainerBgMob from '@/images/clients/client-details-container-bg-mob.png';
-import clientDetailsContainerBgDesk from '@/images/clients/client-details-container-bg-desk.png';
+import clientDetailsContainerBgMob from '@/images/main/clients/client-details-container-bg-mob.png';
+import clientDetailsContainerBgDesk from '@/images/main/clients/client-details-container-bg-desk.png';
 
 export const BackdropWrap = styled.div`
   position: fixed;

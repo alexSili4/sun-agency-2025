@@ -1,32 +1,32 @@
 // atb
-import atbDesk from '@/images/projects/atb/atb-desk.png';
-import atbMob from '@/images/projects/atb/atb-mob.png';
-import atbPrimaryBannerDesk from '@/images/projects/atb/atb-primary-banner-desk.jpg';
-import atbPrimaryBannerMobile from '@/images/projects/atb/atb-primary-banner-mobile.png';
-import atbBanner1Desk from '@/images/projects/atb/atb-banner-1-desk.jpg';
-import atbBanner1Mobile from '@/images/projects/atb/atb-banner-1-mob.jpg';
-import atbCashSystemIntegrationDesk from '@/images/projects/atb/atb-cash-system-integration-desk.png';
-import atbCashSystemIntegrationMobile from '@/images/projects/atb/atb-cash-system-integration-mobile.png';
-import atbPaymentSystemIntegrationDesk from '@/images/projects/atb/atb-payment-system-integration-desk.jpg';
-import atbPaymentSystemIntegrationMobile from '@/images/projects/atb/atb-payment-system-integration-mobile.jpg';
+import atbDesk from '@/images/main/projects/atb/atb-desk.png';
+import atbMob from '@/images/main/projects/atb/atb-mob.png';
+import atbPrimaryBannerDesk from '@/images/projectDetails/atb/atb-primary-banner-desk.jpg';
+import atbPrimaryBannerMobile from '@/images/projectDetails/atb/atb-primary-banner-mobile.png';
+import atbBanner1Desk from '@/images/projectDetails/atb/atb-banner-1-desk.jpg';
+import atbBanner1Mobile from '@/images/projectDetails/atb/atb-banner-1-mob.jpg';
+import atbCashSystemIntegrationDesk from '@/images/projectDetails/atb/atb-cash-system-integration-desk.png';
+import atbCashSystemIntegrationMobile from '@/images/projectDetails/atb/atb-cash-system-integration-mobile.png';
+import atbPaymentSystemIntegrationDesk from '@/images/projectDetails/atb/atb-payment-system-integration-desk.jpg';
+import atbPaymentSystemIntegrationMobile from '@/images/projectDetails/atb/atb-payment-system-integration-mobile.jpg';
 import atbScreens from '@/lottiefiles/projects/atb-screens.json';
 import atbWebsite from '@/lottiefiles/projects/atb-website.json';
-import atbDeliverySystemIntegrationDesk from '@/images/projects/atb/atb-delivery-system-integration-desk.png';
-import atbDeliverySystemIntegrationMobile from '@/images/projects/atb/atb-delivery-system-integration-mobile.png';
-import atbLoyaltySystemIntegrationDesk from '@/images/projects/atb/atb-loyalty-system-integration-desk.jpg';
-import atbLoyaltySystemIntegrationMobile from '@/images/projects/atb/atb-loyalty-system-integration-mobile.jpg';
-import atbMobAppIntegrationDesk from '@/images/projects/atb/atb-mob-app-integration-desk.png';
-import atbMobAppIntegrationMobile from '@/images/projects/atb/atb-mob-app-integration-mobile.png';
-import atbMobAppIntegrationAdditionalDesk from '@/images/projects/atb/atb-mob-app-integration-additional-desk.jpg';
-import atbMobAppIntegrationAdditionalMobile from '@/images/projects/atb/atb-mob-app-integration-additional-mobile.jpg';
-import atbOleksandrFrolov from '@/images/projects/atb/atb-oleksandr-frolov.jpg';
+import atbDeliverySystemIntegrationDesk from '@/images/projectDetails/atb/atb-delivery-system-integration-desk.png';
+import atbDeliverySystemIntegrationMobile from '@/images/projectDetails/atb/atb-delivery-system-integration-mobile.png';
+import atbLoyaltySystemIntegrationDesk from '@/images/projectDetails/atb/atb-loyalty-system-integration-desk.jpg';
+import atbLoyaltySystemIntegrationMobile from '@/images/projectDetails/atb/atb-loyalty-system-integration-mobile.jpg';
+import atbMobAppIntegrationDesk from '@/images/projectDetails/atb/atb-mob-app-integration-desk.png';
+import atbMobAppIntegrationMobile from '@/images/projectDetails/atb/atb-mob-app-integration-mobile.png';
+import atbMobAppIntegrationAdditionalDesk from '@/images/projectDetails/atb/atb-mob-app-integration-additional-desk.jpg';
+import atbMobAppIntegrationAdditionalMobile from '@/images/projectDetails/atb/atb-mob-app-integration-additional-mobile.jpg';
+import atbOleksandrFrolov from '@/images/projectDetails/atb/atb-oleksandr-frolov.jpg';
 // other
-import qanabiDesk from '@/images/projects/qanabi/qanabi-desk.png';
-import qanabiMob from '@/images/projects/qanabi/qanabi-mob.png';
-import maxBanusDesk from '@/images/projects/max-banus/max-banus-desk.png';
-import maxBanusMob from '@/images/projects/max-banus/max-banus-mob.png';
-import evaSportMob from '@/images/projects/eva-sport/eva-sport-mob.png';
-import evaSportDesk from '@/images/projects/eva-sport/eva-sport-desk.png';
+import qanabiDesk from '@/images/main/projects/qanabi/qanabi-desk.png';
+import qanabiMob from '@/images/main/projects/qanabi/qanabi-mob.png';
+import maxBanusDesk from '@/images/main/projects/max-banus/max-banus-desk.png';
+import maxBanusMob from '@/images/main/projects/max-banus/max-banus-mob.png';
+import evaSportMob from '@/images/main/projects/eva-sport/eva-sport-mob.png';
+import evaSportDesk from '@/images/main/projects/eva-sport/eva-sport-desk.png';
 import { Projects } from '@/types/projects.types';
 
 const projects: Projects = [

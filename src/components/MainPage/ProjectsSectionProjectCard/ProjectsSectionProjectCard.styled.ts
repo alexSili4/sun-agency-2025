@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import cardBg from '@/images/projects/card-bg.png';
+import cardBg from '@/images/main/projects/card-bg.png';
 import { IStyledProps } from './ProjectsSectionProjectCard.types';
 import { Link } from 'react-router-dom';
 

@@ -1,7 +1,17 @@
 import { FC } from 'react';
 import { IProps } from './ReviewsSectionReview.types';
-import decorativeIcon from '@/images/reviews/decorative-icon.png';
-import { Container, Avatar, ClientInfo, ClientInfoWrap, DecorativeIcon, JobTitle, Name, Text, TextWrap } from './ReviewsSectionReview.styled';
+import decorativeIcon from '@/images/main/reviews/decorative-icon.png';
+import {
+  Container,
+  Avatar,
+  ClientInfo,
+  ClientInfoWrap,
+  DecorativeIcon,
+  JobTitle,
+  Name,
+  Text,
+  TextWrap,
+} from './ReviewsSectionReview.styled';
 
 const ReviewsSectionReview: FC<IProps> = ({ avatar, jobTitle, name, text }) => {
   return (

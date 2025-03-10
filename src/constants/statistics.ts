@@ -1,7 +1,7 @@
 import { Statistics } from '@/types/statistics.types';
-import number150 from '@/images/main/150.png';
-import number70 from '@/images/main/70.png';
-import number14 from '@/images/main/14.png';
+import number150 from '@/images/main/hero/150.png';
+import number70 from '@/images/main/hero/70.png';
+import number14 from '@/images/main/hero/14.png';
 import Symbols from './symbols';
 
 const statistics: Statistics = [

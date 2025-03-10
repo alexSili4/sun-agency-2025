@@ -1,36 +1,36 @@
 import { Clients } from '@/types/clients.types';
 // atb
-import atbPrimaryLogo from '@/images/clients/atb-primary-logo.png';
-import atbLogo from '@/images/clients/atb-logo.png';
-import atbProjects from '@/images/clients/atb-projects.png';
-import atbYears from '@/images/clients/atb-years.png';
-import atbProject1 from '@/images/clients/atb-project-1.jpg';
-import atbProject2 from '@/images/clients/atb-project-2.jpg';
-import atbProject3 from '@/images/clients/atb-project-3.jpg';
+import atbPrimaryLogo from '@/images/main/clients/atb-primary-logo.png';
+import atbLogo from '@/images/main/clients/atb-logo.png';
+import atbProjects from '@/images/main/clients/atb-projects.png';
+import atbYears from '@/images/main/clients/atb-years.png';
+import atbProject1 from '@/images/main/clients/atb-project-1.jpg';
+import atbProject2 from '@/images/main/clients/atb-project-2.jpg';
+import atbProject3 from '@/images/main/clients/atb-project-3.jpg';
 // activitis
-import activitisPrimaryLogo from '@/images/clients/activitis-primary-logo.png';
+import activitisPrimaryLogo from '@/images/main/clients/activitis-primary-logo.png';
 // delikat
-import delikatPrimaryLogo from '@/images/clients/delikat-primary-logo.png';
+import delikatPrimaryLogo from '@/images/main/clients/delikat-primary-logo.png';
 // eva
-import evaPrimaryLogo from '@/images/clients/eva-primary-logo.png';
+import evaPrimaryLogo from '@/images/main/clients/eva-primary-logo.png';
 // fozzyGroup
-import fozzyGroupPrimaryLogo from '@/images/clients/fozzy-group-primary-logo.png';
+import fozzyGroupPrimaryLogo from '@/images/main/clients/fozzy-group-primary-logo.png';
 // goodwine
-import goodwinePrimaryLogo from '@/images/clients/goodwine-primary-logo.png';
+import goodwinePrimaryLogo from '@/images/main/clients/goodwine-primary-logo.png';
 // imperiaHolding
-import imperiaHoldingPrimaryLogo from '@/images/clients/imperia-holding-primary-logo.png';
+import imperiaHoldingPrimaryLogo from '@/images/main/clients/imperia-holding-primary-logo.png';
 // ligamenta
-import ligamentaPrimaryLogo from '@/images/clients/ligamenta-primary-logo.png';
+import ligamentaPrimaryLogo from '@/images/main/clients/ligamenta-primary-logo.png';
 // nutella
-import nutellaPrimaryLogo from '@/images/clients/nutella-primary-logo.png';
+import nutellaPrimaryLogo from '@/images/main/clients/nutella-primary-logo.png';
 // silpo
-import silpoPrimaryLogo from '@/images/clients/silpo-primary-logo.png';
+import silpoPrimaryLogo from '@/images/main/clients/silpo-primary-logo.png';
 // starbeauty
-import starbeautyPrimaryLogo from '@/images/clients/starbeauty-primary-logo.png';
+import starbeautyPrimaryLogo from '@/images/main/clients/starbeauty-primary-logo.png';
 // varus
-import varusPrimaryLogo from '@/images/clients/varus-primary-logo.png';
+import varusPrimaryLogo from '@/images/main/clients/varus-primary-logo.png';
 // wineBureau
-import wineBureauPrimaryLogo from '@/images/clients/wine-bureau-primary-logo.png';
+import wineBureauPrimaryLogo from '@/images/main/clients/wine-bureau-primary-logo.png';
 
 const clients: Clients = [
   {
