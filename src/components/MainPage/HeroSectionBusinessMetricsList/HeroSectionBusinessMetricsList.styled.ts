@@ -7,8 +7,14 @@ import { motion } from 'framer-motion';
 
 export const List = styled.ul`
   position: absolute;
-  right: 44px;
+  right: 50%;
   bottom: 18px;
+  transform: translateX(50%);
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
+    right: 44px;
+    transform: translateX(0);
+  }
 `;
 
 export const ListItem = styled.li``;

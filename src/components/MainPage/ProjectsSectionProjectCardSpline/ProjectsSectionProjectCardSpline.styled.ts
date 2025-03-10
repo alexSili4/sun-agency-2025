@@ -11,7 +11,9 @@ export const Container = styled.div`
   transform: translateX(-50%);
 `;
 
-export const StyledSplineWrap = styled(motion.div)``;
+export const StyledSplineWrap = styled(motion.div)`
+  background-color: violet;
+`;
 
 export const StyledSpline = styled(Spline)`
   position: absolute;

@@ -1,4 +1,4 @@
-import { FC, useEffect, useRef } from 'react';
+import { FC, useRef } from 'react';
 import {
   Container,
   StyledSplineWrap,
@@ -10,16 +10,14 @@ import { AnimatePresence, useInView } from 'framer-motion';
 
 const AnimatedHeroSectionSpline: FC<IProps> = ({ nextSectionInView }) => {
   const containerRef = useRef<HTMLDivElement>(null);
-  const inView = useInView(containerRef);
+  const inView = useInView(containerRef, {
+    margin: '-200px 0px -200px 0px',
+  });
   const y = nextSectionInView ? '-100%' : '100%';
 
-  const transition = { duration: 0.3 };
+  const transition = { duration: 3 };
 
   const initial = { y, opacity: 0, scale: 0.5 };
-
-  useEffect(() => {
-    console.log(inView);
-  });
 
   return (
     <Container ref={containerRef}>

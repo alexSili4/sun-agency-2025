@@ -23,11 +23,16 @@ export const Image = styled.img`
 
   a:is(:hover, :focus) > div > div > &,
   div:has(a:is(:hover, :focus)) > div > & {
-    transform: scale(0.95);
+    transform: scale(0.99);
   }
 
   @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
     max-width: 347px;
+
+    a:is(:hover, :focus) > div > div > &,
+    div:has(a:is(:hover, :focus)) > div > & {
+      transform: scale(0.95);
+    }
   }
 `;
 
