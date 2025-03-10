@@ -16,4 +16,23 @@ export type Metrics = IMetric[];
 export interface IAbout {
   metrics: Metrics;
   employees: Employees;
+  principles: Principles;
 }
+
+export interface IImage {
+  img: string;
+  sizeMob: number;
+  sizeDesc: number;
+  topMob: number;
+  leftMob: number;
+  topDesc: number;
+  leftDesc: number;
+}
+
+export interface IPrinciple {
+  title: string;
+  text: string;
+  img: IImage;
+}
+
+export type Principles = IPrinciple[];

@@ -1,4 +1,10 @@
-import { Employees, Metrics, IAbout } from '@/types/about.types';
+import { Employees, Metrics, IAbout, Principles } from '@/types/about.types';
+import socialResponsibility from '@/images/about/principles/social-responsibility.png';
+import ethics from '@/images/about/principles/ethics.png';
+import realBenefit from '@/images/about/principles/real-benefit.png';
+import partnership from '@/images/about/principles/partnership.png';
+import brandBoost from '@/images/about/principles/brand-boost.png';
+import lifesSource from '@/images/about/principles/lifes-source.png';
 
 const metrics: Metrics = [
   {
@@ -27,9 +33,91 @@ const employees: Employees = [
   { name: 'Front-end Developer', jobTitle: 'Front-end Developer', avatar: '' },
 ];
 
+const principles: Principles = [
+  {
+    title: 'Сонце — джерело життя',
+    text: 'Сонце — джерело ясності та надійності. Як воно дає життя, ми надихаємо нове у ваш проєкт чи бренд.',
+    img: {
+      img: lifesSource,
+      // sizeMob:,
+      sizeDesc: 300,
+      // topMob:,
+      // leftMob:,
+      topDesc: -95,
+      leftDesc: -280,
+    },
+  },
+  {
+    title: 'Підсилення бренду',
+    text: 'А ще Сонце надає сили. Ми ж висвітлюємо переваги вашого бренду так, щоб вони стали очевидними для кожного споживача.',
+    img: {
+      img: brandBoost,
+      sizeMob: 107,
+      sizeDesc: 300,
+      // topMob:,
+      // leftMob:,
+      topDesc: 144,
+      leftDesc: 196,
+    },
+  },
+  {
+    title: 'Партнерство',
+    text: 'Ми працюємо з тими, хто приймає рішення, хто вірить у свій бізнес і готовий інвестувати ресурси та довіряти нам вирішення складних завдань. Ми цінуємо обґрунтований скептицизм на етапі планування та довіру після ухвалення рішення.',
+    img: {
+      img: partnership,
+      sizeMob: 147,
+      sizeDesc: 300,
+      // topMob:,
+      // leftMob:,
+      topDesc: 239,
+      leftDesc: -443,
+    },
+  },
+  {
+    title: 'Реальна користь',
+    text: 'Ми не займаємось «освоєнням бюджетів» і уникаємо поверхневих рішень. Ми робимо тільки те, що дійсно вирішує проблеми наших клієнтів та покращує життя їхнім споживачам. Те, що дійсно приносить користь.',
+    img: {
+      img: realBenefit,
+      sizeMob: 115,
+      sizeDesc: 300,
+      // topMob:,
+      // leftMob:,
+      topDesc: -9,
+      leftDesc: 426,
+    },
+  },
+  {
+    title: 'Етичність',
+    text: 'Ми не платимо «відкати» й не співпрацюємо зі шкідливими чи неетичними продуктами. Чесність та етичність — наші основні орієнтири.',
+    img: {
+      img: ethics,
+      // sizeMob:,
+      sizeDesc: 300,
+      // topMob:,
+      // leftMob:,
+      topDesc: 241,
+      leftDesc: 429,
+    },
+  },
+  {
+    title: 'Соціальна відповідальність',
+    text: 'Ми підтримуємо армію, сили оборони та волонтерські ініціативи, допомагаючи у спільній боротьбі за майбутнє.',
+    img: {
+      img: socialResponsibility,
+      // sizeMob:,
+      sizeDesc: 300,
+      // topMob:,
+      // leftMob:,
+      topDesc: 344,
+      leftDesc: 654,
+    },
+  },
+];
+
 const about: IAbout = {
   metrics,
   employees,
+  principles,
 };
 
 export default about;
