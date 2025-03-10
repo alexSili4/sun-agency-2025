@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import { IProps } from './AtbFunFactSection.types';
-import decorativeElement from '@/images/projects/fun-fact-decorative-element.png';
+import decorativeElement from '@/images/projectDetails/fun-fact-decorative-element.png';
 import {
   Container,
   Content,

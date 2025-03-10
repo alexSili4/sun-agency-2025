@@ -11,7 +11,7 @@ import {
   DecorativeElement,
   InfoWrap,
 } from './AtbProjectReviewDetails.styled';
-import reviewDecorativeElement from '@/images/projects/review-decorative-element.png';
+import reviewDecorativeElement from '@/images/projectDetails/review-decorative-element.png';
 
 const AtbProjectReviewDetails: FC<IProps> = ({
   text,

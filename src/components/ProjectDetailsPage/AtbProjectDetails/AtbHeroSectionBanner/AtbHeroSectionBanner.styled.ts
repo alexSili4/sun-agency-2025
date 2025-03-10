@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 import { IStyledContainerProps } from './AtbHeroSectionBanner.types';
-import atbHeroBg from '@/images/projects/atb/atb-hero-bg.jpg';
+import atbHeroBg from '@/images/projectDetails/atb/atb-hero-bg.jpg';
 
 export const Container = styled.div<IStyledContainerProps>`
   border-radius: ${({ borderRadiusMobile }) => borderRadiusMobile}px;
