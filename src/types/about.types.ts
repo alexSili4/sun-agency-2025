@@ -21,10 +21,6 @@ export interface IAbout {
 
 export interface IImage {
   img: string;
-  sizeMob: number;
-  sizeDesc: number;
-  topMob: number;
-  leftMob: number;
   topDesc: number;
   leftDesc: number;
 }

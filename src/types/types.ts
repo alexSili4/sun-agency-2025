@@ -1,6 +1,7 @@
 import { MotionValue } from 'framer-motion';
 import { LottieRefCurrentProps } from 'lottie-react';
 import { ChangeEvent, MouseEvent, RefObject } from 'react';
+import Swiper from 'swiper';
 
 // events
 export type GlobalUIEvent = globalThis.UIEvent;
@@ -49,3 +50,5 @@ export type StringOrNull = string | null;
 export type NumberOrNull = number | null;
 
 export type MarqueeDirection = 'right' | 'left';
+
+export type ISwiper = Swiper;
