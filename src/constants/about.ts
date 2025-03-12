@@ -42,6 +42,10 @@ const principles: Principles = [
       topDesc: -95,
       leftDesc: -280,
     },
+    marker: {
+      topDesk: 174,
+      leftDesk: 22,
+    },
   },
   {
     title: 'Підсилення бренду',
@@ -50,6 +54,10 @@ const principles: Principles = [
       img: brandBoost,
       topDesc: 144,
       leftDesc: 196,
+    },
+    marker: {
+      topDesk: 82,
+      leftDesk: 47,
     },
   },
   {
@@ -60,6 +68,10 @@ const principles: Principles = [
       topDesc: 239,
       leftDesc: -443,
     },
+    marker: {
+      topDesk: 44,
+      leftDesk: 191,
+    },
   },
   {
     title: 'Реальна користь',
@@ -68,6 +80,10 @@ const principles: Principles = [
       img: realBenefit,
       topDesc: -9,
       leftDesc: 426,
+    },
+    marker: {
+      topDesk: 70,
+      leftDesk: 57,
     },
   },
   {
@@ -78,6 +94,10 @@ const principles: Principles = [
       topDesc: 241,
       leftDesc: 429,
     },
+    marker: {
+      topDesk: 68,
+      leftDesk: 200,
+    },
   },
   {
     title: 'Соціальна відповідальність',
@@ -86,6 +106,10 @@ const principles: Principles = [
       img: socialResponsibility,
       topDesc: 344,
       leftDesc: 654,
+    },
+    marker: {
+      topDesk: 28,
+      leftDesk: 121,
     },
   },
 ];

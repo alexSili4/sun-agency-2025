@@ -21,5 +21,16 @@ export interface IStyledListItemProps {
   number: number;
   rotate: number;
   radius: number;
-  scale: number;
+}
+
+export interface IStyledImageProps {
+  isActiveBtn: boolean;
+}
+
+export interface IStyledMarkerWrapProps {
+  isActiveBtn: boolean;
+}
+
+export interface IStyledMarkerProps {
+  isActiveBtn: boolean;
 }

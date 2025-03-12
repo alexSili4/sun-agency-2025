@@ -25,10 +25,16 @@ export interface IImage {
   leftDesc: number;
 }
 
+export interface IMarker {
+  topDesk: number;
+  leftDesk: number;
+}
+
 export interface IPrinciple {
   title: string;
   text: string;
   img: IImage;
+  marker: IMarker;
 }
 
 export type Principles = IPrinciple[];

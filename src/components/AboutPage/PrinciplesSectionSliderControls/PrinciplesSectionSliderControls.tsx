@@ -6,6 +6,8 @@ import {
   Image,
   List,
   ListItem,
+  MarkerWrap,
+  Marker,
 } from './PrinciplesSectionSliderControls.styled';
 import { BtnClickEvent } from '@/types/types';
 import { makeBlur } from '@/utils';
@@ -29,7 +31,7 @@ const PrinciplesSectionSliderControls: FC<IProps> = ({
           const isActiveBtn = activeIndex === index;
           const number = index + 1;
           const listItemRotate = rotate * index;
-          const scale = isActiveBtn ? 1.37 : 1;
+          const marker = number.toString().padStart(2, '0');
 
           const onSliderBtnClick = (e: BtnClickEvent) => {
             makeBlur(e.currentTarget);
@@ -43,10 +45,12 @@ const PrinciplesSectionSliderControls: FC<IProps> = ({
               number={number}
               radius={radius}
               rotate={listItemRotate}
-              scale={scale}
             >
               <Button type='button' onClick={onSliderBtnClick}>
-                <Image src={img} alt={title} />
+                <Image src={img} alt={title} isActiveBtn={isActiveBtn} />
+                <MarkerWrap isActiveBtn={isActiveBtn}>
+                  <Marker isActiveBtn={isActiveBtn}>{marker}</Marker>
+                </MarkerWrap>
               </Button>
             </ListItem>
           );
