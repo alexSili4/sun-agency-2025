@@ -15,9 +15,10 @@ export const Container = styled.div<IStyledContainerProps>`
   width: ${({ size }) => size && size}px;
   aspect-ratio: 1 / 1;
   transform: translateX(-50%);
+  pointer-events: none;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.desktop - 1}px) {
-    z-index: ${({ theme }) => theme.zIndex.principlesSliderControls};
+    z-index: 10;
   }
 `;
 
@@ -60,6 +61,7 @@ export const Button = styled.button`
   background-color: transparent;
   border: none;
   padding: 0;
+  pointer-events: all;
 `;
 
 export const Image = styled.img<IStyledImageProps>`

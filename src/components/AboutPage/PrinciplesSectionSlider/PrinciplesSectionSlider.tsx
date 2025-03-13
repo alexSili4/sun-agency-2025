@@ -40,13 +40,6 @@ const PrinciplesSectionSlider: FC<IProps> = ({ principles }) => {
   return (
     <Container>
       <SliderWrap>
-        <PrinciplesSectionSliderControls
-          principles={principles}
-          activeIndex={activeIndex}
-          size={size}
-          rotate={30}
-        />
-        <Background ref={backgroundRef}></Background>
         <StyledSwiper
           onSwiper={onSwiper}
           onSlideChange={onSwiper}
@@ -60,6 +53,13 @@ const PrinciplesSectionSlider: FC<IProps> = ({ principles }) => {
           modules={[Autoplay, Pagination]}
           onAutoplayTimeLeft={onAutoplayTimeLeft}
         >
+          <PrinciplesSectionSliderControls
+            principles={principles}
+            activeIndex={activeIndex}
+            size={size}
+            rotate={30}
+          />
+          <Background ref={backgroundRef}></Background>
           {principles.map(({ text, title }, index) => {
             const isActiveSlide = index === activeIndex;
 
