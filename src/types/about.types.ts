@@ -21,8 +21,8 @@ export interface IAbout {
 
 export interface IImage {
   img: string;
-  topDesc: number;
-  leftDesc: number;
+  topDesk: number;
+  leftDesk: number;
 }
 
 export interface IMarker {

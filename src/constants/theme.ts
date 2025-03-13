@@ -40,6 +40,7 @@ interface ITheme {
     menuBtn: number;
     contactsModalWin: number;
     header: number;
+    principlesSliderControls: number;
   };
   transitionDurationAndFunc: string;
   spacing: (value?: number) => number;
@@ -72,6 +73,7 @@ const theme: ITheme = {
     loader: 10,
     menuBtn: 10,
     header: 10,
+    principlesSliderControls: 10,
     contactsModalWin: 100,
     animatedModalWin: 100000,
   },

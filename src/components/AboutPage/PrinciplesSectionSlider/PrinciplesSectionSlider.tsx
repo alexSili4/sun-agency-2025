@@ -1,11 +1,11 @@
 import { FC, useEffect, useRef, useState } from 'react';
 import { Autoplay, Pagination } from 'swiper/modules';
-import { SwiperSlide } from 'swiper/react';
 import {
   Background,
   Container,
   SliderWrap,
   StyledSwiper,
+  StyledSwiperSlide,
 } from './PrinciplesSectionSlider.styled';
 import { IProps } from './PrinciplesSectionSlider.types';
 import PrinciplesSectionSliderPrincipleDetails from '@AboutPageComponents/PrinciplesSectionSliderPrincipleDetails';
@@ -40,6 +40,12 @@ const PrinciplesSectionSlider: FC<IProps> = ({ principles }) => {
   return (
     <Container>
       <SliderWrap>
+        <PrinciplesSectionSliderControls
+          principles={principles}
+          activeIndex={activeIndex}
+          size={size}
+          rotate={30}
+        />
         <Background ref={backgroundRef}></Background>
         <StyledSwiper
           onSwiper={onSwiper}
@@ -54,20 +60,19 @@ const PrinciplesSectionSlider: FC<IProps> = ({ principles }) => {
           modules={[Autoplay, Pagination]}
           onAutoplayTimeLeft={onAutoplayTimeLeft}
         >
-          {principles.map(({ text, title }, index) => (
-            <SwiperSlide key={index}>
-              <PrinciplesSectionSliderPrincipleDetails
-                text={text}
-                title={title}
-              />
-            </SwiperSlide>
-          ))}
-          <PrinciplesSectionSliderControls
-            principles={principles}
-            activeIndex={activeIndex}
-            size={size}
-            rotate={30}
-          />
+          {principles.map(({ text, title }, index) => {
+            const isActiveSlide = index === activeIndex;
+
+            return (
+              <StyledSwiperSlide key={index}>
+                <PrinciplesSectionSliderPrincipleDetails
+                  text={text}
+                  title={title}
+                  isActiveSlide={isActiveSlide}
+                />
+              </StyledSwiperSlide>
+            );
+          })}
           <PrinciplesSectionSliderPagination
             principles={principles}
             activeIndex={activeIndex}

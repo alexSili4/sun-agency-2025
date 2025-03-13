@@ -39,8 +39,8 @@ const principles: Principles = [
     text: 'Сонце — джерело ясності та надійності. Як воно дає життя, ми надихаємо нове у ваш проєкт чи бренд.',
     img: {
       img: lifesSource,
-      topDesc: -95,
-      leftDesc: -280,
+      topDesk: -95,
+      leftDesk: -280,
     },
     marker: {
       topDesk: 174,
@@ -52,8 +52,8 @@ const principles: Principles = [
     text: 'А ще Сонце надає сили. Ми ж висвітлюємо переваги вашого бренду так, щоб вони стали очевидними для кожного споживача.',
     img: {
       img: brandBoost,
-      topDesc: 144,
-      leftDesc: 196,
+      topDesk: 144,
+      leftDesk: -196,
     },
     marker: {
       topDesk: 82,
@@ -65,8 +65,8 @@ const principles: Principles = [
     text: 'Ми працюємо з тими, хто приймає рішення, хто вірить у свій бізнес і готовий інвестувати ресурси та довіряти нам вирішення складних завдань. Ми цінуємо обґрунтований скептицизм на етапі планування та довіру після ухвалення рішення.',
     img: {
       img: partnership,
-      topDesc: 239,
-      leftDesc: -443,
+      topDesk: 239,
+      leftDesk: -443,
     },
     marker: {
       topDesk: 44,
@@ -78,8 +78,8 @@ const principles: Principles = [
     text: 'Ми не займаємось «освоєнням бюджетів» і уникаємо поверхневих рішень. Ми робимо тільки те, що дійсно вирішує проблеми наших клієнтів та покращує життя їхнім споживачам. Те, що дійсно приносить користь.',
     img: {
       img: realBenefit,
-      topDesc: -9,
-      leftDesc: 426,
+      topDesk: -9,
+      leftDesk: 426,
     },
     marker: {
       topDesk: 70,
@@ -91,8 +91,8 @@ const principles: Principles = [
     text: 'Ми не платимо «відкати» й не співпрацюємо зі шкідливими чи неетичними продуктами. Чесність та етичність — наші основні орієнтири.',
     img: {
       img: ethics,
-      topDesc: 241,
-      leftDesc: 429,
+      topDesk: 241,
+      leftDesk: 429,
     },
     marker: {
       topDesk: 68,
@@ -104,8 +104,8 @@ const principles: Principles = [
     text: 'Ми підтримуємо армію, сили оборони та волонтерські ініціативи, допомагаючи у спільній боротьбі за майбутнє.',
     img: {
       img: socialResponsibility,
-      topDesc: 344,
-      leftDesc: 654,
+      topDesk: 344,
+      leftDesk: 654,
     },
     marker: {
       topDesk: 28,

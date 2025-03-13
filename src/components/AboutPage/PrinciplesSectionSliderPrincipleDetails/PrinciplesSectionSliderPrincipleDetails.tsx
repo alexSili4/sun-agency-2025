@@ -9,9 +9,10 @@ import {
 const PrinciplesSectionSliderPrincipleDetails: FC<IProps> = ({
   text,
   title,
+  isActiveSlide,
 }) => {
   return (
-    <Container>
+    <Container isActiveSlide={isActiveSlide}>
       <Title>{title}</Title>
       <Text>{text}</Text>
     </Container>

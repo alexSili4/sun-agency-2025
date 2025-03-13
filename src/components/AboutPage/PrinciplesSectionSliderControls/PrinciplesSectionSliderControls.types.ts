@@ -21,6 +21,8 @@ export interface IStyledListItemProps {
   number: number;
   rotate: number;
   radius: number;
+  leftDesk: number;
+  topDesk: number;
 }
 
 export interface IStyledImageProps {
@@ -29,6 +31,8 @@ export interface IStyledImageProps {
 
 export interface IStyledMarkerWrapProps {
   isActiveBtn: boolean;
+  topDesk: number;
+  leftDesk: number;
 }
 
 export interface IStyledMarkerProps {

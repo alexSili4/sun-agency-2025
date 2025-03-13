@@ -8,6 +8,14 @@ export const Container = styled.div`
   position: relative;
   padding-left: ${({ theme }) => theme.padding.container}px;
   padding-right: ${({ theme }) => theme.padding.container}px;
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
+    width: 240px;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
 `;
 
 export const List = styled.ul`
@@ -16,8 +24,14 @@ export const List = styled.ul`
 `;
 
 export const ListItem = styled.li<IStyledListItemProps>`
-  width: ${({ isActiveBtn }) => (isActiveBtn ? '100%' : '41px')};
-  transition: width ${({ theme }) => theme.transitionDurationAndFunc};
+  flex-grow: ${({ isActiveBtn }) => (isActiveBtn ? 1 : 0)};
+  flex-shrink: 0;
+  width: 41px;
+  transition: flex-grow ${({ theme }) => theme.transitionDurationAndFunc};
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
+    width: 21px;
+  }
 `;
 
 export const Button = styled.button`

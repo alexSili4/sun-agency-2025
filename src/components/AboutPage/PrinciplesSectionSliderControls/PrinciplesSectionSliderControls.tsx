@@ -27,34 +27,49 @@ const PrinciplesSectionSliderControls: FC<IProps> = ({
   return (
     <Container ref={containerRef} size={size}>
       <List size={size} rotate={listRotate}>
-        {principles.map(({ img: { img }, title }, index) => {
-          const isActiveBtn = activeIndex === index;
-          const number = index + 1;
-          const listItemRotate = rotate * index;
-          const marker = number.toString().padStart(2, '0');
+        {principles.map(
+          (
+            {
+              img: { img, leftDesk: imgLeftDesk, topDesk: imgTopDesk },
+              marker: { leftDesk: markerLeftDesk, topDesk: markerTopDesk },
+              title,
+            },
+            index
+          ) => {
+            const isActiveBtn = activeIndex === index;
+            const number = index + 1;
+            const listItemRotate = rotate * index;
+            const marker = number.toString().padStart(2, '0');
 
-          const onSliderBtnClick = (e: BtnClickEvent) => {
-            makeBlur(e.currentTarget);
+            const onSliderBtnClick = (e: BtnClickEvent) => {
+              makeBlur(e.currentTarget);
 
-            swiper.slideTo(index);
-          };
+              swiper.slideTo(index);
+            };
 
-          return (
-            <ListItem
-              key={index}
-              number={number}
-              radius={radius}
-              rotate={listItemRotate}
-            >
-              <Button type='button' onClick={onSliderBtnClick}>
-                <Image src={img} alt={title} isActiveBtn={isActiveBtn} />
-                <MarkerWrap isActiveBtn={isActiveBtn}>
-                  <Marker isActiveBtn={isActiveBtn}>{marker}</Marker>
-                </MarkerWrap>
-              </Button>
-            </ListItem>
-          );
-        })}
+            return (
+              <ListItem
+                key={index}
+                number={number}
+                radius={radius}
+                rotate={listItemRotate}
+                leftDesk={imgLeftDesk}
+                topDesk={imgTopDesk}
+              >
+                <Button type='button' onClick={onSliderBtnClick}>
+                  <Image src={img} alt={title} isActiveBtn={isActiveBtn} />
+                  <MarkerWrap
+                    isActiveBtn={isActiveBtn}
+                    topDesk={markerTopDesk}
+                    leftDesk={markerLeftDesk}
+                  >
+                    <Marker isActiveBtn={isActiveBtn}>{marker}</Marker>
+                  </MarkerWrap>
+                </Button>
+              </ListItem>
+            );
+          }
+        )}
       </List>
     </Container>
   );
