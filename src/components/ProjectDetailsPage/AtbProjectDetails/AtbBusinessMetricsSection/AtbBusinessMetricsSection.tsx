@@ -21,7 +21,7 @@ const AtbBusinessMetricsSection: FC<IProps> = ({ businessMetrics, banner }) => {
             <AtbBusinessMetricsList businessMetrics={businessMetrics} />
           </Content>
         </GeneralContainer>
-        <Banner src={banner} />
+        <Banner src={banner} alt='' />
       </Container>
     </Section>
   );

@@ -1,10 +1,23 @@
-import { Employees, Metrics, IAbout, Principles } from '@/types/about.types';
+import {
+  Employees,
+  Metrics,
+  IAbout,
+  Principles,
+  System,
+} from '@/types/about.types';
 import socialResponsibility from '@/images/about/principles/social-responsibility.png';
 import ethics from '@/images/about/principles/ethics.png';
 import realBenefit from '@/images/about/principles/real-benefit.png';
 import partnership from '@/images/about/principles/partnership.png';
 import brandBoost from '@/images/about/principles/brand-boost.png';
 import lifesSource from '@/images/about/principles/lifes-source.png';
+import leaderLine1 from '@/icons/about/system/leader-line-1.svg';
+import leaderLine2 from '@/icons/about/system/leader-line-2.svg';
+import leaderLine3 from '@/icons/about/system/leader-line-3.svg';
+import leaderLine4 from '@/icons/about/system/leader-line-4.svg';
+import leaderLine5 from '@/icons/about/system/leader-line-5.svg';
+import leaderLine6 from '@/icons/about/system/leader-line-6.svg';
+import leaderLine7 from '@/icons/about/system/leader-line-7.svg';
 
 const metrics: Metrics = [
   {
@@ -114,10 +127,230 @@ const principles: Principles = [
   },
 ];
 
+const system: System = [
+  {
+    point: {
+      topMob: 116,
+      leftMob: 220,
+      topDesk: 321,
+      leftDesk: 607,
+      desc: {
+        text: 'Швидкість і оптимізація',
+        paddingTopMob: 50,
+        paddingLeftMob: 50,
+        paddingBottomDesk: 185,
+        paddingRightDesk: 154,
+        bottomDesk: -5,
+        rightDesk: -5,
+        topMob: -5,
+        leftMob: -5,
+        leaderLine: {
+          imgDesk: leaderLine1,
+          // topMob:,
+          // leftMob:,
+          // bottomMob:,
+          topDesk: 45,
+          leftDesk: 194,
+          widthDesk: 139,
+          heightDesk: 170,
+        },
+      },
+    },
+  },
+  {
+    point: {
+      topMob: 161,
+      leftMob: 186,
+      topDesk: 445,
+      leftDesk: 513,
+      desc: {
+        text: 'Дослідження та стратегія',
+        paddingTopMob: 100,
+        paddingLeftMob: 100,
+        paddingBottomDesk: 234,
+        paddingRightDesk: 207,
+        paddingLeftDesk: 24,
+        topMob: -5,
+        leftMob: -5,
+        bottomDesk: -5,
+        rightDesk: -5,
+        leaderLine: {
+          imgDesk: leaderLine2,
+          // topMob:,
+          // leftMob:,
+          // bottomMob:,
+          // rightMob:,
+          topDesk: 45,
+          leftDesk: 210,
+          widthDesk: 194,
+          heightDesk: 232,
+        },
+      },
+    },
+  },
+  {
+    point: {
+      topMob: 157,
+      leftMob: 153,
+      topDesk: 432,
+      leftDesk: 422,
+      desc: {
+        text: 'Розумна інвестиція',
+        paddingTopMob: 100,
+        paddingLeftMob: 100,
+        paddingTopDesk: 5,
+        paddingBottomDesk: 217,
+        paddingRightDesk: 71,
+        paddingLeftDesk: 162,
+        topMob: -5,
+        leftMob: -5,
+        bottomDesk: -6,
+        rightDesk: -59,
+        leaderLine: {
+          imgDesk: leaderLine3,
+          // topMob:,
+          // leftMob:,
+          // bottomMob:,
+          // rightMob:,
+          topDesk: 45,
+          leftDesk: 210,
+          widthDesk: 125,
+          heightDesk: 218,
+        },
+      },
+    },
+  },
+  {
+    point: {
+      topMob: 191,
+      leftMob: 132,
+      topDesk: 527,
+      leftDesk: 364,
+      desc: {
+        text: 'Супровід і технічна підтримка',
+        paddingTopMob: 100,
+        paddingLeftMob: 100,
+        paddingTopDesk: 13,
+        paddingRightDesk: 122,
+        topDesk: -38,
+        rightDesk: -63,
+        topMob: -38,
+        leftMob: -63,
+        leaderLine: {
+          imgDesk: leaderLine4,
+          // topMob:,
+          // leftMob:,
+          // bottomMob:,
+          // rightMob:,
+          leftDesk: 238,
+          bottomDesk: 37,
+          widthDesk: 41,
+          heightDesk: 8,
+        },
+      },
+    },
+  },
+  {
+    point: {
+      topMob: 127,
+      leftMob: 335,
+      topDesk: 349,
+      leftDesk: 925,
+      desc: {
+        text: 'Фокус на бізнес-цілі',
+        paddingTopMob: 50,
+        paddingBottomMob: 0,
+        paddingRightMob: 50,
+        paddingLeftMob: 0,
+        paddingTopDesk: 0,
+        paddingBottomDesk: 161,
+        paddingRightDesk: 0,
+        paddingLeftDesk: 106,
+        leftDesk: -5,
+        bottomDesk: -5,
+        rightMob: -5,
+        topMob: -5,
+        leaderLine: {
+          imgDesk: leaderLine5,
+          // topMob:,
+          // leftMob:,
+          // bottomMob:,
+          // rightMob:,
+          topDesk: 39,
+          rightDesk: 179,
+          widthDesk: 84,
+          heightDesk: 134,
+        },
+      },
+    },
+  },
+  {
+    point: {
+      topMob: 184,
+      leftMob: 372,
+      topDesk: 507,
+      leftDesk: 1027,
+      desc: {
+        text: 'Розвиток із перших кроків',
+        paddingTopMob: 50,
+        paddingRightMob: 50,
+        paddingBottomDesk: 193,
+        paddingLeftDesk: 132,
+        leftDesk: -5,
+        bottomDesk: -5,
+        topMob: -5,
+        rightMob: -5,
+        leaderLine: {
+          imgDesk: leaderLine6,
+          // topMob:,
+          // leftMob:,
+          // bottomMob:,
+          // rightMob:,
+          topDesk: 21,
+          rightDesk: 194,
+          widthDesk: 130,
+          heightDesk: 196,
+        },
+      },
+    },
+  },
+  {
+    point: {
+      topMob: 217,
+      leftMob: 393,
+      topDesk: 598,
+      leftDesk: 1084,
+      desc: {
+        text: 'Прозорість роботи',
+        paddingTopMob: 50,
+        paddingRightMob: 50,
+        paddingTopDesk: 27,
+        paddingLeftDesk: 78,
+        topDesk: -5,
+        leftDesk: -5,
+        topMob: -5,
+        rightMob: -5,
+        leaderLine: {
+          imgDesk: leaderLine7,
+          // topMob:,
+          // leftMob:,
+          // bottomMob:,
+          // rightMob:,
+          bottomDesk: 71,
+          rightDesk: 169,
+          widthDesk: 44,
+          heightDesk: 18,
+        },
+      },
+    },
+  },
+];
+
 const about: IAbout = {
   metrics,
   employees,
   principles,
+  system,
 };
 
 export default about;

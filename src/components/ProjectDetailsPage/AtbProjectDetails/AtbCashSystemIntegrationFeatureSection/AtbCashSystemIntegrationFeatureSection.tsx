@@ -27,7 +27,7 @@ const AtbCashSystemIntegrationFeatureSection: FC<IProps> = ({
               <AtbText text={desc} />
             </AtbContentContainer>
           </Content>
-          <Image src={banner} />
+          <Image src={banner} alt='' />
         </Container>
       </GeneralContainer>
     </Section>

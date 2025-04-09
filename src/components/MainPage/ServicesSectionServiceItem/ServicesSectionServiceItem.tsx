@@ -30,9 +30,9 @@ const ServicesSectionServiceItem: FC<IProps> = ({
         </TitleWrap>
         <DetailsWrap>
           <ServicesSectionTagsList tags={tags} />
-          <Image src={icon} />
+          <Image src={icon} alt='' />
         </DetailsWrap>
-        <GlowImg src={serviceGlow} />
+        <GlowImg src={serviceGlow} alt='' />
       </Container>
     </Link>
   );

@@ -41,7 +41,7 @@ const AnimatedProjectsSectionBg: FC<IProps> = ({
       animate={animate}
     >
       <Element variants={elementVariants}>
-        <Image src={sectionBg} />
+        <Image src={sectionBg} alt='' />
       </Element>
     </Container>
   );

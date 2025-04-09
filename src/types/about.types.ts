@@ -13,19 +13,13 @@ export interface IMetric {
 
 export type Metrics = IMetric[];
 
-export interface IAbout {
-  metrics: Metrics;
-  employees: Employees;
-  principles: Principles;
-}
-
-export interface IImage {
+export interface IPrincipleImage {
   img: string;
   topDesk: number;
   leftDesk: number;
 }
 
-export interface IMarker {
+export interface IPrincipleMarker {
   topDesk: number;
   leftDesk: number;
 }
@@ -33,8 +27,67 @@ export interface IMarker {
 export interface IPrinciple {
   title: string;
   text: string;
-  img: IImage;
-  marker: IMarker;
+  img: IPrincipleImage;
+  marker: IPrincipleMarker;
 }
 
 export type Principles = IPrinciple[];
+
+export interface ISystemPointLeaderLine {
+  imgDesk: string;
+  imgMob: string;
+  topMob?: number;
+  leftMob?: number;
+  bottomMob?: number;
+  rightMob?: number;
+  topDesk?: number;
+  leftDesk?: number;
+  bottomDesk?: number;
+  rightDesk?: number;
+  widthDesk: number;
+  heightDesk: number;
+  widthMob: number;
+  heightMob: number;
+}
+
+export interface ISystemPointDesc {
+  text: string;
+  paddingTopMob?: number;
+  paddingBottomMob?: number;
+  paddingRightMob?: number;
+  paddingLeftMob?: number;
+  paddingTopDesk?: number;
+  paddingBottomDesk?: number;
+  paddingRightDesk?: number;
+  paddingLeftDesk?: number;
+  topMob?: number;
+  bottomMob?: number;
+  rightMob?: number;
+  leftMob?: number;
+  topDesk?: number;
+  bottomDesk?: number;
+  rightDesk?: number;
+  leftDesk?: number;
+  leaderLine: ISystemPointLeaderLine;
+}
+
+export interface ISystemPoint {
+  topMob: number;
+  leftMob: number;
+  topDesk: number;
+  leftDesk: number;
+  desc: ISystemPointDesc;
+}
+
+export interface ISystemItem {
+  point: ISystemPoint;
+}
+
+export type System = ISystemItem[];
+
+export interface IAbout {
+  metrics: Metrics;
+  employees: Employees;
+  principles: Principles;
+  system: System;
+}

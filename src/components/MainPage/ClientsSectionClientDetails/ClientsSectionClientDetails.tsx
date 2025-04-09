@@ -23,7 +23,7 @@ const ClientsSectionClientDetails: FC<IProps> = ({
   return (
     <Container>
       <InfoWrap>
-        <Logo src={logo} />
+        <Logo src={logo} alt='' />
         <TextWrap>
           <WebsiteAddress>{websiteAddress}</WebsiteAddress>
           <Text>{text}</Text>

@@ -13,7 +13,7 @@ const AtbHeroSectionBanner: FC<IProps> = ({
       borderRadiusDesk={borderRadiusDesk}
       borderRadiusMobile={borderRadiusMobile}
     >
-      <Image src={banner} />
+      <Image src={banner} alt='' />
     </Container>
   );
 };

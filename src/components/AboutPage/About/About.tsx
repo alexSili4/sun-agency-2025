@@ -6,13 +6,13 @@ import PrinciplesSection from '@AboutPageComponents/PrinciplesSection';
 import SystemSection from '@AboutPageComponents/SystemSection';
 import { IProps } from './About.types';
 
-const About: FC<IProps> = ({ employees, metrics, principles }) => {
+const About: FC<IProps> = ({ employees, metrics, principles, system }) => {
   return (
     <>
       <HeroSection metrics={metrics} />
       <OurProcessSection />
       <PrinciplesSection principles={principles} />
-      <SystemSection />
+      <SystemSection system={system} />
       <EmployeesSection employees={employees} />
     </>
   );

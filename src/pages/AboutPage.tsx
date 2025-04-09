@@ -3,10 +3,15 @@ import About from '@AboutPageComponents/About';
 import { about } from '@/constants';
 
 const AboutPage: FC = () => {
-  const { employees, metrics, principles } = about;
+  const { employees, metrics, principles, system } = about;
 
   return (
-    <About employees={employees} metrics={metrics} principles={principles} />
+    <About
+      employees={employees}
+      metrics={metrics}
+      principles={principles}
+      system={system}
+    />
   );
 };
 

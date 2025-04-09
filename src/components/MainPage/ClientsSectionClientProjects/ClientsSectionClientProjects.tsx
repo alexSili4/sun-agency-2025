@@ -13,7 +13,7 @@ const ClientsSectionClientProjects: FC<IProps> = ({ projects }) => {
       {projects.map((image, index) => (
         <ListItem key={index}>
           <Container>
-            <Image src={image} />
+            <Image src={image} alt='' />
           </Container>
         </ListItem>
       ))}

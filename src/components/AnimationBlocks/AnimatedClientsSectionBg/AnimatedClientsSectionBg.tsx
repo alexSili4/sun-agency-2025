@@ -29,7 +29,7 @@ const AnimatedClientsSectionBg: FC<IProps> = ({ shouldShow }) => {
 
   return (
     <Container variants={containerVariants} initial='hidden' animate={animate}>
-      <Image src={sectionBg} variants={itemVariants} />
+      <Image src={sectionBg} alt='' variants={itemVariants} />
     </Container>
   );
 };

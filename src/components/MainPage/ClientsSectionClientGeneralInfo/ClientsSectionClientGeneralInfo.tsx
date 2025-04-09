@@ -13,13 +13,13 @@ const ClientsSectionClientGeneralInfo: FC<IProps> = ({ projects, years }) => {
     <List>
       <ListItem>
         <Container>
-          <Number src={projects} />
+          <Number src={projects} alt='' />
           <Title>успішних проектів</Title>
         </Container>
       </ListItem>
       <ListItem>
         <Container>
-          <Number src={years} />
+          <Number src={years} alt='' />
           <Title>років співпраці</Title>
         </Container>
       </ListItem>

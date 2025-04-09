@@ -33,7 +33,7 @@ const ClientsSectionMarqueeItem: FC<IProps> = ({
   return (
     <>
       <ShowClientDetailsBtn onClick={onShowClientDetailsBtnClick} type='button'>
-        <ClientLogo src={primaryLogo} />
+        <ClientLogo src={primaryLogo} alt='' />
       </ShowClientDetailsBtn>
       <ClientsSectionClientDetailsModalWin
         showModalWin={showClientDetails}

@@ -19,13 +19,13 @@ const ReviewsSectionReview: FC<IProps> = ({ avatar, jobTitle, name, text }) => {
       <Text>{text}</Text>
       <ClientInfoWrap>
         <ClientInfo>
-          <Avatar src={avatar} />
+          <Avatar src={avatar} alt='' />
           <TextWrap>
             <Name>{name}</Name>
             <JobTitle>{jobTitle}</JobTitle>
           </TextWrap>
         </ClientInfo>
-        <DecorativeIcon src={decorativeIcon} />
+        <DecorativeIcon src={decorativeIcon} alt='' />
       </ClientInfoWrap>
     </Container>
   );

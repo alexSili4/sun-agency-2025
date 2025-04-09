@@ -36,7 +36,7 @@ const AtbPaymentSystemIntegrationFeatureSection: FC<IProps> = ({
             </Content>
           </AtbContentContainer>
         </GeneralContainer>
-        <Image src={banner} />
+        <Image src={banner} alt='' />
       </Container>
     </Section>
   );

@@ -24,7 +24,7 @@ const AtbDeliverySystemIntegrationFeatureSection: FC<IProps> = ({
           <AtbContentContainer title={title}>
             <AtbText text={desc} />
           </AtbContentContainer>
-          <Image src={banner} />
+          <Image src={banner} alt='' />
         </Container>
       </GeneralContainer>
     </Section>

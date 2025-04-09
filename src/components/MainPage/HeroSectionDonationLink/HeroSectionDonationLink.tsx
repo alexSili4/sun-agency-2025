@@ -46,10 +46,10 @@ const HeroSectionDonationLink: FC = () => {
         stopOnUnmount
         muted
       />
-      <ShadowImg src={donationLinkShadow} />
+      <ShadowImg src={donationLinkShadow} alt='' />
       <LinkTitle>Допомога рідному 206 батальйону ТрО</LinkTitle>
       <LinkIconContainer>
-        <LinkDecorativeImg src={donationLink} />
+        <LinkDecorativeImg src={donationLink} alt='' />
         <LinkIconWrap>
           <FaChevronRight size={theme.iconSizes.donationLink} />
         </LinkIconWrap>

@@ -49,6 +49,8 @@ export type StringOrNull = string | null;
 
 export type NumberOrNull = number | null;
 
+export type NumberOrUndefined = number | undefined;
+
 export type MarqueeDirection = 'right' | 'left';
 
 export type ISwiper = Swiper;
