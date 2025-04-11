@@ -56,7 +56,6 @@ const SystemSectionSystemSchemaPointDetails: FC<IProps> = ({
       rightMob={descRightMob}
       topMob={descTopMob}
     >
-      <SystemSectionSystemSchemaPointDesc text={text} />
       <SystemSectionSystemSchemaPointLeaderLine
         imgDesk={leaderLineImgDesk}
         imgMob={leaderLineImgMob}
@@ -73,6 +72,7 @@ const SystemSectionSystemSchemaPointDetails: FC<IProps> = ({
         widthDesk={leaderLineWidthDesk}
         heightDesk={leaderLineHeightDesk}
       />
+      <SystemSectionSystemSchemaPointDesc text={text} />
     </Container>
   );
 };

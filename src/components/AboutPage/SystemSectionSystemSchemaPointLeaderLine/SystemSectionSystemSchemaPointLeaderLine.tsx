@@ -20,7 +20,7 @@ const SystemSectionSystemSchemaPointLeaderLine: FC<IProps> = ({
   bottomDesk,
   imgMob,
   widthMob,
-  // heightMob,
+  heightMob,
 }) => {
   return (
     <Container

@@ -11,6 +11,8 @@ export const Container = styled.span<IStyledContainerProps>`
   padding-bottom: ${({ paddingBottomMob }) => paddingBottomMob}px;
   padding-left: ${({ paddingLeftMob }) => paddingLeftMob}px;
   padding-right: ${({ paddingRightMob }) => paddingRightMob}px;
+  pointer-events: none;
+  transition: opacity ${({ theme }) => theme.transitionDurationAndFunc};
 
   @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
     top: ${({ topDesk }) => (topDesk ? `${topDesk}px` : 'auto')};
@@ -21,5 +23,9 @@ export const Container = styled.span<IStyledContainerProps>`
     padding-bottom: ${({ paddingBottomDesk }) => paddingBottomDesk}px;
     padding-left: ${({ paddingLeftDesk }) => paddingLeftDesk}px;
     padding-right: ${({ paddingRightDesk }) => paddingRightDesk}px;
+  }
+
+  button:not(:is(:hover, :focus)) > & {
+    opacity: 0;
   }
 `;

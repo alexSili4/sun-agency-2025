@@ -21,7 +21,7 @@ export const Container = styled.div`
 export const Content = styled.div`
   display: flex;
   flex-direction: column;
-  gap: ${({ theme }) => theme.spacing(25)}px;
+  gap: ${({ theme }) => theme.spacing(12)}px;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
     align-items: center;
