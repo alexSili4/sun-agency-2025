@@ -79,8 +79,23 @@ export interface ISystemPoint {
   desc: ISystemPointDesc;
 }
 
+export interface ISystemImg {
+  img: string;
+  topMob?: number;
+  leftMob?: number;
+  rightMob?: number;
+  bottomMob?: number;
+  topDesk?: number;
+  leftDesk?: number;
+  rightDesk?: number;
+  bottomDesk?: number;
+  sizeMob: number;
+  sizeDesk: number;
+}
+
 export interface ISystemItem {
   point: ISystemPoint;
+  img?: ISystemImg;
 }
 
 export type System = ISystemItem[];

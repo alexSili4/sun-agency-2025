@@ -18,6 +18,12 @@ import leaderLine4 from '@/icons/about/system/leader-line-4.svg';
 import leaderLine5 from '@/icons/about/system/leader-line-5.svg';
 import leaderLine6 from '@/icons/about/system/leader-line-6.svg';
 import leaderLine7 from '@/icons/about/system/leader-line-7.svg';
+import coin1 from '@/images/about/system/coin-1.png';
+import coin2 from '@/images/about/system/coin-2.png';
+import coin3 from '@/images/about/system/coin-3.png';
+import coin4 from '@/images/about/system/coin-4.png';
+import coin5 from '@/images/about/system/coin-5.png';
+import coin6 from '@/images/about/system/coin-6.png';
 
 const metrics: Metrics = [
   {
@@ -158,6 +164,15 @@ const system: System = [
         },
       },
     },
+    img: {
+      img: coin1,
+      topMob: 95,
+      leftMob: 180,
+      topDesk: 263,
+      leftDesk: 495,
+      sizeMob: 33,
+      sizeDesk: 90,
+    },
   },
   {
     point: {
@@ -189,6 +204,15 @@ const system: System = [
           heightMob: 96,
         },
       },
+    },
+    img: {
+      img: coin2,
+      bottomMob: 93,
+      leftMob: 103,
+      bottomDesk: 255,
+      leftDesk: 284,
+      sizeMob: 36,
+      sizeDesk: 100,
     },
   },
   {
@@ -254,6 +278,15 @@ const system: System = [
         },
       },
     },
+    img: {
+      img: coin3,
+      bottomMob: 31,
+      leftMob: 139,
+      bottomDesk: 85,
+      leftDesk: 382,
+      sizeMob: 40,
+      sizeDesk: 110,
+    },
   },
   {
     point: {
@@ -265,10 +298,7 @@ const system: System = [
         text: 'Фокус на бізнес-цілі',
         paddingBottomMob: 50,
         paddingRightMob: 50,
-        paddingLeftMob: 0,
-        paddingTopDesk: 0,
         paddingBottomDesk: 161,
-        paddingRightDesk: 0,
         paddingLeftDesk: 106,
         leftDesk: -5,
         bottomDesk: -5,
@@ -287,6 +317,15 @@ const system: System = [
           heightMob: 74,
         },
       },
+    },
+    img: {
+      img: coin4,
+      topMob: 108,
+      rightMob: 161,
+      topDesk: 299,
+      rightDesk: 444,
+      sizeMob: 35,
+      sizeDesk: 95,
     },
   },
   {
@@ -319,6 +358,15 @@ const system: System = [
         },
       },
     },
+    img: {
+      img: coin5,
+      bottomMob: 56,
+      rightMob: 124,
+      bottomDesk: 155,
+      rightDesk: 342,
+      sizeMob: 36,
+      sizeDesk: 100,
+    },
   },
   {
     point: {
@@ -349,6 +397,15 @@ const system: System = [
           heightMob: 19,
         },
       },
+    },
+    img: {
+      img: coin6,
+      bottomMob: 16,
+      rightMob: 166,
+      bottomDesk: 45,
+      rightDesk: 459,
+      sizeMob: 40,
+      sizeDesk: 110,
     },
   },
 ];

@@ -2,6 +2,7 @@ import { FC } from 'react';
 import { IProps } from './SystemSectionSystemSchema.types';
 import SystemSectionSystemSchemaPoint from '@AboutPageComponents/SystemSectionSystemSchemaPoint';
 import { Container, List, ListItem } from './SystemSectionSystemSchema.styled';
+import SystemSectionSystemSchemaImg from '@AboutPageComponents/SystemSectionSystemSchemaImg';
 
 const SystemSectionSystemSchema: FC<IProps> = ({ system }) => {
   return (
@@ -51,6 +52,7 @@ const SystemSectionSystemSchema: FC<IProps> = ({ system }) => {
                   },
                 },
               },
+              img,
             },
             index
           ) => (
@@ -92,6 +94,21 @@ const SystemSectionSystemSchema: FC<IProps> = ({ system }) => {
                 leaderLineRightMob={leaderLineRightMob}
                 leaderLineTopMob={leaderLineTopMob}
               />
+              {img && (
+                <SystemSectionSystemSchemaImg
+                  bottomDesk={img.bottomDesk}
+                  bottomMob={img.bottomMob}
+                  img={img.img}
+                  leftDesk={img.leftDesk}
+                  leftMob={img.leftMob}
+                  rightDesk={img.rightDesk}
+                  rightMob={img.rightMob}
+                  sizeDesk={img.sizeDesk}
+                  sizeMob={img.sizeMob}
+                  topDesk={img.topDesk}
+                  topMob={img.topMob}
+                />
+              )}
             </ListItem>
           )
         )}

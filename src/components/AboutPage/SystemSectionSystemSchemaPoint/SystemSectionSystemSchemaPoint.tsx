@@ -2,6 +2,7 @@ import { FC } from 'react';
 import { Container, Point } from './SystemSectionSystemSchemaPoint.styled';
 import { IProps } from './SystemSectionSystemSchemaPoint.types';
 import SystemSectionSystemSchemaPointDetails from '@AboutPageComponents/SystemSectionSystemSchemaPointDetails';
+import ActivePoint from '@/icons/about/system/active-point.svg?react';
 
 const SystemSectionSystemSchemaPoint: FC<IProps> = ({
   pointLeftDesk,
@@ -48,6 +49,7 @@ const SystemSectionSystemSchemaPoint: FC<IProps> = ({
       topMob={pointTopMob}
     >
       <Point>
+        <ActivePoint />
         <SystemSectionSystemSchemaPointDetails
           descPaddingBottomDesk={descPaddingBottomDesk}
           descPaddingBottomMob={descPaddingBottomMob}
