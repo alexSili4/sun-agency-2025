@@ -44,6 +44,7 @@ const PrinciplesSectionSlider: FC<IProps> = ({ principles }) => {
           onSwiper={onSwiper}
           onSlideChange={onSwiper}
           speed={800}
+          slidesPerView='auto'
           spaceBetween={30}
           centeredSlides={true}
           autoplay={{

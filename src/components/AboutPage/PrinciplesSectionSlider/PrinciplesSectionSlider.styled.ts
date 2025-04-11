@@ -10,9 +10,7 @@ export const SliderWrap = styled.div`
   position: relative;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
-    width: 516px;
-    margin-left: auto;
-    margin-right: auto;
+    width: 100%;
   }
 `;
 
@@ -28,11 +26,7 @@ export const Background = styled.div`
   transform: translateX(-50%);
 
   @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
-    top: auto;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    transform: translateX(0);
+    width: 516px;
   }
 `;
 
@@ -43,16 +37,18 @@ export const StyledSwiper = styled(Swiper)`
   height: 100%;
   padding-top: ${({ theme }) => theme.spacing(31)}px;
   padding-bottom: ${({ theme }) => theme.spacing(15)}px;
-  overflow: visible;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
     padding-top: ${({ theme }) => theme.spacing(38)}px;
-    padding-bottom: ${({ theme }) => theme.spacing(24)}px;
+    padding-bottom: ${({ theme }) => theme.spacing(30)}px;
+    overflow: visible;
 
-    & .${ClassNames.swiperWrapper} {
+    & .${ClassNames.swiperWrapper}:not(.swiper-slide-active) {
       pointer-events: none !important;
     }
   }
 `;
 
-export const StyledSwiperSlide = styled(SwiperSlide)``;
+export const StyledSwiperSlide = styled(SwiperSlide)`
+  width: 346px !important;
+`;

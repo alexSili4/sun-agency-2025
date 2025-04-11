@@ -5,14 +5,12 @@ export const Container = styled.div<IStyledContainerProps>`
   display: flex;
   flex-direction: column;
   gap: ${({ theme }) => theme.spacing(4)}px;
-  padding-left: ${({ theme }) => theme.padding.container}px;
-  padding-right: ${({ theme }) => theme.padding.container}px;
   opacity: ${({ isActiveSlide }) => (isActiveSlide ? 1 : 0)};
   transition: opacity ${({ theme }) => theme.transitionDurationAndFunc};
 
-  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
-    padding-left: ${({ theme }) => theme.spacing(21)}px;
-    padding-right: ${({ theme }) => theme.spacing(21)}px;
+  @media (max-width: ${({ theme }) => theme.breakpoints.desktop - 1}px) {
+    padding-left: ${({ theme }) => theme.padding.container}px;
+    padding-right: ${({ theme }) => theme.padding.container}px;
   }
 `;
 
