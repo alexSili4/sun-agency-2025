@@ -14,6 +14,9 @@ export const Container = styled.div<IStyledContainerProps>`
 
 export const Point = styled.button`
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 5px;
   aspect-ratio: 1 / 1;
   border: 0.3px solid rgba(255, 255, 255, 0.07);
@@ -30,10 +33,12 @@ export const Point = styled.button`
     top: 50%;
     left: 50%;
     width: 24px;
-    aspect-ratio: 1 / 1;
+    height: 24px;
     transform: translateX(-50%) translateY(-50%);
     transition: opacity ${({ theme }) => theme.transitionDurationAndFunc};
+  }
 
-    button: is;
+  &:not(:is(:hover, :focus)) > svg {
+    opacity: 0;
   }
 `;
