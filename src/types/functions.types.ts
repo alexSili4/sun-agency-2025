@@ -19,3 +19,8 @@ export interface IGetFlexItemWidthProps {
   listLength: number;
   listGap: number;
 }
+
+export interface IGetCurrentOpacity {
+  value: number;
+  index: number;
+}

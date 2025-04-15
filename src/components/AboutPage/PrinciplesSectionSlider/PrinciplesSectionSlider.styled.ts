@@ -37,11 +37,11 @@ export const StyledSwiper = styled(Swiper)`
   height: 100%;
   padding-top: ${({ theme }) => theme.spacing(31)}px;
   padding-bottom: ${({ theme }) => theme.spacing(15)}px;
+  overflow: visible;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
     padding-top: ${({ theme }) => theme.spacing(38)}px;
     padding-bottom: ${({ theme }) => theme.spacing(30)}px;
-    overflow: visible;
 
     & .${ClassNames.swiperWrapper}:not(.swiper-slide-active) {
       pointer-events: none !important;

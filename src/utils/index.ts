@@ -5,3 +5,4 @@ export { default as splitArray } from './splitArray';
 export { default as smoothScroll } from './smoothScroll';
 export { default as getFlexItemWidth } from './getFlexItemWidth';
 export { default as getIsFirstItem } from './getIsFirstItem';
+export { default as getCurrentOpacity } from './getCurrentOpacity';

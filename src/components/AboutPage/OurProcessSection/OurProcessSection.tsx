@@ -1,13 +1,18 @@
 import { FC } from 'react';
-import { Section } from './OurProcessSection.styled';
+import { Section, Container } from './OurProcessSection.styled';
 import GeneralContainer from '@GeneralComponents/GeneralContainer';
 import AboutPageSectionTitle from '@AboutPageComponents/AboutPageSectionTitle';
+import OurProcessSectionSteps from '@AboutPageComponents/OurProcessSectionSteps';
+import { IProps } from './OurProcessSection.types';
 
-const OurProcessSection: FC = () => {
+const OurProcessSection: FC<IProps> = ({ process }) => {
   return (
     <Section>
       <GeneralContainer>
-        <AboutPageSectionTitle title='Наш Процес' />
+        <Container>
+          <AboutPageSectionTitle title='Наш Процес' />
+          <OurProcessSectionSteps process={process} />
+        </Container>
       </GeneralContainer>
     </Section>
   );

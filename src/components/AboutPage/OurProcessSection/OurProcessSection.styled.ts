@@ -10,3 +10,13 @@ export const Section = styled.section`
     padding-bottom: ${({ theme }) => theme.spacing(30)}px;
   }
 `;
+
+export const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: ${({ theme }) => theme.spacing(8)}px;
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
+    gap: ${({ theme }) => theme.spacing(10)}px;
+  }
+`;

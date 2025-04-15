@@ -1,6 +1,8 @@
+import { Variants } from 'framer-motion';
 import {
   ElementOrNull,
   Func,
+  MotionValueNumber,
   OnDivClickFunc,
   RefDivObject,
   RefFunc,
@@ -40,4 +42,14 @@ export interface IUseIsHoverOrFocus {
 export interface IUseLottieContainerInView {
   containerRef: RefDivObject;
   lottieRef: RefLottieObject;
+}
+
+export interface IUseProcessStepsListAnimationProps {
+  containerRef: RefDivObject;
+  processLength: number;
+}
+
+export interface IUseProcessStepsListAnimation {
+  activeIndex: MotionValueNumber;
+  textVariants: Variants;
 }

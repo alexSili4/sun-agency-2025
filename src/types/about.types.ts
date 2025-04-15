@@ -100,9 +100,17 @@ export interface ISystemItem {
 
 export type System = ISystemItem[];
 
+export interface IProcessStep {
+  text: string;
+  img: string;
+}
+
+export type Process = IProcessStep[];
+
 export interface IAbout {
   metrics: Metrics;
   employees: Employees;
   principles: Principles;
   system: System;
+  process: Process;
 }

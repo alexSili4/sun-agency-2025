@@ -4,6 +4,7 @@ import {
   IAbout,
   Principles,
   System,
+  Process,
 } from '@/types/about.types';
 import socialResponsibility from '@/images/about/principles/social-responsibility.png';
 import ethics from '@/images/about/principles/ethics.png';
@@ -24,6 +25,11 @@ import coin3 from '@/images/about/system/coin-3.png';
 import coin4 from '@/images/about/system/coin-4.png';
 import coin5 from '@/images/about/system/coin-5.png';
 import coin6 from '@/images/about/system/coin-6.png';
+import step1 from '@/images/about/process/step-1.png';
+import step2 from '@/images/about/process/step-2.png';
+import step3 from '@/images/about/process/step-3.png';
+import step4 from '@/images/about/process/step-4.png';
+import step5 from '@/images/about/process/step-5.png';
 
 const metrics: Metrics = [
   {
@@ -50,6 +56,29 @@ const employees: Employees = [
   { name: 'Катерина Луценко', jobTitle: 'Designer', avatar: '' },
   { name: 'Тетяна Шумакова', jobTitle: 'Front-end Developer', avatar: '' },
   { name: 'Front-end Developer', jobTitle: 'Front-end Developer', avatar: '' },
+];
+
+const process: Process = [
+  {
+    text: 'Вивчаємо задачу клієнта, пропонуємо рішення, формуємо вартість та підписуємо договір з передоплатою',
+    img: step1,
+  },
+  {
+    text: 'Розробляємо технічне завдання, концепцію інтерфейсу та загальну дизайн-концепцію проєкту.',
+    img: step2,
+  },
+  {
+    text: 'Створюємо дизайн всіх унікальних сторінок та інтерактивний front-end-прототип.',
+    img: step3,
+  },
+  {
+    text: 'Інтегруємо прототип у систему управління сайтом, програмуємо функції та налаштовуємо систему.',
+    img: step4,
+  },
+  {
+    text: 'Наповнюємо сайт контентом, вичитуємо тексти, тестуємо систему та усуваємо всі недоліки. Запускаємо проєкт.',
+    img: step5,
+  },
 ];
 
 const principles: Principles = [
@@ -415,6 +444,7 @@ const about: IAbout = {
   employees,
   principles,
   system,
+  process,
 };
 
 export default about;

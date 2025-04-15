@@ -45,6 +45,8 @@ export type AnyElements = any[];
 
 export type MotionValueNumber = MotionValue<number>;
 
+export type MotionValueBoolean = MotionValue<boolean>;
+
 export type StringOrNull = string | null;
 
 export type NumberOrNull = number | null;
