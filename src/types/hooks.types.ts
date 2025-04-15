@@ -2,7 +2,6 @@ import { Variants } from 'framer-motion';
 import {
   ElementOrNull,
   Func,
-  MotionValueNumber,
   OnDivClickFunc,
   RefDivObject,
   RefFunc,
@@ -50,6 +49,6 @@ export interface IUseProcessStepsListAnimationProps {
 }
 
 export interface IUseProcessStepsListAnimation {
-  activeIndex: MotionValueNumber;
+  currentStep: number;
   textVariants: Variants;
 }

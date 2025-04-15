@@ -24,7 +24,7 @@ export const StyledLinkTitle = styled.span`
   line-height: 1.4;
   letter-spacing: 0%;
   text-align: left;
-  transition: color ${({ theme }) => theme.transitionDurationAndFunc};
+  transition: color ${({ theme }) => theme.transitionDurationAndFunc.all};
 
   div:has(a:is(:hover, :focus)) > ul > li > a:not(:is(:hover, :focus)) > & {
     color: ${({ theme }) => theme.colors.inactiveLink};

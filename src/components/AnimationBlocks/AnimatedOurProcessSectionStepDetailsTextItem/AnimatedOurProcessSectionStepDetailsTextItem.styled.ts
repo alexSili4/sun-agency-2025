@@ -2,6 +2,8 @@ import styled from '@emotion/styled';
 import { motion } from 'framer-motion';
 
 export const Container = styled(motion.div)`
+  flex-shrink: 0;
+  width: 23.5vw;
   overflow: hidden;
 `;
 

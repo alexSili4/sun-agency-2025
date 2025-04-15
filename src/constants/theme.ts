@@ -42,7 +42,7 @@ interface ITheme {
     header: number;
     principlesSliderControls: number;
   };
-  transitionDurationAndFunc: string;
+  transitionDurationAndFunc: { all: string; process: string };
   spacing: (value?: number) => number;
 }
 
@@ -90,7 +90,10 @@ const theme: ITheme = {
     closeClientDetailsBtn: 14,
     menuBtn: 17,
   },
-  transitionDurationAndFunc: '400ms cubic-bezier(0.4, 0, 0.2, 1)',
+  transitionDurationAndFunc: {
+    all: '400ms cubic-bezier(0.4, 0, 0.2, 1)',
+    process: '600ms cubic-bezier(0.4, 0, 0.2, 1)',
+  },
   spacing: (value = 1) => value * 4,
 };
 

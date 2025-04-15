@@ -42,7 +42,7 @@ export const Title = styled.span`
   font-size: 28px;
   font-weight: 600;
   line-height: 1.4;
-  transition: color ${({ theme }) => theme.transitionDurationAndFunc};
+  transition: color ${({ theme }) => theme.transitionDurationAndFunc.all};
 
   div:has(a:is(:hover, :focus))
     > div:not(:has(a:is(:hover, :focus)))
@@ -63,7 +63,7 @@ export const IconWrap = styled.span<IStyledIconWrapProps>`
   width: 28px;
   aspect-ratio: 1 / 1;
   transform: rotate(${({ isShowList }) => (isShowList ? 0 : 180)}deg);
-  transition: transform ${({ theme }) => theme.transitionDurationAndFunc};
+  transition: transform ${({ theme }) => theme.transitionDurationAndFunc.all};
 
   button:is(:hover, :focus) > & {
     transform: rotate(${({ isShowList }) => (isShowList ? 180 : 0)}deg);
@@ -82,7 +82,7 @@ export const LinksList = styled.ul<IStyledLinksListProps>`
   max-height: ${({ isShowList, scrollHeight }) =>
     isShowList ? scrollHeight : 0}px;
   overflow-y: hidden;
-  transition: max-height ${({ theme }) => theme.transitionDurationAndFunc};
+  transition: max-height ${({ theme }) => theme.transitionDurationAndFunc.all};
 `;
 
 export const LinksListItem = styled.li``;
@@ -97,7 +97,7 @@ export const StyledLink = styled(Link)`
   font-weight: 400;
   line-height: 1.75;
   letter-spacing: -0.14px;
-  transition: color ${({ theme }) => theme.transitionDurationAndFunc};
+  transition: color ${({ theme }) => theme.transitionDurationAndFunc.all};
 
   div:has(a:is(:hover, :focus)) > div > ul > li > &:not(:is(:hover, :focus)) {
     color: ${({ theme }) => theme.colors.inactiveLink};

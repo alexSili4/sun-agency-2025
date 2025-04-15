@@ -70,9 +70,9 @@ export const GlowImg = styled.img`
   left: 0px;
   width: 100%;
   height: 18px;
-  transition: filter ${({ theme }) => theme.transitionDurationAndFunc},
-    opacity ${({ theme }) => theme.transitionDurationAndFunc},
-    transform ${({ theme }) => theme.transitionDurationAndFunc};
+  transition: filter ${({ theme }) => theme.transitionDurationAndFunc.all},
+    opacity ${({ theme }) => theme.transitionDurationAndFunc.all},
+    transform ${({ theme }) => theme.transitionDurationAndFunc.all};
 
   a:not(:is(:hover, :focus)) > div > & {
     filter: grayscale(100%);

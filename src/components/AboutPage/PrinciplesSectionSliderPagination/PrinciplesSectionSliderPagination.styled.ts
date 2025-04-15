@@ -27,7 +27,7 @@ export const ListItem = styled.li<IStyledListItemProps>`
   flex-grow: ${({ isActiveBtn }) => (isActiveBtn ? 1 : 0)};
   flex-shrink: 0;
   width: 41px;
-  transition: flex-grow ${({ theme }) => theme.transitionDurationAndFunc};
+  transition: flex-grow ${({ theme }) => theme.transitionDurationAndFunc.all};
 
   @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
     width: 21px;

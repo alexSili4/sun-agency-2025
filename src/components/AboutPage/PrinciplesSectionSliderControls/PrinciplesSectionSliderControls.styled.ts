@@ -30,7 +30,7 @@ export const List = styled.ul<IStyledListProps>`
   aspect-ratio: 1 / 1;
   transform: translateX(-50%) translateY(-50%)
     rotate(${({ rotate }) => -rotate}deg);
-  transition: transform ${({ theme }) => theme.transitionDurationAndFunc};
+  transition: transform ${({ theme }) => theme.transitionDurationAndFunc.all};
 
   @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
     transform: translateX(-50%) translateY(-50%);
@@ -44,7 +44,7 @@ export const ListItem = styled.li<IStyledListItemProps>`
   transform: translateX(-50%) translateY(-50%)
     rotate(${({ rotate }) => rotate}deg)
     translateY(${({ radius }) => -radius}px);
-  transition: transform ${({ theme }) => theme.transitionDurationAndFunc};
+  transition: transform ${({ theme }) => theme.transitionDurationAndFunc.all};
 
   @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
     top: ${({ topDesk }) => topDesk}px;
@@ -69,7 +69,7 @@ export const Image = styled.img<IStyledImageProps>`
   max-width: 110px;
   aspect-ratio: 1 / 1;
   transform: scale(${({ isActiveBtn }) => (isActiveBtn ? 1.37 : 1)});
-  transition: transform ${({ theme }) => theme.transitionDurationAndFunc};
+  transition: transform ${({ theme }) => theme.transitionDurationAndFunc.all};
 
   @media (max-width: ${({ theme }) => theme.breakpoints.desktop - 1}px) {
     button:is(:hover, :focus) > & {
@@ -100,8 +100,8 @@ export const MarkerWrap = styled.span<IStyledMarkerWrapProps>`
   transform: translateX(${({ isActiveBtn }) => (isActiveBtn ? 12 : 0)}px)
     translateY(${({ isActiveBtn }) => (isActiveBtn ? -18 : 0)}px)
     scale(${({ isActiveBtn }) => (isActiveBtn ? 2 : 1)});
-  transition: transform ${({ theme }) => theme.transitionDurationAndFunc},
-    border-color ${({ theme }) => theme.transitionDurationAndFunc};
+  transition: transform ${({ theme }) => theme.transitionDurationAndFunc.all},
+    border-color ${({ theme }) => theme.transitionDurationAndFunc.all};
 
   @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
     top: ${({ topDesk }) => topDesk}px;
@@ -126,7 +126,7 @@ export const Marker = styled.span<IStyledMarkerProps>`
   font-family: ${({ theme }) => theme.fontFamily.involve};
   font-size: 5.7px;
   font-weight: 400;
-  transition: color ${({ theme }) => theme.transitionDurationAndFunc};
+  transition: color ${({ theme }) => theme.transitionDurationAndFunc.all};
 
   @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
     font-size: 16px;

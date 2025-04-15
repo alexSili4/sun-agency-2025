@@ -14,7 +14,7 @@ export const StyledLink = styled(Link)<IStyledProps>`
   margin: ${({ isCenter }) => isCenter && '0 auto'};
   pointer-events: ${({ isHidden }) => (isHidden ? 'none' : 'all')};
   opacity: ${({ isHidden }) => (isHidden ? 0 : 1)};
-  transition: opacity ${({ theme }) => theme.transitionDurationAndFunc};
+  transition: opacity ${({ theme }) => theme.transitionDurationAndFunc.all};
 `;
 
 export const LinkIcon = styled.span`

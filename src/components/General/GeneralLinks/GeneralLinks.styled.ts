@@ -33,7 +33,7 @@ export const PrivacyPolicyLink = styled.a<IStyledPrivacyPolicyLinkProps>`
   font-weight: 400;
   line-height: 2;
   letter-spacing: -0.14px;
-  transition: color ${({ theme }) => theme.transitionDurationAndFunc};
+  transition: color ${({ theme }) => theme.transitionDurationAndFunc.all};
 
   div:has(a:is(:hover, :focus)) > &:not(:is(:hover, :focus)) {
     color: ${({ theme }) => theme.colors.inactiveLink};

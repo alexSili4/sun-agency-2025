@@ -1,11 +1,10 @@
-import { MotionValueNumber } from '@/types/types';
 import { Variants } from 'framer-motion';
 
 export interface IProps {
   img: string;
   text: string;
   isPositionAbsolute: boolean;
-  activeIndex: MotionValueNumber;
+  isCurrentStep: boolean;
   index: number;
   textVariants: Variants;
 }

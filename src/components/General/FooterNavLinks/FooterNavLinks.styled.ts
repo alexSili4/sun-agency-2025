@@ -18,7 +18,7 @@ export const StyledLink = styled(Link)`
   font-size: 14px;
   font-weight: 400;
   line-height: 1.7;
-  transition: color ${({ theme }) => theme.transitionDurationAndFunc};
+  transition: color ${({ theme }) => theme.transitionDurationAndFunc.all};
 
   li:first-of-type > & {
     padding-left: 0;

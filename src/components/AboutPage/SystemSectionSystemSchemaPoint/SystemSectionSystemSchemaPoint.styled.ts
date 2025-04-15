@@ -35,7 +35,7 @@ export const Point = styled.button`
     width: 24px;
     height: 24px;
     transform: translateX(-50%) translateY(-50%);
-    transition: opacity ${({ theme }) => theme.transitionDurationAndFunc};
+    transition: opacity ${({ theme }) => theme.transitionDurationAndFunc.all};
   }
 
   &:not(:is(:hover, :focus)) > svg {

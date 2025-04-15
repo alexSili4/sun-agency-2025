@@ -6,7 +6,7 @@ export const Container = styled.div<IStyledContainerProps>`
   flex-direction: column;
   gap: ${({ theme }) => theme.spacing(4)}px;
   opacity: ${({ isActiveSlide }) => (isActiveSlide ? 1 : 0)};
-  transition: opacity ${({ theme }) => theme.transitionDurationAndFunc};
+  transition: opacity ${({ theme }) => theme.transitionDurationAndFunc.all};
 
   @media (max-width: ${({ theme }) => theme.breakpoints.desktop - 1}px) {
     padding-left: ${({ theme }) => theme.padding.container}px;

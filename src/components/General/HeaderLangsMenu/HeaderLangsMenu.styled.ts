@@ -7,7 +7,7 @@ import {
 export const Container = styled.div<IStyledContainerProps>`
   display: ${({ isFullMenu }) => isFullMenu && 'flex'};
   opacity: ${({ isHidden }) => (isHidden ? 0 : 1)};
-  transition: opacity ${({ theme }) => theme.transitionDurationAndFunc};
+  transition: opacity ${({ theme }) => theme.transitionDurationAndFunc.all};
 
   @media (max-width: ${({ theme }) => theme.breakpoints.desktop - 1}px) {
     display: ${({ isHiddenOnMobile }) => isHiddenOnMobile && 'none'};
@@ -27,7 +27,7 @@ export const LangsRadioBtnWrap = styled.div<IStyledLangsRadioBtnWrapProps>`
   left: 0;
   display: ${({ isFullMenu }) => isFullMenu && 'flex'};
   transform: ${({ isFullMenu }) => !isFullMenu && 'translateX(-100%)'};
-  transition: transform ${({ theme }) => theme.transitionDurationAndFunc};
+  transition: transform ${({ theme }) => theme.transitionDurationAndFunc.all};
 
   div:not(:has(input:is(:hover, :focus))) > & {
     transform: ${({ isFullMenu }) => !isFullMenu && 'translateX(0px)'};

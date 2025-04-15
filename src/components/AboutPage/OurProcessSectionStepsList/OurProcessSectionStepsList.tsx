@@ -5,7 +5,7 @@ import { IProps } from './OurProcessSectionStepsList.types';
 
 const OurProcessSectionStepsList: FC<IProps> = ({
   process,
-  activeIndex,
+  currentStep,
   textVariants,
 }) => {
   return (
@@ -13,6 +13,7 @@ const OurProcessSectionStepsList: FC<IProps> = ({
       <List>
         {process.map(({ img, text }, index) => {
           const isHiddenElement = index !== 0;
+          const isCurrentStep = currentStep === index;
 
           return (
             <ListItem key={index} isHiddenElement={isHiddenElement}>
@@ -21,7 +22,7 @@ const OurProcessSectionStepsList: FC<IProps> = ({
                 text={text}
                 isPositionAbsolute={isHiddenElement}
                 index={index}
-                activeIndex={activeIndex}
+                isCurrentStep={isCurrentStep}
                 textVariants={textVariants}
               />
             </ListItem>

@@ -19,7 +19,7 @@ export const StyledLink = styled.a<IStyledLinkProps>`
   align-items: center;
   gap: ${({ theme }) => theme.spacing(2)}px;
   color: ${({ theme }) => theme.colors.white};
-  transition: color ${({ theme }) => theme.transitionDurationAndFunc};
+  transition: color ${({ theme }) => theme.transitionDurationAndFunc.all};
   padding-top: ${({ mobileLinkPadding }) => mobileLinkPadding}px;
   padding-bottom: ${({ mobileLinkPadding }) => mobileLinkPadding}px;
 

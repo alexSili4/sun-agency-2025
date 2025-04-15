@@ -4,6 +4,7 @@ import {
 } from '@/types/hooks.types';
 import { Transition, useScroll, useTransform, Variants } from 'framer-motion';
 import { useEffect, useRef, useState } from 'react';
+import useProcessStep from './useProcessStep';
 
 const useProcessStepsListAnimation = ({
   containerRef,
@@ -24,6 +25,7 @@ const useProcessStepsListAnimation = ({
   );
   const defaultIndex = activeIndex.get();
   const prevIndex = useRef<number>(defaultIndex);
+  const currentStep = useProcessStep(activeIndex);
 
   const yFrom = isPrevElement ? '-100%' : '100%';
   const yTo = isPrevElement ? '100%' : '-100%';
@@ -62,7 +64,7 @@ const useProcessStepsListAnimation = ({
     return () => unsubscribe();
   }, []);
 
-  return { textVariants, activeIndex };
+  return { textVariants, currentStep };
 };
 
 export default useProcessStepsListAnimation;

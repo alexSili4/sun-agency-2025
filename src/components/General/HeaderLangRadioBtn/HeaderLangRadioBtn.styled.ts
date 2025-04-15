@@ -10,8 +10,8 @@ export const Container = styled.label<IStyledContainerProps>`
   padding-right: ${({ theme, isLastRadioBtn }) =>
     !isLastRadioBtn && `${theme.spacing(4)}px`};
   cursor: pointer;
-  transition: opacity ${({ theme }) => theme.transitionDurationAndFunc},
-    transform ${({ theme }) => theme.transitionDurationAndFunc};
+  transition: opacity ${({ theme }) => theme.transitionDurationAndFunc.all},
+    transform ${({ theme }) => theme.transitionDurationAndFunc.all};
 
   div:not(:has(input:is(:hover, :focus))) > div > & {
     transform: ${({ isFullMenu }) => !isFullMenu && 'translateX(0px)'};
@@ -41,7 +41,7 @@ export const TitleWrap = styled.span<IStyledTitleWrapProps>`
   border-radius: 50%;
   border: 1px solid;
   border-color: transparent;
-  transition: border-color ${({ theme }) => theme.transitionDurationAndFunc};
+  transition: border-color ${({ theme }) => theme.transitionDurationAndFunc.all};
 
   div:has(input:is(:hover, :focus)) label:has(input:checked) > & {
     border-color: rgba(255, 255, 255, 0.12);
@@ -64,7 +64,7 @@ export const Title = styled.span<IStyledTitleProps>`
   font-weight: 400;
   line-height: 1.07;
   text-transform: uppercase;
-  transition: text-shadow ${({ theme }) => theme.transitionDurationAndFunc};
+  transition: text-shadow ${({ theme }) => theme.transitionDurationAndFunc.all};
 
   *:has(input:is(:hover, :focus, :checked)) > span > & {
     text-shadow: 0px 1px 5px #fff9d7;

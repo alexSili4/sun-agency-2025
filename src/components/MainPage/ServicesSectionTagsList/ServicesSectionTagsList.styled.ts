@@ -4,8 +4,8 @@ export const List = styled.ul`
   display: flex;
   align-items: center;
   gap: ${({ theme }) => theme.spacing(5)}px;
-  transition: transform ${({ theme }) => theme.transitionDurationAndFunc},
-    opacity ${({ theme }) => theme.transitionDurationAndFunc};
+  transition: transform ${({ theme }) => theme.transitionDurationAndFunc.all},
+    opacity ${({ theme }) => theme.transitionDurationAndFunc.all};
 
   a:not(:is(:hover, :focus)) > div > div > & {
     transform: translateX(100px);

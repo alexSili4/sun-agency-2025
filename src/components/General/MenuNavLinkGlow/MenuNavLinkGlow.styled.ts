@@ -8,8 +8,8 @@ export const Image = styled.img`
   opacity: 0.2;
   transform: translateY(50%);
   pointer-events: none;
-  transition: filter ${({ theme }) => theme.transitionDurationAndFunc},
-    opacity ${({ theme }) => theme.transitionDurationAndFunc};
+  transition: filter ${({ theme }) => theme.transitionDurationAndFunc.all},
+    opacity ${({ theme }) => theme.transitionDurationAndFunc.all};
 
   div:has(a:is(:hover, :focus)) > & {
     filter: grayscale(0%);

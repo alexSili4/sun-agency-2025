@@ -7,7 +7,7 @@ import { useProcessStepsListAnimation } from '@/hooks';
 const OurProcessSectionSteps: FC<IProps> = ({ process }) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const processLength = process.length;
-  const { textVariants, activeIndex } = useProcessStepsListAnimation({
+  const { textVariants, currentStep } = useProcessStepsListAnimation({
     containerRef,
     processLength,
   });
@@ -16,7 +16,7 @@ const OurProcessSectionSteps: FC<IProps> = ({ process }) => {
     <Container ref={containerRef}>
       <OurProcessSectionStepsList
         process={process}
-        activeIndex={activeIndex}
+        currentStep={currentStep}
         textVariants={textVariants}
       />
     </Container>

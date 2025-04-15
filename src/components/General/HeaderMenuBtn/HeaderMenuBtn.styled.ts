@@ -13,8 +13,8 @@ export const Button = styled.button<IStyledButtonProps>`
   border-radius: 13px;
   opacity: ${({ shouldHide }) => shouldHide && 0};
   transform: translateY(${({ shouldHide }) => shouldHide && -100}%);
-  transition: transform ${({ theme }) => theme.transitionDurationAndFunc},
-    opacity ${({ theme }) => theme.transitionDurationAndFunc};
+  transition: transform ${({ theme }) => theme.transitionDurationAndFunc.all},
+    opacity ${({ theme }) => theme.transitionDurationAndFunc.all};
   pointer-events: all;
   outline: none;
 

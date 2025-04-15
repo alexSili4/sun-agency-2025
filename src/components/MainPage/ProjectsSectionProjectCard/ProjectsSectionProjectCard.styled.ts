@@ -19,7 +19,7 @@ export const ImgWrap = styled.div`
 
 export const Image = styled.img`
   width: 100%;
-  transition: transform ${({ theme }) => theme.transitionDurationAndFunc};
+  transition: transform ${({ theme }) => theme.transitionDurationAndFunc.all};
 
   a:is(:hover, :focus) > div > div > &,
   div:has(a:is(:hover, :focus)) > div > & {

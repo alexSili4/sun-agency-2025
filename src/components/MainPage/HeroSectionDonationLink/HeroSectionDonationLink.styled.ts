@@ -15,7 +15,7 @@ export const StyledLink = styled(Link)`
   backdrop-filter: blur(8px);
   background-color: ${({ theme }) => theme.colors};
   overflow: hidden;
-  transition: border-color ${({ theme }) => theme.transitionDurationAndFunc};
+  transition: border-color ${({ theme }) => theme.transitionDurationAndFunc.all};
 
   &:is(:hover, :focus) {
     border-color: transparent;
@@ -45,8 +45,8 @@ export const LinkDecorativeImg = styled.img`
   width: 23px;
   transform: translateX(calc(-50% - 18px)) translateY(-50%);
 
-  transition: opacity ${({ theme }) => theme.transitionDurationAndFunc},
-    transform ${({ theme }) => theme.transitionDurationAndFunc};
+  transition: opacity ${({ theme }) => theme.transitionDurationAndFunc.all},
+    transform ${({ theme }) => theme.transitionDurationAndFunc.all};
 
   a:is(:hover, :focus) > span > & {
     opacity: 0;
@@ -77,7 +77,7 @@ export const StyledReactPlayer = styled(ReactPlayer)`
   width: calc(100% - 34px) !important;
   height: auto !important;
   transform: translateY(-50%);
-  transition: opacity ${({ theme }) => theme.transitionDurationAndFunc};
+  transition: opacity ${({ theme }) => theme.transitionDurationAndFunc.all};
 
   a:not(:is(:hover, :focus)) > & {
     opacity: 0;

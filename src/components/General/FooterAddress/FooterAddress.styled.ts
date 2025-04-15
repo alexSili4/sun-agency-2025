@@ -27,7 +27,7 @@ export const Title = styled.p`
   font-weight: 400;
   line-height: 1;
   font-style: normal;
-  transition: color ${({ theme }) => theme.transitionDurationAndFunc};
+  transition: color ${({ theme }) => theme.transitionDurationAndFunc.all};
 
   address:has(a:is(:hover, :focus)) > div:not(:has(a:is(:hover, :focus))) > & {
     color: ${({ theme }) => theme.colors.inactiveLink};
@@ -41,7 +41,7 @@ export const StyledLink = styled.a`
   font-weight: 600;
   line-height: 1;
   font-style: normal;
-  transition: color ${({ theme }) => theme.transitionDurationAndFunc};
+  transition: color ${({ theme }) => theme.transitionDurationAndFunc.all};
 
   address:has(a:is(:hover, :focus)) &:not(:is(:hover, :focus)) {
     color: ${({ theme }) => theme.colors.inactiveLink};
@@ -59,7 +59,7 @@ export const AddressLink = styled.a`
   font-weight: 400;
   line-height: 1;
   font-style: normal;
-  transition: color ${({ theme }) => theme.transitionDurationAndFunc};
+  transition: color ${({ theme }) => theme.transitionDurationAndFunc.all};
 
   address:has(a:is(:hover, :focus)) &:not(:is(:hover, :focus)) {
     color: ${({ theme }) => theme.colors.inactiveLink};

@@ -1,6 +1,8 @@
-import { MotionValueNumber } from '@/types/types';
-
 export interface IProps {
   img: string;
-  opacity: MotionValueNumber;
+  isShow: boolean;
+}
+
+export interface IStyledContainerProps {
+  isShow: boolean;
 }

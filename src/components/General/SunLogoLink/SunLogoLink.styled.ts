@@ -4,7 +4,7 @@ import { IStyledLogoLinkProps } from './SunLogoLink.types';
 
 export const LogoLink = styled(Link)<IStyledLogoLinkProps>`
   opacity: ${({ showMenuModalWin }) => (showMenuModalWin ? 0 : 1)};
-  transition: opacity ${({ theme }) => theme.transitionDurationAndFunc};
+  transition: opacity ${({ theme }) => theme.transitionDurationAndFunc.all};
 
   & > svg {
     display: block;

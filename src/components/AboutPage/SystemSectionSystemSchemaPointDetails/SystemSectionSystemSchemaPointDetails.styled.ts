@@ -12,7 +12,7 @@ export const Container = styled.span<IStyledContainerProps>`
   padding-left: ${({ paddingLeftMob }) => paddingLeftMob}px;
   padding-right: ${({ paddingRightMob }) => paddingRightMob}px;
   pointer-events: none;
-  transition: opacity ${({ theme }) => theme.transitionDurationAndFunc};
+  transition: opacity ${({ theme }) => theme.transitionDurationAndFunc.all};
 
   @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
     top: ${({ topDesk }) => (topDesk ? `${topDesk}px` : 'auto')};
