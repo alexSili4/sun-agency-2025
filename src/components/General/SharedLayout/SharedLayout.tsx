@@ -5,8 +5,14 @@ import { Outlet } from 'react-router-dom';
 import Loader from '@GeneralComponents/Loader';
 import Header from '@GeneralComponents/Header';
 import Footer from '@GeneralComponents/Footer';
+import { theme } from '@/constants';
+import { useIsAboutPage } from '@/hooks';
 
 const SharedLayout: FC = () => {
+  const isAboutPage = useIsAboutPage();
+
+  const startColor = isAboutPage ? theme.colors.dark : theme.colors.black;
+
   return (
     <>
       <Header />
@@ -15,7 +21,7 @@ const SharedLayout: FC = () => {
           <Outlet />
         </Suspense>
       </Main>
-      <Footer />
+      <Footer startColor={startColor} />
     </>
   );
 };

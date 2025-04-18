@@ -1,15 +1,17 @@
 import { FC } from 'react';
-import { StyledFooter, SectionBg, ContentWrap } from './Footer.styled';
+import { StyledFooter, ContentWrap } from './Footer.styled';
 // ----- components
 import FooterGeneralInfo from '@GeneralComponents/FooterGeneralInfo';
 import FooterMainInfo from '@GeneralComponents/FooterMainInfo';
 import FooterSpline from '@GeneralComponents/FooterSpline';
+import FooterLastSectionGradient from '@GeneralComponents/FooterLastSectionGradient';
+import { IProps } from './Footer.types';
 
-const Footer: FC = () => {
+const Footer: FC<IProps> = ({ startColor }) => {
   return (
     <StyledFooter>
       <FooterSpline />
-      <SectionBg></SectionBg>
+      <FooterLastSectionGradient startColor={startColor} />
       <ContentWrap>
         <FooterMainInfo />
         <FooterGeneralInfo />

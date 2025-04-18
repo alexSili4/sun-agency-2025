@@ -11,19 +11,6 @@ export const StyledFooter = styled.footer`
   }
 `;
 
-export const SectionBg = styled.div`
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 114px;
-  background-image: linear-gradient(
-    180deg,
-    ${({ theme }) => theme.colors.black},
-    ${({ theme }) => theme.colors.darkBg} 100%
-  );
-`;
-
 export const ContentWrap = styled.div`
   position: relative;
   display: flex;

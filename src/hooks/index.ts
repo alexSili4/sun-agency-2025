@@ -7,3 +7,4 @@ export { default as useMediaQuery } from './useMediaQuery';
 export { default as useIsDesk } from './useIsDesk';
 export { default as useProcessStepsListAnimation } from './useProcessStepsListAnimation';
 export { default as useProcessStep } from './useProcessStep';
+export { default as useIsAboutPage } from './useIsAboutPage';
