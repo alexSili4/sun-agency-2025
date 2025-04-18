@@ -10,7 +10,7 @@ import {
   Marker,
 } from './PrinciplesSectionSliderControls.styled';
 import { BtnClickEvent } from '@/types/types';
-import { makeBlur } from '@/utils';
+import { makeBlur, padStart } from '@/utils';
 import { useSwiper } from 'swiper/react';
 
 const PrinciplesSectionSliderControls: FC<IProps> = ({
@@ -39,7 +39,12 @@ const PrinciplesSectionSliderControls: FC<IProps> = ({
             const isActiveBtn = activeIndex === index;
             const number = index + 1;
             const listItemRotate = rotate * index;
-            const marker = number.toString().padStart(2, '0');
+
+            const marker = padStart({
+              value: number,
+              maxLength: 2,
+              addSymbol: '0',
+            });
 
             const onSliderBtnClick = (e: BtnClickEvent) => {
               makeBlur(e.currentTarget);

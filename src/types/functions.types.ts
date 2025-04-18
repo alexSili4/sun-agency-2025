@@ -24,3 +24,9 @@ export interface IGetCurrentOpacity {
   value: number;
   index: number;
 }
+
+export interface IPadStartProps {
+  value: string | number;
+  maxLength: number;
+  addSymbol: string;
+}

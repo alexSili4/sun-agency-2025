@@ -4,6 +4,7 @@ import { IProps } from './AnimatedServicesList.types';
 import { List, ListItem } from './AnimatedServicesList.styled';
 // ----- components
 import ServicesSectionServiceItem from '@MainPageComponents/ServicesSectionServiceItem';
+import { padStart } from '@/utils';
 
 const AnimatedServicesList: FC<IProps> = ({ services, nextSectionInView }) => {
   const listRef = useRef<HTMLUListElement>(null);
@@ -45,7 +46,12 @@ const AnimatedServicesList: FC<IProps> = ({ services, nextSectionInView }) => {
       {services.map(({ icon, path, tags, title }, index) => {
         const position = index + 1;
         const positionString = String(position);
-        const formattedNumber = positionString.padStart(2, '0');
+
+        const formattedNumber = padStart({
+          value: positionString,
+          maxLength: 2,
+          addSymbol: '0',
+        });
 
         return (
           <ListItem variants={elementVariants} key={index}>

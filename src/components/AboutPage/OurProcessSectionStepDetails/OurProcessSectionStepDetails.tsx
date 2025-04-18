@@ -8,7 +8,6 @@ import OurProcessSectionStepDetailsImg from '@AboutPageComponents/OurProcessSect
 const OurProcessSectionStepDetails: FC<IProps> = ({
   img,
   text,
-  isPositionAbsolute,
   index,
   isCurrentStep,
   textVariants,
@@ -16,18 +15,20 @@ const OurProcessSectionStepDetails: FC<IProps> = ({
   total,
 }) => {
   return (
-    <Container isPositionAbsolute={isPositionAbsolute}>
+    <Container>
       <OurProcessSectionStepDetailsNumber
         number={number}
         total={total}
         isShow={isCurrentStep}
+        elementKey={index}
+        variants={textVariants}
       />
       <OurProcessSectionStepDetailsImg img={img} isShow={isCurrentStep} />
       <AnimatedOurProcessSectionStepDetailsText
         variants={textVariants}
         text={text}
         isShow={isCurrentStep}
-        key={index}
+        elementKey={index}
       />
     </Container>
   );

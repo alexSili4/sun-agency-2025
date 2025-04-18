@@ -4,6 +4,7 @@ import {
   Container,
   Text,
   Element,
+  TextWrap,
 } from './AnimatedOurProcessSectionStepDetailsTextItem.styled';
 
 const AnimatedOurProcessSectionStepDetailsTextItem: FC<IProps> = ({
@@ -18,7 +19,9 @@ const AnimatedOurProcessSectionStepDetailsTextItem: FC<IProps> = ({
       exit='exit'
     >
       <Element>
-        <Text>{text}</Text>
+        <TextWrap>
+          <Text>{text}</Text>
+        </TextWrap>
       </Element>
     </Container>
   );

@@ -5,4 +5,5 @@ export interface IProps {
 
 export interface IStyledContainerProps {
   isShow: boolean;
+  img: string;
 }

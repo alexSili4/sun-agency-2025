@@ -1,8 +1,8 @@
 import { Variants } from 'framer-motion';
 
 export interface IProps {
+  number: string;
   isShow: boolean;
-  elementKey: number;
-  text: string;
   variants: Variants;
+  elementKey: number;
 }

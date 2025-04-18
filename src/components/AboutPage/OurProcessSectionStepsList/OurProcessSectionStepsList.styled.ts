@@ -1,5 +1,4 @@
 import styled from '@emotion/styled';
-import { IStyledListItemProps } from './OurProcessSectionStepsList.types';
 
 export const Container = styled.div`
   position: sticky;
@@ -8,13 +7,19 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   height: 100vh;
+  padding-top: ${({ theme }) => theme.spacing(8)}px;
+  padding-bottom: ${({ theme }) => theme.spacing(8)}px;
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
+    padding-top: ${({ theme }) => theme.spacing(28)}px;
+    padding-bottom: ${({ theme }) => theme.spacing(28)}px;
+  }
 `;
 
 export const List = styled.ul`
+  position: relative;
   width: 100%;
   height: 100%;
 `;
 
-export const ListItem = styled.li<IStyledListItemProps>`
-  height: ${({ isHiddenElement }) => (isHiddenElement ? 0 : '100%')};
-`;
+export const ListItem = styled.li``;

@@ -2,6 +2,7 @@ import { FC } from 'react';
 import { Container, List, ListItem } from './OurProcessSectionStepsList.styled';
 import OurProcessSectionStepDetails from '@AboutPageComponents/OurProcessSectionStepDetails';
 import { IProps } from './OurProcessSectionStepsList.types';
+import { padStart } from '@/utils';
 
 const OurProcessSectionStepsList: FC<IProps> = ({
   process,
@@ -12,18 +13,31 @@ const OurProcessSectionStepsList: FC<IProps> = ({
     <Container>
       <List>
         {process.map(({ img, text }, index) => {
-          const isHiddenElement = index !== 0;
           const isCurrentStep = currentStep === index;
+          const stepNumber = index + 1;
+          const totalNumber = process.length;
+
+          const number = padStart({
+            value: stepNumber,
+            maxLength: 2,
+            addSymbol: '0',
+          });
+          const total = padStart({
+            value: totalNumber,
+            maxLength: 2,
+            addSymbol: '0',
+          });
 
           return (
-            <ListItem key={index} isHiddenElement={isHiddenElement}>
+            <ListItem key={index}>
               <OurProcessSectionStepDetails
                 img={img}
                 text={text}
-                isPositionAbsolute={isHiddenElement}
                 index={index}
                 isCurrentStep={isCurrentStep}
                 textVariants={textVariants}
+                number={number}
+                total={total}
               />
             </ListItem>
           );

@@ -2,23 +2,26 @@ import { FC } from 'react';
 import AnimatedOurProcessSectionStepDetailsTextItem from '@AnimationBlocks/AnimatedOurProcessSectionStepDetailsTextItem';
 import { AnimatePresence } from 'framer-motion';
 import { IProps } from './AnimatedOurProcessSectionStepDetailsText.types';
+import { Container } from './AnimatedOurProcessSectionStepDetailsText.styled';
 
 const AnimatedOurProcessSectionStepDetailsText: FC<IProps> = ({
   isShow,
-  key,
+  elementKey,
   text,
   variants,
 }) => {
   return (
-    <AnimatePresence mode='wait'>
-      {isShow && (
-        <AnimatedOurProcessSectionStepDetailsTextItem
-          key={key}
-          text={text}
-          variants={variants}
-        />
-      )}
-    </AnimatePresence>
+    <Container>
+      <AnimatePresence mode='wait'>
+        {isShow && (
+          <AnimatedOurProcessSectionStepDetailsTextItem
+            key={elementKey}
+            text={text}
+            variants={variants}
+          />
+        )}
+      </AnimatePresence>
+    </Container>
   );
 };
 

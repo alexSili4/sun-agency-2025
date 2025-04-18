@@ -1,9 +1,8 @@
 import styled from '@emotion/styled';
-import { IStyledContainerProps } from './OurProcessSectionStepDetails.types';
 
-export const Container = styled.div<IStyledContainerProps>`
-  position: ${({ isPositionAbsolute }) =>
-    isPositionAbsolute ? 'absolute' : 'relative'};
+export const Container = styled.div`
+  flex-grow: 0;
+  position: absolute;
   top: 0;
   left: 0;
   display: flex;
@@ -14,12 +13,8 @@ export const Container = styled.div<IStyledContainerProps>`
   height: 100%;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
-    top: ${({ isPositionAbsolute }) => (isPositionAbsolute ? 50 : 0)}%;
     flex-direction: row-reverse;
     align-items: center;
     gap: ${({ theme }) => theme.spacing(10)}px;
-    transform: translateY(
-      ${({ isPositionAbsolute }) => (isPositionAbsolute ? -50 : 0)}%
-    );
   }
 `;

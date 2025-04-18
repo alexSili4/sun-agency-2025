@@ -17,8 +17,8 @@ const useProcessStepsListAnimation = ({
   });
   const activeIndex = useTransform(
     scrollYProgress,
-    [0, 1],
-    [0, processLength - 1],
+    [0, 0.4, 0.6, 1],
+    [0, 0, processLength - 1, processLength - 1],
     {
       clamp: true,
     }

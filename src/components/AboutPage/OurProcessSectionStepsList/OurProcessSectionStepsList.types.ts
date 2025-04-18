@@ -6,7 +6,3 @@ export interface IProps {
   currentStep: number;
   textVariants: Variants;
 }
-
-export interface IStyledListItemProps {
-  isHiddenElement: boolean;
-}
