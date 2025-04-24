@@ -6,3 +6,4 @@ export { default as smoothScroll } from './smoothScroll';
 export { default as getFlexItemWidth } from './getFlexItemWidth';
 export { default as getIsFirstItem } from './getIsFirstItem';
 export { default as padStart } from './padStart';
+export { default as getProcessStepsAngles } from './getProcessStepsAngles';

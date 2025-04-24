@@ -13,6 +13,10 @@ const OurProcessSectionStepDetails: FC<IProps> = ({
   textVariants,
   number,
   total,
+  isShow,
+  activePointRotate,
+  activePointTranslateY,
+  processImgContainerRef,
 }) => {
   return (
     <Container>
@@ -23,7 +27,14 @@ const OurProcessSectionStepDetails: FC<IProps> = ({
         elementKey={index}
         variants={textVariants}
       />
-      <OurProcessSectionStepDetailsImg img={img} isShow={isCurrentStep} />
+      <OurProcessSectionStepDetailsImg
+        img={img}
+        isShowLogo={isCurrentStep}
+        isShow={isShow}
+        activePointRotate={activePointRotate}
+        activePointTranslateY={activePointTranslateY}
+        containerRef={processImgContainerRef}
+      />
       <AnimatedOurProcessSectionStepDetailsText
         variants={textVariants}
         text={text}

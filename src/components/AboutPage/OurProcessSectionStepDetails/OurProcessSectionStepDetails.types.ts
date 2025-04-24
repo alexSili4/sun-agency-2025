@@ -1,3 +1,4 @@
+import { RefDivObject } from '@/types/types';
 import { Variants } from 'framer-motion';
 
 export interface IProps {
@@ -8,4 +9,8 @@ export interface IProps {
   textVariants: Variants;
   number: string;
   total: string;
+  isShow: boolean;
+  activePointRotate: number;
+  activePointTranslateY: number;
+  processImgContainerRef: RefDivObject;
 }

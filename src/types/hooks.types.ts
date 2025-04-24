@@ -2,11 +2,14 @@ import { Variants } from 'framer-motion';
 import {
   ElementOrNull,
   Func,
+  NumberOrNull,
   OnDivClickFunc,
   RefDivObject,
   RefFunc,
   RefLottieObject,
 } from './types';
+import { OnSwiperAutoplayTimeLeft, OnSwiperFunc } from './functions.types';
+import { Process } from './about.types';
 
 export interface IUseModalWinProps {
   setModalWinState: Func;
@@ -45,10 +48,19 @@ export interface IUseLottieContainerInView {
 
 export interface IUseProcessStepsListAnimationProps {
   containerRef: RefDivObject;
-  processLength: number;
+  process: Process;
 }
 
 export interface IUseProcessStepsListAnimation {
   currentStep: number;
   textVariants: Variants;
+  activePointRotate: number;
+}
+
+export interface IUsePrinciplesSlider {
+  onSwiper: OnSwiperFunc;
+  onAutoplayTimeLeft: OnSwiperAutoplayTimeLeft;
+  activeIndex: number;
+  size: NumberOrNull;
+  progress: number;
 }

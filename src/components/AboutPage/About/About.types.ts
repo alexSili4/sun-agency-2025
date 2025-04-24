@@ -5,6 +5,7 @@ import {
   Process,
   System,
 } from '@/types/about.types';
+import { RefDivObject } from '@/types/types';
 
 export interface IProps {
   employees: Employees;
@@ -12,4 +13,8 @@ export interface IProps {
   principles: Principles;
   system: System;
   process: Process;
+  activePointTranslateY: number;
+  principlesSliderBgRef: RefDivObject;
+  processImgContainerRef: RefDivObject;
+  principlesSectionRef: RefDivObject;
 }

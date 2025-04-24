@@ -1,4 +1,4 @@
-import { FC, useEffect, useRef, useState } from 'react';
+import { FC } from 'react';
 import { Autoplay, Pagination } from 'swiper/modules';
 import {
   Background,
@@ -10,32 +10,12 @@ import {
 import { IProps } from './PrinciplesSectionSlider.types';
 import PrinciplesSectionSliderPrincipleDetails from '@AboutPageComponents/PrinciplesSectionSliderPrincipleDetails';
 import PrinciplesSectionSliderPagination from '@AboutPageComponents/PrinciplesSectionSliderPagination';
-import { ISwiper, NumberOrNull } from '@/types/types';
 import PrinciplesSectionSliderControls from '@AboutPageComponents/PrinciplesSectionSliderControls';
+import { usePrinciplesSlider } from '@/hooks';
 
-const PrinciplesSectionSlider: FC<IProps> = ({ principles }) => {
-  const [activeIndex, setActiveIndex] = useState<number>(0);
-  const [progress, setProgress] = useState<number>(0);
-  const [size, setSize] = useState<NumberOrNull>(null);
-  const backgroundRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const scrollWidth = backgroundRef.current?.scrollWidth;
-
-    if (scrollWidth) {
-      setSize(scrollWidth);
-    }
-  }, []);
-
-  const onAutoplayTimeLeft = (_: ISwiper, __: number, time: number) => {
-    const progress = (1 - time) * 100;
-
-    setProgress(progress);
-  };
-
-  const onSwiper = (swiper: ISwiper) => {
-    setActiveIndex(swiper.activeIndex);
-  };
+const PrinciplesSectionSlider: FC<IProps> = ({ principles, backgroundRef }) => {
+  const { activeIndex, onAutoplayTimeLeft, onSwiper, progress, size } =
+    usePrinciplesSlider(backgroundRef);
 
   return (
     <Container>

@@ -12,12 +12,24 @@ const About: FC<IProps> = ({
   principles,
   system,
   process,
+  principlesSliderBgRef,
+  activePointTranslateY,
+  processImgContainerRef,
+  principlesSectionRef,
 }) => {
   return (
     <>
       <HeroSection metrics={metrics} />
-      <OurProcessSection process={process} />
-      <PrinciplesSection principles={principles} />
+      <OurProcessSection
+        process={process}
+        activePointTranslateY={activePointTranslateY}
+        processImgContainerRef={processImgContainerRef}
+      />
+      <PrinciplesSection
+        sectionRef={principlesSectionRef}
+        principles={principles}
+        backgroundRef={principlesSliderBgRef}
+      />
       <SystemSection system={system} />
       <EmployeesSection employees={employees} />
     </>

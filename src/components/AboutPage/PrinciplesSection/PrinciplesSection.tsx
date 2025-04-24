@@ -4,12 +4,19 @@ import { Container, Section } from './PrinciplesSection.styled';
 import PrinciplesSectionSlider from '@AboutPageComponents/PrinciplesSectionSlider';
 import { IProps } from './PrinciplesSection.types';
 
-const PrinciplesSection: FC<IProps> = ({ principles }) => {
+const PrinciplesSection: FC<IProps> = ({
+  principles,
+  backgroundRef,
+  sectionRef,
+}) => {
   return (
-    <Section>
+    <Section ref={sectionRef}>
       <Container>
         <AboutPageSectionTitle title='Принципи' />
-        <PrinciplesSectionSlider principles={principles} />
+        <PrinciplesSectionSlider
+          principles={principles}
+          backgroundRef={backgroundRef}
+        />
       </Container>
     </Section>
   );

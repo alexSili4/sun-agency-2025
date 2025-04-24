@@ -35,6 +35,7 @@ interface ITheme {
     servicesListBtn: number;
   };
   zIndex: {
+    ourProcessSection: number;
     loader: number;
     animatedModalWin: number;
     menuBtn: number;
@@ -70,6 +71,7 @@ const theme: ITheme = {
     mobile: 335,
   },
   zIndex: {
+    ourProcessSection: 10,
     loader: 10,
     menuBtn: 10,
     header: 10,
@@ -92,7 +94,7 @@ const theme: ITheme = {
   },
   transitionDurationAndFunc: {
     all: '400ms cubic-bezier(0.4, 0, 0.2, 1)',
-    process: '600ms cubic-bezier(0.4, 0, 0.2, 1)',
+    process: '800ms ease-in-out',
   },
   spacing: (value = 1) => value * 4,
 };

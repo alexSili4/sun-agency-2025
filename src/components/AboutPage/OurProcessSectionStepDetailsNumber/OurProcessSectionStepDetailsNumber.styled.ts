@@ -5,7 +5,7 @@ export const Container = styled.div`
   overflow: hidden;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
-    width: 20.8vw;
+    width: 23.5vw;
   }
 `;
 

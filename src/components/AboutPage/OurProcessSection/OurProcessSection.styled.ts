@@ -1,6 +1,8 @@
 import styled from '@emotion/styled';
 
 export const Section = styled.section`
+  position: relative;
+  z-index: ${({ theme }) => theme.zIndex.ourProcessSection};
   padding-top: ${({ theme }) => theme.spacing(29)}px;
   padding-bottom: ${({ theme }) => theme.spacing(14)}px;
   background-color: ${({ theme }) => theme.colors.dark};

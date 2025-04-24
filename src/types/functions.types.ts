@@ -1,4 +1,4 @@
-import { AnyElements } from './types';
+import { AnyElements, ISwiper } from './types';
 
 export interface IGetIsLastIndexProps {
   currentIndex: number;
@@ -30,3 +30,11 @@ export interface IPadStartProps {
   maxLength: number;
   addSymbol: string;
 }
+
+export type OnSwiperFunc = (swiper: ISwiper) => void;
+
+export type OnSwiperAutoplayTimeLeft = (
+  swiper: ISwiper,
+  number: number,
+  time: number
+) => void;

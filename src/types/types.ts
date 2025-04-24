@@ -41,6 +41,8 @@ export type ElementOrNull = Element | null;
 
 export type Strings = string[];
 
+export type Numbers = number[];
+
 export type AnyElements = any[];
 
 export type MotionValueNumber = MotionValue<number>;
