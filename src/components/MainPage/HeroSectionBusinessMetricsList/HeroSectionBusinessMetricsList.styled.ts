@@ -1,8 +1,5 @@
 import styled from '@emotion/styled';
-import {
-  IStyledImageProps,
-  IStyledStatisticsItemProps,
-} from './HeroSectionBusinessMetricsList.types';
+import { IStyledStatisticsItemProps } from './HeroSectionBusinessMetricsList.types';
 import { motion } from 'framer-motion';
 
 export const List = styled.ul`
@@ -31,10 +28,17 @@ export const StatisticsItem = styled(motion.div)<IStyledStatisticsItemProps>`
   padding-bottom: ${({ theme }) => theme.spacing(12)}px;
 `;
 
-export const Image = styled.img<IStyledImageProps>`
-  width: ${({ width }) => width}px;
-  max-width: ${({ width }) => width}px;
-  height: ${({ height }) => height}px;
+export const Number = styled.p`
+  color: ${({ theme }) => theme.colors.white};
+  font-family: ${({ theme }) => theme.fontFamily.involve};
+  font-size: 70px;
+  font-weight: 600;
+  line-height: 1.16;
+  text-transform: lowercase;
+  filter: drop-shadow(1px 1px 4px rgba(255, 225, 67, 0.2));
+  text-shadow: 0px 0px 0px #a34400, 1px 0px 0px #a34400, 1px 1px 0px #a34400,
+    0px 1px 0px #a34400, -1px 1px 0px #a34400, -1px 0px 0px #a34400,
+    -1px -1px 0px #a34400, 0px -1px 0px #a34400, 1px -1px 0px #a34400;
 `;
 
 export const Text = styled.p`

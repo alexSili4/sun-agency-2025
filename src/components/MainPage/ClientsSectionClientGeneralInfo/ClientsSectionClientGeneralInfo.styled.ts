@@ -14,9 +14,30 @@ export const Container = styled.div`
   gap: ${({ theme }) => theme.spacing(2)}px;
 `;
 
-export const Number = styled.img`
-  align-self: flex-start;
-  height: 38px;
+export const Projects = styled.p`
+  color: ${({ theme }) => theme.colors.white};
+  font-family: ${({ theme }) => theme.fontFamily.involve};
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.16;
+  text-transform: lowercase;
+  filter: drop-shadow(1px 1px 4px rgba(255, 225, 67, 0.2));
+  text-shadow: 0px 0px 0px #a34400, 1px 0px 0px #a34400, 1px 1px 0px #a34400,
+    0px 1px 0px #a34400, -1px 1px 0px #a34400, -1px 0px 0px #a34400,
+    -1px -1px 0px #a34400, 0px -1px 0px #a34400, 1px -1px 0px #a34400;
+`;
+
+export const Years = styled.p`
+  color: ${({ theme }) => theme.colors.white};
+  font-family: ${({ theme }) => theme.fontFamily.involve};
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.16;
+  text-transform: lowercase;
+  filter: drop-shadow(1px 1px 4px rgba(255, 225, 67, 0.2));
+  text-shadow: 0px 0px 0px #a34400, 1px 0px 0px #a34400, 1px 1px 0px #a34400,
+    0px 1px 0px #a34400, -1px 1px 0px #a34400, -1px 0px 0px #a34400,
+    -1px -1px 0px #a34400, 0px -1px 0px #a34400, 1px -1px 0px #a34400;
 `;
 
 export const Title = styled.p`

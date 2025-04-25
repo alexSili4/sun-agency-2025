@@ -15,6 +15,5 @@ export const Container = styled.div`
   @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
     flex-direction: row-reverse;
     align-items: center;
-    gap: ${({ theme }) => theme.spacing(10)}px;
   }
 `;

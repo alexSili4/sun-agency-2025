@@ -3,6 +3,7 @@ import sectionBgMob from '@/images/about/hero/section-bg-mob.png';
 import sectionBgDesk from '@/images/about/hero/section-bg-desk.png';
 
 export const Section = styled.section`
+  position: relative;
   background-color: ${({ theme }) => theme.colors.dark};
 `;
 

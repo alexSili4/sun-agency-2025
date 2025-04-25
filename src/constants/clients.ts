@@ -2,8 +2,6 @@ import { Clients } from '@/types/clients.types';
 // atb
 import atbPrimaryLogo from '@/images/main/clients/atb-primary-logo.png';
 import atbLogo from '@/images/main/clients/atb-logo.png';
-import atbProjects from '@/images/main/clients/atb-projects.png';
-import atbYears from '@/images/main/clients/atb-years.png';
 import atbProject1 from '@/images/main/clients/atb-project-1.jpg';
 import atbProject2 from '@/images/main/clients/atb-project-2.jpg';
 import atbProject3 from '@/images/main/clients/atb-project-3.jpg';
@@ -38,8 +36,8 @@ const clients: Clients = [
     logo: atbLogo,
     websiteAddress: 'https://www.atbmarket.com',
     text: 'activitis We have worked with to build a complete new website with quite complex connections with our CRM and accounting functions. The end product is brilliant, a really first class blend of design and functionality and the speed and depth of understanding about our business was remarkable. I’d highly recommend them',
-    projects: atbProjects,
-    years: atbYears,
+    projects: '20+',
+    years: '5',
     images: [atbProject1, atbProject2, atbProject3],
   },
   {
@@ -47,8 +45,8 @@ const clients: Clients = [
     logo: atbLogo,
     websiteAddress: 'https://www.atbmarket.com',
     text: 'atb We have worked with to build a complete new website with quite complex connections with our CRM and accounting functions. The end product is brilliant, a really first class blend of design and functionality and the speed and depth of understanding about our business was remarkable. I’d highly recommend them',
-    projects: atbProjects,
-    years: atbYears,
+    projects: '20+',
+    years: '5',
     images: [atbProject1, atbProject2, atbProject3],
   },
   {
@@ -56,8 +54,8 @@ const clients: Clients = [
     logo: atbLogo,
     websiteAddress: 'https://www.atbmarket.com',
     text: 'delikat We have worked with to build a complete new website with quite complex connections with our CRM and accounting functions. The end product is brilliant, a really first class blend of design and functionality and the speed and depth of understanding about our business was remarkable. I’d highly recommend them',
-    projects: atbProjects,
-    years: atbYears,
+    projects: '20+',
+    years: '5',
     images: [atbProject1, atbProject2, atbProject3],
   },
   {
@@ -65,8 +63,8 @@ const clients: Clients = [
     logo: atbLogo,
     websiteAddress: 'https://www.atbmarket.com',
     text: 'eva We have worked with to build a complete new website with quite complex connections with our CRM and accounting functions. The end product is brilliant, a really first class blend of design and functionality and the speed and depth of understanding about our business was remarkable. I’d highly recommend them',
-    projects: atbProjects,
-    years: atbYears,
+    projects: '20+',
+    years: '5',
     images: [atbProject1, atbProject2, atbProject3],
   },
   {
@@ -74,8 +72,8 @@ const clients: Clients = [
     logo: atbLogo,
     websiteAddress: 'https://www.atbmarket.com',
     text: 'fozzyGroup We have worked with to build a complete new website with quite complex connections with our CRM and accounting functions. The end product is brilliant, a really first class blend of design and functionality and the speed and depth of understanding about our business was remarkable. I’d highly recommend them',
-    projects: atbProjects,
-    years: atbYears,
+    projects: '20+',
+    years: '5',
     images: [atbProject1, atbProject2, atbProject3],
   },
   {
@@ -83,8 +81,8 @@ const clients: Clients = [
     logo: atbLogo,
     websiteAddress: 'https://www.atbmarket.com',
     text: 'goodwine We have worked with to build a complete new website with quite complex connections with our CRM and accounting functions. The end product is brilliant, a really first class blend of design and functionality and the speed and depth of understanding about our business was remarkable. I’d highly recommend them',
-    projects: atbProjects,
-    years: atbYears,
+    projects: '20+',
+    years: '5',
     images: [atbProject1, atbProject2, atbProject3],
   },
   {
@@ -92,8 +90,8 @@ const clients: Clients = [
     logo: atbLogo,
     websiteAddress: 'https://www.atbmarket.com',
     text: 'imperiaHolding We have worked with to build a complete new website with quite complex connections with our CRM and accounting functions. The end product is brilliant, a really first class blend of design and functionality and the speed and depth of understanding about our business was remarkable. I’d highly recommend them',
-    projects: atbProjects,
-    years: atbYears,
+    projects: '20+',
+    years: '5',
     images: [atbProject1, atbProject2, atbProject3],
   },
   {
@@ -101,8 +99,8 @@ const clients: Clients = [
     logo: atbLogo,
     websiteAddress: 'https://www.atbmarket.com',
     text: 'ligamenta We have worked with to build a complete new website with quite complex connections with our CRM and accounting functions. The end product is brilliant, a really first class blend of design and functionality and the speed and depth of understanding about our business was remarkable. I’d highly recommend them',
-    projects: atbProjects,
-    years: atbYears,
+    projects: '20+',
+    years: '5',
     images: [atbProject1, atbProject2, atbProject3],
   },
   {
@@ -110,8 +108,8 @@ const clients: Clients = [
     logo: atbLogo,
     websiteAddress: 'https://www.atbmarket.com',
     text: 'nutella We have worked with to build a complete new website with quite complex connections with our CRM and accounting functions. The end product is brilliant, a really first class blend of design and functionality and the speed and depth of understanding about our business was remarkable. I’d highly recommend them',
-    projects: atbProjects,
-    years: atbYears,
+    projects: '20+',
+    years: '5',
     images: [atbProject1, atbProject2, atbProject3],
   },
   {
@@ -119,8 +117,8 @@ const clients: Clients = [
     logo: atbLogo,
     websiteAddress: 'https://www.atbmarket.com',
     text: 'silpo We have worked with to build a complete new website with quite complex connections with our CRM and accounting functions. The end product is brilliant, a really first class blend of design and functionality and the speed and depth of understanding about our business was remarkable. I’d highly recommend them',
-    projects: atbProjects,
-    years: atbYears,
+    projects: '20+',
+    years: '5',
     images: [atbProject1, atbProject2, atbProject3],
   },
   {
@@ -128,8 +126,8 @@ const clients: Clients = [
     logo: atbLogo,
     websiteAddress: 'https://www.atbmarket.com',
     text: 'starbeauty We have worked with to build a complete new website with quite complex connections with our CRM and accounting functions. The end product is brilliant, a really first class blend of design and functionality and the speed and depth of understanding about our business was remarkable. I’d highly recommend them',
-    projects: atbProjects,
-    years: atbYears,
+    projects: '20+',
+    years: '5',
     images: [atbProject1, atbProject2, atbProject3],
   },
   {
@@ -137,8 +135,8 @@ const clients: Clients = [
     logo: atbLogo,
     websiteAddress: 'https://www.atbmarket.com',
     text: 'varus We have worked with to build a complete new website with quite complex connections with our CRM and accounting functions. The end product is brilliant, a really first class blend of design and functionality and the speed and depth of understanding about our business was remarkable. I’d highly recommend them',
-    projects: atbProjects,
-    years: atbYears,
+    projects: '20+',
+    years: '5',
     images: [atbProject1, atbProject2, atbProject3],
   },
   {
@@ -146,8 +144,8 @@ const clients: Clients = [
     logo: atbLogo,
     websiteAddress: 'https://www.atbmarket.com',
     text: 'wineBureau We have worked with to build a complete new website with quite complex connections with our CRM and accounting functions. The end product is brilliant, a really first class blend of design and functionality and the speed and depth of understanding about our business was remarkable. I’d highly recommend them',
-    projects: atbProjects,
-    years: atbYears,
+    projects: '20+',
+    years: '5',
     images: [atbProject1, atbProject2, atbProject3],
   },
 ];

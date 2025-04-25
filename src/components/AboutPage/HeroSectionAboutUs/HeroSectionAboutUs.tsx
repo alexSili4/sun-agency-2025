@@ -9,9 +9,9 @@ import {
 } from './HeroSectionAboutUs.styled';
 import { IProps } from './HeroSectionAboutUs.types';
 
-const HeroSectionAboutUs: FC<IProps> = ({ metrics }) => {
+const HeroSectionAboutUs: FC<IProps> = ({ metrics, containerRef }) => {
   return (
-    <Container>
+    <Container ref={containerRef}>
       <Content>
         <TextWrap>
           <Title>Що варто знати про нас</Title>

@@ -10,8 +10,12 @@ export const Container = styled.div`
   aspect-ratio: 516 / 526;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.desktop - 1}px) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
     width: 100%;
     max-width: 70%;
+    transform: translateX(-50%) translateY(-50%);
   }
 
   @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {

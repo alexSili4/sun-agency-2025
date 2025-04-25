@@ -43,7 +43,7 @@ interface ITheme {
     header: number;
     principlesSliderControls: number;
   };
-  transitionDurationAndFunc: { all: string; process: string };
+  transitionDurationAndFunc: { all: string; process: string; about: string };
   spacing: (value?: number) => number;
 }
 
@@ -95,6 +95,7 @@ const theme: ITheme = {
   transitionDurationAndFunc: {
     all: '400ms cubic-bezier(0.4, 0, 0.2, 1)',
     process: '800ms ease-in-out',
+    about: '2000ms ease-in-out',
   },
   spacing: (value = 1) => value * 4,
 };

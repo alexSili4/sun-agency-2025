@@ -5,10 +5,6 @@ export interface IProps {
   secondOpacity: MotionValueNumber;
   thirdOpacity: MotionValueNumber;
 }
-export interface IStyledImageProps {
-  width: number;
-  height: number;
-}
 
 export interface IStyledStatisticsItemProps {
   isBaseItem: boolean;

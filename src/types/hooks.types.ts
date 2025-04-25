@@ -64,3 +64,13 @@ export interface IUsePrinciplesSlider {
   size: NumberOrNull;
   progress: number;
 }
+
+export interface IUseActivePointAnimationProps {
+  processImgContainerRef: RefDivObject;
+  principlesSectionRef: RefDivObject;
+  principlesSliderBgRef: RefDivObject;
+}
+
+export interface IUseActivePointAnimation {
+  activePointTranslateY: number;
+}

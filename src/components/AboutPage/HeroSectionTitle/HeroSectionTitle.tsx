@@ -6,7 +6,6 @@ const HeroSectionTitle: FC = () => {
   return (
     <Container>
       <AnimatedHeroSectionTitle />
-      {/* TODO Fix SCENE */}
     </Container>
   );
 };

@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
-import systemDesk from '@/images/about/system/system-desk.jpg';
-import systemMob from '@/images/about/system/system-mob.jpg';
+import systemDesk from '@/images/about/system/system-desk.png';
+import systemMob from '@/images/about/system/system-mob.png';
 
 export const Container = styled.div`
   position: relative;

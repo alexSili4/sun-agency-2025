@@ -4,8 +4,9 @@ import {
   Container,
   List,
   ListItem,
-  Number,
+  Projects,
   Title,
+  Years,
 } from './ClientsSectionClientGeneralInfo.styled';
 
 const ClientsSectionClientGeneralInfo: FC<IProps> = ({ projects, years }) => {
@@ -13,13 +14,13 @@ const ClientsSectionClientGeneralInfo: FC<IProps> = ({ projects, years }) => {
     <List>
       <ListItem>
         <Container>
-          <Number src={projects} alt='' />
+          <Projects>{projects}</Projects>
           <Title>успішних проектів</Title>
         </Container>
       </ListItem>
       <ListItem>
         <Container>
-          <Number src={years} alt='' />
+          <Years>{years}</Years>
           <Title>років співпраці</Title>
         </Container>
       </ListItem>
