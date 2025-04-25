@@ -1,1 +1,1 @@
-export { default } from './LoyaltySystemIntegrationFeatureSection
+export { default } from './LoyaltySystemIntegrationFeatureSection';
