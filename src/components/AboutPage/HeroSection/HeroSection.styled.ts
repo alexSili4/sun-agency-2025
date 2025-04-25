@@ -7,7 +7,7 @@ export const Section = styled.section`
   background-color: ${({ theme }) => theme.colors.dark};
 `;
 
-export const Background = styled.section`
+export const Background = styled.div`
   padding-top: ${({ theme }) => theme.spacing(22)}px;
   padding-bottom: ${({ theme }) => theme.spacing(16)}px;
   background-image: url(${sectionBgMob});

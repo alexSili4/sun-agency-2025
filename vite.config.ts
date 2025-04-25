@@ -15,6 +15,7 @@ export default defineConfig({
       '@ProjectDetailsPageComponents': '/src/components/ProjectDetailsPage',
       '@AtbProjectDetailsComponents':
         '/src/components/ProjectDetailsPage/AtbProjectDetails',
+      '@ContactsPageComponents': '/src/components/ContactsPage',
     },
   },
 });

@@ -11,6 +11,7 @@ export interface IGeneralInfo {
   timeline: string;
   client: string;
   websiteAddress: string;
+  fullWebsiteAddress: string;
 }
 
 export interface IMainInfo {

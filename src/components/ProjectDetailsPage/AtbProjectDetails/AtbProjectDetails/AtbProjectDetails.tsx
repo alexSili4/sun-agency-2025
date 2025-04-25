@@ -1,19 +1,19 @@
 import { FC } from 'react';
 import { IProps } from './AtbProjectDetails.types';
 // ----- components
-import AtbProjectDetailsHeroSection from '@AtbProjectDetailsComponents/AtbHeroSection';
-import AtbGeneralInfoSection from '@AtbProjectDetailsComponents/AtbGeneralInfoSection';
-import AtbBusinessMetricsSection from '@AtbProjectDetailsComponents/AtbBusinessMetricsSection';
-import AtbTechnicalTaskSection from '@AtbProjectDetailsComponents/AtbTechnicalTaskSection';
-import AtbCashSystemIntegrationFeatureSection from '@AtbProjectDetailsComponents/AtbCashSystemIntegrationFeatureSection';
-import AtbPaymentSystemIntegrationFeatureSection from '@AtbProjectDetailsComponents/AtbPaymentSystemIntegrationFeatureSection';
-import AtbDeliverySystemIntegrationFeatureSection from '@AtbProjectDetailsComponents/AtbDeliverySystemIntegrationFeatureSection';
-import AtbLoyaltySystemIntegrationFeatureSection from '@AtbProjectDetailsComponents/AtbLoyaltySystemIntegrationFeatureSection';
-import AtbMobAppIntegrationFeatureSection from '@AtbProjectDetailsComponents/AtbMobAppIntegrationFeatureSection';
-import AtbFunFactSection from '@AtbProjectDetailsComponents/AtbFunFactSection';
-import AtbProjectTeamSection from '@AtbProjectDetailsComponents/AtbProjectTeamSection';
-import AtbProjectPreviewSection from '@AtbProjectDetailsComponents/AtbProjectPreviewSection';
-import AtbProjectReviewsSection from '@AtbProjectDetailsComponents/AtbProjectReviewsSection';
+import HeroSection from '@AtbProjectDetailsComponents/HeroSection';
+import GeneralInfoSection from '@AtbProjectDetailsComponents/GeneralInfoSection';
+import BusinessMetricsSection from '@AtbProjectDetailsComponents/BusinessMetricsSection';
+import TechnicalTaskSection from '@AtbProjectDetailsComponents/TechnicalTaskSection';
+import CashSystemIntegrationFeatureSection from '@AtbProjectDetailsComponents/CashSystemIntegrationFeatureSection';
+import PaymentSystemIntegrationFeatureSection from '@AtbProjectDetailsComponents/PaymentSystemIntegrationFeatureSection';
+import DeliverySystemIntegrationFeatureSection from '@AtbProjectDetailsComponents/DeliverySystemIntegrationFeatureSection';
+import LoyaltySystemIntegrationFeatureSection from '@AtbProjectDetailsComponents/LoyaltySystemIntegrationFeatureSection';
+import MobAppIntegrationFeatureSection from '@AtbProjectDetailsComponents/MobAppIntegrationFeatureSection';
+import TeamSection from '@AtbProjectDetailsComponents/TeamSection';
+import ProjectPreviewSection from '@AtbProjectDetailsComponents/ProjectPreviewSection';
+import ReviewsSection from '@AtbProjectDetailsComponents/ReviewsSection';
+import FunFactSection from '@AtbProjectDetailsComponents/FunFactSection';
 
 const AtbProjectDetails: FC<IProps> = ({ project, isDesk }) => {
   const {
@@ -23,7 +23,13 @@ const AtbProjectDetails: FC<IProps> = ({ project, isDesk }) => {
       title: mainInfoTitle,
       primaryBanner: { mobile: primaryBannerMobile, desk: primaryBannerDesk },
     },
-    generalInfo: { client, desc: generalInfoDesc, timeline, websiteAddress },
+    generalInfo: {
+      client,
+      desc: generalInfoDesc,
+      timeline,
+      websiteAddress,
+      fullWebsiteAddress,
+    },
     businessMetrics,
     banner1: { mobile: banner1Mobile, desk: banner1Desk },
     technicalTask: { desc: technicalTaskDesc, services, preview },
@@ -105,7 +111,7 @@ const AtbProjectDetails: FC<IProps> = ({ project, isDesk }) => {
 
   return (
     <>
-      <AtbProjectDetailsHeroSection
+      <HeroSection
         name={name}
         tags={tags}
         title={mainInfoTitle}
@@ -113,58 +119,59 @@ const AtbProjectDetails: FC<IProps> = ({ project, isDesk }) => {
         borderRadiusDesk={58}
         borderRadiusMobile={40}
       />
-      <AtbGeneralInfoSection
+      <GeneralInfoSection
         desc={generalInfoDesc}
         timeline={timeline}
         client={client}
         websiteAddress={websiteAddress}
+        fullWebsiteAddress={fullWebsiteAddress}
       />
-      <AtbBusinessMetricsSection
+      <BusinessMetricsSection
         businessMetrics={businessMetrics}
         banner={banner1}
       />
-      <AtbTechnicalTaskSection
+      <TechnicalTaskSection
         desc={technicalTaskDesc}
         services={services}
         animationData={preview}
       />
-      <AtbCashSystemIntegrationFeatureSection
+      <CashSystemIntegrationFeatureSection
         banner={cashSystemIntegrationBanner}
         desc={cashSystemIntegrationDesc}
         title={cashSystemIntegrationTitle}
       />
-      <AtbPaymentSystemIntegrationFeatureSection
+      <PaymentSystemIntegrationFeatureSection
         banner={paymentSystemIntegrationBanner}
         desc={paymentSystemIntegrationDesc}
         title={paymentSystemIntegrationTitle}
         metrics={paymentSystemIntegrationMetrics}
       />
-      <AtbDeliverySystemIntegrationFeatureSection
+      <DeliverySystemIntegrationFeatureSection
         banner={deliverySystemIntegrationBanner}
         desc={deliverySystemIntegrationDesc}
         title={deliverySystemIntegrationTitle}
       />
-      <AtbLoyaltySystemIntegrationFeatureSection
+      <LoyaltySystemIntegrationFeatureSection
         title={loyaltySystemIntegrationTitle}
         desc={loyaltySystemIntegrationDesc}
         banner={loyaltySystemIntegrationBanner}
         metrics={loyaltySystemIntegrationMetrics}
       />
-      <AtbMobAppIntegrationFeatureSection
+      <MobAppIntegrationFeatureSection
         title={mobAppIntegrationTitle}
         desc={mobAppIntegrationDesc}
         banner={mobAppIntegrationBanner}
         additionalBanner={mobAppIntegrationAdditionalBanner}
       />
-      <AtbFunFactSection funFact={funFact} />
-      <AtbProjectTeamSection
+      <FunFactSection funFact={funFact} />
+      <TeamSection
         clientTeam={clientTeam}
         clientTeamTitle={clientTeamTitle}
         sunAgencyTeam={sunAgencyTeam}
         sunAgencyTeamTitle={sunAgencyTeamTitle}
       />
-      <AtbProjectPreviewSection animationData={websitePreview} />
-      <AtbProjectReviewsSection reviews={reviews} />
+      <ProjectPreviewSection animationData={websitePreview} />
+      <ReviewsSection reviews={reviews} />
     </>
   );
 };

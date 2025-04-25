@@ -13,7 +13,8 @@
       ],
       "@AtbProjectDetailsComponents/*": [
         "./src/components/ProjectDetailsPage/AtbProjectDetails/*"
-      ]
+      ],
+      "@ContactsPageComponents/*": ["./src/components/ContactsPage/*"]
     },
     "target": "ES2020",
     "useDefineForClassFields": true,

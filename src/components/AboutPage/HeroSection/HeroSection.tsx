@@ -7,6 +7,7 @@ import Breadcrumbs from '@GeneralComponents/Breadcrumbs';
 import { IProps } from './HeroSection.types';
 import HeroSectionScene from '@AboutPageComponents/HeroSectionScene';
 import { useInView } from 'framer-motion';
+import HiddenPageTitle from '@GeneralComponents/HiddenPageTitle';
 
 const HeroSection: FC<IProps> = ({ metrics }) => {
   const aboutUsContainerRef = useRef<HTMLDivElement>(null);
@@ -20,6 +21,7 @@ const HeroSection: FC<IProps> = ({ metrics }) => {
 
   return (
     <Section>
+      <HiddenPageTitle title='Про нас' />
       <HeroSectionScene
         rotate={rotate}
         scale={scale}
