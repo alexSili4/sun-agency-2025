@@ -8,6 +8,7 @@ export const Container = styled.div`
   left: 50%;
   width: calc(100% + 80px + 80px);
   transform: translateX(-50%);
+  background-color: pink;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
     top: -146px;

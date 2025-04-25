@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { StyledFooter, ContentWrap } from './Footer.styled';
+import { StyledFooter, ContentWrap, Container } from './Footer.styled';
 // ----- components
 import FooterGeneralInfo from '@GeneralComponents/FooterGeneralInfo';
 import FooterMainInfo from '@GeneralComponents/FooterMainInfo';
@@ -7,15 +7,21 @@ import FooterSpline from '@GeneralComponents/FooterSpline';
 import FooterLastSectionGradient from '@GeneralComponents/FooterLastSectionGradient';
 import { IProps } from './Footer.types';
 
-const Footer: FC<IProps> = ({ startColor }) => {
+const Footer: FC<IProps> = ({ startColor, showContactsInfo }) => {
   return (
     <StyledFooter>
-      <FooterSpline />
-      <FooterLastSectionGradient startColor={startColor} />
-      <ContentWrap>
-        <FooterMainInfo />
+      {showContactsInfo ? (
+        <Container>
+          <FooterSpline />
+          <FooterLastSectionGradient startColor={startColor} />
+          <ContentWrap>
+            <FooterMainInfo />
+            <FooterGeneralInfo />
+          </ContentWrap>
+        </Container>
+      ) : (
         <FooterGeneralInfo />
-      </ContentWrap>
+      )}
     </StyledFooter>
   );
 };

@@ -4,9 +4,9 @@ import { useLocation } from 'react-router-dom';
 const useIsAboutPage = (): boolean => {
   const { pathname } = useLocation();
 
-  const isCabinetPage = pathname === PagePaths.about;
+  const isAboutPage = pathname === PagePaths.about;
 
-  return isCabinetPage;
+  return isAboutPage;
 };
 
 export default useIsAboutPage;

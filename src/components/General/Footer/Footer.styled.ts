@@ -1,9 +1,13 @@
 import styled from '@emotion/styled';
 
 export const StyledFooter = styled.footer`
-  position: relative;
-  padding-top: ${({ theme }) => theme.spacing(69)}px;
   background-color: ${({ theme }) => theme.colors.dark};
+`;
+
+export const Container = styled.div`
+  position: relative;
+  background-color: inherit;
+  padding-top: ${({ theme }) => theme.spacing(69)}px;
   overflow: hidden;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {

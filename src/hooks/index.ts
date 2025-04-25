@@ -11,3 +11,4 @@ export { default as useIsAboutPage } from './useIsAboutPage';
 export { default as useFooterStartColor } from './useFooterStartColor';
 export { default as usePrinciplesSlider } from './usePrinciplesSlider';
 export { default as useActivePointAnimation } from './useActivePointAnimation';
+export { default as useIsContactsPage } from './useIsContactsPage';
