@@ -16,7 +16,6 @@ const AnimatedSectionSubtitle: FC<IProps> = ({
     margin: '-300px',
   });
   const subtitleParts = text.split(Symbols.space);
-  const lastIndex = subtitleParts.length - 1;
   const animate = inView ? 'visible' : 'hidden';
 
   const containerVariants = {
@@ -51,12 +50,12 @@ const AnimatedSectionSubtitle: FC<IProps> = ({
       isHiddenOnDesk={isHiddenOnDesk}
       isCenter={isCenter}
     >
-      {subtitleParts.map((part, currentIndex) => {
-        const isLastIndex = getIsLastIndex({ currentIndex, lastIndex });
+      {subtitleParts.map((part, index) => {
+        const isLastIndex = getIsLastIndex({ index, array: subtitleParts });
         const text = isLastIndex ? part : `${part} `;
 
         return (
-          <SubtitlePart variants={elementVariants} key={currentIndex}>
+          <SubtitlePart variants={elementVariants} key={index}>
             {text}
           </SubtitlePart>
         );

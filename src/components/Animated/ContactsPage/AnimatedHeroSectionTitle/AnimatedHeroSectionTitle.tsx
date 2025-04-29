@@ -1,11 +1,8 @@
-import { FC, Fragment } from 'react';
+import { FC } from 'react';
 import {
   Title,
-  Accent,
   AnimatedContainer,
-  AnimatedElement,
-  TextLine,
-  TextLineWord,
+  Text,
 } from './AnimatedHeroSectionTitle.styled';
 import AnimatedHeroSectionTitlePart from '@AnimatedContactsPageComponents/AnimatedHeroSectionTitlePart';
 
@@ -43,60 +40,17 @@ const AnimatedHeroSectionTitle: FC = () => {
         initial='hidden'
         animate='visible'
       >
-        <TextLine>
-          {strings.map((text, index) => {
-            const animatedElement = (
-              <AnimatedHeroSectionTitlePart text={text} />
-            );
-
-            return (
-              <Fragment key={index}>
-                {isLastIndex ? (
-                  animatedElement
-                ) : (
-                  <>
-                    <br />
-                    {animatedElement}
-                  </>
-                )}
-              </Fragment>
-            );
-          })}
-          {/* <AnimatedElement variants={elementVariants}>
-            <TextLineWord>Завжди</TextLineWord>
-          </AnimatedElement>
-          <AnimatedElement variants={elementVariants}>
-            <TextLineWord> </TextLineWord>
-          </AnimatedElement>
-          <AnimatedElement variants={elementVariants}>
-            <TextLineWord>на</TextLineWord>
-          </AnimatedElement>
-          <AnimatedElement variants={elementVariants}>
-            <TextLineWord> </TextLineWord>
-          </AnimatedElement>
-          <AnimatedElement variants={elementVariants}>
-            <TextLineWord>зв’язку!</TextLineWord>
-          </AnimatedElement>
-          <AnimatedElement variants={elementVariants}>
-            <TextLineWord> </TextLineWord>
-          </AnimatedElement>
-          <AnimatedElement variants={elementVariants}>
-            <TextLineWord>Давайте</TextLineWord>
-          </AnimatedElement>
-          <br />
-          <AnimatedElement variants={elementVariants}>
-            <TextLineWord>обговоримо</TextLineWord>
-          </AnimatedElement>
-          <AnimatedElement variants={elementVariants}>
-            <TextLineWord> </TextLineWord>
-          </AnimatedElement>
-          <AnimatedElement variants={elementVariants}>
-            <TextLineWord>ваш</TextLineWord>
-          </AnimatedElement>
-          <AnimatedElement variants={elementVariants}>
-            <Accent>{accent}</Accent>
-          </AnimatedElement> */}
-        </TextLine>
+        <Text>
+          <AnimatedHeroSectionTitlePart
+            elementVariants={elementVariants}
+            text={strings[0]}
+          />
+          <AnimatedHeroSectionTitlePart
+            elementVariants={elementVariants}
+            text={strings[1]}
+            accent={accent}
+          />
+        </Text>
       </AnimatedContainer>
     </Title>
   );

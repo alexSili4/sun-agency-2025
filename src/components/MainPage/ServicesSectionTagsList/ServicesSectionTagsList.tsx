@@ -12,13 +12,12 @@ import {
 const ServicesSectionTagsList: FC<IProps> = ({ tags }) => {
   return (
     <List>
-      {tags.map((tag, currentIndex) => {
-        const lastIndex = tags.length - 1;
-        const isLastIndex = getIsLastIndex({ currentIndex, lastIndex });
+      {tags.map((tag, index) => {
+        const isLastIndex = getIsLastIndex({ index, array: tags });
         const tagComponent = <Tag>{tag}</Tag>;
 
         return (
-          <ListItem key={currentIndex}>
+          <ListItem key={index}>
             <Container>
               {isLastIndex ? (
                 tagComponent

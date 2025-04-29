@@ -33,6 +33,10 @@ interface ITheme {
     reviewsSlider: number;
     breadcrumbs: number;
     servicesListBtn: number;
+    contactsLabel: number;
+    contactsCopy: number;
+    contactsTg: number;
+    contactsArrow: number;
   };
   zIndex: {
     ourProcessSection: number;
@@ -88,9 +92,13 @@ const theme: ITheme = {
     breadcrumbs: 9,
     reviewsSlider: 11,
     servicesListBtn: 11,
+    contactsCopy: 14,
     socialLink: 14,
     closeClientDetailsBtn: 14,
+    contactsArrow: 16,
+    contactsTg: 16,
     menuBtn: 17,
+    contactsLabel: 20,
   },
   transitionDurationAndFunc: {
     all: '400ms cubic-bezier(0.4, 0, 0.2, 1)',

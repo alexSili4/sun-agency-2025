@@ -1,13 +1,15 @@
 import { FC } from 'react';
-import { Container } from './HeroSectionContacts.styled';
+import { Container, Content } from './HeroSectionContacts.styled';
 import HeroSectionContactsInfo from '@ContactsPageComponents/HeroSectionContactsInfo';
 import HeroSectionContactsForm from '@ContactsPageComponents/HeroSectionContactsForm';
 
 const HeroSectionContacts: FC = () => {
   return (
     <Container>
-      <HeroSectionContactsInfo />
-      <HeroSectionContactsForm />
+      <Content>
+        <HeroSectionContactsInfo />
+        <HeroSectionContactsForm />
+      </Content>
     </Container>
   );
 };

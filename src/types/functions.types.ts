@@ -1,8 +1,8 @@
 import { AnyElements, ISwiper } from './types';
 
 export interface IGetIsLastIndexProps {
-  currentIndex: number;
-  lastIndex: number;
+  index: number;
+  array: Array<any>;
 }
 
 export interface ISplitArray {

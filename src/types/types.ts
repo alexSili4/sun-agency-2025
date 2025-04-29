@@ -30,6 +30,8 @@ export type SetBooleanFunc = (data: boolean) => void;
 // refs
 export type RefFunc = (node?: Element | null | undefined) => void;
 
+export type RefAnchorObject = RefObject<HTMLAnchorElement>;
+
 export type RefDivObject = RefObject<HTMLDivElement>;
 
 export type RefListObject = RefObject<HTMLUListElement>;

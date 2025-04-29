@@ -1,5 +1,6 @@
 const enum Symbols {
   space = ' ',
+  emptyString = '',
   textWrap = '\n',
 }
 

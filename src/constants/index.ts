@@ -16,3 +16,4 @@ export { default as navLinks } from './navLinks';
 export { default as servicesLinks } from './servicesLinks';
 export { default as footerNavLinks } from './footerNavLinks';
 export { default as about } from './about';
+export { default as contacts } from './contacts';

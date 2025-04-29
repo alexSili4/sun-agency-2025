@@ -1,7 +1,31 @@
 import { FC } from 'react';
+import HeroSectionContactsInfoEmail from '@ContactsPageComponents/HeroSectionContactsInfoEmail';
+import { List, ListItem } from './HeroSectionContactsInfo.styled';
+import { contacts } from '@/constants';
+import HeroSectionContactsInfoPhone from '@ContactsPageComponents/HeroSectionContactsInfoPhone';
+import HeroSectionContactsInfoAddress from '@ContactsPageComponents/HeroSectionContactsInfoAddress';
 
 const HeroSectionContactsInfo: FC = () => {
-  return <div>HeroSectionContactsInfo</div>;
+  const {
+    address: { link: addressLink, text: addressText },
+    email,
+    phone,
+  } = contacts;
+  const contactLength = Object.keys(contacts).length;
+
+  return (
+    <List>
+      <ListItem contacts={contactLength}>
+        <HeroSectionContactsInfoEmail email={email} />
+      </ListItem>
+      <ListItem contacts={contactLength}>
+        <HeroSectionContactsInfoPhone phone={phone} />
+      </ListItem>
+      <ListItem contacts={contactLength}>
+        <HeroSectionContactsInfoAddress link={addressLink} text={addressText} />
+      </ListItem>
+    </List>
+  );
 };
 
 export default HeroSectionContactsInfo;
