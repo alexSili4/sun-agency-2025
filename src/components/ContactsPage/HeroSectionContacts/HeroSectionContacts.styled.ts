@@ -9,8 +9,6 @@ export const Content = styled.div`
   display: flex;
   flex-direction: column;
   gap: ${({ theme }) => theme.spacing(6)}px;
-
-  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
-    width: 896px;
-  }
+  width: 100%;
+  max-width: 896px;
 `;

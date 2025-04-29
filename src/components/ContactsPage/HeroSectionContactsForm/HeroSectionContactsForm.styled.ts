@@ -24,3 +24,24 @@ export const Background = styled.div`
 `;
 
 export const Form = styled.form``;
+
+export const Content = styled.div`
+  padding: ${({ theme }) => theme.spacing(6)}px;
+  padding-bottom: ${({ theme }) => theme.spacing(8)}px;
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
+    padding: ${({ theme: { spacing } }) => `${spacing(14)}px ${spacing(16)}px`};
+  }
+`;
+
+export const InputsWrap = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: ${({ theme }) => theme.spacing(6)}px;
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: ${({ theme }) => theme.spacing(8)}px;
+  }
+`;
