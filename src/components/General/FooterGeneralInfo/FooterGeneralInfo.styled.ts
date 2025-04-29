@@ -14,8 +14,6 @@ export const Container = styled.div`
 
 export const ContentWrap = styled.div`
   background-color: inherit;
-  padding-top: ${({ theme }) => theme.spacing(12)}px;
-  padding-bottom: ${({ theme }) => theme.spacing(12)}px;
 `;
 
 export const Content = styled.div`

@@ -1,7 +1,14 @@
 import { FC } from 'react';
+import { Background, Container, Form } from './HeroSectionContactsForm.styled';
 
 const HeroSectionContactsForm: FC = () => {
-  return <div>HeroSectionContactsForm</div>;
+  return (
+    <Container>
+      <Background>
+        <Form>HeroSectionContactsForm</Form>
+      </Background>
+    </Container>
+  );
 };
 
 export default HeroSectionContactsForm;
