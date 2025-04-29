@@ -1,4 +1,4 @@
-import { OnBtnClickFunc } from '@/types/types';
+import { OnBtnClickFunc } from '@/types/functions.types';
 
 export interface IProps {
   onClick: OnBtnClickFunc;

@@ -1,4 +1,31 @@
-import { AnyElements, ISwiper } from './types';
+import { InvalidContactsFormFields } from './contacts.types';
+import {
+  AnchorClickEvent,
+  AnyElements,
+  BtnClickEvent,
+  DivClickEvent,
+  InputChangeEvent,
+  ISwiper,
+  StringOrNull,
+} from './types';
+
+export type Func = () => void;
+
+export type OnDivClickFunc = (e: DivClickEvent) => void;
+
+export type OnInputChangeFunc = (e: InputChangeEvent) => void;
+
+export type OnAnchorClickFunc = (e: AnchorClickEvent) => void;
+
+export type OnBtnClickFunc = (e: BtnClickEvent) => void;
+
+export type SetBooleanFunc = (data: boolean) => void;
+
+export type SetInvalidContactsFormFieldsFunc = (
+  data: InvalidContactsFormFields
+) => void;
+
+export type SetStringOrNullFunc = (data: StringOrNull) => void;
 
 export interface IGetIsLastIndexProps {
   index: number;
@@ -38,3 +65,8 @@ export type OnSwiperAutoplayTimeLeft = (
   number: number,
   time: number
 ) => void;
+
+export interface IGetInvalidContactsFormFields {
+  errorMessage: string;
+  invalidFields: InvalidContactsFormFields;
+}

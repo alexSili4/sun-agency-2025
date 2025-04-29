@@ -17,7 +17,7 @@ import HeroSectionContactsInfoLink from '@ContactsPageComponents/HeroSectionCont
 const HeroSectionContactsInfoPhone: FC<IProps> = ({ phone }) => {
   const content = (
     <Container>
-      {phone.map(({ tg, isViber, number }) => {
+      {phone.map(({ tg, isViber, number }, index) => {
         const isTg = Boolean(tg);
         const shouldShowMessengers = isTg || isViber;
 
@@ -26,7 +26,7 @@ const HeroSectionContactsInfoPhone: FC<IProps> = ({ phone }) => {
         const viber = `viber://chat?number=%2B${validPhoneNumber}`;
 
         return (
-          <PhoneWrap>
+          <PhoneWrap key={index}>
             <HeroSectionContactsInfoLink href={linkPhoneNumber} isMaxWidth>
               {number}
             </HeroSectionContactsInfoLink>

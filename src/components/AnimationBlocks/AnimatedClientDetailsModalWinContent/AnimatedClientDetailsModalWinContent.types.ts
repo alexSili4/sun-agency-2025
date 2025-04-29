@@ -1,4 +1,4 @@
-import { Func, OnDivClickFunc } from '@/types/types';
+import { Func, OnDivClickFunc } from '@/types/functions.types';
 import { ReactNode } from 'react';
 
 export interface IProps {

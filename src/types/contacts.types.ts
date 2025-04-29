@@ -1,3 +1,5 @@
+import { Strings } from './types';
+
 export interface IPhone {
   number: string;
   tg?: string;
@@ -12,7 +14,29 @@ export interface IAddress {
 }
 
 export interface IContacts {
-  email: string;
-  phone: Phone;
-  address: IAddress;
+  info: {
+    email: string;
+    phone: Phone;
+    address: IAddress;
+  };
+  services: Strings;
 }
+
+export interface IContactsFormData {
+  name: string;
+  email: string;
+  phone: string;
+  services: Strings;
+  message: string;
+}
+
+export type ContactsFormField = keyof IContactsFormData;
+
+export type InvalidContactsFormFields = ContactsFormField[] | null;
+
+export interface IContactsFormErrorMessage {
+  field: ContactsFormField;
+  message: string;
+}
+
+export type ContactsFormErrorMessages = IContactsFormErrorMessage[];

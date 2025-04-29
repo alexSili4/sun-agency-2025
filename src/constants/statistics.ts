@@ -9,12 +9,12 @@ const statistics: Statistics = [
   },
   {
     number: '70+',
-    title: `Успішних${Symbols.textWrap}e-commerce`,
+    title: `Успішних${Symbols.break}e-commerce`,
     isBaseItem: false,
   },
   {
     number: '150+',
-    title: `задоволених${Symbols.textWrap}клієнтів`,
+    title: `задоволених${Symbols.break}клієнтів`,
     isBaseItem: true,
   },
 ];

@@ -1,4 +1,5 @@
-import { Func, Strings } from '@/types/types';
+import { Func } from '@/types/functions.types';
+import { Strings } from '@/types/types';
 
 export interface IProps {
   showModalWin: boolean;

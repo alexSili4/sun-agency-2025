@@ -7,8 +7,10 @@ interface ITheme {
     dark: string;
     black: string;
     white: string;
+    white70: string;
     inactiveLink: string;
     darkBg: string;
+    error: string;
   };
   fontFamily: {
     involve: string;
@@ -26,6 +28,7 @@ interface ITheme {
     desktop: number;
   };
   iconSizes: {
+    contactsServices: number;
     menuBtn: number;
     socialLink: number;
     donationLink: number;
@@ -57,7 +60,9 @@ const theme: ITheme = {
     darkBg: '#090C08',
     black: '#000000',
     white: '#ffffff',
+    white70: 'rgba(255, 255, 255, 0.7)',
     inactiveLink: '#3e4648',
+    error: 'rgba(255, 52, 7, 0.7)',
   },
   fontFamily: {
     involve: 'Involve',
@@ -95,6 +100,7 @@ const theme: ITheme = {
     contactsCopy: 14,
     socialLink: 14,
     closeClientDetailsBtn: 14,
+    contactsServices: 16,
     contactsArrow: 16,
     contactsTg: 16,
     menuBtn: 17,

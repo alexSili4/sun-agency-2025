@@ -12,7 +12,7 @@ export const AnimatedElement = styled(motion.span)`
 export const AccentSymbol = styled.span`
   display: inline-block;
   white-space: pre;
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.7);
   font-family: ${({ theme }) => theme.fontFamily.pliska};
   font-style: italic;
   font-size: 30px;

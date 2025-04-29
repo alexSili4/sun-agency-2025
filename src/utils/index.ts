@@ -9,3 +9,5 @@ export { default as padStart } from './padStart';
 export { default as getProcessStepsAngles } from './getProcessStepsAngles';
 export { default as copyToClipboard } from './copyToClipboard';
 export { default as getValidPhoneNumber } from './getValidPhoneNumber';
+export { default as getInvalidContactsFormFields } from './getInvalidContactsFormFields';
+export { default as getContactsFormErrorMessage } from './getContactsFormErrorMessage';

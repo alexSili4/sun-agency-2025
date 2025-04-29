@@ -1,7 +1,8 @@
 const enum Symbols {
   space = ' ',
   emptyString = '',
-  textWrap = '\n',
+  // textWrap = '\n',
+  break = '<br/>',
 }
 
 export default Symbols;

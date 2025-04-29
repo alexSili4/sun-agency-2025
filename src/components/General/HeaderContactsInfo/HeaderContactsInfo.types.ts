@@ -1,4 +1,4 @@
-import { OnBtnClickFunc, OnInputChangeFunc } from '@/types/types';
+import { OnBtnClickFunc, OnInputChangeFunc } from '@/types/functions.types';
 
 export interface IProps {
   currentLang: string;

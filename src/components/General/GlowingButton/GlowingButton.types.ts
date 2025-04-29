@@ -1,4 +1,4 @@
-import { OnBtnClickFunc } from '@/types/types';
+import { OnBtnClickFunc } from '@/types/functions.types';
 import { ReactNode } from 'react';
 
 export interface IProps {

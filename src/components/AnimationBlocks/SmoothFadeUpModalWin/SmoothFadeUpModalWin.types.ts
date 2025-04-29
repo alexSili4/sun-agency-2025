@@ -1,4 +1,4 @@
-import { OnDivClickFunc, SetBooleanFunc } from '@/types/types';
+import { OnDivClickFunc, SetBooleanFunc } from '@/types/functions.types';
 import { ReactNode } from 'react';
 
 export interface IProps {

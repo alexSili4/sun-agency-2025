@@ -1,14 +1,17 @@
 import { Variants } from 'framer-motion';
 import {
   ElementOrNull,
-  Func,
   NumberOrNull,
-  OnDivClickFunc,
   RefDivObject,
   RefFunc,
   RefLottieObject,
 } from './types';
-import { OnSwiperAutoplayTimeLeft, OnSwiperFunc } from './functions.types';
+import {
+  Func,
+  OnDivClickFunc,
+  OnSwiperAutoplayTimeLeft,
+  OnSwiperFunc,
+} from './functions.types';
 import { Process } from './about.types';
 
 export interface IUseModalWinProps {

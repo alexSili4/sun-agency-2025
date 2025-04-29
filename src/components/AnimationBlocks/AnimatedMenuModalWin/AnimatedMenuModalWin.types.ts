@@ -3,7 +3,7 @@ import {
   OnAnchorClickFunc,
   OnInputChangeFunc,
   SetBooleanFunc,
-} from '@/types/types';
+} from '@/types/functions.types';
 
 export interface IProps {
   currentLang: string;

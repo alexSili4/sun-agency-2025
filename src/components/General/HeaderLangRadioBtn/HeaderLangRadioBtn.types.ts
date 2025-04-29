@@ -1,4 +1,4 @@
-import { OnInputChangeFunc } from '@/types/types';
+import { OnInputChangeFunc } from '@/types/functions.types';
 
 export interface IProps {
   mobileWidth: number;

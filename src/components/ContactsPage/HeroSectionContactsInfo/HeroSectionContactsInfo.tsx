@@ -1,18 +1,17 @@
 import { FC } from 'react';
 import HeroSectionContactsInfoEmail from '@ContactsPageComponents/HeroSectionContactsInfoEmail';
 import { List, ListItem } from './HeroSectionContactsInfo.styled';
-import { contacts } from '@/constants';
 import HeroSectionContactsInfoPhone from '@ContactsPageComponents/HeroSectionContactsInfoPhone';
 import HeroSectionContactsInfoAddress from '@ContactsPageComponents/HeroSectionContactsInfoAddress';
+import { IProps } from './HeroSectionContactsInfo.types';
 
-const HeroSectionContactsInfo: FC = () => {
-  const {
-    address: { link: addressLink, text: addressText },
-    email,
-    phone,
-  } = contacts;
-  const contactLength = Object.keys(contacts).length;
-
+const HeroSectionContactsInfo: FC<IProps> = ({
+  contactLength,
+  email,
+  phone,
+  addressLink,
+  addressText,
+}) => {
   return (
     <List>
       <ListItem contacts={contactLength}>

@@ -1,4 +1,4 @@
-import { Func } from '@/types/types';
+import { Func } from '@/types/functions.types';
 import { useSyncExternalStore } from 'react';
 
 const useMediaQuery = (breakpoint: number) => {

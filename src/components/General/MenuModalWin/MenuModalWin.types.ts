@@ -1,4 +1,4 @@
-import { OnAnchorClickFunc, OnInputChangeFunc } from '@/types/types';
+import { OnAnchorClickFunc, OnInputChangeFunc } from '@/types/functions.types';
 
 export interface IProps {
   currentLang: string;

@@ -4,10 +4,9 @@ import {
   List,
   ListItem,
   StatisticsItem,
-  TextPart,
   Number,
 } from './HeroSectionBusinessMetricsList.styled';
-import { statistics, Symbols } from '@/constants';
+import { statistics } from '@/constants';
 import { IProps } from './HeroSectionBusinessMetricsList.types';
 
 const HeroSectionBusinessMetricsList: FC<IProps> = ({
@@ -21,7 +20,6 @@ const HeroSectionBusinessMetricsList: FC<IProps> = ({
         const isThirdItem = index === 2;
         const isSecondItem = index === 1;
 
-        const textParts = title.split(Symbols.textWrap);
         const targetOpacity = isSecondItem
           ? secondOpacity
           : isThirdItem
@@ -35,11 +33,7 @@ const HeroSectionBusinessMetricsList: FC<IProps> = ({
               style={{ opacity: targetOpacity }}
             >
               <Number>{number}</Number>
-              <Text>
-                {textParts.map((word, index) => (
-                  <TextPart key={index}>{word}</TextPart>
-                ))}
-              </Text>
+              <Text dangerouslySetInnerHTML={{ __html: title }}></Text>
             </StatisticsItem>
           </ListItem>
         );

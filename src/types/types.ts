@@ -14,25 +14,14 @@ export type InputChangeEvent = ChangeEvent<HTMLInputElement>;
 
 export type AnchorClickEvent = MouseEvent<HTMLAnchorElement>;
 
-// functions
-export type Func = () => void;
-
-export type OnDivClickFunc = (e: DivClickEvent) => void;
-
-export type OnInputChangeFunc = (e: InputChangeEvent) => void;
-
-export type OnAnchorClickFunc = (e: AnchorClickEvent) => void;
-
-export type OnBtnClickFunc = (e: BtnClickEvent) => void;
-
-export type SetBooleanFunc = (data: boolean) => void;
-
 // refs
 export type RefFunc = (node?: Element | null | undefined) => void;
 
 export type RefAnchorObject = RefObject<HTMLAnchorElement>;
 
 export type RefDivObject = RefObject<HTMLDivElement>;
+
+export type RefInputObject = RefObject<HTMLInputElement>;
 
 export type RefListObject = RefObject<HTMLUListElement>;
 
@@ -51,6 +40,8 @@ export type MotionValueNumber = MotionValue<number>;
 
 export type MotionValueBoolean = MotionValue<boolean>;
 
+export type StringsOrNull = Strings | null;
+
 export type StringOrNull = string | null;
 
 export type NumberOrNull = number | null;
@@ -60,3 +51,9 @@ export type NumberOrUndefined = number | undefined;
 export type MarqueeDirection = 'right' | 'left';
 
 export type ISwiper = Swiper;
+
+export type InputType = 'text' | 'email' | 'tel';
+
+export interface IRegExp {
+  email: RegExp;
+}

@@ -49,7 +49,3 @@ export const Text = styled.p`
   line-height: 1.16;
   text-transform: lowercase;
 `;
-
-export const TextPart = styled.span`
-  display: block;
-`;

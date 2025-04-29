@@ -1,5 +1,5 @@
 import { NavLinks } from '@/types/navLinks';
-import { OnAnchorClickFunc } from '@/types/types';
+import { OnAnchorClickFunc } from '@/types/functions.types';
 
 export interface IProps {
   onClick: OnAnchorClickFunc;
