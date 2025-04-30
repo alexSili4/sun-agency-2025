@@ -1,7 +1,7 @@
 const enum Symbols {
   space = ' ',
   emptyString = '',
-  // textWrap = '\n',
+  comma = ', ',
   break = '<br/>',
 }
 

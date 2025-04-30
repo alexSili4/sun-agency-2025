@@ -70,3 +70,8 @@ export interface IGetInvalidContactsFormFields {
   errorMessage: string;
   invalidFields: InvalidContactsFormFields;
 }
+
+export interface IGetContactsFormServicesBtnTitle {
+  isDefaultBtnTitle: boolean;
+  btnTitle: string;
+}

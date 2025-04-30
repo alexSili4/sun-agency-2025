@@ -8,6 +8,7 @@ import { AxiosError } from 'axios';
 import {
   getInvalidContactsFormFields,
   getContactsFormErrorMessage,
+  getContactsFormServicesBtnTitle,
 } from '@/utils';
 import { IProps } from './HeroSectionContactsForm.types';
 import { IContactsFormData } from '@/types/contacts.types';
@@ -28,7 +29,11 @@ const HeroSectionContactsForm: FC<IProps> = ({
     register,
     handleSubmit,
     formState: { isSubmitting, errors },
+    watch,
   } = useForm<IContactsFormData>();
+  const checkedServices = watch('services');
+  const { isDefaultBtnTitle, btnTitle } =
+    getContactsFormServicesBtnTitle(checkedServices);
 
   const phoneNumberStart = '+380';
   const phoneInputRef = useMask({
@@ -135,8 +140,12 @@ const HeroSectionContactsForm: FC<IProps> = ({
           gapDesk={gapDesk}
           rowLength={rowLength}
           title='Послуги, що Вас цікавлять'
-          settings={{ ...register('services') }}
+          settings={{
+            ...register('services'),
+          }}
           services={services}
+          btnTitle={btnTitle}
+          isDefaultBtnTitle={isDefaultBtnTitle}
         />
         <HeroSectionContactsFormInput
           gapDesk={gapDesk}

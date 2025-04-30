@@ -13,9 +13,8 @@ import { IProps } from './HeroSectionContactsFormContainer.types';
 
 const HeroSectionContactsFormContainer: FC<IProps> = ({ services }) => {
   const [error, setError] = useState<StringOrNull>(null);
-  const [invalidFields, setInvalidFields] = useState<InvalidContactsFormFields>(
-    ['email', 'name', 'phone']
-  );
+  const [invalidFields, setInvalidFields] =
+    useState<InvalidContactsFormFields>(null);
   const [
     ,
     // isSuccess

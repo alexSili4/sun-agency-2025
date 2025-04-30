@@ -11,7 +11,6 @@ export const Container = styled.div`
     #ffffff,
     #161616
   );
-  overflow: hidden;
 `;
 
 export const Background = styled.div`

@@ -1,12 +1,15 @@
 import { FC } from 'react';
 import {
-  Container,
+  Label,
   Input,
   TextArea,
   Title,
+  Container,
+  ServiceBtnWrap,
 } from './HeroSectionContactsFormInput.styled';
 import { IProps } from './HeroSectionContactsFormInput.types';
 import HeroSectionContactsFormServices from '@ContactsPageComponents/HeroSectionContactsFormServices';
+import HeroSectionContactsFormServicesBtn from '@ContactsPageComponents/HeroSectionContactsFormServicesBtn';
 
 const HeroSectionContactsFormInput: FC<IProps> = ({
   title,
@@ -17,19 +20,29 @@ const HeroSectionContactsFormInput: FC<IProps> = ({
   gapDesk,
   rowLength,
   services,
+  btnTitle = '',
+  isDefaultBtnTitle = false,
   isTextArea = false,
   isInvalidField = false,
 }) => {
-  return (
-    <Container gapDesk={gapDesk} rowLength={rowLength} isTextArea={isTextArea}>
+  return services ? (
+    <Container gapDesk={gapDesk} rowLength={rowLength}>
+      <Title isInvalidField={isInvalidField}>{title}</Title>
+      <ServiceBtnWrap>
+        <HeroSectionContactsFormServicesBtn isFake />
+        <HeroSectionContactsFormServices
+          btnTitle={btnTitle}
+          isDefaultBtnTitle={isDefaultBtnTitle}
+          services={services}
+          settings={settings}
+        />
+      </ServiceBtnWrap>
+    </Container>
+  ) : (
+    <Label gapDesk={gapDesk} rowLength={rowLength} isTextArea={isTextArea}>
       <Title isInvalidField={isInvalidField}>{title}</Title>
       {isTextArea ? (
         <TextArea placeholder={placeholder} {...settings}></TextArea>
-      ) : services ? (
-        <HeroSectionContactsFormServices
-          btnTitle='Оберіть'
-          services={services}
-        />
       ) : (
         <Input
           isInvalidField={isInvalidField}
@@ -39,7 +52,7 @@ const HeroSectionContactsFormInput: FC<IProps> = ({
           ref={inputRef}
         />
       )}
-    </Container>
+    </Label>
   );
 };
 

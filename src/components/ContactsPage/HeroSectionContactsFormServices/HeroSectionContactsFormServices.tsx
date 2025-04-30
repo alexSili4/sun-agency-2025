@@ -1,27 +1,55 @@
-import { FC } from 'react';
+import { FC, useEffect, useRef, useState } from 'react';
 import { IProps } from './HeroSectionContactsFormServices.types';
 import HeroSectionContactsFormServicesList from '@ContactsPageComponents/HeroSectionContactsFormServicesList';
-import { theme } from '@/constants';
-import {
-  Button,
-  BtnTitle,
-  BtnWrap,
-  IconWrap,
-} from './HeroSectionContactsFormServices.styled';
-import { FaChevronDown } from 'react-icons/fa';
+import { Container } from './HeroSectionContactsFormServices.styled';
+import { makeBlur } from '@/utils';
+import { BtnClickEvent } from '@/types/types';
+import HeroSectionContactsFormServicesBtn from '@ContactsPageComponents/HeroSectionContactsFormServicesBtn';
 
 const HeroSectionContactsFormServices: FC<IProps> = ({
   services,
   btnTitle,
+  settings,
+  isDefaultBtnTitle,
 }) => {
+  const [isShowList, setIsShowList] = useState<boolean>(false);
+  const [listHeight, setListHeight] = useState<number>(0);
+  const listRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const list = listRef.current;
+
+    if (list) {
+      setListHeight(list.scrollHeight);
+    }
+  }, []);
+
+  const toggleIsShowList = () => {
+    setIsShowList((prevState) => !prevState);
+  };
+
+  const onShowListBtnClick = (e: BtnClickEvent) => {
+    makeBlur(e.currentTarget);
+
+    toggleIsShowList();
+  };
+
   return (
-    <BtnWrap>
-      <Button type='button'>
-        <BtnTitle>{btnTitle}</BtnTitle>
-        <FaChevronDown size={theme.iconSizes.contactsServices} />
-      </Button>
-      {/* <HeroSectionContactsFormServicesList services={services} /> */}
-    </BtnWrap>
+    <Container>
+      <HeroSectionContactsFormServicesList
+        services={services}
+        settings={settings}
+        isShow={isShowList}
+        contentRef={listRef}
+        height={listHeight}
+      />
+      <HeroSectionContactsFormServicesBtn
+        btnTitle={btnTitle}
+        onClick={onShowListBtnClick}
+        isShowList={isShowList}
+        isDefaultBtnTitle={isDefaultBtnTitle}
+      />
+    </Container>
   );
 };
 

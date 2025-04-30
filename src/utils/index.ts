@@ -11,3 +11,4 @@ export { default as copyToClipboard } from './copyToClipboard';
 export { default as getValidPhoneNumber } from './getValidPhoneNumber';
 export { default as getInvalidContactsFormFields } from './getInvalidContactsFormFields';
 export { default as getContactsFormErrorMessage } from './getContactsFormErrorMessage';
+export { default as getContactsFormServicesBtnTitle } from './getContactsFormServicesBtnTitle';

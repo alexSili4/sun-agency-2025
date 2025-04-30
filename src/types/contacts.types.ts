@@ -26,7 +26,7 @@ export interface IContactsFormData {
   name: string;
   email: string;
   phone: string;
-  services: Strings;
+  services?: Strings | boolean;
   message: string;
 }
 

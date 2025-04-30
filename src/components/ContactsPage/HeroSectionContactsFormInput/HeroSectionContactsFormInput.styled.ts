@@ -1,12 +1,31 @@
 import styled from '@emotion/styled';
 import {
-  IStyledContainerProps,
+  IStyledLabelProps,
   IStyledInputProps,
   IStyledTitleProps,
+  IStyledContainerProps,
 } from './HeroSectionContactsFormInput.types';
 import { getFlexItemWidth } from '@/utils';
 
-export const Container = styled.label<IStyledContainerProps>`
+export const Container = styled.div<IStyledContainerProps>`
+  display: flex;
+  flex-direction: column;
+  gap: ${({ theme }) => theme.spacing(2)}px;
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
+    gap: ${({ theme }) => theme.spacing(3)}px;
+    width: calc(
+      ${({ gapDesk, rowLength }) =>
+        getFlexItemWidth({ listGap: gapDesk, listLength: rowLength })}
+    );
+  }
+`;
+
+export const ServiceBtnWrap = styled.div`
+  position: relative;
+`;
+
+export const Label = styled.label<IStyledLabelProps>`
   display: flex;
   flex-direction: column;
   gap: ${({ theme }) => theme.spacing(2)}px;
@@ -43,7 +62,8 @@ export const Input = styled.input<IStyledInputProps>`
   font-size: 14px;
   font-weight: 500;
   line-height: 1.4;
-  transition: border-color ${({ theme }) => theme.transitionDurationAndFunc.all};
+  transition: border-color ${({ theme }) => theme.transitionDurationAndFunc.all},
+    box-shadow ${({ theme }) => theme.transitionDurationAndFunc.all};
 
   &::placeholder {
     color: #444444;
@@ -52,6 +72,7 @@ export const Input = styled.input<IStyledInputProps>`
   &:is(:hover, :focus) {
     outline: none;
     border-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0px 0px 2px 0px rgba(255, 255, 255, 0.1);
   }
 
   @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
@@ -74,7 +95,8 @@ export const TextArea = styled.textarea`
   font-size: 14px;
   font-weight: 500;
   line-height: 1.4;
-  transition: border-color ${({ theme }) => theme.transitionDurationAndFunc.all};
+  transition: border-color ${({ theme }) => theme.transitionDurationAndFunc.all},
+    box-shadow ${({ theme }) => theme.transitionDurationAndFunc.all};
 
   @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
     height: 100px;
@@ -87,5 +109,6 @@ export const TextArea = styled.textarea`
   &:is(:hover, :focus) {
     outline: none;
     border-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0px 0px 2px 0px rgba(255, 255, 255, 0.1);
   }
 `;

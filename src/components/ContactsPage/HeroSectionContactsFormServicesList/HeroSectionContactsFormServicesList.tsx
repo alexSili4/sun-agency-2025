@@ -3,23 +3,35 @@ import { IProps } from './HeroSectionContactsFormServicesList.types';
 import {
   Container,
   List,
-  ListItem,
   ListWrap,
+  Content,
+  ListItem,
 } from './HeroSectionContactsFormServicesList.styled';
 import HeroSectionContactsFormService from '@ContactsPageComponents/HeroSectionContactsFormService';
 
-const HeroSectionContactsFormServicesList: FC<IProps> = ({ services }) => {
+const HeroSectionContactsFormServicesList: FC<IProps> = ({
+  services,
+  settings,
+  isShow,
+  contentRef,
+  height,
+}) => {
   return (
-    <Container>
-      <ListWrap>
-        <List>
-          {services.map((service, index) => (
-            <ListItem key={index}>
-              <HeroSectionContactsFormService service={service} />
-            </ListItem>
-          ))}
-        </List>
-      </ListWrap>
+    <Container isShow={isShow} height={height}>
+      <Content ref={contentRef}>
+        <ListWrap>
+          <List>
+            {services.map((service, index) => (
+              <ListItem key={index}>
+                <HeroSectionContactsFormService
+                  service={service}
+                  settings={settings}
+                />
+              </ListItem>
+            ))}
+          </List>
+        </ListWrap>
+      </Content>
     </Container>
   );
 };
