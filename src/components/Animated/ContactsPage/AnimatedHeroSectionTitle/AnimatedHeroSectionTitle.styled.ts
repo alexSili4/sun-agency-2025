@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 import { motion } from 'framer-motion';
 
 export const Title = styled.h2`
-  background: linear-gradient(120deg, #000 40%, #fff 50%, #000 60%);
+  background-image: linear-gradient(120deg, #000 40%, #fff 50%, #000 60%);
   background-size: 200% 100%;
   -webkit-background-clip: text;
   background-clip: text;

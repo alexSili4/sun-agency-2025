@@ -1,4 +1,4 @@
-import { InputType, RefInputObject, Strings } from '@/types/types';
+import { InputType, Strings } from '@/types/types';
 
 export interface IProps {
   title: string;
@@ -10,9 +10,10 @@ export interface IProps {
   type?: InputType;
   placeholder?: string;
   isTextArea?: boolean;
-  inputRef?: RefInputObject;
   isInvalidField?: boolean;
   isDefaultBtnTitle?: boolean;
+  phoneInputReplacement?: object;
+  phoneInputMask?: string;
 }
 
 export interface IStyledContainerProps {

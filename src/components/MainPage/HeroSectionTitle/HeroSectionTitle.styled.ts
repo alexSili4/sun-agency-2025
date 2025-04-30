@@ -1,11 +1,17 @@
 import styled from '@emotion/styled';
 import { motion } from 'framer-motion';
 import { IStyledTitleProps } from './HeroSectionTitle.types';
+import { animations } from '@/constants';
 
 export const Title = styled.h1<IStyledTitleProps>`
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-image: linear-gradient(120deg, #000 40%, #fff 50%, #000 60%);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: ${animations.shinyText} 3s linear infinite;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
     display: ${({ isHiddenOnDesk }) => isHiddenOnDesk && 'none'};
@@ -24,7 +30,7 @@ export const TitlePartContainer = styled(motion.span)`
 `;
 
 export const TitlePart = styled.span`
-  color: ${({ theme }) => theme.colors.white};
+  color: ${({ theme }) => theme.colors.white70};
   font-family: ${({ theme }) => theme.fontFamily.involve};
   font-size: 24px;
   font-weight: 400;

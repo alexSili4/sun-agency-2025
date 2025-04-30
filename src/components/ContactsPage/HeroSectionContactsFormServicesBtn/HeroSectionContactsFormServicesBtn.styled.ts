@@ -44,6 +44,11 @@ export const BtnTitle = styled.span<IStyledBtnTitleProps>`
   font-weight: 500;
   line-height: 1.4;
   text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
   transition: color ${({ theme }) => theme.transitionDurationAndFunc.all};
 
   @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {

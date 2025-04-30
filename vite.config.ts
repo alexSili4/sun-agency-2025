@@ -19,6 +19,7 @@ export default defineConfig({
       // animations
       '@AnimatedContactsPageComponents':
         '/src/components/Animated/ContactsPage',
+      '@AnimatedMainPageComponents': '/src/components/Animated/MainPage',
     },
   },
 });

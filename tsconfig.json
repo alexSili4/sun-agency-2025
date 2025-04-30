@@ -18,7 +18,8 @@
       // animations
       "@AnimatedContactsPageComponents/*": [
         "./src/components/Animated/ContactsPage/*"
-      ]
+      ],
+      "@AnimatedMainPageComponents/*": ["./src/components/Animated/MainPage/*"]
     },
     "target": "ES2020",
     "useDefineForClassFields": true,

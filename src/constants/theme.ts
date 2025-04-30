@@ -49,6 +49,7 @@ interface ITheme {
     contactsModalWin: number;
     header: number;
     principlesSliderControls: number;
+    serviceBtn: number;
   };
   transitionDurationAndFunc: { all: string; process: string; about: string };
   spacing: (value?: number) => number;
@@ -80,6 +81,7 @@ const theme: ITheme = {
     mobile: 335,
   },
   zIndex: {
+    serviceBtn: 10,
     ourProcessSection: 10,
     loader: 10,
     menuBtn: 10,

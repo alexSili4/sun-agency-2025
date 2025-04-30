@@ -10,7 +10,7 @@ export const AnimatedElement = styled(motion.span)`
 export const TextLineSymbol = styled.span`
   display: inline-block;
   white-space: pre;
-  color: rgba(255, 255, 255, 0.7);
+  color: ${({theme})=>theme.colors.white70};
   font-family: ${({ theme }) => theme.fontFamily.involve};
   font-size: 24px;
   font-weight: 400;

@@ -5,7 +5,7 @@ import { makeBlur, smoothScroll } from '@/utils';
 import { useScroll, useTransform } from 'framer-motion';
 import { SectionsIds } from '@/constants';
 // ----- components
-import AnimatedHeroSectionTitle from '@AnimationBlocks/AnimatedHeroSectionTitle';
+import AnimatedHeroSectionTitle from '@AnimatedMainPageComponents/AnimatedHeroSectionTitle';
 import HeroSectionDonationInfo from '@MainPageComponents/HeroSectionDonationInfo';
 import GeneralContainer from '@GeneralComponents/GeneralContainer';
 import HeroSectionBusinessMetrics from '@MainPageComponents/HeroSectionBusinessMetrics';

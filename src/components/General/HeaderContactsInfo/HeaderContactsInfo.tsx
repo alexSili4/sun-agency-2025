@@ -7,7 +7,7 @@ import { PagePaths } from '@/constants';
 import GlowingLink from '@GeneralComponents/GlowingLink';
 import HeaderLangsMenu from '@GeneralComponents/HeaderLangsMenu';
 import HeaderMenuBtn from '@GeneralComponents/HeaderMenuBtn';
-import { useIsDesk } from '@/hooks';
+import { useContactsGlowingElementSize } from '@/hooks';
 
 const HeaderContactsInfo: FC<IProps> = ({
   currentLang,
@@ -16,10 +16,11 @@ const HeaderContactsInfo: FC<IProps> = ({
   onLangRadioBtnChange,
   onMenuBtnClick,
 }) => {
-  const isDesk = useIsDesk();
-
-  const glowingLinkWidth = isDesk ? 130 : 102;
-  const glowingLinkGlowWidth = glowingLinkWidth + 18;
+  const {
+    glowingElementGlowHeight,
+    glowingElementGlowWidth,
+    glowingElementWidth,
+  } = useContactsGlowingElementSize();
 
   return (
     <Container showMenuModalWin={showMenuModalWin}>
@@ -30,12 +31,12 @@ const HeaderContactsInfo: FC<IProps> = ({
         isHiddenOnMobile
       />
       <GlowingLink
-        width={glowingLinkWidth}
+        width={glowingElementWidth}
         title='Контакт'
         href={PagePaths.contacts}
         animationData={glowingContactBtn}
-        glowHeight={71}
-        glowWidth={glowingLinkGlowWidth}
+        glowHeight={glowingElementGlowHeight}
+        glowWidth={glowingElementGlowWidth}
         isHidden={showMenuModalWin}
         loop
       />

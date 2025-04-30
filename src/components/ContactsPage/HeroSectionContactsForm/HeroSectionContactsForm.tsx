@@ -1,7 +1,6 @@
 import { FC, useEffect, useState } from 'react';
-import { Form, InputsWrap } from './HeroSectionContactsForm.styled';
+import { Content, Form, InputsWrap } from './HeroSectionContactsForm.styled';
 import HeroSectionContactsFormInput from '@ContactsPageComponents/HeroSectionContactsFormInput';
-import { useMask } from '@react-input/mask';
 import { FormErrorMessages, regExp } from '@/constants';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { AxiosError } from 'axios';
@@ -12,6 +11,7 @@ import {
 } from '@/utils';
 import { IProps } from './HeroSectionContactsForm.types';
 import { IContactsFormData } from '@/types/contacts.types';
+import GlowingFormBtn from '@ContactsPageComponents/GlowingFormBtn';
 
 const HeroSectionContactsForm: FC<IProps> = ({
   updateError,
@@ -36,10 +36,8 @@ const HeroSectionContactsForm: FC<IProps> = ({
     getContactsFormServicesBtnTitle(checkedServices);
 
   const phoneNumberStart = '+380';
-  const phoneInputRef = useMask({
-    mask: `${phoneNumberStart} __ ___ ____`,
-    replacement: { _: /\d/ },
-  });
+  const phoneInputMask = `${phoneNumberStart} __ ___ ____`;
+  const phoneInputReplacement = { _: /\d/ };
 
   const updateDisabled = (data: boolean) => {
     setDisabled(data);
@@ -83,79 +81,83 @@ const HeroSectionContactsForm: FC<IProps> = ({
 
   return (
     <Form onSubmit={handleSubmit(handleFormSubmit)}>
-      <InputsWrap rowGapDesk={gapDesk}>
-        <HeroSectionContactsFormInput
-          gapDesk={gapDesk}
-          rowLength={rowLength}
-          title='Ім’я*'
-          placeholder='Ваше ім’я'
-          isInvalidField={isInvalidNameField}
-          settings={{
-            ...register('name', {
-              required: {
-                message: FormErrorMessages.nameReqErr,
-                value: true,
-              },
-            }),
-          }}
-        />
-        <HeroSectionContactsFormInput
-          gapDesk={gapDesk}
-          rowLength={rowLength}
-          title='Email*'
-          type='email'
-          placeholder='your@mail.com'
-          isInvalidField={isInvalidEmailField}
-          settings={{
-            ...register('email', {
-              required: {
-                value: true,
-                message: FormErrorMessages.emailReqErr,
-              },
-              pattern: {
-                value: regExp.email,
-                message: FormErrorMessages.emailRegExpErr,
-              },
-            }),
-          }}
-        />
-        <HeroSectionContactsFormInput
-          gapDesk={gapDesk}
-          rowLength={rowLength}
-          title='Телефон*'
-          type='tel'
-          placeholder={phoneNumberStart}
-          inputRef={phoneInputRef}
-          isInvalidField={isInvalidPhoneField}
-          settings={{
-            ...register('phone', {
-              required: {
-                value: true,
-                message: FormErrorMessages.phoneReqErr,
-              },
-            }),
-          }}
-        />
-        <HeroSectionContactsFormInput
-          gapDesk={gapDesk}
-          rowLength={rowLength}
-          title='Послуги, що Вас цікавлять'
-          settings={{
-            ...register('services'),
-          }}
-          services={services}
-          btnTitle={btnTitle}
-          isDefaultBtnTitle={isDefaultBtnTitle}
-        />
-        <HeroSectionContactsFormInput
-          gapDesk={gapDesk}
-          rowLength={rowLength}
-          title='Повідомлення'
-          placeholder='Напишіть повідомлення...'
-          settings={{ ...register('message') }}
-          isTextArea
-        />
-      </InputsWrap>
+      <Content>
+        <InputsWrap rowGapDesk={gapDesk}>
+          <HeroSectionContactsFormInput
+            gapDesk={gapDesk}
+            rowLength={rowLength}
+            title='Ім’я*'
+            placeholder='Ваше ім’я'
+            isInvalidField={isInvalidNameField}
+            settings={{
+              ...register('name', {
+                required: {
+                  message: FormErrorMessages.nameReqErr,
+                  value: true,
+                },
+              }),
+            }}
+          />
+          <HeroSectionContactsFormInput
+            gapDesk={gapDesk}
+            rowLength={rowLength}
+            title='Email*'
+            type='email'
+            placeholder='your@mail.com'
+            isInvalidField={isInvalidEmailField}
+            settings={{
+              ...register('email', {
+                required: {
+                  value: true,
+                  message: FormErrorMessages.emailReqErr,
+                },
+                pattern: {
+                  value: regExp.email,
+                  message: FormErrorMessages.emailRegExpErr,
+                },
+              }),
+            }}
+          />
+          <HeroSectionContactsFormInput
+            gapDesk={gapDesk}
+            rowLength={rowLength}
+            title='Телефон*'
+            type='tel'
+            placeholder={phoneNumberStart}
+            isInvalidField={isInvalidPhoneField}
+            phoneInputMask={phoneInputMask}
+            phoneInputReplacement={phoneInputReplacement}
+            settings={{
+              ...register('phone', {
+                required: {
+                  value: true,
+                  message: FormErrorMessages.phoneReqErr,
+                },
+              }),
+            }}
+          />
+          <HeroSectionContactsFormInput
+            gapDesk={gapDesk}
+            rowLength={rowLength}
+            title='Послуги, що Вас цікавлять'
+            settings={{
+              ...register('services'),
+            }}
+            services={services}
+            btnTitle={btnTitle}
+            isDefaultBtnTitle={isDefaultBtnTitle}
+          />
+          <HeroSectionContactsFormInput
+            gapDesk={gapDesk}
+            rowLength={rowLength}
+            title='Повідомлення'
+            placeholder='Напишіть повідомлення...'
+            settings={{ ...register('message') }}
+            isTextArea
+          />
+        </InputsWrap>
+        <GlowingFormBtn title='Надіслати' disabled={disabled} />
+      </Content>
     </Form>
   );
 };

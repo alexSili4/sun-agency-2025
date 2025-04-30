@@ -6,6 +6,7 @@ import {
   Title,
   Container,
   ServiceBtnWrap,
+  StyledInputMask,
 } from './HeroSectionContactsFormInput.styled';
 import { IProps } from './HeroSectionContactsFormInput.types';
 import HeroSectionContactsFormServices from '@ContactsPageComponents/HeroSectionContactsFormServices';
@@ -14,7 +15,6 @@ import HeroSectionContactsFormServicesBtn from '@ContactsPageComponents/HeroSect
 const HeroSectionContactsFormInput: FC<IProps> = ({
   title,
   placeholder,
-  inputRef,
   settings,
   type,
   gapDesk,
@@ -24,6 +24,8 @@ const HeroSectionContactsFormInput: FC<IProps> = ({
   isDefaultBtnTitle = false,
   isTextArea = false,
   isInvalidField = false,
+  phoneInputReplacement,
+  phoneInputMask,
 }) => {
   return services ? (
     <Container gapDesk={gapDesk} rowLength={rowLength}>
@@ -43,13 +45,21 @@ const HeroSectionContactsFormInput: FC<IProps> = ({
       <Title isInvalidField={isInvalidField}>{title}</Title>
       {isTextArea ? (
         <TextArea placeholder={placeholder} {...settings}></TextArea>
+      ) : phoneInputMask ? (
+        <StyledInputMask
+          isInvalidField={isInvalidField}
+          type={type}
+          placeholder={placeholder}
+          mask={phoneInputMask}
+          replacement={phoneInputReplacement}
+          {...settings}
+        />
       ) : (
         <Input
           isInvalidField={isInvalidField}
           type={type}
           placeholder={placeholder}
           {...settings}
-          ref={inputRef}
         />
       )}
     </Label>

@@ -77,3 +77,9 @@ export interface IUseActivePointAnimationProps {
 export interface IUseActivePointAnimation {
   activePointTranslateY: number;
 }
+
+export interface IUseContactsGlowingElementSize {
+  glowingElementGlowHeight: number;
+  glowingElementGlowWidth: number;
+  glowingElementWidth: number;
+}

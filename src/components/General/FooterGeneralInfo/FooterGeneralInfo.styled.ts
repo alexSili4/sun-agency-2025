@@ -14,6 +14,11 @@ export const Container = styled.div`
 
 export const ContentWrap = styled.div`
   background-color: inherit;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.desktop - 1}px) {
+    padding-top: ${({ theme }) => theme.spacing(4)}px;
+    padding-bottom: ${({ theme }) => theme.spacing(4)}px;
+  }
 `;
 
 export const Content = styled.div`
