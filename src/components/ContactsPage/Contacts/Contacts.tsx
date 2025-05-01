@@ -5,7 +5,7 @@ import ParticlesItem from '@GeneralComponents/ParticlesItem';
 const Contacts: FC = () => {
   return (
     <>
-      <HeroSection />
+      <HeroSection animationDuration={1} />
       <ParticlesItem />
     </>
   );

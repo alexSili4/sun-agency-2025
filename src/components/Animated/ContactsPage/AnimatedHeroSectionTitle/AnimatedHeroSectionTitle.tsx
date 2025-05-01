@@ -5,8 +5,9 @@ import {
   Text,
 } from './AnimatedHeroSectionTitle.styled';
 import AnimatedHeroSectionTitlePart from '@AnimatedContactsPageComponents/AnimatedHeroSectionTitlePart';
+import { IProps } from './AnimatedHeroSectionTitle.types';
 
-const AnimatedHeroSectionTitle: FC = () => {
+const AnimatedHeroSectionTitle: FC<IProps> = ({ animationDuration }) => {
   const strings = ['Завжди на зв’язку! Давайте', 'обговоримо ваш'];
   const accent = ' проект';
 
@@ -20,7 +21,7 @@ const AnimatedHeroSectionTitle: FC = () => {
   };
 
   const transition = {
-    duration: 0.6,
+    duration: animationDuration,
     ease: [0.25, 0.1, 0.25, 1],
   };
 

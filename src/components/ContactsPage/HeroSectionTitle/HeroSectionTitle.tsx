@@ -1,15 +1,14 @@
 import { FC } from 'react';
-import { Container, SubTitle } from './HeroSectionTitle.styled';
+import { Container } from './HeroSectionTitle.styled';
 import AnimatedHeroSectionTitle from '@AnimatedContactsPageComponents/AnimatedHeroSectionTitle';
+import AnimatedHeroSectionSubtitle from '@AnimatedContactsPageComponents/AnimatedHeroSectionSubtitle';
+import { IProps } from './HeroSectionTitle.types';
 
-const HeroSectionTitle: FC = () => {
+const HeroSectionTitle: FC<IProps> = ({ animationDuration }) => {
   return (
     <Container>
-      <AnimatedHeroSectionTitle />
-      <SubTitle>
-        Зв'яжіться з нами, щоб поділитися ідеєю або запропонувати партнерство.
-        Ми готові надати пораду та обговорити будь-які питання.
-      </SubTitle>
+      <AnimatedHeroSectionTitle animationDuration={animationDuration} />
+      <AnimatedHeroSectionSubtitle animationDuration={animationDuration} />
     </Container>
   );
 };

@@ -3,11 +3,7 @@ import { IStyledContainerProps } from './GeneralContainer.types';
 
 export const Container = styled.div<IStyledContainerProps>`
   position: ${({ isPositionRelative, isPositionAbsolute }) =>
-    isPositionRelative
-      ? 'relative'
-      : isPositionAbsolute
-      ? 'absolute'
-      : 'static'};
+    isPositionRelative ? 'relative' : isPositionAbsolute ? 'absolute' : ''};
   top: ${({ top }) => top};
   left: ${({ isCenterXPosition }) => isCenterXPosition && '50%'};
   width: 100%;
@@ -17,9 +13,8 @@ export const Container = styled.div<IStyledContainerProps>`
   margin-left: auto;
   margin-right: auto;
   pointer-events: ${({ isPointerEventsNone }) => isPointerEventsNone && 'none'};
-  transform: translateX(
-    ${({ isCenterXPosition }) => (isCenterXPosition ? '-50%' : 0)}
-  );
+  transform: ${({ isCenterXPosition }) =>
+    isCenterXPosition && 'translateX(-50%)'};
 
   @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
     width: 96vw;

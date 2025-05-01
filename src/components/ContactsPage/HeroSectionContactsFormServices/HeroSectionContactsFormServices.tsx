@@ -1,7 +1,7 @@
 import { FC, useEffect, useRef, useState } from 'react';
 import { IProps } from './HeroSectionContactsFormServices.types';
 import HeroSectionContactsFormServicesList from '@ContactsPageComponents/HeroSectionContactsFormServicesList';
-import { Container } from './HeroSectionContactsFormServices.styled';
+import { Container, Backdrop } from './HeroSectionContactsFormServices.styled';
 import { makeBlur } from '@/utils';
 import { BtnClickEvent } from '@/types/types';
 import HeroSectionContactsFormServicesBtn from '@ContactsPageComponents/HeroSectionContactsFormServicesBtn';
@@ -34,22 +34,29 @@ const HeroSectionContactsFormServices: FC<IProps> = ({
     toggleIsShowList();
   };
 
+  const onBackdropClick = () => {
+    toggleIsShowList();
+  };
+
   return (
-    <Container>
-      <HeroSectionContactsFormServicesList
-        services={services}
-        settings={settings}
-        isShow={isShowList}
-        contentRef={listRef}
-        height={listHeight}
-      />
-      <HeroSectionContactsFormServicesBtn
-        btnTitle={btnTitle}
-        onClick={onShowListBtnClick}
-        isShowList={isShowList}
-        isDefaultBtnTitle={isDefaultBtnTitle}
-      />
-    </Container>
+    <>
+      {isShowList && <Backdrop onClick={onBackdropClick}></Backdrop>}
+      <Container>
+        <HeroSectionContactsFormServicesList
+          services={services}
+          settings={settings}
+          isShow={isShowList}
+          contentRef={listRef}
+          height={listHeight}
+        />
+        <HeroSectionContactsFormServicesBtn
+          btnTitle={btnTitle}
+          onClick={onShowListBtnClick}
+          isShowList={isShowList}
+          isDefaultBtnTitle={isDefaultBtnTitle}
+        />
+      </Container>
+    </>
   );
 };
 
