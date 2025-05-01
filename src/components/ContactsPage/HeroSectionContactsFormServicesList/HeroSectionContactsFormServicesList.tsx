@@ -21,10 +21,11 @@ const HeroSectionContactsFormServicesList: FC<IProps> = ({
       <Content ref={contentRef}>
         <ListWrap>
           <List>
-            {services.map((service, index) => (
+            {services.map(({ label, value }, index) => (
               <ListItem key={index}>
                 <HeroSectionContactsFormService
-                  service={service}
+                  label={label}
+                  value={value}
                   settings={settings}
                 />
               </ListItem>

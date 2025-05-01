@@ -1,4 +1,5 @@
 export interface IProps {
-  service: string;
+  value: string;
+  label: string;
   settings: object;
 }

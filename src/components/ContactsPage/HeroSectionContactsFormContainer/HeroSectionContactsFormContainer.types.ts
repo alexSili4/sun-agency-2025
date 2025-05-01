@@ -1,5 +1,5 @@
-import { Strings } from '@/types/types';
+import { Services } from '@/types/contacts.types';
 
 export interface IProps {
-  services: Strings;
+  services: Services;
 }

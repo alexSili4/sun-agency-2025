@@ -1,12 +1,12 @@
+import { Services } from '@/types/contacts.types';
 import {
   SetBooleanFunc,
   SetStringOrNullFunc,
   SetInvalidContactsFormFieldsFunc,
 } from '@/types/functions.types';
-import { Strings } from '@/types/types';
 
 export interface IProps {
-  services: Strings;
+  services: Services;
   gapDesk: number;
   rowLength: number;
   isInvalidNameField: boolean;

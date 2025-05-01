@@ -6,11 +6,15 @@ import {
   Title,
 } from './HeroSectionContactsFormService.styled';
 
-const HeroSectionContactsFormService: FC<IProps> = ({ service, settings }) => {
+const HeroSectionContactsFormService: FC<IProps> = ({
+  value,
+  settings,
+  label,
+}) => {
   return (
     <Container>
-      <Title>{service}</Title>
-      <Input value={service} type='checkbox' {...settings} />
+      <Title>{label}</Title>
+      <Input value={value} type='checkbox' {...settings} />
     </Container>
   );
 };

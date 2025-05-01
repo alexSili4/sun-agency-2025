@@ -1,7 +1,8 @@
-import { RefDivObject, Strings } from '@/types/types';
+import { Services } from '@/types/contacts.types';
+import { RefDivObject } from '@/types/types';
 
 export interface IProps {
-  services: Strings;
+  services: Services;
   settings: object;
   isShow: boolean;
   contentRef: RefDivObject;

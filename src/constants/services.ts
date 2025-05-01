@@ -8,25 +8,25 @@ import webDevelopment from '@/images/main/services/web-development.png';
 const services: Services = [
   {
     title: 'Комплексний e-commerce',
-    tags: ['Корпоративні сайти', 'Пропо сайти', 'Сервісні сайти'],
+    tags: ['Корпоративні сайти', 'Промо сайти', 'Сервісні сайти'],
     path: PagePaths.eCommerce,
     icon: eCommerce,
   },
   {
     title: 'Розробка сайтів',
-    tags: ['Корпоративні сайти', 'Пропо сайти', 'Сервісні сайти'],
+    tags: ['Корпоративні сайти', 'Промо сайти', 'Сервісні сайти'],
     path: PagePaths.webDevelopment,
     icon: webDevelopment,
   },
   {
     title: 'Брендинг та айдентика',
-    tags: ['Корпоративні сайти', 'Пропо сайти', 'Сервісні сайти'],
+    tags: ['Корпоративні сайти', 'Промо сайти', 'Сервісні сайти'],
     path: PagePaths.brandingAndIdentity,
     icon: brandingAndIdentity,
   },
   {
     title: 'Цифровізація',
-    tags: ['Корпоративні сайти', 'Пропо сайти', 'Сервісні сайти'],
+    tags: ['Корпоративні сайти', 'Промо сайти', 'Сервісні сайти'],
     path: PagePaths.digitalization,
     icon: digitalization,
   },

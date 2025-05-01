@@ -1,4 +1,5 @@
-import { InputType, Strings } from '@/types/types';
+import { Services } from '@/types/contacts.types';
+import { InputType } from '@/types/types';
 
 export interface IProps {
   title: string;
@@ -6,7 +7,7 @@ export interface IProps {
   gapDesk: number;
   rowLength: number;
   btnTitle?: string;
-  services?: Strings;
+  services?: Services;
   type?: InputType;
   placeholder?: string;
   isTextArea?: boolean;

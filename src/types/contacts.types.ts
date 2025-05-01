@@ -13,13 +13,20 @@ export interface IAddress {
   link: string;
 }
 
+export interface IService {
+  label: string;
+  value: string;
+}
+
+export type Services = IService[];
+
 export interface IContacts {
   info: {
     email: string;
     phone: Phone;
     address: IAddress;
   };
-  services: Strings;
+  services: Services;
 }
 
 export interface IContactsFormData {

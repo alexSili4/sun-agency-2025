@@ -17,12 +17,12 @@ const contacts: IContacts = {
     },
   },
   services: [
-    'Електронна комерція',
-    'Веб-розробка',
-    'iOS та Android додатки',
-    'Брендинг та айдентика',
-    'Цифровізація',
-    'Інше',
+    { label: 'Електронна комерція', value: 'e-commerce' },
+    { label: 'Веб-розробка', value: 'web-dev' },
+    { label: 'iOS та Android додатки', value: 'applications' },
+    { label: 'Брендинг та айдентика', value: 'branding-and-identity' },
+    { label: 'Цифровізація', value: 'digitalization' },
+    { label: 'Інше', value: 'other' },
   ],
 };
 
