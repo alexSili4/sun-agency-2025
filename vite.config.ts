@@ -16,9 +16,11 @@ export default defineConfig({
       '@AtbProjectDetailsComponents':
         '/src/components/ProjectDetailsPage/AtbProjectDetails',
       '@ContactsPageComponents': '/src/components/ContactsPage',
+      '@ClientsPageComponents': '/src/components/ClientsPage',
       // animations
       '@AnimatedContactsPageComponents':
         '/src/components/Animated/ContactsPage',
+      '@AnimatedClientsPageComponents': '/src/components/Animated/ClientsPage',
       '@AnimatedMainPageComponents': '/src/components/Animated/MainPage',
     },
   },

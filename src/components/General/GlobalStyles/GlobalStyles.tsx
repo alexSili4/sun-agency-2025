@@ -115,7 +115,7 @@ const GlobalStyles: FC = () => (
         flex-direction: column;
         justify-content: space-between;
         min-height: 100vh;
-        background-color: ${theme.colors.dark};
+        /* background-color: ${theme.colors.dark}; */
       }
     `}
   />

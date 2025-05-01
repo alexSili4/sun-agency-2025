@@ -1,7 +1,7 @@
-import { Clients } from '@/types/clients.types';
+import { CompanyClients } from '@/types/clients.types';
 import { MarqueeDirection } from '@/types/types';
 
 export interface IProps {
-  clients: Clients;
+  clients: CompanyClients;
   direction: MarqueeDirection;
 }

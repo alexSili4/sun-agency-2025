@@ -36,7 +36,7 @@ const HeroSection: FC<IProps> = ({
           borderRadiusDesk={borderRadiusDesk}
           borderRadiusMobile={borderRadiusMobile}
         >
-          <GeneralContainer>
+          <GeneralContainer isPositionRelative>
             <Content>
               <ProjectDetailsBreadcrumbs name={name} />
               <TitleWrap>

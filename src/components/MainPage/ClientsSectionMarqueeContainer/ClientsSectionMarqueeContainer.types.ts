@@ -1,6 +1,6 @@
-import { Clients } from '@/types/clients.types';
+import { CompanyClients } from '@/types/clients.types';
 
 export interface IProps {
-  topClientsLine: Clients;
-  bottomClientsLine: Clients;
+  topClientsLine: CompanyClients;
+  bottomClientsLine: CompanyClients;
 }

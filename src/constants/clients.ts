@@ -1,4 +1,10 @@
-import { Clients } from '@/types/clients.types';
+import {
+  CompanyClients,
+  IClients,
+  ITags,
+  IServices,
+  Years,
+} from '@/types/clients.types';
 // atb
 import atbPrimaryLogo from '@/images/main/clients/atb-primary-logo.png';
 import atbLogo from '@/images/main/clients/atb-logo.png';
@@ -30,7 +36,50 @@ import varusPrimaryLogo from '@/images/main/clients/varus-primary-logo.png';
 // wineBureau
 import wineBureauPrimaryLogo from '@/images/main/clients/wine-bureau-primary-logo.png';
 
-const clients: Clients = [
+const tags: ITags = {
+  all: { value: '', label: 'Всі' },
+  retail: { value: 'retail', label: 'Рітейл' },
+  beautyAndCare: { value: 'beautyAndCare', label: 'Догляд та краса' },
+  finances: { value: 'finances', label: 'Фінанси' },
+  health: { value: 'health', label: 'Здоров’я' },
+  restaurants: { value: 'restaurants', label: 'Ресторани' },
+  fmcg: { value: 'fmcg', label: 'FMCG' },
+};
+
+const services: IServices = {
+  all: { value: '', label: 'Всі послуги' },
+  eCommerce: { value: 'e-commerce', label: 'Електронна комерція' },
+  webDev: { value: 'web-dev', label: 'Веб-розробка' },
+  applications: { value: 'applications', label: 'iOS та Android додатки' },
+  brandingAndIdentity: {
+    value: 'branding-and-identity',
+    label: 'Брендинг та айдентика',
+  },
+  digitalization: { value: 'digitalization', label: 'Цифровізація' },
+};
+
+const years: Years = {
+  2011: '2011',
+  2012: '2012',
+  2013: '2013',
+  2014: '2014',
+  2015: '2015',
+  2016: '2016',
+  2017: '2017',
+  2018: '2018',
+  2019: '2019',
+  2020: '2020',
+  2021: '2021',
+  2022: '2022',
+  2023: '2023',
+  2024: '2024',
+  2025: '2025',
+  2026: '2026',
+  2027: '2027',
+  2028: '2028',
+};
+
+const companyClients: CompanyClients = [
   {
     primaryLogo: activitisPrimaryLogo,
     logo: atbLogo,
@@ -149,5 +198,14 @@ const clients: Clients = [
     images: [atbProject1, atbProject2, atbProject3],
   },
 ];
+
+export const clients: IClients = {
+  clients: companyClients,
+  filters: {
+    tags,
+    services,
+    years,
+  },
+};
 
 export default clients;
