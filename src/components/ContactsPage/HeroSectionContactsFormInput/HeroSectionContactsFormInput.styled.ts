@@ -73,8 +73,8 @@ export const StyledInputMask = styled(InputMask)<IStyledInputProps>`
 
   &:is(:hover, :focus) {
     outline: none;
-    border-color: rgba(255, 255, 255, 0.1);
-    box-shadow: 0px 0px 2px 0px rgba(255, 255, 255, 0.1);
+    border-color: ${({ theme }) => theme.colors.white10};
+    box-shadow: 0px 0px 2px 0px ${({ theme }) => theme.colors.white10};
   }
 
   @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
@@ -104,8 +104,8 @@ export const Input = styled.input<IStyledInputProps>`
 
   &:is(:hover, :focus) {
     outline: none;
-    border-color: rgba(255, 255, 255, 0.1);
-    box-shadow: 0px 0px 2px 0px rgba(255, 255, 255, 0.1);
+    border-color: ${({ theme }) => theme.colors.white10};
+    box-shadow: 0px 0px 2px 0px ${({ theme }) => theme.colors.white10};
   }
 
   @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
@@ -141,7 +141,7 @@ export const TextArea = styled.textarea`
 
   &:is(:hover, :focus) {
     outline: none;
-    border-color: rgba(255, 255, 255, 0.1);
-    box-shadow: 0px 0px 2px 0px rgba(255, 255, 255, 0.1);
+    border-color: ${({ theme }) => theme.colors.white10};
+    box-shadow: 0px 0px 2px 0px ${({ theme }) => theme.colors.white10};
   }
 `;

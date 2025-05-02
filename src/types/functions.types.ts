@@ -1,3 +1,4 @@
+import { Services } from './clients.types';
 import { InvalidContactsFormFields } from './contacts.types';
 import {
   AnchorClickEvent,
@@ -74,4 +75,9 @@ export interface IGetInvalidContactsFormFields {
 export interface IGetContactsFormServicesBtnTitle {
   isDefaultBtnTitle: boolean;
   btnTitle: string;
+}
+
+export interface IGetServicesBtnTitleProps {
+  services: Services;
+  filter: string;
 }

@@ -34,7 +34,16 @@ export interface IServiceDetails {
   label: string;
 }
 
-export interface IServices {}
+export type Services = IServiceDetails[];
+
+export interface IServices {
+  all: IServiceDetails;
+  eCommerce: IServiceDetails;
+  webDev: IServiceDetails;
+  applications: IServiceDetails;
+  brandingAndIdentity: IServiceDetails;
+  digitalization: IServiceDetails;
+}
 
 export interface IYears {
   2011: string;

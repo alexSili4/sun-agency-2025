@@ -8,6 +8,8 @@ interface ITheme {
     black: string;
     white: string;
     white70: string;
+    white50: string;
+    white10: string;
     inactiveLink: string;
     darkBg: string;
     error: string;
@@ -40,6 +42,7 @@ interface ITheme {
     contactsCopy: number;
     contactsTg: number;
     contactsArrow: number;
+    clientsServices: number;
   };
   zIndex: {
     ourProcessSection: number;
@@ -60,10 +63,13 @@ const theme: ITheme = {
     dark: '#0a0a0a',
     darkBg: '#090C08',
     black: '#000000',
-    white: '#ffffff',
-    white70: 'rgba(255, 255, 255, 0.7)',
     inactiveLink: '#3e4648',
     error: 'rgba(255, 52, 7, 0.7)',
+    // white
+    white: '#ffffff',
+    white70: 'rgba(255, 255, 255, 0.7)',
+    white50: 'rgba(255, 255, 255, 0.5)',
+    white10: 'rgba(255, 255, 255, 0.1)',
   },
   fontFamily: {
     involve: 'Involve',
@@ -102,6 +108,7 @@ const theme: ITheme = {
     contactsCopy: 14,
     socialLink: 14,
     closeClientDetailsBtn: 14,
+    clientsServices: 16,
     contactsServices: 16,
     contactsArrow: 16,
     contactsTg: 16,

@@ -26,8 +26,8 @@ export const Button = styled.button<IStyledButtonProps>`
 
   &:is(:hover, :focus) {
     outline: none;
-    border-color: rgba(255, 255, 255, 0.1);
-    box-shadow: 0px 0px 2px 0px rgba(255, 255, 255, 0.1);
+    border-color: ${({ theme }) => theme.colors.white10};
+    box-shadow: 0px 0px 2px 0px ${({ theme }) => theme.colors.white10};
   }
 
   &:is(:hover, :focus) > svg {

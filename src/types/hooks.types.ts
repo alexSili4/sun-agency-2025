@@ -9,6 +9,7 @@ import {
 import {
   Func,
   OnDivClickFunc,
+  OnInputChangeFunc,
   OnSwiperAutoplayTimeLeft,
   OnSwiperFunc,
 } from './functions.types';
@@ -94,4 +95,9 @@ export interface IUseContactsGlowingElementSize {
   glowingElementGlowHeight: number;
   glowingElementGlowWidth: number;
   glowingElementWidth: number;
+}
+
+export interface IUseClientsFilter {
+  onFilterChange: OnInputChangeFunc;
+  filter: string;
 }

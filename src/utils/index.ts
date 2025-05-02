@@ -14,3 +14,5 @@ export { default as getContactsFormErrorMessage } from './getContactsFormErrorMe
 export { default as getContactsFormServicesBtnTitle } from './getContactsFormServicesBtnTitle';
 export { default as getContactsFormServiceByValue } from './getContactsFormServiceByValue';
 export { default as getClientsListCategories } from './getClientsListCategories';
+export { default as getClientsListServices } from './getClientsListServices';
+export { default as getServicesBtnTitle } from './getServicesBtnTitle';

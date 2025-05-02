@@ -1,9 +1,10 @@
+import { SearchParamsKeys } from '@/constants';
 import { OnInputChangeFunc } from '@/types/functions.types';
 
 export interface IProps {
-  name: string;
   label: string;
   value: string;
+  name: SearchParamsKeys;
   isChecked: boolean;
   onChange: OnInputChangeFunc;
 }

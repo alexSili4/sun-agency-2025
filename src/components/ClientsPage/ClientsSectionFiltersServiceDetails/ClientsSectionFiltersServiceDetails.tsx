@@ -1,18 +1,18 @@
 import { FC } from 'react';
-import { IProps } from './ClientsSectionFiltersCategoryDetails.types';
+import { IProps } from './ClientsSectionFiltersServiceDetails.types';
 import {
-  Input,
   Container,
+  Input,
   Title,
   TitleWrap,
-} from './ClientsSectionFiltersCategoryDetails.styled';
+} from './ClientsSectionFiltersServiceDetails.styled';
 
-const ClientsSectionFiltersCategoryDetails: FC<IProps> = ({
+const ClientsSectionFiltersServiceDetails: FC<IProps> = ({
   isChecked,
   label,
+  name,
   onChange,
   value,
-  name,
 }) => {
   return (
     <Container>
@@ -30,4 +30,4 @@ const ClientsSectionFiltersCategoryDetails: FC<IProps> = ({
   );
 };
 
-export default ClientsSectionFiltersCategoryDetails;
+export default ClientsSectionFiltersServiceDetails;

@@ -1,36 +1,28 @@
 import { FC } from 'react';
 import { IProps } from './ClientsSectionFiltersCategories.types';
-import { useSetSearchParams } from '@/hooks';
 import ClientsSectionFiltersCategoryDetails from '@ClientsPageComponents/ClientsSectionFiltersCategoryDetails';
 import { List, ListItem } from './ClientsSectionFiltersCategories.styled';
-import { SearchParamsKeys } from '@/constants';
-import { InputChangeEvent } from '@/types/types';
-import { makeBlur } from '@/utils';
+import { useClientsFilter } from '@/hooks';
 
-const ClientsSectionFiltersCategories: FC<IProps> = ({ categories }) => {
-  const { searchParams, updateSearchParams } = useSetSearchParams();
-  const category = searchParams.get(SearchParamsKeys.category);
-
-  const onCategoryChange = (e: InputChangeEvent) => {
-    const { name: key, value } = e.currentTarget;
-
-    makeBlur(e.currentTarget);
-
-    updateSearchParams({ key, value });
-  };
+const ClientsSectionFiltersCategories: FC<IProps> = ({
+  searchParamsKey,
+  categories,
+}) => {
+  const { filter, onFilterChange } = useClientsFilter(searchParamsKey);
 
   return (
     <List>
       {categories.map(({ label, value }, index) => {
-        const isChecked = category === value;
+        const isChecked = filter === value;
 
         return (
           <ListItem key={index}>
             <ClientsSectionFiltersCategoryDetails
               label={label}
               value={value}
+              name={searchParamsKey}
               isChecked={isChecked}
-              onChange={onCategoryChange}
+              onChange={onFilterChange}
             />
           </ListItem>
         );

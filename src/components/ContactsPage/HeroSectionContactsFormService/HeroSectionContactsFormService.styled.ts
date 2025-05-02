@@ -8,7 +8,7 @@ export const Container = styled.label`
 `;
 
 export const Title = styled.span`
-  color: rgba(255, 255, 255, 0.5);
+  color: ${({ theme }) => theme.colors.white50};
   font-family: ${({ theme }) => theme.fontFamily.involve};
   font-size: 14px;
   font-weight: 500;

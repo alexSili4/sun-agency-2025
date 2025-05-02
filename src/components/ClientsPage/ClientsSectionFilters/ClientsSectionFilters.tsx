@@ -4,18 +4,26 @@ import ClientsSectionFiltersCategories from '@ClientsPageComponents/ClientsSecti
 import ClientsSectionFiltersServices from '@ClientsPageComponents/ClientsSectionFiltersServices';
 import ClientsSectionFiltersDate from '@ClientsPageComponents/ClientsSectionFiltersDate';
 import { IProps } from './ClientsSectionFilters.types';
-import { getClientsListCategories } from '@/utils';
+import { getClientsListCategories, getClientsListServices } from '@/utils';
+import { SearchParamsKeys } from '@/constants';
 
 const ClientsSectionFilters: FC<IProps> = ({ filters }) => {
-  const { categories } = filters;
+  const { categories, services } = filters;
 
   const listCategories = getClientsListCategories(categories);
+  const listServices = getClientsListServices(services);
 
   return (
     <Container>
-      <ClientsSectionFiltersCategories categories={listCategories} />
+      <ClientsSectionFiltersCategories
+        categories={listCategories}
+        searchParamsKey={SearchParamsKeys.category}
+      />
       <Content>
-        <ClientsSectionFiltersServices />
+        <ClientsSectionFiltersServices
+          services={listServices}
+          searchParamsKey={SearchParamsKeys.service}
+        />
         <ClientsSectionFiltersDate />
       </Content>
     </Container>

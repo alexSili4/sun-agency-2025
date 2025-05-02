@@ -42,7 +42,7 @@ export const Border = styled.div`
   width: 100%;
   height: 100%;
   box-sizing: border-box;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid ${({theme})=>theme.colors.white10};
   background-color: rgba(217, 217, 217, 0);
   border-radius: 50%;
 `;

@@ -14,3 +14,4 @@ export { default as useActivePointAnimation } from './useActivePointAnimation';
 export { default as useIsContactsPage } from './useIsContactsPage';
 export { default as useContactsGlowingElementSize } from './useContactsGlowingElementSize';
 export { default as useSetSearchParams } from './useSetSearchParams';
+export { default as useClientsFilter } from './useClientsFilter';
