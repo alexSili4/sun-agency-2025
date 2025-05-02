@@ -1,3 +1,4 @@
+import { CompanyClients } from '@/types/clients.types';
 import { RefDivObject } from '@/types/types';
 
 export interface IProps {
@@ -11,6 +12,7 @@ export interface IProps {
   // clients
   clientsSectionInView: boolean;
   clientsSectionRef: RefDivObject;
+  clients: CompanyClients;
   // other
   shouldShowClientsSectionContent: boolean;
   servicesSectionRef: RefDivObject;

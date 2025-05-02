@@ -1,9 +1,9 @@
 import {
   CompanyClients,
   IClients,
-  ITags,
+  ICategories,
   IServices,
-  Years,
+  IYears,
 } from '@/types/clients.types';
 // atb
 import atbPrimaryLogo from '@/images/main/clients/atb-primary-logo.png';
@@ -36,7 +36,7 @@ import varusPrimaryLogo from '@/images/main/clients/varus-primary-logo.png';
 // wineBureau
 import wineBureauPrimaryLogo from '@/images/main/clients/wine-bureau-primary-logo.png';
 
-const tags: ITags = {
+const categories: ICategories = {
   all: { value: '', label: 'Всі' },
   retail: { value: 'retail', label: 'Рітейл' },
   beautyAndCare: { value: 'beautyAndCare', label: 'Догляд та краса' },
@@ -58,7 +58,7 @@ const services: IServices = {
   digitalization: { value: 'digitalization', label: 'Цифровізація' },
 };
 
-const years: Years = {
+const years: IYears = {
   2011: '2011',
   2012: '2012',
   2013: '2013',
@@ -202,7 +202,7 @@ const companyClients: CompanyClients = [
 export const clients: IClients = {
   clients: companyClients,
   filters: {
-    tags,
+    categories,
     services,
     years,
   },

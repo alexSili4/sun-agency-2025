@@ -18,6 +18,7 @@ const Main: FC<IProps> = ({
   shouldShowClientsSectionContent,
   reviewsSectionRef,
   projectsSectionRef,
+  clients,
 }) => {
   return (
     <>
@@ -35,6 +36,7 @@ const Main: FC<IProps> = ({
       <ClientsSection
         shouldShowSectionContent={shouldShowClientsSectionContent}
         sectionRef={clientsSectionRef}
+        clients={clients}
       />
       <ReviewsSection sectionRef={reviewsSectionRef} />
     </>

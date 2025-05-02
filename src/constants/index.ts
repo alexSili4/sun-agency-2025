@@ -19,3 +19,4 @@ export { default as about } from './about';
 export { default as contacts } from './contacts';
 export { default as FormErrorMessages } from './formErrorMessages';
 export { default as regExp } from './regExp';
+export { default as SearchParamsKeys } from './searchParamsKeys';

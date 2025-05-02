@@ -4,7 +4,7 @@ import { IProps } from './AnimatedClientsSectionContent.types';
 // ----- components
 import ClientsSectionContent from '@MainPageComponents/ClientsSectionContent';
 
-const AnimatedClientsSectionContent: FC<IProps> = ({ shouldShow }) => {
+const AnimatedClientsSectionContent: FC<IProps> = ({ shouldShow, clients }) => {
   const animate = shouldShow ? 'visible' : 'hidden';
 
   const containerVariants = {
@@ -33,7 +33,7 @@ const AnimatedClientsSectionContent: FC<IProps> = ({ shouldShow }) => {
   return (
     <Container variants={containerVariants} initial='hidden' animate={animate}>
       <ItemWrap variants={itemVariants}>
-        <ClientsSectionContent />
+        <ClientsSectionContent clients={clients} />
       </ItemWrap>
     </Container>
   );

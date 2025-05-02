@@ -8,12 +8,16 @@ import AnimatedClientsSectionContent from '@AnimationBlocks/AnimatedClientsSecti
 const ClientsSection: FC<IProps> = ({
   sectionRef,
   shouldShowSectionContent,
+  clients,
 }) => {
   return (
     <Section ref={sectionRef}>
       <Background>
         <AnimatedClientsSectionBg shouldShow={shouldShowSectionContent} />
-        <AnimatedClientsSectionContent shouldShow={shouldShowSectionContent} />
+        <AnimatedClientsSectionContent
+          shouldShow={shouldShowSectionContent}
+          clients={clients}
+        />
       </Background>
     </Section>
   );

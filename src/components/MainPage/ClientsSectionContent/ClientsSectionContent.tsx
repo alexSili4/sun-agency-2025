@@ -4,7 +4,7 @@ import {
   ClientsMarqueeWrap,
   TextWrap,
 } from './ClientsSectionContent.styled';
-import { PagePaths, clients } from '@/constants';
+import { PagePaths } from '@/constants';
 import { splitArray } from '@/utils';
 import glowingLink from '@/lottiefiles/glow/glowing-link.json';
 // ----- components
@@ -13,8 +13,9 @@ import AnimatedSectionTitle from '@AnimationBlocks/AnimatedSectionTitle';
 import GlowingLink from '@GeneralComponents/GlowingLink';
 import ClientsSectionMarqueeContainer from '@MainPageComponents/ClientsSectionMarqueeContainer';
 import AnimatedSectionSubtitle from '@AnimationBlocks/AnimatedSectionSubtitle';
+import { IProps } from './ClientsSectionContent.types';
 
-const ClientsSectionContent: FC = () => {
+const ClientsSectionContent: FC<IProps> = ({ clients }) => {
   const { firstItem: firstClientsItem, secondItem: secondClientsItem } =
     splitArray(clients);
 

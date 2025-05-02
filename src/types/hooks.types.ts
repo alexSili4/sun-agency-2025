@@ -13,6 +13,18 @@ import {
   OnSwiperFunc,
 } from './functions.types';
 import { Process } from './about.types';
+import { SetURLSearchParams } from 'react-router-dom';
+
+export interface IUpdateSearchParamsProps {
+  key: string;
+  value: string;
+}
+
+export interface IUseSetSearchParams {
+  updateSearchParams: (data: IUpdateSearchParamsProps) => void;
+  searchParams: URLSearchParams;
+  setSearchParams: SetURLSearchParams;
+}
 
 export interface IUseModalWinProps {
   setModalWinState: Func;

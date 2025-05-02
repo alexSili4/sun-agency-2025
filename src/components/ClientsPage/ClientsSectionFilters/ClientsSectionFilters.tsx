@@ -1,13 +1,19 @@
 import { FC } from 'react';
 import { Container, Content } from './ClientsSectionFilters.styled';
-import ClientsSectionFiltersTags from '@ClientsPageComponents/ClientsSectionFiltersTags';
+import ClientsSectionFiltersCategories from '@ClientsPageComponents/ClientsSectionFiltersCategories';
 import ClientsSectionFiltersServices from '@ClientsPageComponents/ClientsSectionFiltersServices';
 import ClientsSectionFiltersDate from '@ClientsPageComponents/ClientsSectionFiltersDate';
+import { IProps } from './ClientsSectionFilters.types';
+import { getClientsListCategories } from '@/utils';
 
-const ClientsSectionFilters: FC = () => {
+const ClientsSectionFilters: FC<IProps> = ({ filters }) => {
+  const { categories } = filters;
+
+  const listCategories = getClientsListCategories(categories);
+
   return (
     <Container>
-      <ClientsSectionFiltersTags />
+      <ClientsSectionFiltersCategories categories={listCategories} />
       <Content>
         <ClientsSectionFiltersServices />
         <ClientsSectionFiltersDate />

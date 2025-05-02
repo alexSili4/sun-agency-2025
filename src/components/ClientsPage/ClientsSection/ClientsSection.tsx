@@ -4,14 +4,15 @@ import GeneralContainer from '@GeneralComponents/GeneralContainer';
 import ClientsSectionFilters from '@ClientsPageComponents/ClientsSectionFilters';
 import ClientsSectionClientsList from '@ClientsPageComponents/ClientsSectionClientsList';
 import { Section, Container } from './ClientsSection.styled';
+import { IProps } from './ClientsSection.types';
 
-const ClientsSection: FC = () => {
+const ClientsSection: FC<IProps> = ({ filters }) => {
   return (
     <Section>
       <HiddenSectionTitle title='Наші клієнти' />
       <GeneralContainer>
         <Container>
-          <ClientsSectionFilters />
+          <ClientsSectionFilters filters={filters} />
           <ClientsSectionClientsList />
         </Container>
       </GeneralContainer>

@@ -1,7 +1,7 @@
+import { clients } from '@/constants';
 import Main from '@MainPageComponents/Main';
 import { useInView } from 'framer-motion';
 import { FC, useRef } from 'react';
-// import { useInView } from 'framer-motion';
 
 const MainPage: FC = () => {
   const projectsSectionRef = useRef<HTMLDivElement>(null);
@@ -9,6 +9,7 @@ const MainPage: FC = () => {
   const servicesSectionRef = useRef<HTMLDivElement>(null);
   const clientsSectionRef = useRef<HTMLDivElement>(null);
   const reviewsSectionRef = useRef<HTMLDivElement>(null);
+  const { clients: clientsData } = clients;
 
   const servicesSectionInViewWithMargin = useInView(servicesSectionRef, {
     margin: '-200px',
@@ -43,6 +44,7 @@ const MainPage: FC = () => {
       clientsSectionRef={clientsSectionRef}
       clientsSectionInView={clientsSectionInView}
       reviewsSectionRef={reviewsSectionRef}
+      clients={clientsData}
     />
   );
 };

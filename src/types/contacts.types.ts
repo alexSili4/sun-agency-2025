@@ -1,3 +1,4 @@
+import { FieldError } from 'react-hook-form';
 import { Strings } from './types';
 
 export interface IPhone {
@@ -33,7 +34,7 @@ export interface IContactsFormData {
   name: string;
   email: string;
   phone: string;
-  services?: Strings | boolean;
+  services?: Strings;
   message: string;
 }
 
@@ -47,3 +48,10 @@ export interface IContactsFormErrorMessage {
 }
 
 export type ContactsFormErrorMessages = IContactsFormErrorMessage[];
+
+export type ContactsFormErrorDetails = [
+  keyof IContactsFormData,
+  FieldError | undefined
+];
+
+export type ContactsFormErrors = ContactsFormErrorDetails[];
