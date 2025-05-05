@@ -13,6 +13,5 @@ export { default as getInvalidContactsFormFields } from './getInvalidContactsFor
 export { default as getContactsFormErrorMessage } from './getContactsFormErrorMessage';
 export { default as getContactsFormServicesBtnTitle } from './getContactsFormServicesBtnTitle';
 export { default as getContactsFormServiceByValue } from './getContactsFormServiceByValue';
-export { default as getClientsListCategories } from './getClientsListCategories';
-export { default as getClientsListServices } from './getClientsListServices';
-export { default as getServicesBtnTitle } from './getServicesBtnTitle';
+export { default as getClientsFiltersList } from './getClientsFiltersList';
+export { default as getClientsFilterBtnTitle } from './getClientsFilterBtnTitle';

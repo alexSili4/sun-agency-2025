@@ -12,61 +12,62 @@ export interface ICompanyClient {
 
 export type CompanyClients = ICompanyClient[];
 
-export interface ICategoryDetails {
+export interface IFilterDetails {
   value: string;
   label: string;
-}
-
-export type Categories = ICategoryDetails[];
-
-export interface ICategories {
-  all: ICategoryDetails;
-  retail: ICategoryDetails;
-  beautyAndCare: ICategoryDetails;
-  finances: ICategoryDetails;
-  health: ICategoryDetails;
-  restaurants: ICategoryDetails;
-  fmcg: ICategoryDetails;
-}
-
-export interface IServiceDetails {
-  value: string;
-  label: string;
-}
-
-export type Services = IServiceDetails[];
-
-export interface IServices {
-  all: IServiceDetails;
-  eCommerce: IServiceDetails;
-  webDev: IServiceDetails;
-  applications: IServiceDetails;
-  brandingAndIdentity: IServiceDetails;
-  digitalization: IServiceDetails;
-}
-
-export interface IYears {
-  2011: string;
-  2012: string;
-  2013: string;
-  2014: string;
-  2015: string;
-  2016: string;
-  2017: string;
-  2018: string;
-  2019: string;
-  2020: string;
-  2021: string;
-  2022: string;
-  2023: string;
-  2024: string;
-  2025: string;
-  2026: string;
-  2027: string;
-  2028: string;
 }
 
 export interface IFilters {
+  [key: string]: IFilterDetails;
+}
+
+export interface ICategories {
+  [key: string]: IFilterDetails;
+  all: IFilterDetails;
+  retail: IFilterDetails;
+  beautyAndCare: IFilterDetails;
+  finances: IFilterDetails;
+  health: IFilterDetails;
+  restaurants: IFilterDetails;
+  fmcg: IFilterDetails;
+}
+
+export type Filters = IFilterDetails[];
+
+export interface IServices {
+  [key: string]: IFilterDetails;
+  all: IFilterDetails;
+  eCommerce: IFilterDetails;
+  webDev: IFilterDetails;
+  applications: IFilterDetails;
+  brandingAndIdentity: IFilterDetails;
+  digitalization: IFilterDetails;
+}
+
+export interface IYears {
+  [key: string]: IFilterDetails;
+  all: IFilterDetails;
+  year2011: IFilterDetails;
+  year2012: IFilterDetails;
+  year2013: IFilterDetails;
+  year2014: IFilterDetails;
+  year2015: IFilterDetails;
+  year2016: IFilterDetails;
+  year2017: IFilterDetails;
+  year2018: IFilterDetails;
+  year2019: IFilterDetails;
+  year2020: IFilterDetails;
+  year2021: IFilterDetails;
+  year2022: IFilterDetails;
+  year2023: IFilterDetails;
+  year2024: IFilterDetails;
+  year2025: IFilterDetails;
+  year2026: IFilterDetails;
+  year2027: IFilterDetails;
+  year2028: IFilterDetails;
+}
+
+export interface IClientsFilters {
   categories: ICategories;
   services: IServices;
   years: IYears;
@@ -74,5 +75,5 @@ export interface IFilters {
 
 export interface IClients {
   clients: CompanyClients;
-  filters: IFilters;
+  filters: IClientsFilters;
 }

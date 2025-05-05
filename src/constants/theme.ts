@@ -10,6 +10,7 @@ interface ITheme {
     white70: string;
     white50: string;
     white10: string;
+    white7: string;
     inactiveLink: string;
     darkBg: string;
     error: string;
@@ -70,6 +71,7 @@ const theme: ITheme = {
     white70: 'rgba(255, 255, 255, 0.7)',
     white50: 'rgba(255, 255, 255, 0.5)',
     white10: 'rgba(255, 255, 255, 0.1)',
+    white7: 'rgba(255, 255, 255, 0.07)',
   },
   fontFamily: {
     involve: 'Involve',

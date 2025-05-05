@@ -1,10 +1,9 @@
-import { FC, useEffect, useRef, useState } from 'react';
+import { FC, useRef } from 'react';
 import { IProps } from './HeroSectionContactsFormServices.types';
 import HeroSectionContactsFormServicesList from '@ContactsPageComponents/HeroSectionContactsFormServicesList';
 import { Container, Backdrop } from './HeroSectionContactsFormServices.styled';
-import { makeBlur } from '@/utils';
-import { BtnClickEvent } from '@/types/types';
 import HeroSectionContactsFormServicesBtn from '@ContactsPageComponents/HeroSectionContactsFormServicesBtn';
+import { useDropdown } from '@/hooks';
 
 const HeroSectionContactsFormServices: FC<IProps> = ({
   services,
@@ -12,31 +11,9 @@ const HeroSectionContactsFormServices: FC<IProps> = ({
   settings,
   isDefaultBtnTitle,
 }) => {
-  const [isShowList, setIsShowList] = useState<boolean>(false);
-  const [listHeight, setListHeight] = useState<number>(0);
   const listRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const list = listRef.current;
-
-    if (list) {
-      setListHeight(list.scrollHeight);
-    }
-  }, []);
-
-  const toggleIsShowList = () => {
-    setIsShowList((prevState) => !prevState);
-  };
-
-  const onShowListBtnClick = (e: BtnClickEvent) => {
-    makeBlur(e.currentTarget);
-
-    toggleIsShowList();
-  };
-
-  const onBackdropClick = () => {
-    toggleIsShowList();
-  };
+  const { isShowList, listHeight, onBackdropClick, onShowListBtnClick } =
+    useDropdown(listRef);
 
   return (
     <>

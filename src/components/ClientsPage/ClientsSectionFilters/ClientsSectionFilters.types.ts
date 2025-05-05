@@ -1,5 +1,10 @@
-import { IFilters } from '@/types/clients.types';
+import { IClientsFilters } from '@/types/clients.types';
 
 export interface IProps {
-  filters: IFilters;
+  filters: IClientsFilters;
+  otherFiltersGap: number;
+}
+
+export interface IStyledContentProps {
+  gap: number;
 }

@@ -1,5 +1,19 @@
 import styled from '@emotion/styled';
+import { IStyledContentProps } from './ClientsSectionFilters.types';
 
-export const Container = styled.div``;
+export const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: ${({ theme }) => theme.spacing(8)}px;
 
-export const Content = styled.div``;
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+`;
+
+export const Content = styled.div<IStyledContentProps>`
+  display: flex;
+  align-items: center;
+  gap: ${({ gap }) => gap}px;
+`;

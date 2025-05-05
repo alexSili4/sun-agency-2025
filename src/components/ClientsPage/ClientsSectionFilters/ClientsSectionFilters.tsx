@@ -1,30 +1,50 @@
-import { FC } from 'react';
+import { FC, useLayoutEffect, useRef, useState } from 'react';
 import { Container, Content } from './ClientsSectionFilters.styled';
 import ClientsSectionFiltersCategories from '@ClientsPageComponents/ClientsSectionFiltersCategories';
-import ClientsSectionFiltersServices from '@ClientsPageComponents/ClientsSectionFiltersServices';
-import ClientsSectionFiltersDate from '@ClientsPageComponents/ClientsSectionFiltersDate';
+import ClientsSectionFiltersItem from '@ClientsPageComponents/ClientsSectionFiltersItem';
 import { IProps } from './ClientsSectionFilters.types';
-import { getClientsListCategories, getClientsListServices } from '@/utils';
+import { getClientsFiltersList } from '@/utils';
 import { SearchParamsKeys } from '@/constants';
 
-const ClientsSectionFilters: FC<IProps> = ({ filters }) => {
-  const { categories, services } = filters;
+const ClientsSectionFilters: FC<IProps> = ({ filters, otherFiltersGap }) => {
+  const [otherFilters, setOtherFilters] = useState<number>(0);
+  const otherFiltersContainerRef = useRef<HTMLDivElement>(null);
+  const { categories, services, years } = filters;
 
-  const listCategories = getClientsListCategories(categories);
-  const listServices = getClientsListServices(services);
+  const servicesList = getClientsFiltersList(services);
+  const categoriesList = getClientsFiltersList(categories);
+  const yearsList = getClientsFiltersList(years);
+
+  useLayoutEffect(() => {
+    const otherFiltersContainer = otherFiltersContainerRef.current;
+
+    if (otherFiltersContainer) {
+      setOtherFilters(otherFiltersContainer.children.length);
+    }
+  }, []);
 
   return (
     <Container>
       <ClientsSectionFiltersCategories
-        categories={listCategories}
+        categories={categoriesList}
         searchParamsKey={SearchParamsKeys.category}
       />
-      <Content>
-        <ClientsSectionFiltersServices
-          services={listServices}
+      <Content ref={otherFiltersContainerRef} gap={otherFiltersGap}>
+        <ClientsSectionFiltersItem
+          filters={servicesList}
           searchParamsKey={SearchParamsKeys.service}
+          containerGap={otherFiltersGap}
+          widthDesk={240}
+          filtersLength={otherFilters}
         />
-        <ClientsSectionFiltersDate />
+        <ClientsSectionFiltersItem
+          filters={yearsList}
+          searchParamsKey={SearchParamsKeys.year}
+          containerGap={otherFiltersGap}
+          widthDesk={184}
+          filtersLength={otherFilters}
+          maxHeight={259}
+        />
       </Content>
     </Container>
   );

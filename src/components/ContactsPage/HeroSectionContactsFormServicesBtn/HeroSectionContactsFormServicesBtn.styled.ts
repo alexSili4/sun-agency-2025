@@ -11,7 +11,7 @@ export const Button = styled.button<IStyledButtonProps>`
   border-radius: 5px;
   border: 1px solid;
   border-color: transparent;
-  background: rgba(51, 51, 51, 0.2);
+  background-color: rgba(51, 51, 51, 0.2);
   padding: ${({ theme }) => theme.spacing(4)}px;
   opacity: ${({ isFake }) => (isFake ? 0 : 1)};
   pointer-events: ${({ isFake }) => (isFake ? 'none' : 'all')};

@@ -8,6 +8,7 @@ import {
 } from './types';
 import {
   Func,
+  OnBtnClickFunc,
   OnDivClickFunc,
   OnInputChangeFunc,
   OnSwiperAutoplayTimeLeft,
@@ -100,4 +101,11 @@ export interface IUseContactsGlowingElementSize {
 export interface IUseClientsFilter {
   onFilterChange: OnInputChangeFunc;
   filter: string;
+}
+
+export interface IUseDropdown {
+  isShowList: boolean;
+  listHeight: number;
+  onBackdropClick: Func;
+  onShowListBtnClick: OnBtnClickFunc;
 }

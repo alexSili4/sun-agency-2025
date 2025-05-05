@@ -1,7 +1,7 @@
 import { SearchParamsKeys } from '@/constants';
-import { Categories } from '@/types/clients.types';
+import { Filters } from '@/types/clients.types';
 
 export interface IProps {
-  categories: Categories;
+  categories: Filters;
   searchParamsKey: SearchParamsKeys;
 }

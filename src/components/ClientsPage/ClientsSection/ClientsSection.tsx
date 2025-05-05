@@ -12,7 +12,7 @@ const ClientsSection: FC<IProps> = ({ filters }) => {
       <HiddenSectionTitle title='Наші клієнти' />
       <GeneralContainer>
         <Container>
-          <ClientsSectionFilters filters={filters} />
+          <ClientsSectionFilters filters={filters} otherFiltersGap={16} />
           <ClientsSectionClientsList />
         </Container>
       </GeneralContainer>
