@@ -1,9 +1,8 @@
 import { FC } from 'react';
 import HiddenSectionTitle from '@GeneralComponents/HiddenSectionTitle';
 import GeneralContainer from '@GeneralComponents/GeneralContainer';
-import ClientsSectionFilters from '@ClientsPageComponents/ClientsSectionFilters';
-import AnimatedClientsSectionClientsList from '@AnimatedClientsPageComponents/AnimatedClientsSectionClientsList';
-import { Section, Container } from './ClientsSection.styled';
+import AnimatedClientsSectionContent from '@AnimatedClientsPageComponents/AnimatedClientsSectionContent';
+import { Section } from './ClientsSection.styled';
 import { IProps } from './ClientsSection.types';
 import { useFilteredClients } from '@/hooks';
 
@@ -14,10 +13,10 @@ const ClientsSection: FC<IProps> = ({ filters, clients }) => {
     <Section>
       <HiddenSectionTitle title='Наші клієнти' />
       <GeneralContainer>
-        <Container>
-          <ClientsSectionFilters filters={filters} otherFiltersGap={16} />
-          <AnimatedClientsSectionClientsList clients={filteredClients} />
-        </Container>
+        <AnimatedClientsSectionContent
+          clients={filteredClients}
+          filters={filters}
+        />
       </GeneralContainer>
     </Section>
   );

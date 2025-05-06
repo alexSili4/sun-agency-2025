@@ -9,6 +9,8 @@ const listLengthMob = 2;
 const listLengthDesk = 4;
 
 export const Container = styled.div`
+  padding-bottom: ${({ theme }) => theme.spacing()}px;
+
   @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
     padding-bottom: ${({ theme }) => theme.spacing(10)}px;
   }
@@ -17,7 +19,10 @@ export const Container = styled.div`
 export const List = styled.ul`
   display: flex;
   flex-wrap: wrap;
-  gap: ${listGapDesk}px;
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
+    gap: ${listGapDesk}px;
+  }
 `;
 
 export const ListItem = styled(motion.li)`

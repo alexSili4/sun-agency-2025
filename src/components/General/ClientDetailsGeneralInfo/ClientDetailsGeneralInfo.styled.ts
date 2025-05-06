@@ -3,7 +3,14 @@ import styled from '@emotion/styled';
 export const List = styled.ul`
   display: flex;
   align-items: center;
-  gap: ${({ theme }) => theme.spacing(12)}px;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.desktop - 1}px) {
+    justify-content: space-between;
+  }
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
+    gap: ${({ theme }) => theme.spacing(12)}px;
+  }
 `;
 
 export const ListItem = styled.li``;

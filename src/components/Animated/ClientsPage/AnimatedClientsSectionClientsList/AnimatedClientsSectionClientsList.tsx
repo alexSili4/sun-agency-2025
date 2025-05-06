@@ -27,11 +27,17 @@ const AnimatedClientsSectionClientsList: FC<IProps> = ({ clients }) => {
               index
             ) => {
               const delay = index * 0.05;
+              const reverseDelay = (clients.length - index) * 0.05;
 
               const transition: Transition = {
                 duration: 0.8,
                 ease: [0.25, 0.1, 0.25, 1],
                 delay,
+              };
+
+              const exitTransition: Transition = {
+                ...transition,
+                delay: reverseDelay,
               };
 
               return (
@@ -40,7 +46,7 @@ const AnimatedClientsSectionClientsList: FC<IProps> = ({ clients }) => {
                   layout
                   initial={{ opacity: 0, scale: 0.95 }}
                   animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.95 }}
+                  exit={{ opacity: 0, scale: 0.95, transition: exitTransition }}
                   transition={transition}
                 >
                   <ClientsSectionClientsClientDetails
