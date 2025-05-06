@@ -1,13 +1,13 @@
 import { FC } from 'react';
-import { IProps } from './ClientsSectionClientProjects.types';
+import { IProps } from './ClientDetailsProjects.types';
 import {
   Container,
   Image,
   List,
   ListItem,
-} from './ClientsSectionClientProjects.styled';
+} from './ClientDetailsProjects.styled';
 
-const ClientsSectionClientProjects: FC<IProps> = ({ projects }) => {
+const ClientDetailsProjects: FC<IProps> = ({ projects }) => {
   return (
     <List>
       {projects.map((image, index) => (
@@ -21,4 +21,4 @@ const ClientsSectionClientProjects: FC<IProps> = ({ projects }) => {
   );
 };
 
-export default ClientsSectionClientProjects;
+export default ClientDetailsProjects;

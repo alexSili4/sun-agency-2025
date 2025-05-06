@@ -2,6 +2,7 @@ import styled from '@emotion/styled';
 
 export const Section = styled.section`
   padding-top: ${({ theme }) => theme.spacing(23)}px;
+  padding-bottom: ${({ theme }) => theme.spacing(8)}px;
   background-color: ${({ theme }) => theme.colors.dark};
 
   @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {

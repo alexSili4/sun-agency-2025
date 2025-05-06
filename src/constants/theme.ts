@@ -9,6 +9,7 @@ interface ITheme {
     white: string;
     white70: string;
     white50: string;
+    white21: string;
     white10: string;
     white7: string;
     inactiveLink: string;
@@ -70,6 +71,7 @@ const theme: ITheme = {
     white: '#ffffff',
     white70: 'rgba(255, 255, 255, 0.7)',
     white50: 'rgba(255, 255, 255, 0.5)',
+    white21: 'rgba(255, 255, 255, 0.21)',
     white10: 'rgba(255, 255, 255, 0.1)',
     white7: 'rgba(255, 255, 255, 0.07)',
   },

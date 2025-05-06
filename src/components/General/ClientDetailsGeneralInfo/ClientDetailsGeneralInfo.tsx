@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { IProps } from './ClientsSectionClientGeneralInfo.types';
+import { IProps } from './ClientDetailsGeneralInfo.types';
 import {
   Container,
   List,
@@ -7,9 +7,9 @@ import {
   Projects,
   Title,
   Years,
-} from './ClientsSectionClientGeneralInfo.styled';
+} from './ClientDetailsGeneralInfo.styled';
 
-const ClientsSectionClientGeneralInfo: FC<IProps> = ({ projects, years }) => {
+const ClientDetailsGeneralInfo: FC<IProps> = ({ projects, years }) => {
   return (
     <List>
       <ListItem>
@@ -28,4 +28,4 @@ const ClientsSectionClientGeneralInfo: FC<IProps> = ({ projects, years }) => {
   );
 };
 
-export default ClientsSectionClientGeneralInfo;
+export default ClientDetailsGeneralInfo;

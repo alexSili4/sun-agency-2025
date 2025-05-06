@@ -1,10 +1,10 @@
 import { FC } from 'react';
-import { IProps } from './ClientsSectionClientDetailsModalWin.types';
+import { IProps } from './ClientDetailsModalWin.types';
 // ----- components
 import AnimatedClientDetailsModalWin from '@AnimationBlocks/AnimatedClientDetailsModalWin';
-import ClientsSectionClientDetails from '@MainPageComponents/ClientsSectionClientDetails';
+import ClientDetails from '@GeneralComponents/ClientDetails';
 
-const ClientsSectionClientDetailsModalWin: FC<IProps> = ({
+const ClientDetailsModalWin: FC<IProps> = ({
   setModalWinState,
   showModalWin,
   logo,
@@ -19,7 +19,7 @@ const ClientsSectionClientDetailsModalWin: FC<IProps> = ({
       setModalWinState={setModalWinState}
       showModalWin={showModalWin}
     >
-      <ClientsSectionClientDetails
+      <ClientDetails
         logo={logo}
         websiteAddress={websiteAddress}
         text={text}
@@ -31,4 +31,4 @@ const ClientsSectionClientDetailsModalWin: FC<IProps> = ({
   );
 };
 
-export default ClientsSectionClientDetailsModalWin;
+export default ClientDetailsModalWin;

@@ -3,11 +3,11 @@ import HeroSection from '@ClientsPageComponents/HeroSection';
 import ClientsSection from '@ClientsPageComponents/ClientsSection';
 import { IProps } from './Clients.types';
 
-const Clients: FC<IProps> = ({ filters }) => {
+const Clients: FC<IProps> = ({ filters, clients }) => {
   return (
     <>
       <HeroSection animationDuration={0.8} />
-      <ClientsSection filters={filters} />
+      <ClientsSection filters={filters} clients={clients} />
     </>
   );
 };

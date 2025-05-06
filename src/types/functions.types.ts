@@ -1,4 +1,4 @@
-import { Filters } from './clients.types';
+import { CompanyClients, Filters } from './clients.types';
 import { InvalidContactsFormFields } from './contacts.types';
 import {
   AnchorClickEvent,
@@ -80,4 +80,19 @@ export interface IGetContactsFormServicesBtnTitle {
 export interface IGetClientsFilterBtnTitleProps {
   filters: Filters;
   filter: string;
+}
+
+export interface IFilterClientsByCategoryProps {
+  clients: CompanyClients;
+  category: string;
+}
+
+export interface IFilterClientsByYearProps {
+  clients: CompanyClients;
+  year: string;
+}
+
+export interface IFilterClientsByServiceProps {
+  clients: CompanyClients;
+  service: string;
 }

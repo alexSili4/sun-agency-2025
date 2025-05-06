@@ -15,3 +15,6 @@ export { default as getContactsFormServicesBtnTitle } from './getContactsFormSer
 export { default as getContactsFormServiceByValue } from './getContactsFormServiceByValue';
 export { default as getClientsFiltersList } from './getClientsFiltersList';
 export { default as getClientsFilterBtnTitle } from './getClientsFilterBtnTitle';
+export { default as filterClientsByCategory } from './filterClientsByCategory';
+export { default as filterClientsByService } from './filterClientsByService';
+export { default as filterClientsByYear } from './filterClientsByYear';

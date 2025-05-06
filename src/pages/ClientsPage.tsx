@@ -3,9 +3,9 @@ import Clients from '@ClientsPageComponents/Clients';
 import { clients } from '@/constants';
 
 const ClientsPage: FC = () => {
-  const { filters } = clients;
+  const { filters, clients: companyClients } = clients;
 
-  return <Clients filters={filters} />;
+  return <Clients filters={filters} clients={companyClients} />;
 };
 
 export default ClientsPage;

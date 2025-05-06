@@ -1,15 +1,11 @@
 import { FC, useState } from 'react';
-import {
-  ClientLogo,
-  ShowClientDetailsBtn,
-} from './ClientsSectionMarqueeItem.styled';
+import ClientDetailsModalWin from '@GeneralComponents/ClientDetailsModalWin';
 import { BtnClickEvent } from '@/types/types';
 import { makeBlur } from '@/utils';
-import { IProps } from './ClientsSectionMarqueeItem.types';
-// ----- components
-import ClientDetailsModalWin from '@GeneralComponents/ClientDetailsModalWin';
+import { IProps } from './ClientsSectionClientsClientDetails.types';
+import { Button, Logo } from './ClientsSectionClientsClientDetails.styled';
 
-const ClientsSectionMarqueeItem: FC<IProps> = ({
+const ClientsSectionClientsClientDetails: FC<IProps> = ({
   primaryLogo,
   images,
   logo,
@@ -32,9 +28,9 @@ const ClientsSectionMarqueeItem: FC<IProps> = ({
 
   return (
     <>
-      <ShowClientDetailsBtn onClick={onShowClientDetailsBtnClick} type='button'>
-        <ClientLogo src={primaryLogo} alt='' />
-      </ShowClientDetailsBtn>
+      <Button onClick={onShowClientDetailsBtnClick} type='button'>
+        <Logo src={primaryLogo} alt='' />
+      </Button>
       <ClientDetailsModalWin
         showModalWin={showClientDetails}
         setModalWinState={toggleShowClientDetails}
@@ -49,4 +45,4 @@ const ClientsSectionMarqueeItem: FC<IProps> = ({
   );
 };
 
-export default ClientsSectionMarqueeItem;
+export default ClientsSectionClientsClientDetails;

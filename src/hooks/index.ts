@@ -16,3 +16,4 @@ export { default as useContactsGlowingElementSize } from './useContactsGlowingEl
 export { default as useSetSearchParams } from './useSetSearchParams';
 export { default as useClientsFilter } from './useClientsFilter';
 export { default as useDropdown } from './useDropdown';
+export { default as useFilteredClients } from './useFilteredClients';

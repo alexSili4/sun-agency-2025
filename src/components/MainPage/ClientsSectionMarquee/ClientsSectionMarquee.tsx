@@ -9,7 +9,14 @@ const ClientsSectionMarquee: FC<IProps> = ({ clients, direction }) => {
     <Marquee direction={direction} autoFill pauseOnHover>
       {clients.map(
         (
-          { primaryLogo, images, logo, projects, text, websiteAddress, years },
+          {
+            primaryLogo,
+            images,
+            logo,
+            text,
+            websiteAddress,
+            generalInfo: { projects, years },
+          },
           index
         ) => (
           <ClientsSectionMarqueeItem
