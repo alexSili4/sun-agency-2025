@@ -2,8 +2,8 @@ import { FC } from 'react';
 import { IProps } from './AnimatedClientDetailsModalWin.types';
 import { useModalWin } from '@/hooks';
 // ----- components
-import AnimatedClientDetailsModalWinContent from '@AnimationBlocks/AnimatedClientDetailsModalWinContent';
-import AnimatedModalWin from '@AnimationBlocks/AnimatedModalWin';
+import AnimatedClientDetailsModalWinContent from '@AnimatedGeneralComponents/AnimatedClientDetailsModalWinContent';
+import AnimatedModalWin from '@AnimatedGeneralComponents/AnimatedModalWin';
 import ModalWin from '@GeneralComponents/ModalWin';
 
 const AnimatedClientDetailsModalWin: FC<IProps> = ({

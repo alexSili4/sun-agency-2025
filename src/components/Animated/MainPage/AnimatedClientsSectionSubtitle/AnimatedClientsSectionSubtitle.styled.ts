@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 import { motion } from 'framer-motion';
-import { IStyledTitleProps } from './AnimatedMultiLineSubtitle.types';
+import { IStyledTitleProps } from './AnimatedClientsSectionSubtitle.types';
 
 export const Title = styled.h3<IStyledTitleProps>`
   display: flex;

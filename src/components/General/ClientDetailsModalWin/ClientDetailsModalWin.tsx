@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { IProps } from './ClientDetailsModalWin.types';
 // ----- components
-import AnimatedClientDetailsModalWin from '@AnimationBlocks/AnimatedClientDetailsModalWin';
+import AnimatedClientDetailsModalWin from '@AnimatedGeneralComponents/AnimatedClientDetailsModalWin';
 import ClientDetails from '@GeneralComponents/ClientDetails';
 
 const ClientDetailsModalWin: FC<IProps> = ({

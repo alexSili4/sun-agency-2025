@@ -24,7 +24,11 @@
       "@AnimatedClientsPageComponents/*": [
         "./src/components/Animated/ClientsPage/*"
       ],
-      "@AnimatedMainPageComponents/*": ["./src/components/Animated/MainPage/*"]
+      "@AnimatedGeneralComponents/*": ["./src/components/Animated/General/*"],
+      "@AnimatedMainPageComponents/*": ["./src/components/Animated/MainPage/*"],
+      "@AnimatedAboutPageComponents/*": [
+        "./src/components/Animated/AboutPage/*"
+      ]
     },
     "target": "ES2020",
     "useDefineForClassFields": true,

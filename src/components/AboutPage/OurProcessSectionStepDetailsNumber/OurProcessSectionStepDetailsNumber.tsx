@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import { IProps } from './OurProcessSectionStepDetailsNumber.types';
-import AnimatedOurProcessSectionStepDetailsNumberItem from '@AnimationBlocks/AnimatedOurProcessSectionStepDetailsNumberItem';
+import AnimatedOurProcessSectionStepDetailsNumberItem from '@AnimatedAboutPageComponents/AnimatedOurProcessSectionStepDetailsNumberItem';
 import {
   Container,
   TextWrap,

@@ -12,7 +12,7 @@ import { getProjectPath } from '@/utils';
 import { PagePaths } from '@/constants';
 // ----- components
 import ProjectsSectionProjectCard from '@MainPageComponents/ProjectsSectionProjectCard';
-import AnimatedProjectsSectionGlowingLink from '@AnimationBlocks/AnimatedProjectsSectionGlowingLink';
+import AnimatedProjectsSectionGlowingLink from '@AnimatedMainPageComponents/AnimatedProjectsSectionGlowingLink';
 import { useIsDesk } from '@/hooks';
 
 const ProjectsSectionProjectsList: FC<IProps> = ({

@@ -3,11 +3,11 @@ import {
   Symbol,
   Title,
   LineContainer,
-} from './AnimatedMultiLineSubtitle.styled';
-import { IProps } from './AnimatedMultiLineSubtitle.types';
+} from './AnimatedClientsSectionSubtitle.styled';
+import { IProps } from './AnimatedClientsSectionSubtitle.types';
 import { useInView } from 'framer-motion';
 
-const AnimatedMultiLineSubtitle: FC<IProps> = ({
+const AnimatedClientsSectionSubtitle: FC<IProps> = ({
   lines,
   isHiddenOnMobile = false,
 }) => {
@@ -65,4 +65,4 @@ const AnimatedMultiLineSubtitle: FC<IProps> = ({
   );
 };
 
-export default AnimatedMultiLineSubtitle;
+export default AnimatedClientsSectionSubtitle;

@@ -3,7 +3,7 @@ import { Container, ListContainer } from './HeroSectionBusinessMetrics.styled';
 import { useScroll, useTransform } from 'framer-motion';
 // ----- components
 import HeroSectionBusinessMetricsList from '@MainPageComponents/HeroSectionBusinessMetricsList';
-import AnimatedHeroSectionSpline from '@AnimationBlocks/AnimatedHeroSectionSpline';
+import AnimatedHeroSectionSpline from '@AnimatedMainPageComponents/AnimatedHeroSectionSpline';
 import { IProps } from './HeroSectionBusinessMetrics.types';
 
 const HeroSectionBusinessMetrics: FC<IProps> = ({ nextSectionInView }) => {

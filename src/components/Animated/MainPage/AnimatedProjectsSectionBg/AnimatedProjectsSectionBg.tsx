@@ -9,6 +9,7 @@ const AnimatedProjectsSectionBg: FC<IProps> = ({
   sectionBgRef,
 }) => {
   const animate = inView ? 'visible' : 'hidden';
+  const y = nextSectionInView ? -200 : 200;
 
   const containerVariants = {
     hidden: {},
@@ -22,7 +23,7 @@ const AnimatedProjectsSectionBg: FC<IProps> = ({
 
   const elementVariants = {
     hidden: {
-      y: nextSectionInView ? -200 : 200,
+      y,
       opacity: 0,
       transition,
     },

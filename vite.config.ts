@@ -22,6 +22,8 @@ export default defineConfig({
         '/src/components/Animated/ContactsPage',
       '@AnimatedClientsPageComponents': '/src/components/Animated/ClientsPage',
       '@AnimatedMainPageComponents': '/src/components/Animated/MainPage',
+      '@AnimatedGeneralComponents': '/src/components/Animated/General',
+      '@AnimatedAboutPageComponents': '/src/components/Animated/AboutPage',
     },
   },
 });

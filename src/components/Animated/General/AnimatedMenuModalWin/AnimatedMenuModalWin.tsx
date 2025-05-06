@@ -3,7 +3,7 @@ import { IProps } from './AnimatedMenuModalWin.types';
 import { useModalWin } from '@/hooks';
 // ----- components
 import SmoothFadeUpModalWin from '@AnimationBlocks/SmoothFadeUpModalWin';
-import AnimatedModalWin from '@AnimationBlocks/AnimatedModalWin';
+import AnimatedModalWin from '@AnimatedGeneralComponents/AnimatedModalWin';
 import MenuModalWin from '@GeneralComponents/MenuModalWin';
 import ModalWin from '@GeneralComponents/ModalWin';
 

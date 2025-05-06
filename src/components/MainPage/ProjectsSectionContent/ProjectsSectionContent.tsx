@@ -4,10 +4,10 @@ import { projects } from '@/constants';
 import { IProps } from './ProjectsSectionContent.types';
 // ----- components
 import GeneralContainer from '@GeneralComponents/GeneralContainer';
-import AnimatedProjectsList from '@AnimationBlocks/AnimatedProjectsList';
+import AnimatedProjectsList from '@AnimatedMainPageComponents/AnimatedProjectsList';
 import ProjectsSectionContentWrap from '@MainPageComponents/ProjectsSectionContentWrap';
-import AnimatedProjectsSectionBg from '@AnimationBlocks/AnimatedProjectsSectionBg';
-import AnimatedProjectsSectionGlowingLink from '@AnimationBlocks/AnimatedProjectsSectionGlowingLink';
+import AnimatedProjectsSectionBg from '@AnimatedMainPageComponents/AnimatedProjectsSectionBg';
+import AnimatedProjectsSectionGlowingLink from '@AnimatedMainPageComponents/AnimatedProjectsSectionGlowingLink';
 import AnimatedProjectsSectionTitle from '@AnimationBlocks/AnimatedProjectsSectionTitle';
 
 const ProjectsSectionContent: FC<IProps> = ({

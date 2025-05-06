@@ -8,7 +8,7 @@ import { PagePaths } from '@/constants';
 import { splitArray } from '@/utils';
 import glowingLink from '@/lottiefiles/glow/glowing-link.json';
 // ----- components
-import AnimatedMultiLineSubtitle from '@AnimationBlocks/AnimatedMultiLineSubtitle';
+import AnimatedClientsSectionSubtitle from '@AnimatedMainPageComponents/AnimatedClientsSectionSubtitle';
 import AnimatedSectionTitle from '@AnimationBlocks/AnimatedSectionTitle';
 import GlowingLink from '@GeneralComponents/GlowingLink';
 import ClientsSectionMarqueeContainer from '@MainPageComponents/ClientsSectionMarqueeContainer';
@@ -28,7 +28,7 @@ const ClientsSectionContent: FC<IProps> = ({ clients }) => {
     <Container>
       <TextWrap>
         <AnimatedSectionTitle text='Клієнти' isCenter />
-        <AnimatedMultiLineSubtitle
+        <AnimatedClientsSectionSubtitle
           lines={[subtitleFirstLine, subtitleSecondLine]}
           isHiddenOnMobile
         />

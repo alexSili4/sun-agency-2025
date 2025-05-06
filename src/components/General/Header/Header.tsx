@@ -11,7 +11,7 @@ import {
 import HeaderNavMenu from '@GeneralComponents/HeaderNavMenu';
 import HeaderContactsInfo from '@GeneralComponents/HeaderContactsInfo';
 import GeneralContainer from '@GeneralComponents/GeneralContainer';
-import AnimatedMenuModalWin from '@AnimationBlocks/AnimatedMenuModalWin';
+import AnimatedMenuModalWin from '@AnimatedGeneralComponents/AnimatedMenuModalWin';
 
 const Header: FC = () => {
   const [currentLang, setCurrentLang] = useState<string>(() => langs.ua.name);
