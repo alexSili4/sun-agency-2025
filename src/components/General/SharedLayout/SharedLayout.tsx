@@ -21,7 +21,7 @@ const SharedLayout: FC = () => {
           <Outlet />
         </Suspense>
       </Main>
-      {/* <Footer startColor={startColor} showContactsInfo={showContactsInfo} /> */}
+      <Footer startColor={startColor} showContactsInfo={showContactsInfo} />
     </>
   );
 };
