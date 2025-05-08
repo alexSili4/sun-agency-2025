@@ -9,10 +9,10 @@ import { splitArray } from '@/utils';
 import glowingLink from '@/lottiefiles/glow/glowing-link.json';
 // ----- components
 import AnimatedClientsSectionSubtitle from '@AnimatedMainPageComponents/AnimatedClientsSectionSubtitle';
-import AnimatedSectionTitle from '@AnimationBlocks/AnimatedSectionTitle';
+import AnimatedSectionTitle from '@AnimatedMainPageComponents/AnimatedSectionTitle';
 import GlowingLink from '@GeneralComponents/GlowingLink';
 import ClientsSectionMarqueeContainer from '@MainPageComponents/ClientsSectionMarqueeContainer';
-import AnimatedSectionSubtitle from '@AnimationBlocks/AnimatedSectionSubtitle';
+import AnimatedSectionSubtitle from '@AnimatedMainPageComponents/AnimatedSectionSubtitle';
 import { IProps } from './ClientsSectionContent.types';
 
 const ClientsSectionContent: FC<IProps> = ({ clients }) => {

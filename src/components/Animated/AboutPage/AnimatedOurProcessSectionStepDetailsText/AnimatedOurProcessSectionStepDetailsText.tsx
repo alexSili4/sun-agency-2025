@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import AnimatedOurProcessSectionStepDetailsTextItem from '@AnimationBlocks/AnimatedOurProcessSectionStepDetailsTextItem';
+import AnimatedOurProcessSectionStepDetailsTextItem from '@AnimatedAboutPageComponents/AnimatedOurProcessSectionStepDetailsTextItem';
 import { AnimatePresence } from 'framer-motion';
 import { IProps } from './AnimatedOurProcessSectionStepDetailsText.types';
 import { Container } from './AnimatedOurProcessSectionStepDetailsText.styled';

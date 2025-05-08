@@ -2,7 +2,7 @@ import { FC } from 'react';
 import { IProps } from './AnimatedMenuModalWin.types';
 import { useModalWin } from '@/hooks';
 // ----- components
-import SmoothFadeUpModalWin from '@AnimationBlocks/SmoothFadeUpModalWin';
+import SmoothFadeUpModalWin from '@AnimatedGeneralComponents/SmoothFadeUpModalWin';
 import AnimatedModalWin from '@AnimatedGeneralComponents/AnimatedModalWin';
 import MenuModalWin from '@GeneralComponents/MenuModalWin';
 import ModalWin from '@GeneralComponents/ModalWin';

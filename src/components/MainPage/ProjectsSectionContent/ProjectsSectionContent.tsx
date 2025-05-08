@@ -8,7 +8,7 @@ import AnimatedProjectsList from '@AnimatedMainPageComponents/AnimatedProjectsLi
 import ProjectsSectionContentWrap from '@MainPageComponents/ProjectsSectionContentWrap';
 import AnimatedProjectsSectionBg from '@AnimatedMainPageComponents/AnimatedProjectsSectionBg';
 import AnimatedProjectsSectionGlowingLink from '@AnimatedMainPageComponents/AnimatedProjectsSectionGlowingLink';
-import AnimatedProjectsSectionTitle from '@AnimationBlocks/AnimatedProjectsSectionTitle';
+import AnimatedProjectsSectionTitle from '@AnimatedMainPageComponents/AnimatedProjectsSectionTitle';
 
 const ProjectsSectionContent: FC<IProps> = ({
   nextSectionInView,
@@ -25,9 +25,7 @@ const ProjectsSectionContent: FC<IProps> = ({
             sectionBgRef={sectionBgRef}
           />
           <ProjectsSectionContentWrap>
-            <AnimatedProjectsSectionTitle
-              nextSectionInView={nextSectionInView}
-            />
+            <AnimatedProjectsSectionTitle inView={!nextSectionInView} />
             <AnimatedProjectsSectionGlowingLink
               nextSectionInView={nextSectionInView}
               isHiddenOnMobile

@@ -4,8 +4,8 @@ import { Container, Element } from './AnimatedProjectsSectionTitle.styled';
 // ----- components
 import SectionGeneralTitle from '@MainPageComponents/SectionGeneralTitle';
 
-const AnimatedProjectsSectionTitle: FC<IProps> = ({ nextSectionInView }) => {
-  const animate = !nextSectionInView ? 'visible' : 'hidden';
+const AnimatedProjectsSectionTitle: FC<IProps> = ({ inView }) => {
+  const animate = inView ? 'visible' : 'hidden';
 
   const containerVariants = {
     hidden: {},

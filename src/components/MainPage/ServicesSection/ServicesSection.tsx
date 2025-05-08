@@ -4,7 +4,7 @@ import { Content, Section } from './ServicesSection.styled';
 import { services } from '@/constants';
 // ----- components
 import GeneralContainer from '@GeneralComponents/GeneralContainer';
-import AnimatedServicesList from '@AnimationBlocks/AnimatedServicesList';
+import AnimatedServicesList from '@AnimatedMainPageComponents/AnimatedServicesList';
 import SectionGeneralTitle from '@MainPageComponents/SectionGeneralTitle';
 
 const ServicesSection: FC<IProps> = ({

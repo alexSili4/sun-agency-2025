@@ -5,7 +5,7 @@ import { reviews } from '@/constants';
 // ----- components
 import SectionGeneralTitle from '@MainPageComponents/SectionGeneralTitle';
 import GeneralContainer from '@GeneralComponents/GeneralContainer';
-import AnimatedReviewsSlider from '@AnimationBlocks/AnimatedReviewsSlider';
+import AnimatedReviewsSlider from '@AnimatedMainPageComponents/AnimatedReviewsSlider';
 
 const ReviewsSection: FC<IProps> = ({ sectionRef }) => {
   return (
