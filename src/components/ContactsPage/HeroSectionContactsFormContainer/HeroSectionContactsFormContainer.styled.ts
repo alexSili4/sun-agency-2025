@@ -23,14 +23,10 @@ export const Background = styled.div`
 `;
 
 export const Content = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: ${({ theme }) => theme.spacing(8)}px;
   padding: ${({ theme }) => theme.spacing(6)}px;
   padding-bottom: ${({ theme }) => theme.spacing(8)}px;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
-    gap: ${({ theme }) => theme.spacing(12)}px;
     padding: ${({ theme: { spacing } }) => `${spacing(14)}px ${spacing(16)}px`};
   }
 `;

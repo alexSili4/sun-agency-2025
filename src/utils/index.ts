@@ -9,8 +9,8 @@ export { default as padStart } from './padStart';
 export { default as getProcessStepsAngles } from './getProcessStepsAngles';
 export { default as copyToClipboard } from './copyToClipboard';
 export { default as getValidPhoneNumber } from './getValidPhoneNumber';
-export { default as getInvalidContactsFormFields } from './getInvalidContactsFormFields';
-export { default as getContactsFormErrorMessage } from './getContactsFormErrorMessage';
+export { default as getContactsFormInvalidFields } from './getContactsFormInvalidFields';
+export { default as getContactsFormErrorMessages } from './getContactsFormErrorMessages';
 export { default as getContactsFormServicesBtnTitle } from './getContactsFormServicesBtnTitle';
 export { default as getContactsFormServiceByValue } from './getContactsFormServiceByValue';
 export { default as getClientsFiltersList } from './getClientsFiltersList';
@@ -18,3 +18,4 @@ export { default as getClientsFilterBtnTitle } from './getClientsFilterBtnTitle'
 export { default as filterClientsByCategory } from './filterClientsByCategory';
 export { default as filterClientsByService } from './filterClientsByService';
 export { default as filterClientsByYear } from './filterClientsByYear';
+export { default as getContactFormFieldErrorMessage } from './getContactFormFieldErrorMessage';

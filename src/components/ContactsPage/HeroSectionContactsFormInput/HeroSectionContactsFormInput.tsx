@@ -11,6 +11,7 @@ import {
 import { IProps } from './HeroSectionContactsFormInput.types';
 import HeroSectionContactsFormServices from '@ContactsPageComponents/HeroSectionContactsFormServices';
 import HeroSectionContactsFormServicesBtn from '@ContactsPageComponents/HeroSectionContactsFormServicesBtn';
+import HeroSectionContactsFormErrorMessage from '@ContactsPageComponents/HeroSectionContactsFormErrorMessage';
 
 const HeroSectionContactsFormInput: FC<IProps> = ({
   title,
@@ -26,6 +27,7 @@ const HeroSectionContactsFormInput: FC<IProps> = ({
   isInvalidField = false,
   phoneInputReplacement,
   phoneInputMask,
+  error,
 }) => {
   return services ? (
     <Container gapDesk={gapDesk} rowLength={rowLength}>
@@ -39,6 +41,7 @@ const HeroSectionContactsFormInput: FC<IProps> = ({
           settings={settings}
         />
       </ServiceBtnWrap>
+      {error && <HeroSectionContactsFormErrorMessage error={error} />}
     </Container>
   ) : (
     <Label gapDesk={gapDesk} rowLength={rowLength} isTextArea={isTextArea}>
@@ -62,6 +65,7 @@ const HeroSectionContactsFormInput: FC<IProps> = ({
           {...settings}
         />
       )}
+      {error && <HeroSectionContactsFormErrorMessage error={error} />}
     </Label>
   );
 };

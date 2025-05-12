@@ -1,5 +1,5 @@
 import { CompanyClients, Filters } from './clients.types';
-import { InvalidContactsFormFields } from './contacts.types';
+import { ContactsFormErrors } from './contacts.types';
 import {
   AnchorClickEvent,
   AnyElements,
@@ -22,11 +22,9 @@ export type OnBtnClickFunc = (e: BtnClickEvent) => void;
 
 export type SetBooleanFunc = (data: boolean) => void;
 
-export type SetInvalidContactsFormFieldsFunc = (
-  data: InvalidContactsFormFields
-) => void;
-
 export type SetStringOrNullFunc = (data: StringOrNull) => void;
+
+export type SetContactsFormErrorsFunc = (data: ContactsFormErrors) => void;
 
 export interface IGetIsLastIndexProps {
   index: number;
@@ -67,11 +65,6 @@ export type OnSwiperAutoplayTimeLeft = (
   time: number
 ) => void;
 
-export interface IGetInvalidContactsFormFields {
-  errorMessage: string;
-  invalidFields: InvalidContactsFormFields;
-}
-
 export interface IGetContactsFormServicesBtnTitle {
   isDefaultBtnTitle: boolean;
   btnTitle: string;
@@ -95,4 +88,12 @@ export interface IFilterClientsByYearProps {
 export interface IFilterClientsByServiceProps {
   clients: CompanyClients;
   service: string;
+}
+
+export interface IGetContactFormFieldErrorMessage {
+  nameError: StringOrNull;
+  emailError: StringOrNull;
+  phoneError: StringOrNull;
+  servicesError: StringOrNull;
+  messageError: StringOrNull;
 }

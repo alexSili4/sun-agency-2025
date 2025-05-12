@@ -1,20 +1,19 @@
-import { Services } from '@/types/contacts.types';
+import { ContactsFormErrors, Services } from '@/types/contacts.types';
 import {
   SetBooleanFunc,
-  SetStringOrNullFunc,
-  SetInvalidContactsFormFieldsFunc,
+  SetContactsFormErrorsFunc,
 } from '@/types/functions.types';
 
 export interface IProps {
+  errorMessages: ContactsFormErrors;
   services: Services;
   gapDesk: number;
   rowLength: number;
   isInvalidNameField: boolean;
   isInvalidPhoneField: boolean;
   isInvalidEmailField: boolean;
-  updateError: SetStringOrNullFunc;
+  updateErrors: SetContactsFormErrorsFunc;
   updateIsSuccess: SetBooleanFunc;
-  updateInvalidFields: SetInvalidContactsFormFieldsFunc;
 }
 
 export interface IStyledInputsWrapProps {

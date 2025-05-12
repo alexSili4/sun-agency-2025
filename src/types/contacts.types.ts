@@ -38,20 +38,25 @@ export interface IContactsFormData {
   message: string;
 }
 
-export type ContactsFormField = keyof IContactsFormData;
+export type IContactsFormErrorMessages = Partial<{
+  [K in keyof IContactsFormData]: Strings;
+}>;
 
-export type InvalidContactsFormFields = ContactsFormField[] | null;
-
-export interface IContactsFormErrorMessage {
-  field: ContactsFormField;
-  message: string;
+export interface IFeedbackFormErrorMessages {
+  errors: IContactsFormErrorMessages;
 }
 
-export type ContactsFormErrorMessages = IContactsFormErrorMessage[];
+export type ContactsFormErrors = IContactsFormErrorMessages | null;
+
+export type ContactsFormField = keyof IContactsFormData;
+
+export type ContactsFormInvalidFields = ContactsFormField[] | null;
+
+// export type ContactsFormErrorMessages = IContactsFormErrorMessage[];
 
 export type ContactsFormErrorDetails = [
   keyof IContactsFormData,
   FieldError | undefined
 ];
 
-export type ContactsFormErrors = ContactsFormErrorDetails[];
+export type ContactsFormErrorMessages = ContactsFormErrorDetails[];

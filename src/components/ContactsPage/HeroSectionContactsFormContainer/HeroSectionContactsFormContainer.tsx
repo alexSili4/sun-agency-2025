@@ -5,21 +5,20 @@ import {
   Content,
 } from './HeroSectionContactsFormContainer.styled';
 import HeroSectionContactsForm from '@ContactsPageComponents/HeroSectionContactsForm';
-import { StringOrNull } from '@/types/types';
-import HeroSectionContactsFormErrorMessage from '@ContactsPageComponents/HeroSectionContactsFormErrorMessage';
-import { InvalidContactsFormFields } from '@/types/contacts.types';
+import { ContactsFormErrors } from '@/types/contacts.types';
 import { theme } from '@/constants';
 import { IProps } from './HeroSectionContactsFormContainer.types';
+import { getContactsFormInvalidFields } from '@/utils';
 
 const HeroSectionContactsFormContainer: FC<IProps> = ({ services }) => {
-  const [error, setError] = useState<StringOrNull>(null);
-  const [invalidFields, setInvalidFields] =
-    useState<InvalidContactsFormFields>(null);
+  const [errors, setErrors] = useState<ContactsFormErrors>(null);
   const [
     ,
     // isSuccess
     setIsSuccess,
   ] = useState<boolean>(false);
+
+  const invalidFields = getContactsFormInvalidFields(errors);
 
   const isInvalidNameField = invalidFields
     ? invalidFields.includes('name')
@@ -31,16 +30,12 @@ const HeroSectionContactsFormContainer: FC<IProps> = ({ services }) => {
     ? invalidFields.includes('email')
     : false;
 
-  const updateError = (data: StringOrNull) => {
-    setError(data);
+  const updateErrors = (data: ContactsFormErrors) => {
+    setErrors(data);
   };
 
   const updateIsSuccess = (data: boolean) => {
     setIsSuccess(data);
-  };
-
-  const updateInvalidFields = (data: InvalidContactsFormFields) => {
-    setInvalidFields(data);
   };
 
   return (
@@ -48,17 +43,16 @@ const HeroSectionContactsFormContainer: FC<IProps> = ({ services }) => {
       <Background>
         <Content>
           <HeroSectionContactsForm
+            errorMessages={errors}
             isInvalidEmailField={isInvalidEmailField}
             isInvalidNameField={isInvalidNameField}
             isInvalidPhoneField={isInvalidPhoneField}
-            updateError={updateError}
-            updateInvalidFields={updateInvalidFields}
+            updateErrors={updateErrors}
             updateIsSuccess={updateIsSuccess}
             gapDesk={theme.spacing(8)}
             rowLength={2}
             services={services}
           />
-          {error && <HeroSectionContactsFormErrorMessage error={error} />}
         </Content>
       </Background>
     </Container>

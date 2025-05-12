@@ -1,5 +1,5 @@
 import { Services } from '@/types/contacts.types';
-import { InputType } from '@/types/types';
+import { InputType, StringOrNull } from '@/types/types';
 
 export interface IProps {
   title: string;
@@ -15,6 +15,7 @@ export interface IProps {
   isDefaultBtnTitle?: boolean;
   phoneInputReplacement?: object;
   phoneInputMask?: string;
+  error: StringOrNull;
 }
 
 export interface IStyledContainerProps {

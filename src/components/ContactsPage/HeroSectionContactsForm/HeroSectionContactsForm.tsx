@@ -5,24 +5,25 @@ import { FormErrorMessages, regExp } from '@/constants';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { AxiosError } from 'axios';
 import {
-  getInvalidContactsFormFields,
-  getContactsFormErrorMessage,
+  getContactsFormErrorMessages,
   getContactsFormServicesBtnTitle,
+  getContactFormFieldErrorMessage,
 } from '@/utils';
 import { IProps } from './HeroSectionContactsForm.types';
 import { IContactsFormData } from '@/types/contacts.types';
 import GlowingFormBtn from '@ContactsPageComponents/GlowingFormBtn';
+import appService from '@/services/app.service';
 
 const HeroSectionContactsForm: FC<IProps> = ({
-  updateError,
+  updateErrors,
   updateIsSuccess,
-  updateInvalidFields,
   isInvalidNameField,
   isInvalidPhoneField,
   isInvalidEmailField,
   gapDesk,
   rowLength,
   services,
+  errorMessages,
 }) => {
   const [disabled, setDisabled] = useState<boolean>(false);
   const {
@@ -39,28 +40,28 @@ const HeroSectionContactsForm: FC<IProps> = ({
   const phoneInputMask = `${phoneNumberStart} __ ___ ____`;
   const phoneInputReplacement = { _: /\d/ };
 
+  const { nameError, emailError, phoneError, servicesError, messageError } =
+    getContactFormFieldErrorMessage(errorMessages);
+
   const updateDisabled = (data: boolean) => {
     setDisabled(data);
   };
 
   const handleFormSubmit: SubmitHandler<IContactsFormData> = async (data) => {
     try {
-      updateInvalidFields(null);
-      updateError(null);
+      updateErrors(null);
       updateDisabled(true);
 
-      // TODO fix
-      // await appService.reserved(data);
-      console.log(data);
+      await appService.createFeedback(data);
       updateIsSuccess(true);
     } catch (error) {
-      if (error instanceof AxiosError && error.status === 422) {
-        const errors = error.response?.data;
-        const { errorMessage, invalidFields } =
-          getInvalidContactsFormFields(errors);
+      const isValidationErrors =
+        error instanceof AxiosError && error.status === 422;
 
-        updateInvalidFields(invalidFields);
-        updateError(errorMessage);
+      if (isValidationErrors) {
+        const errors = error.response?.data;
+
+        updateErrors(errors.errors);
       }
     } finally {
       updateDisabled(false);
@@ -68,14 +69,14 @@ const HeroSectionContactsForm: FC<IProps> = ({
   };
 
   useEffect(() => {
-    const errorMessages = getContactsFormErrorMessage(errors);
+    const errorMessages = getContactsFormErrorMessages(errors);
 
-    if (errorMessages.length) {
-      const { errorMessage, invalidFields } =
-        getInvalidContactsFormFields(errorMessages);
+    const keys = Object.keys(errorMessages);
 
-      updateInvalidFields(invalidFields);
-      updateError(errorMessage);
+    if (keys.length) {
+      updateErrors(errorMessages);
+    } else {
+      updateErrors(null);
     }
   }, [isSubmitting, errors]);
 
@@ -84,6 +85,7 @@ const HeroSectionContactsForm: FC<IProps> = ({
       <Content>
         <InputsWrap rowGapDesk={gapDesk}>
           <HeroSectionContactsFormInput
+            error={nameError}
             gapDesk={gapDesk}
             rowLength={rowLength}
             title='Ім’я*'
@@ -99,6 +101,7 @@ const HeroSectionContactsForm: FC<IProps> = ({
             }}
           />
           <HeroSectionContactsFormInput
+            error={emailError}
             gapDesk={gapDesk}
             rowLength={rowLength}
             title='Email*'
@@ -119,6 +122,7 @@ const HeroSectionContactsForm: FC<IProps> = ({
             }}
           />
           <HeroSectionContactsFormInput
+            error={phoneError}
             gapDesk={gapDesk}
             rowLength={rowLength}
             title='Телефон*'
@@ -137,6 +141,7 @@ const HeroSectionContactsForm: FC<IProps> = ({
             }}
           />
           <HeroSectionContactsFormInput
+            error={servicesError}
             gapDesk={gapDesk}
             rowLength={rowLength}
             title='Послуги, що Вас цікавлять'
@@ -148,6 +153,7 @@ const HeroSectionContactsForm: FC<IProps> = ({
             isDefaultBtnTitle={isDefaultBtnTitle}
           />
           <HeroSectionContactsFormInput
+            error={messageError}
             gapDesk={gapDesk}
             rowLength={rowLength}
             title='Повідомлення'
